@@ -22,5 +22,15 @@ namespace PcPartPicker_Desktop_Version
         {
             //pictureBox1.Image
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panelRight_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
