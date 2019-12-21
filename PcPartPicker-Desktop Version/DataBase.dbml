@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="projet" Class="DataBaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=./;Initial Catalog=projet;Integrated Security=True" SettingsObjectName="PcPartPicker_Desktop_Version.Properties.Settings" SettingsPropertyName="projetConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ADMIN" Member="ADMINs">
+    <Type Name="ADMIN">
+      <Column Name="ADMIN_ID" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="BirthDay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Adress" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Sexe" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="User_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="ADMIN_BUILD" Member="BUILDs" ThisKey="ADMIN_ID" OtherKey="ADMIN_ID" Type="BUILD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[USER]" Member="USERs">
+    <Type Name="USER">
+      <Column Name="USER_ID" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Last_Name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="BirthDay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Adress" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Sexe" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="User_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="USER_BUILD" Member="BUILDs" ThisKey="USER_ID" OtherKey="USER_ID" Type="BUILD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BUILD" Member="BUILDs">
+    <Type Name="BUILD">
+      <Column Name="Build_ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Case_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PowerSupply_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CpuCooler_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Cpu_ID" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MoBo_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="USER_ID" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Total_Price" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="Total_Watt" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Bootable" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ADMIN_ID" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Association Name="BUILD_Select_Gpu" Member="Select_Gpus" ThisKey="Build_ID" OtherKey="Build_ID" Type="Select_Gpu" />
+      <Association Name="BUILD_Select_Memory" Member="Select_Memories" ThisKey="Build_ID" OtherKey="Build_ID" Type="Select_Memory" />
+      <Association Name="BUILD_Select_Storage" Member="Select_Storages" ThisKey="Build_ID" OtherKey="Build_ID" Type="Select_Storage" />
+      <Association Name="ADMIN_BUILD" Member="ADMIN" ThisKey="ADMIN_ID" OtherKey="ADMIN_ID" Type="ADMIN" IsForeignKey="true" />
+      <Association Name="USER_BUILD" Member="USER" ThisKey="USER_ID" OtherKey="USER_ID" Type="USER" IsForeignKey="true" />
+      <Association Name="Case_BUILD" Member="Case" ThisKey="Case_ID" OtherKey="Case_ID" Type="Case" IsForeignKey="true" />
+      <Association Name="Cpu_BUILD" Member="Cpu" ThisKey="Cpu_ID" OtherKey="Cpu_ID" Type="Cpu" IsForeignKey="true" />
+      <Association Name="CpuCooler_BUILD" Member="CpuCooler" ThisKey="CpuCooler_ID" OtherKey="CpuCooler_ID" Type="CpuCooler" IsForeignKey="true" />
+      <Association Name="MotherBoard_BUILD" Member="MotherBoard" ThisKey="MoBo_ID" OtherKey="MoBo_ID" Type="MotherBoard" IsForeignKey="true" />
+      <Association Name="PowerSupply_BUILD" Member="PowerSupply" ThisKey="PowerSupply_ID" OtherKey="PowerSupply_ID" Type="PowerSupply" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Case]" Member="Cases">
+    <Type Name="Case">
+      <Column Name="Case_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Manufacturer_Case" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Type_Case" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Side Panel Window]" Member="Side_Panel_Window" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Power Supply Shroud]" Member="Power_Supply_Shroud" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Volume" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Case_Price" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="Case_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Case_BUILD" Member="BUILDs" ThisKey="Case_ID" OtherKey="Case_ID" Type="BUILD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cpu" Member="Cpus">
+    <Type Name="Cpu">
+      <Column Name="Cpu_ID" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ManufacturerCpu" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="[Core Count]" Member="Core_Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Core Clock_Cpu]" Member="Core_Clock_Cpu" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="[Boost Clock_Cpu]" Member="Boost_Clock_Cpu" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Socket" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TDP_Cpu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Maximum Supported Memory_Cpu]" Member="Maximum_Supported_Memory_Cpu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cpu_Price" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="[Integrated Gpu]" Member="Integrated_Gpu" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Cpu_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Cpu_BUILD" Member="BUILDs" ThisKey="Cpu_ID" OtherKey="Cpu_ID" Type="BUILD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CpuCooler" Member="CpuCoolers">
+    <Type Name="CpuCooler">
+      <Column Name="CpuCooler_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ManufacturerCpuCooler" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Model_CpuCooler" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="[Fan RPM]" Member="Fan_RPM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Max Noise Level]" Member="Max_Noise_Level" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="[Water Cooled]" Member="Water_Cooled" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CpuCooler_Price" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="CpuCooler_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="CpuCooler_BUILD" Member="BUILDs" ThisKey="CpuCooler_ID" OtherKey="CpuCooler_ID" Type="BUILD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gpu" Member="Gpus">
+    <Type Name="Gpu">
+      <Column Name="Gpu_ID" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Manufacturer_Gpu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Chipset_Gpu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Memory_Speed_Gpu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Memory Type_Gpu]" Member="Memory_Type_Gpu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[Core Clock_Gpu]" Member="Core_Clock_Gpu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Boost Clock_Gpu]" Member="Boost_Clock_Gpu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Frame Sync]" Member="Frame_Sync" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TDP_Gpu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gpu_Price" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="Gpu_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Gpu_Select_Gpu" Member="Select_Gpus" ThisKey="Gpu_ID" OtherKey="Gpu_ID" Type="Select_Gpu" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Memory" Member="Memories">
+    <Type Name="Memory">
+      <Column Name="Memory_ID" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ManufacturerMemory" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Speed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RAM_Slots" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Voltage" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="[CAS Latency]" Member="CAS_Latency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Timing" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Memory_Price" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="Memory_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Memory_Select_Memory" Member="Select_Memories" ThisKey="Memory_ID" OtherKey="Memory_ID" Type="Select_Memory" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MotherBoard" Member="MotherBoards">
+    <Type Name="MotherBoard">
+      <Column Name="MoBo_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ManufacturerMoBo" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="[Socket / CPU]" Member="Socket___CPU" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[Form Factor&#xD;&#xA;   Form Factor]" Member="Form_Factor_____Form_Factor" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Chipset_MoBo" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="[RAM Slots_MoBo]" Member="RAM_Slots_MoBo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Max RAM]" Member="Max_RAM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Memory Type_Gpu]" Member="Memory_Type_Gpu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[SATA 6 Gb/s]" Member="SATA_6_Gb_s" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[M.2 Slots]" Member="M_2_Slots" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MoBo_Price" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Mobo_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="MotherBoard_BUILD" Member="BUILDs" ThisKey="MoBo_ID" OtherKey="MoBo_ID" Type="BUILD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PowerSupply" Member="PowerSupplies">
+    <Type Name="PowerSupply">
+      <Column Name="PowerSupply_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Manufacturer_Psu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Form Factor_Psu]" Member="Form_Factor_Psu" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[Efficiency Rating]" Member="Efficiency_Rating" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Wattage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Modular" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Psu_Price" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="Psu_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="PowerSupply_BUILD" Member="BUILDs" ThisKey="PowerSupply_ID" OtherKey="PowerSupply_ID" Type="BUILD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Select_Gpu" Member="Select_Gpus">
+    <Type Name="Select_Gpu">
+      <Column Name="Gpu_ID" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Build_ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="BUILD_Select_Gpu" Member="BUILD" ThisKey="Build_ID" OtherKey="Build_ID" Type="BUILD" IsForeignKey="true" />
+      <Association Name="Gpu_Select_Gpu" Member="Gpu" ThisKey="Gpu_ID" OtherKey="Gpu_ID" Type="Gpu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Select_Memory" Member="Select_Memories">
+    <Type Name="Select_Memory">
+      <Column Name="Build_ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Memory_ID" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="BUILD_Select_Memory" Member="BUILD" ThisKey="Build_ID" OtherKey="Build_ID" Type="BUILD" IsForeignKey="true" />
+      <Association Name="Memory_Select_Memory" Member="Memory" ThisKey="Memory_ID" OtherKey="Memory_ID" Type="Memory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Select_Storage" Member="Select_Storages">
+    <Type Name="Select_Storage">
+      <Column Name="Build_ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Storage_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="BUILD_Select_Storage" Member="BUILD" ThisKey="Build_ID" OtherKey="Build_ID" Type="BUILD" IsForeignKey="true" />
+      <Association Name="Storage_Select_Storage" Member="Storage" ThisKey="Storage_ID" OtherKey="Storage_ID" Type="Storage" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Storage" Member="Storages">
+    <Type Name="Storage">
+      <Column Name="Storage_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Manufacturer_Storage" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Capacity_storage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type_Storagre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="[Form Factor_Storage]" Member="Form_Factor_Storage" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Interface_strg" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="NVME" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Storage_Price" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="Storage_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Storage_Select_Storage" Member="Select_Storages" ThisKey="Storage_ID" OtherKey="Storage_ID" Type="Select_Storage" />
+    </Type>
+  </Table>
+</Database>
