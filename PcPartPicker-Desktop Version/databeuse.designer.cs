@@ -23,22 +23,19 @@ namespace PcPartPicker_Desktop_Version
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="projet")]
-	public partial class DataBaseDataContext : System.Data.Linq.DataContext
+	public partial class databeuseDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertADMIN(ADMIN instance);
-    partial void UpdateADMIN(ADMIN instance);
-    partial void DeleteADMIN(ADMIN instance);
-    partial void InsertUSER(USER instance);
-    partial void UpdateUSER(USER instance);
-    partial void DeleteUSER(USER instance);
     partial void InsertBUILD(BUILD instance);
     partial void UpdateBUILD(BUILD instance);
     partial void DeleteBUILD(BUILD instance);
+    partial void InsertUSER(USER instance);
+    partial void UpdateUSER(USER instance);
+    partial void DeleteUSER(USER instance);
     partial void InsertCase(Case instance);
     partial void UpdateCase(Case instance);
     partial void DeleteCase(Case instance);
@@ -74,41 +71,41 @@ namespace PcPartPicker_Desktop_Version
     partial void DeleteStorage(Storage instance);
     #endregion
 		
-		public DataBaseDataContext() : 
+		public databeuseDataContext() : 
 				base(global::PcPartPicker_Desktop_Version.Properties.Settings.Default.projetConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataBaseDataContext(string connection) : 
+		public databeuseDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataBaseDataContext(System.Data.IDbConnection connection) : 
+		public databeuseDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataBaseDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public databeuseDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataBaseDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public databeuseDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<ADMIN> ADMINs
+		public System.Data.Linq.Table<BUILD> BUILDs
 		{
 			get
 			{
-				return this.GetTable<ADMIN>();
+				return this.GetTable<BUILD>();
 			}
 		}
 		
@@ -117,14 +114,6 @@ namespace PcPartPicker_Desktop_Version
 			get
 			{
 				return this.GetTable<USER>();
-			}
-		}
-		
-		public System.Data.Linq.Table<BUILD> BUILDs
-		{
-			get
-			{
-				return this.GetTable<BUILD>();
 			}
 		}
 		
@@ -217,570 +206,6 @@ namespace PcPartPicker_Desktop_Version
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ADMIN")]
-	public partial class ADMIN : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _ADMIN_ID;
-		
-		private string _First_Name;
-		
-		private string _Last_Name;
-		
-		private System.Nullable<System.DateTime> _BirthDay;
-		
-		private string _Phone;
-		
-		private string _Email;
-		
-		private string _Adress;
-		
-		private string _Sexe;
-		
-		private string _User_Picture;
-		
-		private EntitySet<BUILD> _BUILDs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnADMIN_IDChanging(string value);
-    partial void OnADMIN_IDChanged();
-    partial void OnFirst_NameChanging(string value);
-    partial void OnFirst_NameChanged();
-    partial void OnLast_NameChanging(string value);
-    partial void OnLast_NameChanged();
-    partial void OnBirthDayChanging(System.Nullable<System.DateTime> value);
-    partial void OnBirthDayChanged();
-    partial void OnPhoneChanging(string value);
-    partial void OnPhoneChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnAdressChanging(string value);
-    partial void OnAdressChanged();
-    partial void OnSexeChanging(string value);
-    partial void OnSexeChanged();
-    partial void OnUser_PictureChanging(string value);
-    partial void OnUser_PictureChanged();
-    #endregion
-		
-		public ADMIN()
-		{
-			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ADMIN_ID", DbType="VarChar(40) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string ADMIN_ID
-		{
-			get
-			{
-				return this._ADMIN_ID;
-			}
-			set
-			{
-				if ((this._ADMIN_ID != value))
-				{
-					this.OnADMIN_IDChanging(value);
-					this.SendPropertyChanging();
-					this._ADMIN_ID = value;
-					this.SendPropertyChanged("ADMIN_ID");
-					this.OnADMIN_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="VarChar(20)")]
-		public string First_Name
-		{
-			get
-			{
-				return this._First_Name;
-			}
-			set
-			{
-				if ((this._First_Name != value))
-				{
-					this.OnFirst_NameChanging(value);
-					this.SendPropertyChanging();
-					this._First_Name = value;
-					this.SendPropertyChanged("First_Name");
-					this.OnFirst_NameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="VarChar(20)")]
-		public string Last_Name
-		{
-			get
-			{
-				return this._Last_Name;
-			}
-			set
-			{
-				if ((this._Last_Name != value))
-				{
-					this.OnLast_NameChanging(value);
-					this.SendPropertyChanging();
-					this._Last_Name = value;
-					this.SendPropertyChanged("Last_Name");
-					this.OnLast_NameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BirthDay", DbType="Date")]
-		public System.Nullable<System.DateTime> BirthDay
-		{
-			get
-			{
-				return this._BirthDay;
-			}
-			set
-			{
-				if ((this._BirthDay != value))
-				{
-					this.OnBirthDayChanging(value);
-					this.SendPropertyChanging();
-					this._BirthDay = value;
-					this.SendPropertyChanged("BirthDay");
-					this.OnBirthDayChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="VarChar(20)")]
-		public string Phone
-		{
-			get
-			{
-				return this._Phone;
-			}
-			set
-			{
-				if ((this._Phone != value))
-				{
-					this.OnPhoneChanging(value);
-					this.SendPropertyChanging();
-					this._Phone = value;
-					this.SendPropertyChanged("Phone");
-					this.OnPhoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(100)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Adress", DbType="VarChar(150)")]
-		public string Adress
-		{
-			get
-			{
-				return this._Adress;
-			}
-			set
-			{
-				if ((this._Adress != value))
-				{
-					this.OnAdressChanging(value);
-					this.SendPropertyChanging();
-					this._Adress = value;
-					this.SendPropertyChanged("Adress");
-					this.OnAdressChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sexe", DbType="Char(2)")]
-		public string Sexe
-		{
-			get
-			{
-				return this._Sexe;
-			}
-			set
-			{
-				if ((this._Sexe != value))
-				{
-					this.OnSexeChanging(value);
-					this.SendPropertyChanging();
-					this._Sexe = value;
-					this.SendPropertyChanged("Sexe");
-					this.OnSexeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_User_Picture", DbType="VarChar(50)")]
-		public string User_Picture
-		{
-			get
-			{
-				return this._User_Picture;
-			}
-			set
-			{
-				if ((this._User_Picture != value))
-				{
-					this.OnUser_PictureChanging(value);
-					this.SendPropertyChanging();
-					this._User_Picture = value;
-					this.SendPropertyChanged("User_Picture");
-					this.OnUser_PictureChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ADMIN_BUILD", Storage="_BUILDs", ThisKey="ADMIN_ID", OtherKey="ADMIN_ID")]
-		public EntitySet<BUILD> BUILDs
-		{
-			get
-			{
-				return this._BUILDs;
-			}
-			set
-			{
-				this._BUILDs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_BUILDs(BUILD entity)
-		{
-			this.SendPropertyChanging();
-			entity.ADMIN = this;
-		}
-		
-		private void detach_BUILDs(BUILD entity)
-		{
-			this.SendPropertyChanging();
-			entity.ADMIN = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[USER]")]
-	public partial class USER : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _USER_ID;
-		
-		private string _First_Name;
-		
-		private string _Last_Name;
-		
-		private System.Nullable<System.DateTime> _BirthDay;
-		
-		private string _Phone;
-		
-		private string _Email;
-		
-		private string _Adress;
-		
-		private string _Sexe;
-		
-		private string _User_Picture;
-		
-		private EntitySet<BUILD> _BUILDs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnUSER_IDChanging(string value);
-    partial void OnUSER_IDChanged();
-    partial void OnFirst_NameChanging(string value);
-    partial void OnFirst_NameChanged();
-    partial void OnLast_NameChanging(string value);
-    partial void OnLast_NameChanged();
-    partial void OnBirthDayChanging(System.Nullable<System.DateTime> value);
-    partial void OnBirthDayChanged();
-    partial void OnPhoneChanging(string value);
-    partial void OnPhoneChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnAdressChanging(string value);
-    partial void OnAdressChanged();
-    partial void OnSexeChanging(string value);
-    partial void OnSexeChanged();
-    partial void OnUser_PictureChanging(string value);
-    partial void OnUser_PictureChanged();
-    #endregion
-		
-		public USER()
-		{
-			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_ID", DbType="VarChar(40) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string USER_ID
-		{
-			get
-			{
-				return this._USER_ID;
-			}
-			set
-			{
-				if ((this._USER_ID != value))
-				{
-					this.OnUSER_IDChanging(value);
-					this.SendPropertyChanging();
-					this._USER_ID = value;
-					this.SendPropertyChanged("USER_ID");
-					this.OnUSER_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="VarChar(20)")]
-		public string First_Name
-		{
-			get
-			{
-				return this._First_Name;
-			}
-			set
-			{
-				if ((this._First_Name != value))
-				{
-					this.OnFirst_NameChanging(value);
-					this.SendPropertyChanging();
-					this._First_Name = value;
-					this.SendPropertyChanged("First_Name");
-					this.OnFirst_NameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="VarChar(20)")]
-		public string Last_Name
-		{
-			get
-			{
-				return this._Last_Name;
-			}
-			set
-			{
-				if ((this._Last_Name != value))
-				{
-					this.OnLast_NameChanging(value);
-					this.SendPropertyChanging();
-					this._Last_Name = value;
-					this.SendPropertyChanged("Last_Name");
-					this.OnLast_NameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BirthDay", DbType="Date")]
-		public System.Nullable<System.DateTime> BirthDay
-		{
-			get
-			{
-				return this._BirthDay;
-			}
-			set
-			{
-				if ((this._BirthDay != value))
-				{
-					this.OnBirthDayChanging(value);
-					this.SendPropertyChanging();
-					this._BirthDay = value;
-					this.SendPropertyChanged("BirthDay");
-					this.OnBirthDayChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="VarChar(20)")]
-		public string Phone
-		{
-			get
-			{
-				return this._Phone;
-			}
-			set
-			{
-				if ((this._Phone != value))
-				{
-					this.OnPhoneChanging(value);
-					this.SendPropertyChanging();
-					this._Phone = value;
-					this.SendPropertyChanged("Phone");
-					this.OnPhoneChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(100)")]
-		public string Email
-		{
-			get
-			{
-				return this._Email;
-			}
-			set
-			{
-				if ((this._Email != value))
-				{
-					this.OnEmailChanging(value);
-					this.SendPropertyChanging();
-					this._Email = value;
-					this.SendPropertyChanged("Email");
-					this.OnEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Adress", DbType="VarChar(150)")]
-		public string Adress
-		{
-			get
-			{
-				return this._Adress;
-			}
-			set
-			{
-				if ((this._Adress != value))
-				{
-					this.OnAdressChanging(value);
-					this.SendPropertyChanging();
-					this._Adress = value;
-					this.SendPropertyChanged("Adress");
-					this.OnAdressChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sexe", DbType="Char(2)")]
-		public string Sexe
-		{
-			get
-			{
-				return this._Sexe;
-			}
-			set
-			{
-				if ((this._Sexe != value))
-				{
-					this.OnSexeChanging(value);
-					this.SendPropertyChanging();
-					this._Sexe = value;
-					this.SendPropertyChanged("Sexe");
-					this.OnSexeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_User_Picture", DbType="VarChar(50)")]
-		public string User_Picture
-		{
-			get
-			{
-				return this._User_Picture;
-			}
-			set
-			{
-				if ((this._User_Picture != value))
-				{
-					this.OnUser_PictureChanging(value);
-					this.SendPropertyChanging();
-					this._User_Picture = value;
-					this.SendPropertyChanged("User_Picture");
-					this.OnUser_PictureChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="USER_BUILD", Storage="_BUILDs", ThisKey="USER_ID", OtherKey="USER_ID")]
-		public EntitySet<BUILD> BUILDs
-		{
-			get
-			{
-				return this._BUILDs;
-			}
-			set
-			{
-				this._BUILDs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_BUILDs(BUILD entity)
-		{
-			this.SendPropertyChanging();
-			entity.USER = this;
-		}
-		
-		private void detach_BUILDs(BUILD entity)
-		{
-			this.SendPropertyChanging();
-			entity.USER = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BUILD")]
 	public partial class BUILD : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -807,15 +232,11 @@ namespace PcPartPicker_Desktop_Version
 		
 		private System.Nullable<short> _Bootable;
 		
-		private string _ADMIN_ID;
-		
 		private EntitySet<Select_Gpu> _Select_Gpus;
 		
 		private EntitySet<Select_Memory> _Select_Memories;
 		
 		private EntitySet<Select_Storage> _Select_Storages;
-		
-		private EntityRef<ADMIN> _ADMIN;
 		
 		private EntityRef<USER> _USER;
 		
@@ -853,8 +274,6 @@ namespace PcPartPicker_Desktop_Version
     partial void OnTotal_WattChanged();
     partial void OnBootableChanging(System.Nullable<short> value);
     partial void OnBootableChanged();
-    partial void OnADMIN_IDChanging(string value);
-    partial void OnADMIN_IDChanged();
     #endregion
 		
 		public BUILD()
@@ -862,7 +281,6 @@ namespace PcPartPicker_Desktop_Version
 			this._Select_Gpus = new EntitySet<Select_Gpu>(new Action<Select_Gpu>(this.attach_Select_Gpus), new Action<Select_Gpu>(this.detach_Select_Gpus));
 			this._Select_Memories = new EntitySet<Select_Memory>(new Action<Select_Memory>(this.attach_Select_Memories), new Action<Select_Memory>(this.detach_Select_Memories));
 			this._Select_Storages = new EntitySet<Select_Storage>(new Action<Select_Storage>(this.attach_Select_Storages), new Action<Select_Storage>(this.detach_Select_Storages));
-			this._ADMIN = default(EntityRef<ADMIN>);
 			this._USER = default(EntityRef<USER>);
 			this._Case = default(EntityRef<Case>);
 			this._Cpu = default(EntityRef<Cpu>);
@@ -1096,30 +514,6 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ADMIN_ID", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
-		public string ADMIN_ID
-		{
-			get
-			{
-				return this._ADMIN_ID;
-			}
-			set
-			{
-				if ((this._ADMIN_ID != value))
-				{
-					if (this._ADMIN.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnADMIN_IDChanging(value);
-					this.SendPropertyChanging();
-					this._ADMIN_ID = value;
-					this.SendPropertyChanged("ADMIN_ID");
-					this.OnADMIN_IDChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Gpu", Storage="_Select_Gpus", ThisKey="Build_ID", OtherKey="Build_ID")]
 		public EntitySet<Select_Gpu> Select_Gpus
 		{
@@ -1156,40 +550,6 @@ namespace PcPartPicker_Desktop_Version
 			set
 			{
 				this._Select_Storages.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ADMIN_BUILD", Storage="_ADMIN", ThisKey="ADMIN_ID", OtherKey="ADMIN_ID", IsForeignKey=true)]
-		public ADMIN ADMIN
-		{
-			get
-			{
-				return this._ADMIN.Entity;
-			}
-			set
-			{
-				ADMIN previousValue = this._ADMIN.Entity;
-				if (((previousValue != value) 
-							|| (this._ADMIN.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ADMIN.Entity = null;
-						previousValue.BUILDs.Remove(this);
-					}
-					this._ADMIN.Entity = value;
-					if ((value != null))
-					{
-						value.BUILDs.Add(this);
-						this._ADMIN_ID = value.ADMIN_ID;
-					}
-					else
-					{
-						this._ADMIN_ID = default(string);
-					}
-					this.SendPropertyChanged("ADMIN");
-				}
 			}
 		}
 		
@@ -1454,6 +814,360 @@ namespace PcPartPicker_Desktop_Version
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[USER]")]
+	public partial class USER : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _USER_ID;
+		
+		private string _First_Name;
+		
+		private string _Last_Name;
+		
+		private System.Nullable<System.DateTime> _BirthDay;
+		
+		private string _Phone;
+		
+		private string _Email;
+		
+		private string _Adress;
+		
+		private string _Sexe;
+		
+		private string _User_Picture;
+		
+		private string _ROLE;
+		
+		private string _USERNAME;
+		
+		private string _PASSWORD;
+		
+		private EntitySet<BUILD> _BUILDs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUSER_IDChanging(string value);
+    partial void OnUSER_IDChanged();
+    partial void OnFirst_NameChanging(string value);
+    partial void OnFirst_NameChanged();
+    partial void OnLast_NameChanging(string value);
+    partial void OnLast_NameChanged();
+    partial void OnBirthDayChanging(System.Nullable<System.DateTime> value);
+    partial void OnBirthDayChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnAdressChanging(string value);
+    partial void OnAdressChanged();
+    partial void OnSexeChanging(string value);
+    partial void OnSexeChanged();
+    partial void OnUser_PictureChanging(string value);
+    partial void OnUser_PictureChanged();
+    partial void OnROLEChanging(string value);
+    partial void OnROLEChanged();
+    partial void OnUSERNAMEChanging(string value);
+    partial void OnUSERNAMEChanged();
+    partial void OnPASSWORDChanging(string value);
+    partial void OnPASSWORDChanged();
+    #endregion
+		
+		public USER()
+		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_ID", DbType="VarChar(40) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string USER_ID
+		{
+			get
+			{
+				return this._USER_ID;
+			}
+			set
+			{
+				if ((this._USER_ID != value))
+				{
+					this.OnUSER_IDChanging(value);
+					this.SendPropertyChanging();
+					this._USER_ID = value;
+					this.SendPropertyChanged("USER_ID");
+					this.OnUSER_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_First_Name", DbType="VarChar(20)")]
+		public string First_Name
+		{
+			get
+			{
+				return this._First_Name;
+			}
+			set
+			{
+				if ((this._First_Name != value))
+				{
+					this.OnFirst_NameChanging(value);
+					this.SendPropertyChanging();
+					this._First_Name = value;
+					this.SendPropertyChanged("First_Name");
+					this.OnFirst_NameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Last_Name", DbType="VarChar(20)")]
+		public string Last_Name
+		{
+			get
+			{
+				return this._Last_Name;
+			}
+			set
+			{
+				if ((this._Last_Name != value))
+				{
+					this.OnLast_NameChanging(value);
+					this.SendPropertyChanging();
+					this._Last_Name = value;
+					this.SendPropertyChanged("Last_Name");
+					this.OnLast_NameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BirthDay", DbType="Date")]
+		public System.Nullable<System.DateTime> BirthDay
+		{
+			get
+			{
+				return this._BirthDay;
+			}
+			set
+			{
+				if ((this._BirthDay != value))
+				{
+					this.OnBirthDayChanging(value);
+					this.SendPropertyChanging();
+					this._BirthDay = value;
+					this.SendPropertyChanged("BirthDay");
+					this.OnBirthDayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="VarChar(20)")]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(100)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Adress", DbType="VarChar(150)")]
+		public string Adress
+		{
+			get
+			{
+				return this._Adress;
+			}
+			set
+			{
+				if ((this._Adress != value))
+				{
+					this.OnAdressChanging(value);
+					this.SendPropertyChanging();
+					this._Adress = value;
+					this.SendPropertyChanged("Adress");
+					this.OnAdressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sexe", DbType="Char(2)")]
+		public string Sexe
+		{
+			get
+			{
+				return this._Sexe;
+			}
+			set
+			{
+				if ((this._Sexe != value))
+				{
+					this.OnSexeChanging(value);
+					this.SendPropertyChanging();
+					this._Sexe = value;
+					this.SendPropertyChanged("Sexe");
+					this.OnSexeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_User_Picture", DbType="VarChar(50)")]
+		public string User_Picture
+		{
+			get
+			{
+				return this._User_Picture;
+			}
+			set
+			{
+				if ((this._User_Picture != value))
+				{
+					this.OnUser_PictureChanging(value);
+					this.SendPropertyChanging();
+					this._User_Picture = value;
+					this.SendPropertyChanged("User_Picture");
+					this.OnUser_PictureChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ROLE", DbType="VarChar(50)")]
+		public string ROLE
+		{
+			get
+			{
+				return this._ROLE;
+			}
+			set
+			{
+				if ((this._ROLE != value))
+				{
+					this.OnROLEChanging(value);
+					this.SendPropertyChanging();
+					this._ROLE = value;
+					this.SendPropertyChanged("ROLE");
+					this.OnROLEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="VarChar(40)")]
+		public string USERNAME
+		{
+			get
+			{
+				return this._USERNAME;
+			}
+			set
+			{
+				if ((this._USERNAME != value))
+				{
+					this.OnUSERNAMEChanging(value);
+					this.SendPropertyChanging();
+					this._USERNAME = value;
+					this.SendPropertyChanged("USERNAME");
+					this.OnUSERNAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORD", DbType="VarChar(40)")]
+		public string PASSWORD
+		{
+			get
+			{
+				return this._PASSWORD;
+			}
+			set
+			{
+				if ((this._PASSWORD != value))
+				{
+					this.OnPASSWORDChanging(value);
+					this.SendPropertyChanging();
+					this._PASSWORD = value;
+					this.SendPropertyChanged("PASSWORD");
+					this.OnPASSWORDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="USER_BUILD", Storage="_BUILDs", ThisKey="USER_ID", OtherKey="USER_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.USER = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.USER = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[Case]")]
 	public partial class Case : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1467,8 +1181,6 @@ namespace PcPartPicker_Desktop_Version
 		private string _Type_Case;
 		
 		private string _Side_Panel_Window;
-		
-		private System.Nullable<short> _Power_Supply_Shroud;
 		
 		private System.Nullable<float> _Volume;
 		
@@ -1490,8 +1202,6 @@ namespace PcPartPicker_Desktop_Version
     partial void OnType_CaseChanged();
     partial void OnSide_Panel_WindowChanging(string value);
     partial void OnSide_Panel_WindowChanged();
-    partial void OnPower_Supply_ShroudChanging(System.Nullable<short> value);
-    partial void OnPower_Supply_ShroudChanged();
     partial void OnVolumeChanging(System.Nullable<float> value);
     partial void OnVolumeChanged();
     partial void OnCase_PriceChanging(System.Nullable<decimal> value);
@@ -1582,26 +1292,6 @@ namespace PcPartPicker_Desktop_Version
 					this._Side_Panel_Window = value;
 					this.SendPropertyChanged("Side_Panel_Window");
 					this.OnSide_Panel_WindowChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Power Supply Shroud]", Storage="_Power_Supply_Shroud", DbType="SmallInt")]
-		public System.Nullable<short> Power_Supply_Shroud
-		{
-			get
-			{
-				return this._Power_Supply_Shroud;
-			}
-			set
-			{
-				if ((this._Power_Supply_Shroud != value))
-				{
-					this.OnPower_Supply_ShroudChanging(value);
-					this.SendPropertyChanging();
-					this._Power_Supply_Shroud = value;
-					this.SendPropertyChanged("Power_Supply_Shroud");
-					this.OnPower_Supply_ShroudChanged();
 				}
 			}
 		}
