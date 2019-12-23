@@ -28,7 +28,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void label5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void panelRight_Paint(object sender, PaintEventArgs e)
@@ -49,6 +49,7 @@ namespace PcPartPicker_Desktop_Version
             {
                 Main a = new Main(bunifuMaterialTextbox1.Text,bunifuMaterialTextbox2.Text);
                 a.Show();
+                this.Hide();
              
             }else
             {
