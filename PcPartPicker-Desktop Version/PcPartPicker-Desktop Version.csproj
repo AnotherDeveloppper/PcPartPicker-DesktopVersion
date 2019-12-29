@@ -143,6 +143,30 @@
   <ItemGroup>
     <None Include="Resources\X2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full pc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full-pc-white-small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full-pc-white-big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-white-big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gpu-white-big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gpu-small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoPart2Big.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
