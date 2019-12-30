@@ -62,6 +62,11 @@ namespace PcPartPicker_Desktop_Version
 
         }
 
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
             var q = from a in db.USERs

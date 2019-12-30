@@ -163,6 +163,26 @@ namespace PcPartPicker_Desktop_Version.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoPart3Big {
+            get {
+                object obj = ResourceManager.GetObject("logoPart3Big", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoPart3Big1 {
+            get {
+                object obj = ResourceManager.GetObject("logoPart3Big1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu {
             get {
                 object obj = ResourceManager.GetObject("menu", resourceCulture);
@@ -216,6 +236,16 @@ namespace PcPartPicker_Desktop_Version.Properties {
         internal static System.Drawing.Bitmap téléchargement__1_ {
             get {
                 object obj = ResourceManager.GetObject("téléchargement (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unitlited {
+            get {
+                object obj = ResourceManager.GetObject("unitlited", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
