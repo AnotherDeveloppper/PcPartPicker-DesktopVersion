@@ -63,6 +63,16 @@ namespace PcPartPicker_Desktop_Version.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap config_Big {
+            get {
+                object obj = ResourceManager.GetObject("config-Big", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cpu_white {
             get {
                 object obj = ResourceManager.GetObject("cpu-white", resourceCulture);
@@ -206,6 +216,16 @@ namespace PcPartPicker_Desktop_Version.Properties {
         internal static System.Drawing.Bitmap téléchargement__1_ {
             get {
                 object obj = ResourceManager.GetObject("téléchargement (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

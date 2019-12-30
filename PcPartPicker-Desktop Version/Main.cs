@@ -39,10 +39,14 @@ namespace PcPartPicker_Desktop_Version
         {
             if (loop%2 == 0){
                 sider.Width = 281;
+
+                bunifuImageButton1.Location = new Point(227, 93);
             }
             else
             {
+
                 sider.Width = 56;
+                bunifuImageButton1.Location = new Point(5, 93);
 
             }
             loop++;
@@ -63,7 +67,10 @@ namespace PcPartPicker_Desktop_Version
             var q = from a in db.USERs
                     where a.USERNAME == name && a.PASSWORD == password
                     select a;
-         
+
+            bunifuFlatButton2.Text = "                  " + name;
+
+
         }
     }
 }
