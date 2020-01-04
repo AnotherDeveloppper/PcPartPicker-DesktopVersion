@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace PcPartPicker_Desktop_Version
 {
-    public partial class Main : Form
+    public partial class UserAccount : Form
     {
         databeuseDataContext db = new databeuseDataContext();
         string name, password;
         int loop =1; 
-        public Main(String a, String b)
+        public UserAccount(String a, String b)
         {
             InitializeComponent();
             name = a;
@@ -54,7 +54,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -65,35 +65,6 @@ namespace PcPartPicker_Desktop_Version
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
-        {
-            NewBuild n = new NewBuild(name,password);
-            n.ShowDialog();
-        }
-
-        private void Workhere_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            YourBuilds y = new YourBuilds(name, password);
-            y.ShowDialog();
-        }
-
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
-        {
-            AllParts a = new AllParts(name, password);
-            a.ShowDialog();
-        }
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            UserAccount u = new UserAccount(name, password);
-            u.ShowDialog();
         }
 
         private void Main_Load(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace PcPartPicker_Desktop_Version
 {
-    partial class Main
+    partial class AllParts
     {
         /// <summary>
         /// Required designer variable.
@@ -157,7 +157,6 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuFlatButton5
             // 
@@ -195,7 +194,6 @@
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton5.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
             // 
             // bunifuFlatButton4
             // 
@@ -322,7 +320,6 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // Main
             // 
