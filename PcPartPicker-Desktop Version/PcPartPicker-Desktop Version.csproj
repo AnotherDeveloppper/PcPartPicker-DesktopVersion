@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AllParts.Designer.cs">
+      <DependentUpon>AllParts.cs</DependentUpon>
+    </Compile>
     <Compile Include="databeuse.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -65,29 +71,11 @@
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllParts.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Part.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AllParts.Designer.cs">
-      <DependentUpon>AllParts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserAccount.Designer.cs">
-      <DependentUpon>UserAccount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="YourBuilds.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="YourBuilds.Designer.cs">
-      <DependentUpon>YourBuilds.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NewBuild.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewBuild.Designer.cs">
-      <DependentUpon>NewBuild.cs</DependentUpon>
+    <Compile Include="Part.Designer.cs">
+      <DependentUpon>Part.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -100,20 +88,14 @@
     <None Include="databeuse.dbml.layout">
       <DependentUpon>databeuse.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="LoginScreen.resx">
-      <DependentUpon>LoginScreen.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AllParts.resx">
       <DependentUpon>AllParts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserAccount.resx">
-      <DependentUpon>UserAccount.cs</DependentUpon>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="YourBuilds.resx">
-      <DependentUpon>YourBuilds.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewBuild.resx">
-      <DependentUpon>NewBuild.cs</DependentUpon>
+    <EmbeddedResource Include="Part.resx">
+      <DependentUpon>Part.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -217,6 +199,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\unitlited.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_174.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

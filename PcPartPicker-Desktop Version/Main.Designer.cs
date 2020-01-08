@@ -32,6 +32,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.toper = new System.Windows.Forms.Panel();
+            this.naming = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.sider = new System.Windows.Forms.Panel();
             this.Workhere = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,6 +45,7 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toper.SuspendLayout();
             this.sider.SuspendLayout();
+            this.Workhere.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -64,12 +66,23 @@
             // toper
             // 
             this.toper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.toper.Controls.Add(this.naming);
             this.toper.Controls.Add(this.bunifuImageButton2);
             this.toper.Dock = System.Windows.Forms.DockStyle.Top;
             this.toper.Location = new System.Drawing.Point(281, 0);
             this.toper.Name = "toper";
             this.toper.Size = new System.Drawing.Size(645, 78);
             this.toper.TabIndex = 1;
+            // 
+            // naming
+            // 
+            this.naming.AutoSize = true;
+            this.naming.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.naming.ForeColor = System.Drawing.Color.White;
+            this.naming.Location = new System.Drawing.Point(6, 12);
+            this.naming.Name = "naming";
+            this.naming.Size = new System.Drawing.Size(0, 30);
+            this.naming.TabIndex = 6;
             // 
             // sider
             // 
@@ -233,6 +246,7 @@
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // bunifuFlatButton3
             // 
@@ -324,6 +338,10 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
+            // allParts1
+            // 
+   
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,7 +357,9 @@
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.toper.ResumeLayout(false);
+            this.toper.PerformLayout();
             this.sider.ResumeLayout(false);
+            this.Workhere.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
@@ -361,5 +381,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.Panel Workhere;
+        private Bunifu.Framework.UI.BunifuCustomLabel naming;
     }
 }

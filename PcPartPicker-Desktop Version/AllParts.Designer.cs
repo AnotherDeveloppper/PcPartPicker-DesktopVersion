@@ -2,12 +2,12 @@
 {
     partial class AllParts
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,343 +20,316 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.toper = new System.Windows.Forms.Panel();
-            this.sider = new System.Windows.Forms.Panel();
-            this.Workhere = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllParts));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tbSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.toper.SuspendLayout();
-            this.sider.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            this.cbCPU = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbRAM = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.cbMobo = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.bunifuCheckbox4 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.cbStorage = new System.Windows.Forms.Label();
+            this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCheckbox6 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.cbGPU = new System.Windows.Forms.Label();
+            this.cbPSU = new System.Windows.Forms.Label();
+            this.bunifuCheckbox7 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.cbCase = new System.Windows.Forms.Label();
+            this.bunifuCheckbox5 = new Bunifu.Framework.UI.BunifuCheckbox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuElipse1
+            // panel1
             // 
-            this.bunifuElipse1.ElipseRadius = 25;
-            this.bunifuElipse1.TargetControl = this;
+            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.ForeColor = System.Drawing.Color.Crimson;
+            this.panel1.Location = new System.Drawing.Point(11, 11);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(16, 458);
+            this.panel1.TabIndex = 0;
             // 
-            // bunifuDragControl1
+            // panel2
             // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.toper;
-            this.bunifuDragControl1.Vertical = true;
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Location = new System.Drawing.Point(33, 11);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(454, 444);
+            this.panel2.TabIndex = 1;
             // 
-            // toper
+            // tbSearch
             // 
-            this.toper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.toper.Controls.Add(this.bunifuImageButton2);
-            this.toper.Dock = System.Windows.Forms.DockStyle.Top;
-            this.toper.Location = new System.Drawing.Point(281, 0);
-            this.toper.Name = "toper";
-            this.toper.Size = new System.Drawing.Size(645, 78);
-            this.toper.TabIndex = 1;
-            // 
-            // sider
-            // 
-            this.sider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.sider.Controls.Add(this.bunifuFlatButton2);
-            this.sider.Controls.Add(this.bunifuFlatButton5);
-            this.sider.Controls.Add(this.bunifuFlatButton4);
-            this.sider.Controls.Add(this.bunifuFlatButton3);
-            this.sider.Controls.Add(this.bunifuImageButton1);
-            this.sider.Controls.Add(this.bunifuFlatButton1);
-            this.sider.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sider.Location = new System.Drawing.Point(0, 0);
-            this.sider.Name = "sider";
-            this.sider.Size = new System.Drawing.Size(281, 620);
-            this.sider.TabIndex = 0;
-            // 
-            // Workhere
-            // 
-            this.Workhere.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Workhere.Location = new System.Drawing.Point(0, 0);
-            this.Workhere.Name = "Workhere";
-            this.Workhere.Size = new System.Drawing.Size(926, 620);
-            this.Workhere.TabIndex = 2;
-            this.Workhere.Paint += new System.Windows.Forms.PaintEventHandler(this.Workhere_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.pictureBox1.ErrorImage = global::PcPartPicker_Desktop_Version.Properties.Resources.LogoMedium;
-            this.pictureBox1.Image = global::PcPartPicker_Desktop_Version.Properties.Resources.unitlited;
-            this.pictureBox1.InitialImage = global::PcPartPicker_Desktop_Version.Properties.Resources.LogoMedium;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(281, 78);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.bunifuImageButton2.Image = global::PcPartPicker_Desktop_Version.Properties.Resources.X2;
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(572, 12);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(61, 48);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 5;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 25;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = global::PcPartPicker_Desktop_Version.Properties.Resources.user;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 60D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(0, 567);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(281, 48);
-            this.bunifuFlatButton2.TabIndex = 8;
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            // 
-            // bunifuFlatButton5
-            // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "                  All Parts";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = global::PcPartPicker_Desktop_Version.Properties.Resources.cpu_white;
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 0;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = true;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = true;
-            this.bunifuFlatButton5.IconZoom = 60D;
-            this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 309);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(281, 48);
-            this.bunifuFlatButton5.TabIndex = 7;
-            this.bunifuFlatButton5.Text = "                  All Parts";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            // 
-            // bunifuFlatButton4
-            // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "      Completed Builds";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = global::PcPartPicker_Desktop_Version.Properties.Resources.full_pc_white_big;
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = true;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 60D;
-            this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 251);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(281, 48);
-            this.bunifuFlatButton4.TabIndex = 6;
-            this.bunifuFlatButton4.Text = "      Completed Builds";
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            // 
-            // bunifuFlatButton3
-            // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "                  New Build";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = global::PcPartPicker_Desktop_Version.Properties.Resources.config_Big;
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 60D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 193);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(281, 48);
-            this.bunifuFlatButton3.TabIndex = 5;
-            this.bunifuFlatButton3.Text = "                  New Build";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
+            this.tbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbSearch.HintForeColor = System.Drawing.Color.Empty;
+            this.tbSearch.HintText = "";
+            this.tbSearch.isPassword = false;
+            this.tbSearch.LineFocusedColor = System.Drawing.Color.Blue;
+            this.tbSearch.LineIdleColor = System.Drawing.Color.Gray;
+            this.tbSearch.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.tbSearch.LineThickness = 3;
+            this.tbSearch.Location = new System.Drawing.Point(11, 479);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(535, 44);
+            this.tbSearch.TabIndex = 2;
+            this.tbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuImageButton1
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuImageButton1.Image = global::PcPartPicker_Desktop_Version.Properties.Resources.menu3;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(230, 84);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(553, 476);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(39, 34);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(74, 47);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 4;
+            this.bunifuImageButton1.TabIndex = 3;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // bunifuFlatButton1
+            // cbCPU
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "                 Your Builds";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::PcPartPicker_Desktop_Version.Properties.Resources.home_white_big;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 60D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 135);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(281, 48);
-            this.bunifuFlatButton1.TabIndex = 3;
-            this.bunifuFlatButton1.Text = "                 Your Builds";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.cbCPU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbCPU.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbCPU.Checked = true;
+            this.cbCPU.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbCPU.ForeColor = System.Drawing.Color.White;
+            this.cbCPU.Location = new System.Drawing.Point(493, 53);
+            this.cbCPU.Name = "cbCPU";
+            this.cbCPU.Size = new System.Drawing.Size(20, 20);
+            this.cbCPU.TabIndex = 4;
             // 
-            // Main
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.label1.Location = new System.Drawing.Point(533, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Processor";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.label2.Location = new System.Drawing.Point(533, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Memory";
+            // 
+            // cbRAM
+            // 
+            this.cbRAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbRAM.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbRAM.Checked = true;
+            this.cbRAM.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbRAM.ForeColor = System.Drawing.Color.White;
+            this.cbRAM.Location = new System.Drawing.Point(493, 79);
+            this.cbRAM.Name = "cbRAM";
+            this.cbRAM.Size = new System.Drawing.Size(20, 20);
+            this.cbRAM.TabIndex = 6;
+            // 
+            // cbMobo
+            // 
+            this.cbMobo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbMobo.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbMobo.Checked = true;
+            this.cbMobo.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbMobo.ForeColor = System.Drawing.Color.White;
+            this.cbMobo.Location = new System.Drawing.Point(493, 105);
+            this.cbMobo.Name = "cbMobo";
+            this.cbMobo.Size = new System.Drawing.Size(20, 20);
+            this.cbMobo.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.label4.Location = new System.Drawing.Point(533, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Motherboard";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.label5.Location = new System.Drawing.Point(533, 134);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 17);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "CPU Cooler";
+            // 
+            // bunifuCheckbox4
+            // 
+            this.bunifuCheckbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox4.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.bunifuCheckbox4.Checked = true;
+            this.bunifuCheckbox4.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox4.ForeColor = System.Drawing.Color.White;
+            this.bunifuCheckbox4.Location = new System.Drawing.Point(493, 131);
+            this.bunifuCheckbox4.Name = "bunifuCheckbox4";
+            this.bunifuCheckbox4.Size = new System.Drawing.Size(20, 20);
+            this.bunifuCheckbox4.TabIndex = 10;
+            // 
+            // cbStorage
+            // 
+            this.cbStorage.AutoSize = true;
+            this.cbStorage.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbStorage.Location = new System.Drawing.Point(533, 157);
+            this.cbStorage.Name = "cbStorage";
+            this.cbStorage.Size = new System.Drawing.Size(58, 17);
+            this.cbStorage.TabIndex = 13;
+            this.cbStorage.Text = "Storage";
+            // 
+            // bunifuCheckbox2
+            // 
+            this.bunifuCheckbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox2.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.bunifuCheckbox2.Checked = true;
+            this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox2.ForeColor = System.Drawing.Color.White;
+            this.bunifuCheckbox2.Location = new System.Drawing.Point(493, 157);
+            this.bunifuCheckbox2.Name = "bunifuCheckbox2";
+            this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
+            this.bunifuCheckbox2.TabIndex = 12;
+            // 
+            // bunifuCheckbox6
+            // 
+            this.bunifuCheckbox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox6.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.bunifuCheckbox6.Checked = true;
+            this.bunifuCheckbox6.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox6.ForeColor = System.Drawing.Color.White;
+            this.bunifuCheckbox6.Location = new System.Drawing.Point(493, 183);
+            this.bunifuCheckbox6.Name = "bunifuCheckbox6";
+            this.bunifuCheckbox6.Size = new System.Drawing.Size(20, 20);
+            this.bunifuCheckbox6.TabIndex = 14;
+            // 
+            // cbGPU
+            // 
+            this.cbGPU.AutoSize = true;
+            this.cbGPU.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbGPU.Location = new System.Drawing.Point(533, 183);
+            this.cbGPU.Name = "cbGPU";
+            this.cbGPU.Size = new System.Drawing.Size(97, 17);
+            this.cbGPU.TabIndex = 15;
+            this.cbGPU.Text = "Graphic Card";
+            // 
+            // cbPSU
+            // 
+            this.cbPSU.AutoSize = true;
+            this.cbPSU.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbPSU.Location = new System.Drawing.Point(533, 209);
+            this.cbPSU.Name = "cbPSU";
+            this.cbPSU.Size = new System.Drawing.Size(94, 17);
+            this.cbPSU.TabIndex = 17;
+            this.cbPSU.Text = "Power Supply";
+            // 
+            // bunifuCheckbox7
+            // 
+            this.bunifuCheckbox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox7.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.bunifuCheckbox7.Checked = true;
+            this.bunifuCheckbox7.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox7.ForeColor = System.Drawing.Color.White;
+            this.bunifuCheckbox7.Location = new System.Drawing.Point(493, 209);
+            this.bunifuCheckbox7.Name = "bunifuCheckbox7";
+            this.bunifuCheckbox7.Size = new System.Drawing.Size(20, 20);
+            this.bunifuCheckbox7.TabIndex = 16;
+            // 
+            // cbCase
+            // 
+            this.cbCase.AutoSize = true;
+            this.cbCase.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbCase.Location = new System.Drawing.Point(533, 235);
+            this.cbCase.Name = "cbCase";
+            this.cbCase.Size = new System.Drawing.Size(41, 17);
+            this.cbCase.TabIndex = 19;
+            this.cbCase.Text = "Case";
+            // 
+            // bunifuCheckbox5
+            // 
+            this.bunifuCheckbox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox5.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.bunifuCheckbox5.Checked = true;
+            this.bunifuCheckbox5.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox5.ForeColor = System.Drawing.Color.White;
+            this.bunifuCheckbox5.Location = new System.Drawing.Point(493, 235);
+            this.bunifuCheckbox5.Name = "bunifuCheckbox5";
+            this.bunifuCheckbox5.Size = new System.Drawing.Size(20, 20);
+            this.bunifuCheckbox5.TabIndex = 18;
+            // 
+            // AllParts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(926, 620);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.toper);
-            this.Controls.Add(this.sider);
-            this.Controls.Add(this.Workhere);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Main";
-            this.Text = "Main";
-            this.Load += new System.EventHandler(this.Main_Load);
-            this.toper.ResumeLayout(false);
-            this.sider.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            this.Controls.Add(this.cbCase);
+            this.Controls.Add(this.bunifuCheckbox5);
+            this.Controls.Add(this.cbPSU);
+            this.Controls.Add(this.bunifuCheckbox7);
+            this.Controls.Add(this.cbGPU);
+            this.Controls.Add(this.bunifuCheckbox6);
+            this.Controls.Add(this.cbStorage);
+            this.Controls.Add(this.bunifuCheckbox2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.bunifuCheckbox4);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbMobo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbRAM);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbCPU);
+            this.Controls.Add(this.bunifuImageButton1);
+            this.Controls.Add(this.tbSearch);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Name = "AllParts";
+            this.Size = new System.Drawing.Size(645, 542);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.Windows.Forms.Panel toper;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private System.Windows.Forms.Panel sider;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox tbSearch;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private System.Windows.Forms.Panel Workhere;
+        private Bunifu.Framework.UI.BunifuCheckbox cbCPU;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuCheckbox cbRAM;
+        private Bunifu.Framework.UI.BunifuCheckbox cbMobo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox4;
+        private System.Windows.Forms.Label cbStorage;
+        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
+        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox6;
+        private System.Windows.Forms.Label cbGPU;
+        private System.Windows.Forms.Label cbPSU;
+        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox7;
+        private System.Windows.Forms.Label cbCase;
+        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox5;
     }
 }

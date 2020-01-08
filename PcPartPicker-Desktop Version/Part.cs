@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PcPartPicker_Desktop_Version
 {
-    public partial class AllParts : UserControl
+    public partial class Part : UserControl
     {
-        public AllParts()
+        public Part()
         {
             InitializeComponent();
         }

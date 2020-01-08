@@ -39,10 +39,10 @@ namespace PcPartPicker_Desktop_Version
         private void button1_Click(object sender, EventArgs e)
         {
             var q = from a in db.USERs
-                    where bunifuMaterialTextbox1.Text ==a.USERNAME && bunifuMaterialTextbox2.Text ==a.PASSWORD
+                    where bunifuMaterialTextbox1.Text ==a.UserName && bunifuMaterialTextbox2.Text ==a.Password
                     select a;
             var c = from b in db.USERs
-                    where bunifuMaterialTextbox1.Text == b.USERNAME && bunifuMaterialTextbox2.Text == b.PASSWORD
+                    where bunifuMaterialTextbox1.Text == b.UserName && bunifuMaterialTextbox2.Text == b.Password
                     select new { b.USER_ID };
 
             if (q.Count() > 0)

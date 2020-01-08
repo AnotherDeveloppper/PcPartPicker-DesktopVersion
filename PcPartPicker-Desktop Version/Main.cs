@@ -69,8 +69,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            NewBuild n = new NewBuild(name,password);
-            n.ShowDialog();
+            naming.Text = bunifuFlatButton3.Text;
         }
 
         private void Workhere_Paint(object sender, PaintEventArgs e)
@@ -80,30 +79,35 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            YourBuilds y = new YourBuilds(name, password);
-            y.ShowDialog();
+            naming.Text = bunifuFlatButton1.Text;
         }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
-            AllParts a = new AllParts(name, password);
-            a.ShowDialog();
+            naming.Text = bunifuFlatButton5.Text;
+         //   allParts1.BringToFront();
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            UserAccount u = new UserAccount(name, password);
-            u.ShowDialog();
+            naming.Text = bunifuFlatButton2.Text;
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            naming.Text = bunifuFlatButton4.Text;
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
             var q = from a in db.USERs
-                    where a.USERNAME == name && a.PASSWORD == password
+                    where a.UserName == name && a.Password == password
                     select a;
 
             bunifuFlatButton2.Text = "                  " + name;
 
+
+           
 
         }
     }

@@ -212,7 +212,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _Build_ID;
+		private int _Build_ID;
+		
+		private string _Build_Name;
 		
 		private string _Case_ID;
 		
@@ -224,13 +226,13 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _MoBo_ID;
 		
-		private string _USER_ID;
+		private int _USER_ID;
 		
-		private System.Nullable<decimal> _Total_Price;
+		private System.Nullable<double> _Total_Price;
 		
 		private System.Nullable<decimal> _Total_Watt;
 		
-		private System.Nullable<short> _Bootable;
+		private string _Bootable;
 		
 		private EntitySet<Select_Gpu> _Select_Gpus;
 		
@@ -254,8 +256,10 @@ namespace PcPartPicker_Desktop_Version
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnBuild_IDChanging(string value);
+    partial void OnBuild_IDChanging(int value);
     partial void OnBuild_IDChanged();
+    partial void OnBuild_NameChanging(string value);
+    partial void OnBuild_NameChanged();
     partial void OnCase_IDChanging(string value);
     partial void OnCase_IDChanged();
     partial void OnPowerSupply_IDChanging(string value);
@@ -266,13 +270,13 @@ namespace PcPartPicker_Desktop_Version
     partial void OnCpu_IDChanged();
     partial void OnMoBo_IDChanging(string value);
     partial void OnMoBo_IDChanged();
-    partial void OnUSER_IDChanging(string value);
+    partial void OnUSER_IDChanging(int value);
     partial void OnUSER_IDChanged();
-    partial void OnTotal_PriceChanging(System.Nullable<decimal> value);
+    partial void OnTotal_PriceChanging(System.Nullable<double> value);
     partial void OnTotal_PriceChanged();
     partial void OnTotal_WattChanging(System.Nullable<decimal> value);
     partial void OnTotal_WattChanged();
-    partial void OnBootableChanging(System.Nullable<short> value);
+    partial void OnBootableChanging(string value);
     partial void OnBootableChanged();
     #endregion
 		
@@ -290,8 +294,8 @@ namespace PcPartPicker_Desktop_Version
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string Build_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Build_ID
 		{
 			get
 			{
@@ -306,6 +310,26 @@ namespace PcPartPicker_Desktop_Version
 					this._Build_ID = value;
 					this.SendPropertyChanged("Build_ID");
 					this.OnBuild_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_Name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Build_Name
+		{
+			get
+			{
+				return this._Build_Name;
+			}
+			set
+			{
+				if ((this._Build_Name != value))
+				{
+					this.OnBuild_NameChanging(value);
+					this.SendPropertyChanging();
+					this._Build_Name = value;
+					this.SendPropertyChanged("Build_Name");
+					this.OnBuild_NameChanged();
 				}
 			}
 		}
@@ -430,8 +454,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_ID", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
-		public string USER_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_ID", DbType="Int NOT NULL")]
+		public int USER_ID
 		{
 			get
 			{
@@ -454,8 +478,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total_Price", DbType="Decimal(10,0)")]
-		public System.Nullable<decimal> Total_Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total_Price", DbType="Float")]
+		public System.Nullable<double> Total_Price
 		{
 			get
 			{
@@ -494,8 +518,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Bootable", DbType="SmallInt")]
-		public System.Nullable<short> Bootable
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Bootable", DbType="VarChar(10)")]
+		public string Bootable
 		{
 			get
 			{
@@ -580,7 +604,7 @@ namespace PcPartPicker_Desktop_Version
 					}
 					else
 					{
-						this._USER_ID = default(string);
+						this._USER_ID = default(int);
 					}
 					this.SendPropertyChanged("USER");
 				}
@@ -820,7 +844,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _USER_ID;
+		private int _USER_ID;
 		
 		private string _First_Name;
 		
@@ -840,9 +864,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _ROLE;
 		
-		private string _USERNAME;
+		private string _UserName;
 		
-		private string _PASSWORD;
+		private string _Password;
 		
 		private EntitySet<BUILD> _BUILDs;
 		
@@ -850,7 +874,7 @@ namespace PcPartPicker_Desktop_Version
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnUSER_IDChanging(string value);
+    partial void OnUSER_IDChanging(int value);
     partial void OnUSER_IDChanged();
     partial void OnFirst_NameChanging(string value);
     partial void OnFirst_NameChanged();
@@ -870,10 +894,10 @@ namespace PcPartPicker_Desktop_Version
     partial void OnUser_PictureChanged();
     partial void OnROLEChanging(string value);
     partial void OnROLEChanged();
-    partial void OnUSERNAMEChanging(string value);
-    partial void OnUSERNAMEChanged();
-    partial void OnPASSWORDChanging(string value);
-    partial void OnPASSWORDChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
     #endregion
 		
 		public USER()
@@ -882,8 +906,8 @@ namespace PcPartPicker_Desktop_Version
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_ID", DbType="VarChar(40) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string USER_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USER_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int USER_ID
 		{
 			get
 			{
@@ -1082,42 +1106,42 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERNAME", DbType="VarChar(40)")]
-		public string USERNAME
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="VarChar(50)")]
+		public string UserName
 		{
 			get
 			{
-				return this._USERNAME;
+				return this._UserName;
 			}
 			set
 			{
-				if ((this._USERNAME != value))
+				if ((this._UserName != value))
 				{
-					this.OnUSERNAMEChanging(value);
+					this.OnUserNameChanging(value);
 					this.SendPropertyChanging();
-					this._USERNAME = value;
-					this.SendPropertyChanged("USERNAME");
-					this.OnUSERNAMEChanged();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORD", DbType="VarChar(40)")]
-		public string PASSWORD
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarChar(50)")]
+		public string Password
 		{
 			get
 			{
-				return this._PASSWORD;
+				return this._Password;
 			}
 			set
 			{
-				if ((this._PASSWORD != value))
+				if ((this._Password != value))
 				{
-					this.OnPASSWORDChanging(value);
+					this.OnPasswordChanging(value);
 					this.SendPropertyChanging();
-					this._PASSWORD = value;
-					this.SendPropertyChanged("PASSWORD");
-					this.OnPASSWORDChanged();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
 				}
 			}
 		}
@@ -1184,7 +1208,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private System.Nullable<float> _Volume;
 		
-		private System.Nullable<decimal> _Case_Price;
+		private System.Nullable<double> _Case_Price;
 		
 		private string _Case_Picture;
 		
@@ -1204,7 +1228,7 @@ namespace PcPartPicker_Desktop_Version
     partial void OnSide_Panel_WindowChanged();
     partial void OnVolumeChanging(System.Nullable<float> value);
     partial void OnVolumeChanged();
-    partial void OnCase_PriceChanging(System.Nullable<decimal> value);
+    partial void OnCase_PriceChanging(System.Nullable<double> value);
     partial void OnCase_PriceChanged();
     partial void OnCase_PictureChanging(string value);
     partial void OnCase_PictureChanged();
@@ -1316,8 +1340,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Case_Price", DbType="Decimal(10,0)")]
-		public System.Nullable<decimal> Case_Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Case_Price", DbType="Float")]
+		public System.Nullable<double> Case_Price
 		{
 			get
 			{
@@ -1414,6 +1438,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		private System.Nullable<int> _Core_Count;
 		
+		private System.Nullable<int> _Threads_Count;
+		
 		private System.Nullable<float> _Core_Clock_Cpu;
 		
 		private System.Nullable<float> _Boost_Clock_Cpu;
@@ -1424,9 +1450,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private System.Nullable<int> _Maximum_Supported_Memory_Cpu;
 		
-		private System.Nullable<decimal> _Cpu_Price;
+		private System.Nullable<double> _Cpu_Price;
 		
-		private System.Nullable<short> _Integrated_Gpu;
+		private string _Integrated_Gpu;
 		
 		private string _Cpu_Picture;
 		
@@ -1442,6 +1468,8 @@ namespace PcPartPicker_Desktop_Version
     partial void OnManufacturerCpuChanged();
     partial void OnCore_CountChanging(System.Nullable<int> value);
     partial void OnCore_CountChanged();
+    partial void OnThreads_CountChanging(System.Nullable<int> value);
+    partial void OnThreads_CountChanged();
     partial void OnCore_Clock_CpuChanging(System.Nullable<float> value);
     partial void OnCore_Clock_CpuChanged();
     partial void OnBoost_Clock_CpuChanging(System.Nullable<float> value);
@@ -1452,9 +1480,9 @@ namespace PcPartPicker_Desktop_Version
     partial void OnTDP_CpuChanged();
     partial void OnMaximum_Supported_Memory_CpuChanging(System.Nullable<int> value);
     partial void OnMaximum_Supported_Memory_CpuChanged();
-    partial void OnCpu_PriceChanging(System.Nullable<decimal> value);
+    partial void OnCpu_PriceChanging(System.Nullable<double> value);
     partial void OnCpu_PriceChanged();
-    partial void OnIntegrated_GpuChanging(System.Nullable<short> value);
+    partial void OnIntegrated_GpuChanging(string value);
     partial void OnIntegrated_GpuChanged();
     partial void OnCpu_PictureChanging(string value);
     partial void OnCpu_PictureChanged();
@@ -1522,6 +1550,26 @@ namespace PcPartPicker_Desktop_Version
 					this._Core_Count = value;
 					this.SendPropertyChanged("Core_Count");
 					this.OnCore_CountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Threads Count]", Storage="_Threads_Count", DbType="Int")]
+		public System.Nullable<int> Threads_Count
+		{
+			get
+			{
+				return this._Threads_Count;
+			}
+			set
+			{
+				if ((this._Threads_Count != value))
+				{
+					this.OnThreads_CountChanging(value);
+					this.SendPropertyChanging();
+					this._Threads_Count = value;
+					this.SendPropertyChanged("Threads_Count");
+					this.OnThreads_CountChanged();
 				}
 			}
 		}
@@ -1626,8 +1674,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cpu_Price", DbType="Decimal(10,0)")]
-		public System.Nullable<decimal> Cpu_Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cpu_Price", DbType="Float")]
+		public System.Nullable<double> Cpu_Price
 		{
 			get
 			{
@@ -1646,8 +1694,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Integrated Gpu]", Storage="_Integrated_Gpu", DbType="SmallInt")]
-		public System.Nullable<short> Integrated_Gpu
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Integrated Gpu]", Storage="_Integrated_Gpu", DbType="VarChar(10)")]
+		public string Integrated_Gpu
 		{
 			get
 			{
@@ -1744,13 +1792,13 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Model_CpuCooler;
 		
-		private System.Nullable<int> _Fan_RPM;
+		private string _Fan_RPM;
 		
-		private System.Nullable<float> _Max_Noise_Level;
+		private string _Max_Noise_Level;
 		
-		private System.Nullable<short> _Water_Cooled;
+		private string _Water_Cooled;
 		
-		private System.Nullable<decimal> _CpuCooler_Price;
+		private System.Nullable<double> _CpuCooler_Price;
 		
 		private string _CpuCooler_Picture;
 		
@@ -1766,13 +1814,13 @@ namespace PcPartPicker_Desktop_Version
     partial void OnManufacturerCpuCoolerChanged();
     partial void OnModel_CpuCoolerChanging(string value);
     partial void OnModel_CpuCoolerChanged();
-    partial void OnFan_RPMChanging(System.Nullable<int> value);
+    partial void OnFan_RPMChanging(string value);
     partial void OnFan_RPMChanged();
-    partial void OnMax_Noise_LevelChanging(System.Nullable<float> value);
+    partial void OnMax_Noise_LevelChanging(string value);
     partial void OnMax_Noise_LevelChanged();
-    partial void OnWater_CooledChanging(System.Nullable<short> value);
+    partial void OnWater_CooledChanging(string value);
     partial void OnWater_CooledChanged();
-    partial void OnCpuCooler_PriceChanging(System.Nullable<decimal> value);
+    partial void OnCpuCooler_PriceChanging(System.Nullable<double> value);
     partial void OnCpuCooler_PriceChanged();
     partial void OnCpuCooler_PictureChanging(string value);
     partial void OnCpuCooler_PictureChanged();
@@ -1844,8 +1892,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Fan RPM]", Storage="_Fan_RPM", DbType="Int")]
-		public System.Nullable<int> Fan_RPM
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Fan RPM]", Storage="_Fan_RPM", DbType="VarChar(50)")]
+		public string Fan_RPM
 		{
 			get
 			{
@@ -1864,8 +1912,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Max Noise Level]", Storage="_Max_Noise_Level", DbType="Real")]
-		public System.Nullable<float> Max_Noise_Level
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Max Noise Level]", Storage="_Max_Noise_Level", DbType="VarChar(50)")]
+		public string Max_Noise_Level
 		{
 			get
 			{
@@ -1884,8 +1932,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Water Cooled]", Storage="_Water_Cooled", DbType="SmallInt")]
-		public System.Nullable<short> Water_Cooled
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Water Cooled]", Storage="_Water_Cooled", DbType="VarChar(100)")]
+		public string Water_Cooled
 		{
 			get
 			{
@@ -1904,8 +1952,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CpuCooler_Price", DbType="Decimal(10,0)")]
-		public System.Nullable<decimal> CpuCooler_Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CpuCooler_Price", DbType="Float")]
+		public System.Nullable<double> CpuCooler_Price
 		{
 			get
 			{
@@ -2014,7 +2062,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private System.Nullable<int> _TDP_Gpu;
 		
-		private System.Nullable<decimal> _Gpu_Price;
+		private System.Nullable<double> _Gpu_Price;
 		
 		private string _Gpu_Picture;
 		
@@ -2042,7 +2090,7 @@ namespace PcPartPicker_Desktop_Version
     partial void OnFrame_SyncChanged();
     partial void OnTDP_GpuChanging(System.Nullable<int> value);
     partial void OnTDP_GpuChanged();
-    partial void OnGpu_PriceChanging(System.Nullable<decimal> value);
+    partial void OnGpu_PriceChanging(System.Nullable<double> value);
     partial void OnGpu_PriceChanged();
     partial void OnGpu_PictureChanging(string value);
     partial void OnGpu_PictureChanged();
@@ -2234,8 +2282,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gpu_Price", DbType="Decimal(10,0)")]
-		public System.Nullable<decimal> Gpu_Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gpu_Price", DbType="Float")]
+		public System.Nullable<double> Gpu_Price
 		{
 			get
 			{
@@ -2330,6 +2378,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _ManufacturerMemory;
 		
+		private System.Nullable<int> _MemorySize;
+		
 		private System.Nullable<int> _Speed;
 		
 		private System.Nullable<int> _RAM_Slots;
@@ -2338,9 +2388,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private System.Nullable<int> _CAS_Latency;
 		
-		private string _Timing;
-		
-		private System.Nullable<decimal> _Memory_Price;
+		private System.Nullable<double> _Memory_Price;
 		
 		private string _Memory_Picture;
 		
@@ -2354,6 +2402,8 @@ namespace PcPartPicker_Desktop_Version
     partial void OnMemory_IDChanged();
     partial void OnManufacturerMemoryChanging(string value);
     partial void OnManufacturerMemoryChanged();
+    partial void OnMemorySizeChanging(System.Nullable<int> value);
+    partial void OnMemorySizeChanged();
     partial void OnSpeedChanging(System.Nullable<int> value);
     partial void OnSpeedChanged();
     partial void OnRAM_SlotsChanging(System.Nullable<int> value);
@@ -2362,9 +2412,7 @@ namespace PcPartPicker_Desktop_Version
     partial void OnVoltageChanged();
     partial void OnCAS_LatencyChanging(System.Nullable<int> value);
     partial void OnCAS_LatencyChanged();
-    partial void OnTimingChanging(string value);
-    partial void OnTimingChanged();
-    partial void OnMemory_PriceChanging(System.Nullable<decimal> value);
+    partial void OnMemory_PriceChanging(System.Nullable<double> value);
     partial void OnMemory_PriceChanged();
     partial void OnMemory_PictureChanging(string value);
     partial void OnMemory_PictureChanged();
@@ -2412,6 +2460,26 @@ namespace PcPartPicker_Desktop_Version
 					this._ManufacturerMemory = value;
 					this.SendPropertyChanged("ManufacturerMemory");
 					this.OnManufacturerMemoryChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MemorySize", DbType="Int")]
+		public System.Nullable<int> MemorySize
+		{
+			get
+			{
+				return this._MemorySize;
+			}
+			set
+			{
+				if ((this._MemorySize != value))
+				{
+					this.OnMemorySizeChanging(value);
+					this.SendPropertyChanging();
+					this._MemorySize = value;
+					this.SendPropertyChanged("MemorySize");
+					this.OnMemorySizeChanged();
 				}
 			}
 		}
@@ -2496,28 +2564,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Timing", DbType="VarChar(40)")]
-		public string Timing
-		{
-			get
-			{
-				return this._Timing;
-			}
-			set
-			{
-				if ((this._Timing != value))
-				{
-					this.OnTimingChanging(value);
-					this.SendPropertyChanging();
-					this._Timing = value;
-					this.SendPropertyChanged("Timing");
-					this.OnTimingChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Memory_Price", DbType="Decimal(10,0)")]
-		public System.Nullable<decimal> Memory_Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Memory_Price", DbType="Float")]
+		public System.Nullable<double> Memory_Price
 		{
 			get
 			{
@@ -2614,7 +2662,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Socket___CPU;
 		
-		private string _Form_Factor_____Form_Factor;
+		private string _Form_Factor;
 		
 		private string _Chipset_MoBo;
 		
@@ -2622,13 +2670,11 @@ namespace PcPartPicker_Desktop_Version
 		
 		private System.Nullable<int> _Max_RAM;
 		
-		private string _Memory_Type_Gpu;
-		
 		private System.Nullable<int> _SATA_6_Gb_s;
 		
 		private System.Nullable<int> _M_2_Slots;
 		
-		private string _MoBo_Price;
+		private System.Nullable<double> _MoBo_Price;
 		
 		private string _Mobo_Picture;
 		
@@ -2644,21 +2690,19 @@ namespace PcPartPicker_Desktop_Version
     partial void OnManufacturerMoBoChanged();
     partial void OnSocket___CPUChanging(string value);
     partial void OnSocket___CPUChanged();
-    partial void OnForm_Factor_____Form_FactorChanging(string value);
-    partial void OnForm_Factor_____Form_FactorChanged();
+    partial void OnForm_FactorChanging(string value);
+    partial void OnForm_FactorChanged();
     partial void OnChipset_MoBoChanging(string value);
     partial void OnChipset_MoBoChanged();
     partial void OnRAM_Slots_MoBoChanging(System.Nullable<int> value);
     partial void OnRAM_Slots_MoBoChanged();
     partial void OnMax_RAMChanging(System.Nullable<int> value);
     partial void OnMax_RAMChanged();
-    partial void OnMemory_Type_GpuChanging(string value);
-    partial void OnMemory_Type_GpuChanged();
     partial void OnSATA_6_Gb_sChanging(System.Nullable<int> value);
     partial void OnSATA_6_Gb_sChanged();
     partial void OnM_2_SlotsChanging(System.Nullable<int> value);
     partial void OnM_2_SlotsChanged();
-    partial void OnMoBo_PriceChanging(string value);
+    partial void OnMoBo_PriceChanging(System.Nullable<double> value);
     partial void OnMoBo_PriceChanged();
     partial void OnMobo_PictureChanging(string value);
     partial void OnMobo_PictureChanged();
@@ -2730,22 +2774,22 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Form Factor\r\n   Form Factor]", Storage="_Form_Factor_____Form_Factor", DbType="VarChar(40)")]
-		public string Form_Factor_____Form_Factor
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Form Factor]", Storage="_Form_Factor", DbType="VarChar(40)")]
+		public string Form_Factor
 		{
 			get
 			{
-				return this._Form_Factor_____Form_Factor;
+				return this._Form_Factor;
 			}
 			set
 			{
-				if ((this._Form_Factor_____Form_Factor != value))
+				if ((this._Form_Factor != value))
 				{
-					this.OnForm_Factor_____Form_FactorChanging(value);
+					this.OnForm_FactorChanging(value);
 					this.SendPropertyChanging();
-					this._Form_Factor_____Form_Factor = value;
-					this.SendPropertyChanged("Form_Factor_____Form_Factor");
-					this.OnForm_Factor_____Form_FactorChanged();
+					this._Form_Factor = value;
+					this.SendPropertyChanged("Form_Factor");
+					this.OnForm_FactorChanged();
 				}
 			}
 		}
@@ -2810,26 +2854,6 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Memory Type_Gpu]", Storage="_Memory_Type_Gpu", DbType="VarChar(20)")]
-		public string Memory_Type_Gpu
-		{
-			get
-			{
-				return this._Memory_Type_Gpu;
-			}
-			set
-			{
-				if ((this._Memory_Type_Gpu != value))
-				{
-					this.OnMemory_Type_GpuChanging(value);
-					this.SendPropertyChanging();
-					this._Memory_Type_Gpu = value;
-					this.SendPropertyChanged("Memory_Type_Gpu");
-					this.OnMemory_Type_GpuChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[SATA 6 Gb/s]", Storage="_SATA_6_Gb_s", DbType="Int")]
 		public System.Nullable<int> SATA_6_Gb_s
 		{
@@ -2870,8 +2894,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoBo_Price", DbType="Char(10)")]
-		public string MoBo_Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoBo_Price", DbType="Float")]
+		public System.Nullable<double> MoBo_Price
 		{
 			get
 			{
@@ -2974,7 +2998,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Modular;
 		
-		private System.Nullable<decimal> _Psu_Price;
+		private System.Nullable<double> _Psu_Price;
 		
 		private string _Psu_Picture;
 		
@@ -2996,7 +3020,7 @@ namespace PcPartPicker_Desktop_Version
     partial void OnWattageChanged();
     partial void OnModularChanging(string value);
     partial void OnModularChanged();
-    partial void OnPsu_PriceChanging(System.Nullable<decimal> value);
+    partial void OnPsu_PriceChanging(System.Nullable<double> value);
     partial void OnPsu_PriceChanged();
     partial void OnPsu_PictureChanging(string value);
     partial void OnPsu_PictureChanged();
@@ -3128,8 +3152,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Psu_Price", DbType="Decimal(10,0)")]
-		public System.Nullable<decimal> Psu_Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Psu_Price", DbType="Float")]
+		public System.Nullable<double> Psu_Price
 		{
 			get
 			{
@@ -3222,7 +3246,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Gpu_ID;
 		
-		private string _Build_ID;
+		private int _Build_ID;
 		
 		private EntityRef<BUILD> _BUILD;
 		
@@ -3234,7 +3258,7 @@ namespace PcPartPicker_Desktop_Version
     partial void OnCreated();
     partial void OnGpu_IDChanging(string value);
     partial void OnGpu_IDChanged();
-    partial void OnBuild_IDChanging(string value);
+    partial void OnBuild_IDChanging(int value);
     partial void OnBuild_IDChanged();
     #endregion
 		
@@ -3269,8 +3293,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string Build_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Build_ID
 		{
 			get
 			{
@@ -3320,7 +3344,7 @@ namespace PcPartPicker_Desktop_Version
 					}
 					else
 					{
-						this._Build_ID = default(string);
+						this._Build_ID = default(int);
 					}
 					this.SendPropertyChanged("BUILD");
 				}
@@ -3388,7 +3412,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _Build_ID;
+		private int _Build_ID;
 		
 		private string _Memory_ID;
 		
@@ -3400,7 +3424,7 @@ namespace PcPartPicker_Desktop_Version
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnBuild_IDChanging(string value);
+    partial void OnBuild_IDChanging(int value);
     partial void OnBuild_IDChanged();
     partial void OnMemory_IDChanging(string value);
     partial void OnMemory_IDChanged();
@@ -3413,8 +3437,8 @@ namespace PcPartPicker_Desktop_Version
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string Build_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Build_ID
 		{
 			get
 			{
@@ -3488,7 +3512,7 @@ namespace PcPartPicker_Desktop_Version
 					}
 					else
 					{
-						this._Build_ID = default(string);
+						this._Build_ID = default(int);
 					}
 					this.SendPropertyChanged("BUILD");
 				}
@@ -3556,7 +3580,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _Build_ID;
+		private int _Build_ID;
 		
 		private string _Storage_ID;
 		
@@ -3568,7 +3592,7 @@ namespace PcPartPicker_Desktop_Version
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnBuild_IDChanging(string value);
+    partial void OnBuild_IDChanging(int value);
     partial void OnBuild_IDChanged();
     partial void OnStorage_IDChanging(string value);
     partial void OnStorage_IDChanged();
@@ -3581,8 +3605,8 @@ namespace PcPartPicker_Desktop_Version
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string Build_ID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Build_ID
 		{
 			get
 			{
@@ -3656,7 +3680,7 @@ namespace PcPartPicker_Desktop_Version
 					}
 					else
 					{
-						this._Build_ID = default(string);
+						this._Build_ID = default(int);
 					}
 					this.SendPropertyChanged("BUILD");
 				}
@@ -3738,7 +3762,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private System.Nullable<short> _NVME;
 		
-		private System.Nullable<decimal> _Storage_Price;
+		private System.Nullable<double> _Storage_Price;
 		
 		private string _Storage_Picture;
 		
@@ -3762,7 +3786,7 @@ namespace PcPartPicker_Desktop_Version
     partial void OnInterface_strgChanged();
     partial void OnNVMEChanging(System.Nullable<short> value);
     partial void OnNVMEChanged();
-    partial void OnStorage_PriceChanging(System.Nullable<decimal> value);
+    partial void OnStorage_PriceChanging(System.Nullable<double> value);
     partial void OnStorage_PriceChanged();
     partial void OnStorage_PictureChanging(string value);
     partial void OnStorage_PictureChanged();
@@ -3914,8 +3938,8 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Storage_Price", DbType="Decimal(10,0)")]
-		public System.Nullable<decimal> Storage_Price
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Storage_Price", DbType="Float")]
+		public System.Nullable<double> Storage_Price
 		{
 			get
 			{
