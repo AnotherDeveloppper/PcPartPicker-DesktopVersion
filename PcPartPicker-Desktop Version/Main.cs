@@ -85,7 +85,10 @@ namespace PcPartPicker_Desktop_Version
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
             naming.Text = bunifuFlatButton5.Text;
-         //   allParts1.BringToFront();
+            //   allParts1.BringToFront();
+            allParts1.BringToFront();
+
+          
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -96,6 +99,11 @@ namespace PcPartPicker_Desktop_Version
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
             naming.Text = bunifuFlatButton4.Text;
+        }
+
+        private void allParts1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void Main_Load(object sender, EventArgs e)

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllParts));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -52,21 +51,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Crimson;
-            this.panel1.ForeColor = System.Drawing.Color.Crimson;
-            this.panel1.Location = new System.Drawing.Point(11, 11);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(16, 458);
-            this.panel1.TabIndex = 0;
-            // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Location = new System.Drawing.Point(33, 11);
+            this.panel2.Location = new System.Drawing.Point(11, 11);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(454, 444);
+            this.panel2.Size = new System.Drawing.Size(476, 444);
             this.panel2.TabIndex = 1;
             // 
             // tbSearch
@@ -100,6 +91,7 @@
             this.bunifuImageButton1.TabIndex = 3;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // cbCPU
             // 
@@ -300,9 +292,9 @@
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "AllParts";
             this.Size = new System.Drawing.Size(645, 542);
+            this.Load += new System.EventHandler(this.AllParts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -310,8 +302,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox tbSearch;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;

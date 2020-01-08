@@ -33,22 +33,23 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.toper = new System.Windows.Forms.Panel();
             this.naming = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.sider = new System.Windows.Forms.Panel();
-            this.Workhere = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.sider = new System.Windows.Forms.Panel();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Workhere = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.allParts1 = new PcPartPicker_Desktop_Version.AllParts();
             this.toper.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.sider.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.Workhere.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -84,6 +85,20 @@
             this.naming.Size = new System.Drawing.Size(0, 30);
             this.naming.TabIndex = 6;
             // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.bunifuImageButton2.Image = global::PcPartPicker_Desktop_Version.Properties.Resources.X2;
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(572, 12);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(61, 48);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 5;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 25;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            // 
             // sider
             // 
             this.sider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
@@ -98,42 +113,6 @@
             this.sider.Name = "sider";
             this.sider.Size = new System.Drawing.Size(281, 620);
             this.sider.TabIndex = 0;
-            // 
-            // Workhere
-            // 
-            this.Workhere.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Workhere.Location = new System.Drawing.Point(0, 0);
-            this.Workhere.Name = "Workhere";
-            this.Workhere.Size = new System.Drawing.Size(926, 620);
-            this.Workhere.TabIndex = 2;
-            this.Workhere.Paint += new System.Windows.Forms.PaintEventHandler(this.Workhere_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.pictureBox1.ErrorImage = global::PcPartPicker_Desktop_Version.Properties.Resources.LogoMedium;
-            this.pictureBox1.Image = global::PcPartPicker_Desktop_Version.Properties.Resources.unitlited;
-            this.pictureBox1.InitialImage = global::PcPartPicker_Desktop_Version.Properties.Resources.LogoMedium;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(281, 78);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.bunifuImageButton2.Image = global::PcPartPicker_Desktop_Version.Properties.Resources.X2;
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(572, 12);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(61, 48);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 5;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 25;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -338,9 +317,36 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
+            // Workhere
+            // 
+            this.Workhere.Controls.Add(this.allParts1);
+            this.Workhere.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Workhere.Location = new System.Drawing.Point(0, 0);
+            this.Workhere.Name = "Workhere";
+            this.Workhere.Size = new System.Drawing.Size(926, 620);
+            this.Workhere.TabIndex = 2;
+            this.Workhere.Paint += new System.Windows.Forms.PaintEventHandler(this.Workhere_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.pictureBox1.ErrorImage = global::PcPartPicker_Desktop_Version.Properties.Resources.LogoMedium;
+            this.pictureBox1.Image = global::PcPartPicker_Desktop_Version.Properties.Resources.unitlited;
+            this.pictureBox1.InitialImage = global::PcPartPicker_Desktop_Version.Properties.Resources.LogoMedium;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(281, 78);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // allParts1
             // 
-   
+            this.allParts1.Location = new System.Drawing.Point(281, 78);
+            this.allParts1.Name = "allParts1";
+            this.allParts1.Size = new System.Drawing.Size(645, 542);
+            this.allParts1.TabIndex = 0;
+            this.allParts1.Load += new System.EventHandler(this.allParts1_Load);
             // 
             // Main
             // 
@@ -358,11 +364,11 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.toper.ResumeLayout(false);
             this.toper.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.sider.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.Workhere.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,5 +388,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.Panel Workhere;
         private Bunifu.Framework.UI.BunifuCustomLabel naming;
+        private AllParts allParts1;
     }
 }

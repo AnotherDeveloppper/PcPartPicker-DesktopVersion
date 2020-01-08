@@ -63,7 +63,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PcPartPicker_Desktop_Version.Properties.Resources.add_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(599, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(365, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -79,7 +79,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbItemName);
             this.Name = "Part";
-            this.Size = new System.Drawing.Size(714, 60);
+            this.Size = new System.Drawing.Size(448, 60);
             ((System.ComponentModel.ISupportInitialize)(this.pbItemPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
