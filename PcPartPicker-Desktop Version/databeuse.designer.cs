@@ -1694,7 +1694,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Integrated Gpu]", Storage="_Integrated_Gpu", DbType="VarChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Integrated Gpu]", Storage="_Integrated_Gpu", DbType="VarChar(50)")]
 		public string Integrated_Gpu
 		{
 			get
@@ -3754,7 +3754,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private System.Nullable<int> _Capacity_storage;
 		
-		private string _Type_Storagre;
+		private string _Type_Storage;
 		
 		private string _Form_Factor_Storage;
 		
@@ -3778,8 +3778,8 @@ namespace PcPartPicker_Desktop_Version
     partial void OnManufacturer_StorageChanged();
     partial void OnCapacity_storageChanging(System.Nullable<int> value);
     partial void OnCapacity_storageChanged();
-    partial void OnType_StoragreChanging(string value);
-    partial void OnType_StoragreChanged();
+    partial void OnType_StorageChanging(string value);
+    partial void OnType_StorageChanged();
     partial void OnForm_Factor_StorageChanging(string value);
     partial void OnForm_Factor_StorageChanged();
     partial void OnInterface_strgChanging(string value);
@@ -3858,22 +3858,22 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type_Storagre", DbType="VarChar(20)")]
-		public string Type_Storagre
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type_Storage", DbType="VarChar(20)")]
+		public string Type_Storage
 		{
 			get
 			{
-				return this._Type_Storagre;
+				return this._Type_Storage;
 			}
 			set
 			{
-				if ((this._Type_Storagre != value))
+				if ((this._Type_Storage != value))
 				{
-					this.OnType_StoragreChanging(value);
+					this.OnType_StorageChanging(value);
 					this.SendPropertyChanging();
-					this._Type_Storagre = value;
-					this.SendPropertyChanged("Type_Storagre");
-					this.OnType_StoragreChanged();
+					this._Type_Storage = value;
+					this.SendPropertyChanged("Type_Storage");
+					this.OnType_StorageChanged();
 				}
 			}
 		}

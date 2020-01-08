@@ -1,0 +1,26 @@
+// MID atx //
+insert into case values ("nzxt-h510","nzxt","ATX Mid","Tempered Glass",41.345,69.99,"nzxt-h510.jpg")
+insert into case values ("fractal-design","fractal","ATX Mid","Tinted Acrylic",46.633,99.98,"fractal-design.jpg")
+insert into case values ("Thermaltake-coreG12","Thermaltake","ATX Mid","Tempered Glass",46.633,85.98,"Thermaltake-coreG12.jpg")
+insert into case values ("Corsair-spec05","Corsair","ATX Mid","Tempered Glass",41.633,43.50,"Corsair-spec05.jpg")
+insert into case values ("Corsair-icue465x","Corsair","ATX Mid","Tempered Glass",41.455,143.50,"Corsair-icue465x.jpg")
+insert into case values ("Corsair-specDelta","Corsair","ATX Mid","Tempered Glass",41.58,79.99,"Corsair-specDelta.jpg")
+insert into case values ("nzxt-h510Elite","nzxt","ATX Mid","Tempered Glass",41.345,149.99,"nzxt-h510Elite.jpg")
+insert into case values ("Aerocool-Cylon","Aerocool","ATX Mid","Tinted Tempered Glass",41.345,49.99,"Aerocool-Cylon.jpg")
+insert into case values ("Phanteks-EclipseP400","Phanteks","ATX Mid","Tempered Glass",45.345,47.99,"Phanteks-EclipseP400.jpg")
+insert into case values ("Aerocool-p7c1","Aerocool","ATX Mid","Tempered Glass",60.233,82.99,"Aerocool-p7c1.jpg")
+//MINI itx  //
+insert into case values ("nzxt-h210i","nzxt","mini itx","Tempered Glass",27.345,109.99,"nzxt-h210i.jpg")
+insert into case values ("nzxt-h200","nzxt","mini itx","Tempered Glass",27.264,87.99,"nzxt-h200.jpg")
+insert into case values ("nzxt-h210","nzxt","mini itx","Tempered Glass",27.345,79.99,"nzxt-h210.jpg")
+insert into case values ("nzxt-h200i","nzxt","mini itx","Tempered Glass",27.264,137.99,"nzxt-h200i.jpg")
+insert into case values ("evga-hardon","evga","mini itx","Acrylic",27.345,152.99,"evga-hardon.jpg")
+// mini atx //
+insert into case values ("coolerMaster-elite241","coolerMaster","ATX Mini","none",23.345,147.99,"coolerMaster-elite241.jpg") 
+insert into case values ("coolerMaster-elite360","coolerMaster","ATX Mini","none",23.232,67.99,"coolerMaster-elite360.jpg") 
+// full atx //
+insert into case values ("Thermaltake-view71","Thermaltake","ATX Full","Acrylic",95.345,184.99,"Thermaltake-view71.jpg")
+insert into case values ("Thermaltake-tower900","Thermaltake","ATX Full","Tempered Glass",150.345,249.99,"Thermaltake-tower900.jpg")
+insert into case values ("Thermaltake-corex71","Thermaltake","ATX Full","Acrylic",150.345,249.99,"Thermaltake-corex71.jpg")
+insert into case values ("Cougar-panzerMax","Cougar","ATX Full","Acrylic",150.345,139.99,"Cougar-panzerMax.jpg")
+insert into case values ("Cougar-panzerevo","Cougar","ATX Full","Acrylic",150.345,219.99,"Cougar-panzeroevo.jpg")

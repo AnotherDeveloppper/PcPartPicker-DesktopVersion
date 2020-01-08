@@ -65,7 +65,7 @@
       <Column Name="TDP_Cpu" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="[Maximum Supported Memory_Cpu]" Member="Maximum_Supported_Memory_Cpu" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Cpu_Price" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="[Integrated Gpu]" Member="Integrated_Gpu" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[Integrated Gpu]" Member="Integrated_Gpu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Cpu_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="Cpu_BUILD" Member="BUILDs" ThisKey="Cpu_ID" OtherKey="Cpu_ID" Type="BUILD" />
     </Type>
@@ -171,7 +171,7 @@
       <Column Name="Storage_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Manufacturer_Storage" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Capacity_storage" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Type_Storagre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Type_Storage" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="[Form Factor_Storage]" Member="Form_Factor_Storage" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="Interface_strg" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="NVME" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />

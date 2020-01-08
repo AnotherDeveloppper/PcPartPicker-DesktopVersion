@@ -22,5 +22,12 @@ namespace PcPartPicker_Desktop_Version
             InitializeComponent();
             lbItemName.Text = Text;
         }
+
+        public Part(string text ,string Path)
+        {
+            InitializeComponent();
+            lbItemName.Text = Text;
+
+        }
     }
 }
