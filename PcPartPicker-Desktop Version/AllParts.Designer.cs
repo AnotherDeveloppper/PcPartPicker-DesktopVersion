@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllParts));
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tbSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.cbCPU = new Bunifu.Framework.UI.BunifuCheckbox();
@@ -48,17 +47,11 @@
             this.bunifuCheckbox7 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.cbCase = new System.Windows.Forms.Label();
             this.bunifuCheckbox5 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Location = new System.Drawing.Point(11, 11);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(476, 444);
-            this.panel2.TabIndex = 1;
             // 
             // tbSearch
             // 
@@ -72,10 +65,10 @@
             this.tbSearch.LineIdleColor = System.Drawing.Color.Gray;
             this.tbSearch.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.tbSearch.LineThickness = 3;
-            this.tbSearch.Location = new System.Drawing.Point(11, 479);
+            this.tbSearch.Location = new System.Drawing.Point(17, 17);
             this.tbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(535, 44);
+            this.tbSearch.Size = new System.Drawing.Size(470, 44);
             this.tbSearch.TabIndex = 2;
             this.tbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -84,9 +77,9 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.SeaGreen;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(553, 476);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(515, 14);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(74, 47);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(108, 47);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 3;
             this.bunifuImageButton1.TabStop = false;
@@ -100,7 +93,7 @@
             this.cbCPU.Checked = true;
             this.cbCPU.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbCPU.ForeColor = System.Drawing.Color.White;
-            this.cbCPU.Location = new System.Drawing.Point(493, 53);
+            this.cbCPU.Location = new System.Drawing.Point(500, 192);
             this.cbCPU.Name = "cbCPU";
             this.cbCPU.Size = new System.Drawing.Size(20, 20);
             this.cbCPU.TabIndex = 4;
@@ -109,7 +102,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.label1.Location = new System.Drawing.Point(533, 53);
+            this.label1.Location = new System.Drawing.Point(540, 192);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 17);
             this.label1.TabIndex = 5;
@@ -119,7 +112,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.label2.Location = new System.Drawing.Point(533, 79);
+            this.label2.Location = new System.Drawing.Point(540, 218);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 7;
@@ -132,7 +125,7 @@
             this.cbRAM.Checked = true;
             this.cbRAM.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbRAM.ForeColor = System.Drawing.Color.White;
-            this.cbRAM.Location = new System.Drawing.Point(493, 79);
+            this.cbRAM.Location = new System.Drawing.Point(500, 218);
             this.cbRAM.Name = "cbRAM";
             this.cbRAM.Size = new System.Drawing.Size(20, 20);
             this.cbRAM.TabIndex = 6;
@@ -144,7 +137,7 @@
             this.cbMobo.Checked = true;
             this.cbMobo.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbMobo.ForeColor = System.Drawing.Color.White;
-            this.cbMobo.Location = new System.Drawing.Point(493, 105);
+            this.cbMobo.Location = new System.Drawing.Point(500, 244);
             this.cbMobo.Name = "cbMobo";
             this.cbMobo.Size = new System.Drawing.Size(20, 20);
             this.cbMobo.TabIndex = 8;
@@ -153,7 +146,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.label4.Location = new System.Drawing.Point(533, 105);
+            this.label4.Location = new System.Drawing.Point(540, 244);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 17);
             this.label4.TabIndex = 9;
@@ -163,7 +156,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.label5.Location = new System.Drawing.Point(533, 134);
+            this.label5.Location = new System.Drawing.Point(540, 273);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 17);
             this.label5.TabIndex = 11;
@@ -176,7 +169,7 @@
             this.bunifuCheckbox4.Checked = true;
             this.bunifuCheckbox4.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.bunifuCheckbox4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox4.Location = new System.Drawing.Point(493, 131);
+            this.bunifuCheckbox4.Location = new System.Drawing.Point(500, 270);
             this.bunifuCheckbox4.Name = "bunifuCheckbox4";
             this.bunifuCheckbox4.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox4.TabIndex = 10;
@@ -185,7 +178,7 @@
             // 
             this.cbStorage.AutoSize = true;
             this.cbStorage.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbStorage.Location = new System.Drawing.Point(533, 157);
+            this.cbStorage.Location = new System.Drawing.Point(540, 296);
             this.cbStorage.Name = "cbStorage";
             this.cbStorage.Size = new System.Drawing.Size(58, 17);
             this.cbStorage.TabIndex = 13;
@@ -198,7 +191,7 @@
             this.bunifuCheckbox2.Checked = true;
             this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.bunifuCheckbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox2.Location = new System.Drawing.Point(493, 157);
+            this.bunifuCheckbox2.Location = new System.Drawing.Point(500, 296);
             this.bunifuCheckbox2.Name = "bunifuCheckbox2";
             this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox2.TabIndex = 12;
@@ -210,7 +203,7 @@
             this.bunifuCheckbox6.Checked = true;
             this.bunifuCheckbox6.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.bunifuCheckbox6.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox6.Location = new System.Drawing.Point(493, 183);
+            this.bunifuCheckbox6.Location = new System.Drawing.Point(500, 322);
             this.bunifuCheckbox6.Name = "bunifuCheckbox6";
             this.bunifuCheckbox6.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox6.TabIndex = 14;
@@ -219,7 +212,7 @@
             // 
             this.cbGPU.AutoSize = true;
             this.cbGPU.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbGPU.Location = new System.Drawing.Point(533, 183);
+            this.cbGPU.Location = new System.Drawing.Point(540, 322);
             this.cbGPU.Name = "cbGPU";
             this.cbGPU.Size = new System.Drawing.Size(97, 17);
             this.cbGPU.TabIndex = 15;
@@ -229,7 +222,7 @@
             // 
             this.cbPSU.AutoSize = true;
             this.cbPSU.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbPSU.Location = new System.Drawing.Point(533, 209);
+            this.cbPSU.Location = new System.Drawing.Point(540, 348);
             this.cbPSU.Name = "cbPSU";
             this.cbPSU.Size = new System.Drawing.Size(94, 17);
             this.cbPSU.TabIndex = 17;
@@ -242,7 +235,7 @@
             this.bunifuCheckbox7.Checked = true;
             this.bunifuCheckbox7.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.bunifuCheckbox7.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox7.Location = new System.Drawing.Point(493, 209);
+            this.bunifuCheckbox7.Location = new System.Drawing.Point(500, 348);
             this.bunifuCheckbox7.Name = "bunifuCheckbox7";
             this.bunifuCheckbox7.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox7.TabIndex = 16;
@@ -251,7 +244,7 @@
             // 
             this.cbCase.AutoSize = true;
             this.cbCase.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbCase.Location = new System.Drawing.Point(533, 235);
+            this.cbCase.Location = new System.Drawing.Point(540, 374);
             this.cbCase.Name = "cbCase";
             this.cbCase.Size = new System.Drawing.Size(41, 17);
             this.cbCase.TabIndex = 19;
@@ -264,15 +257,35 @@
             this.bunifuCheckbox5.Checked = true;
             this.bunifuCheckbox5.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.bunifuCheckbox5.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox5.Location = new System.Drawing.Point(493, 235);
+            this.bunifuCheckbox5.Location = new System.Drawing.Point(500, 374);
             this.bunifuCheckbox5.Name = "bunifuCheckbox5";
             this.bunifuCheckbox5.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox5.TabIndex = 18;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Location = new System.Drawing.Point(11, 79);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(476, 444);
+            this.panel2.TabIndex = 20;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(393, 374);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Visible = false;
             // 
             // AllParts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.cbCase);
             this.Controls.Add(this.bunifuCheckbox5);
             this.Controls.Add(this.cbPSU);
@@ -291,18 +304,17 @@
             this.Controls.Add(this.cbCPU);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.tbSearch);
-            this.Controls.Add(this.panel2);
             this.Name = "AllParts";
             this.Size = new System.Drawing.Size(645, 542);
             this.Load += new System.EventHandler(this.AllParts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox tbSearch;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuCheckbox cbCPU;
@@ -321,5 +333,7 @@
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox7;
         private System.Windows.Forms.Label cbCase;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

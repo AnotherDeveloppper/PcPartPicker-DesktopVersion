@@ -12,6 +12,7 @@ namespace PcPartPicker_Desktop_Version
 {
     public partial class AllParts : UserControl
     {
+        databeuseDataContext db = new databeuseDataContext();
         public AllParts()
         {
             InitializeComponent();
@@ -26,12 +27,31 @@ namespace PcPartPicker_Desktop_Version
             poss = (p.Top + p.Height + 5 );
 
         }
+        public void addItem(string text,string path)
+        {
+            Part p = new PcPartPicker_Desktop_Version.Part(text,path);
+            panel2.Controls.Add(p);
+            p.Top = poss;
+            poss = (p.Top + p.Height + 5);
 
+        }
         private void AllParts_Load(object sender, EventArgs e)
         {
-            addItem("PSU");
-            addItem("MOTHERBOARD");
+            List<Gpu> b = new List<Gpu>();
+            var q = (from a in db.Gpus
+                    select a).ToList();
+            b = q;
+            dataGridView1.DataSource = b;
             
+            int i = b.Count();
+             for(int a =0;a<i;a++)
+              {
+
+            string c = dataGridView1.Rows[a].Cells[0].Value.ToString();
+                 addItem(c);
+              }
+
+
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
