@@ -85,12 +85,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="databeuse.dbml.layout">
-      <DependentUpon>databeuse.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="AllParts.resx">
       <DependentUpon>AllParts.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="databeuse.dbml.layout">
+      <DependentUpon>databeuse.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>

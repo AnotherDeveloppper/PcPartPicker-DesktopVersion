@@ -28,7 +28,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnCreated();
     partial void InsertBUILD(BUILD instance);
     partial void UpdateBUILD(BUILD instance);
@@ -101,7 +101,7 @@ namespace PcPartPicker_Desktop_Version
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<BUILD> BUILDs
+		public System.Data.Linq.Table<BUILD> BUILD
 		{
 			get
 			{
@@ -109,7 +109,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<USER> USERs
+		public System.Data.Linq.Table<USER> USER
 		{
 			get
 			{
@@ -117,7 +117,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<Case> Cases
+		public System.Data.Linq.Table<Case> Case
 		{
 			get
 			{
@@ -125,7 +125,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<Cpu> Cpus
+		public System.Data.Linq.Table<Cpu> Cpu
 		{
 			get
 			{
@@ -133,7 +133,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<CpuCooler> CpuCoolers
+		public System.Data.Linq.Table<CpuCooler> CpuCooler
 		{
 			get
 			{
@@ -141,7 +141,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<Gpu> Gpus
+		public System.Data.Linq.Table<Gpu> Gpu
 		{
 			get
 			{
@@ -149,7 +149,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<Memory> Memories
+		public System.Data.Linq.Table<Memory> Memory
 		{
 			get
 			{
@@ -157,7 +157,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<MotherBoard> MotherBoards
+		public System.Data.Linq.Table<MotherBoard> MotherBoard
 		{
 			get
 			{
@@ -165,7 +165,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<PowerSupply> PowerSupplies
+		public System.Data.Linq.Table<PowerSupply> PowerSupply
 		{
 			get
 			{
@@ -173,7 +173,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<Select_Gpu> Select_Gpus
+		public System.Data.Linq.Table<Select_Gpu> Select_Gpu
 		{
 			get
 			{
@@ -181,7 +181,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<Select_Memory> Select_Memories
+		public System.Data.Linq.Table<Select_Memory> Select_Memory
 		{
 			get
 			{
@@ -189,7 +189,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<Select_Storage> Select_Storages
+		public System.Data.Linq.Table<Select_Storage> Select_Storage
 		{
 			get
 			{
@@ -197,7 +197,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		public System.Data.Linq.Table<Storage> Storages
+		public System.Data.Linq.Table<Storage> Storage
 		{
 			get
 			{
@@ -234,11 +234,11 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Bootable;
 		
-		private EntitySet<Select_Gpu> _Select_Gpus;
+		private EntitySet<Select_Gpu> _Select_Gpu;
 		
-		private EntitySet<Select_Memory> _Select_Memories;
+		private EntitySet<Select_Memory> _Select_Memory;
 		
-		private EntitySet<Select_Storage> _Select_Storages;
+		private EntitySet<Select_Storage> _Select_Storage;
 		
 		private EntityRef<USER> _USER;
 		
@@ -252,7 +252,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private EntityRef<PowerSupply> _PowerSupply;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -282,9 +282,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		public BUILD()
 		{
-			this._Select_Gpus = new EntitySet<Select_Gpu>(new Action<Select_Gpu>(this.attach_Select_Gpus), new Action<Select_Gpu>(this.detach_Select_Gpus));
-			this._Select_Memories = new EntitySet<Select_Memory>(new Action<Select_Memory>(this.attach_Select_Memories), new Action<Select_Memory>(this.detach_Select_Memories));
-			this._Select_Storages = new EntitySet<Select_Storage>(new Action<Select_Storage>(this.attach_Select_Storages), new Action<Select_Storage>(this.detach_Select_Storages));
+			this._Select_Gpu = new EntitySet<Select_Gpu>(new Action<Select_Gpu>(this.attach_Select_Gpu), new Action<Select_Gpu>(this.detach_Select_Gpu));
+			this._Select_Memory = new EntitySet<Select_Memory>(new Action<Select_Memory>(this.attach_Select_Memory), new Action<Select_Memory>(this.detach_Select_Memory));
+			this._Select_Storage = new EntitySet<Select_Storage>(new Action<Select_Storage>(this.attach_Select_Storage), new Action<Select_Storage>(this.detach_Select_Storage));
 			this._USER = default(EntityRef<USER>);
 			this._Case = default(EntityRef<Case>);
 			this._Cpu = default(EntityRef<Cpu>);
@@ -538,42 +538,42 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Gpu", Storage="_Select_Gpus", ThisKey="Build_ID", OtherKey="Build_ID")]
-		public EntitySet<Select_Gpu> Select_Gpus
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Gpu", Storage="_Select_Gpu", ThisKey="Build_ID", OtherKey="Build_ID")]
+		public EntitySet<Select_Gpu> Select_Gpu
 		{
 			get
 			{
-				return this._Select_Gpus;
+				return this._Select_Gpu;
 			}
 			set
 			{
-				this._Select_Gpus.Assign(value);
+				this._Select_Gpu.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Memory", Storage="_Select_Memories", ThisKey="Build_ID", OtherKey="Build_ID")]
-		public EntitySet<Select_Memory> Select_Memories
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Memory", Storage="_Select_Memory", ThisKey="Build_ID", OtherKey="Build_ID")]
+		public EntitySet<Select_Memory> Select_Memory
 		{
 			get
 			{
-				return this._Select_Memories;
+				return this._Select_Memory;
 			}
 			set
 			{
-				this._Select_Memories.Assign(value);
+				this._Select_Memory.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Storage", Storage="_Select_Storages", ThisKey="Build_ID", OtherKey="Build_ID")]
-		public EntitySet<Select_Storage> Select_Storages
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Storage", Storage="_Select_Storage", ThisKey="Build_ID", OtherKey="Build_ID")]
+		public EntitySet<Select_Storage> Select_Storage
 		{
 			get
 			{
-				return this._Select_Storages;
+				return this._Select_Storage;
 			}
 			set
 			{
-				this._Select_Storages.Assign(value);
+				this._Select_Storage.Assign(value);
 			}
 		}
 		
@@ -594,12 +594,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._USER.Entity = null;
-						previousValue.BUILDs.Remove(this);
+						previousValue.BUILD.Remove(this);
 					}
 					this._USER.Entity = value;
 					if ((value != null))
 					{
-						value.BUILDs.Add(this);
+						value.BUILD.Add(this);
 						this._USER_ID = value.USER_ID;
 					}
 					else
@@ -628,12 +628,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._Case.Entity = null;
-						previousValue.BUILDs.Remove(this);
+						previousValue.BUILD.Remove(this);
 					}
 					this._Case.Entity = value;
 					if ((value != null))
 					{
-						value.BUILDs.Add(this);
+						value.BUILD.Add(this);
 						this._Case_ID = value.Case_ID;
 					}
 					else
@@ -662,12 +662,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._Cpu.Entity = null;
-						previousValue.BUILDs.Remove(this);
+						previousValue.BUILD.Remove(this);
 					}
 					this._Cpu.Entity = value;
 					if ((value != null))
 					{
-						value.BUILDs.Add(this);
+						value.BUILD.Add(this);
 						this._Cpu_ID = value.Cpu_ID;
 					}
 					else
@@ -696,12 +696,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._CpuCooler.Entity = null;
-						previousValue.BUILDs.Remove(this);
+						previousValue.BUILD.Remove(this);
 					}
 					this._CpuCooler.Entity = value;
 					if ((value != null))
 					{
-						value.BUILDs.Add(this);
+						value.BUILD.Add(this);
 						this._CpuCooler_ID = value.CpuCooler_ID;
 					}
 					else
@@ -730,12 +730,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._MotherBoard.Entity = null;
-						previousValue.BUILDs.Remove(this);
+						previousValue.BUILD.Remove(this);
 					}
 					this._MotherBoard.Entity = value;
 					if ((value != null))
 					{
-						value.BUILDs.Add(this);
+						value.BUILD.Add(this);
 						this._MoBo_ID = value.MoBo_ID;
 					}
 					else
@@ -764,12 +764,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._PowerSupply.Entity = null;
-						previousValue.BUILDs.Remove(this);
+						previousValue.BUILD.Remove(this);
 					}
 					this._PowerSupply.Entity = value;
 					if ((value != null))
 					{
-						value.BUILDs.Add(this);
+						value.BUILD.Add(this);
 						this._PowerSupply_ID = value.PowerSupply_ID;
 					}
 					else
@@ -801,37 +801,37 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		private void attach_Select_Gpus(Select_Gpu entity)
+		private void attach_Select_Gpu(Select_Gpu entity)
 		{
 			this.SendPropertyChanging();
 			entity.BUILD = this;
 		}
 		
-		private void detach_Select_Gpus(Select_Gpu entity)
+		private void detach_Select_Gpu(Select_Gpu entity)
 		{
 			this.SendPropertyChanging();
 			entity.BUILD = null;
 		}
 		
-		private void attach_Select_Memories(Select_Memory entity)
+		private void attach_Select_Memory(Select_Memory entity)
 		{
 			this.SendPropertyChanging();
 			entity.BUILD = this;
 		}
 		
-		private void detach_Select_Memories(Select_Memory entity)
+		private void detach_Select_Memory(Select_Memory entity)
 		{
 			this.SendPropertyChanging();
 			entity.BUILD = null;
 		}
 		
-		private void attach_Select_Storages(Select_Storage entity)
+		private void attach_Select_Storage(Select_Storage entity)
 		{
 			this.SendPropertyChanging();
 			entity.BUILD = this;
 		}
 		
-		private void detach_Select_Storages(Select_Storage entity)
+		private void detach_Select_Storage(Select_Storage entity)
 		{
 			this.SendPropertyChanging();
 			entity.BUILD = null;
@@ -868,9 +868,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Password;
 		
-		private EntitySet<BUILD> _BUILDs;
+		private EntitySet<BUILD> _BUILD;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -902,7 +902,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public USER()
 		{
-			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
+			this._BUILD = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILD), new Action<BUILD>(this.detach_BUILD));
 			OnCreated();
 		}
 		
@@ -1146,16 +1146,16 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="USER_BUILD", Storage="_BUILDs", ThisKey="USER_ID", OtherKey="USER_ID")]
-		public EntitySet<BUILD> BUILDs
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="USER_BUILD", Storage="_BUILD", ThisKey="USER_ID", OtherKey="USER_ID")]
+		public EntitySet<BUILD> BUILD
 		{
 			get
 			{
-				return this._BUILDs;
+				return this._BUILD;
 			}
 			set
 			{
-				this._BUILDs.Assign(value);
+				this._BUILD.Assign(value);
 			}
 		}
 		
@@ -1179,13 +1179,13 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		private void attach_BUILDs(BUILD entity)
+		private void attach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.USER = this;
 		}
 		
-		private void detach_BUILDs(BUILD entity)
+		private void detach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.USER = null;
@@ -1212,9 +1212,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Case_Picture;
 		
-		private EntitySet<BUILD> _BUILDs;
+		private EntitySet<BUILD> _BUILD;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -1236,7 +1236,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Case()
 		{
-			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
+			this._BUILD = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILD), new Action<BUILD>(this.detach_BUILD));
 			OnCreated();
 		}
 		
@@ -1380,16 +1380,16 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Case_BUILD", Storage="_BUILDs", ThisKey="Case_ID", OtherKey="Case_ID")]
-		public EntitySet<BUILD> BUILDs
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Case_BUILD", Storage="_BUILD", ThisKey="Case_ID", OtherKey="Case_ID")]
+		public EntitySet<BUILD> BUILD
 		{
 			get
 			{
-				return this._BUILDs;
+				return this._BUILD;
 			}
 			set
 			{
-				this._BUILDs.Assign(value);
+				this._BUILD.Assign(value);
 			}
 		}
 		
@@ -1413,13 +1413,13 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		private void attach_BUILDs(BUILD entity)
+		private void attach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.Case = this;
 		}
 		
-		private void detach_BUILDs(BUILD entity)
+		private void detach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.Case = null;
@@ -1456,9 +1456,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Cpu_Picture;
 		
-		private EntitySet<BUILD> _BUILDs;
+		private EntitySet<BUILD> _BUILD;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -1490,7 +1490,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Cpu()
 		{
-			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
+			this._BUILD = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILD), new Action<BUILD>(this.detach_BUILD));
 			OnCreated();
 		}
 		
@@ -1694,7 +1694,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Integrated Gpu]", Storage="_Integrated_Gpu", DbType="VarChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Integrated Gpu]", Storage="_Integrated_Gpu", DbType="VarChar(50)")]
 		public string Integrated_Gpu
 		{
 			get
@@ -1734,16 +1734,16 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cpu_BUILD", Storage="_BUILDs", ThisKey="Cpu_ID", OtherKey="Cpu_ID")]
-		public EntitySet<BUILD> BUILDs
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cpu_BUILD", Storage="_BUILD", ThisKey="Cpu_ID", OtherKey="Cpu_ID")]
+		public EntitySet<BUILD> BUILD
 		{
 			get
 			{
-				return this._BUILDs;
+				return this._BUILD;
 			}
 			set
 			{
-				this._BUILDs.Assign(value);
+				this._BUILD.Assign(value);
 			}
 		}
 		
@@ -1767,13 +1767,13 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		private void attach_BUILDs(BUILD entity)
+		private void attach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.Cpu = this;
 		}
 		
-		private void detach_BUILDs(BUILD entity)
+		private void detach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.Cpu = null;
@@ -1802,9 +1802,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _CpuCooler_Picture;
 		
-		private EntitySet<BUILD> _BUILDs;
+		private EntitySet<BUILD> _BUILD;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -1828,7 +1828,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public CpuCooler()
 		{
-			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
+			this._BUILD = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILD), new Action<BUILD>(this.detach_BUILD));
 			OnCreated();
 		}
 		
@@ -1992,16 +1992,16 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CpuCooler_BUILD", Storage="_BUILDs", ThisKey="CpuCooler_ID", OtherKey="CpuCooler_ID")]
-		public EntitySet<BUILD> BUILDs
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CpuCooler_BUILD", Storage="_BUILD", ThisKey="CpuCooler_ID", OtherKey="CpuCooler_ID")]
+		public EntitySet<BUILD> BUILD
 		{
 			get
 			{
-				return this._BUILDs;
+				return this._BUILD;
 			}
 			set
 			{
-				this._BUILDs.Assign(value);
+				this._BUILD.Assign(value);
 			}
 		}
 		
@@ -2025,13 +2025,13 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		private void attach_BUILDs(BUILD entity)
+		private void attach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.CpuCooler = this;
 		}
 		
-		private void detach_BUILDs(BUILD entity)
+		private void detach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.CpuCooler = null;
@@ -2066,9 +2066,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Gpu_Picture;
 		
-		private EntitySet<Select_Gpu> _Select_Gpus;
+		private EntitySet<Select_Gpu> _Select_Gpu;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -2098,7 +2098,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Gpu()
 		{
-			this._Select_Gpus = new EntitySet<Select_Gpu>(new Action<Select_Gpu>(this.attach_Select_Gpus), new Action<Select_Gpu>(this.detach_Select_Gpus));
+			this._Select_Gpu = new EntitySet<Select_Gpu>(new Action<Select_Gpu>(this.attach_Select_Gpu), new Action<Select_Gpu>(this.detach_Select_Gpu));
 			OnCreated();
 		}
 		
@@ -2322,16 +2322,16 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Gpu_Select_Gpu", Storage="_Select_Gpus", ThisKey="Gpu_ID", OtherKey="Gpu_ID")]
-		public EntitySet<Select_Gpu> Select_Gpus
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Gpu_Select_Gpu", Storage="_Select_Gpu", ThisKey="Gpu_ID", OtherKey="Gpu_ID")]
+		public EntitySet<Select_Gpu> Select_Gpu
 		{
 			get
 			{
-				return this._Select_Gpus;
+				return this._Select_Gpu;
 			}
 			set
 			{
-				this._Select_Gpus.Assign(value);
+				this._Select_Gpu.Assign(value);
 			}
 		}
 		
@@ -2355,13 +2355,13 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		private void attach_Select_Gpus(Select_Gpu entity)
+		private void attach_Select_Gpu(Select_Gpu entity)
 		{
 			this.SendPropertyChanging();
 			entity.Gpu = this;
 		}
 		
-		private void detach_Select_Gpus(Select_Gpu entity)
+		private void detach_Select_Gpu(Select_Gpu entity)
 		{
 			this.SendPropertyChanging();
 			entity.Gpu = null;
@@ -2392,9 +2392,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Memory_Picture;
 		
-		private EntitySet<Select_Memory> _Select_Memories;
+		private EntitySet<Select_Memory> _Select_Memory;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -2420,7 +2420,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Memory()
 		{
-			this._Select_Memories = new EntitySet<Select_Memory>(new Action<Select_Memory>(this.attach_Select_Memories), new Action<Select_Memory>(this.detach_Select_Memories));
+			this._Select_Memory = new EntitySet<Select_Memory>(new Action<Select_Memory>(this.attach_Select_Memory), new Action<Select_Memory>(this.detach_Select_Memory));
 			OnCreated();
 		}
 		
@@ -2604,16 +2604,16 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Memory_Select_Memory", Storage="_Select_Memories", ThisKey="Memory_ID", OtherKey="Memory_ID")]
-		public EntitySet<Select_Memory> Select_Memories
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Memory_Select_Memory", Storage="_Select_Memory", ThisKey="Memory_ID", OtherKey="Memory_ID")]
+		public EntitySet<Select_Memory> Select_Memory
 		{
 			get
 			{
-				return this._Select_Memories;
+				return this._Select_Memory;
 			}
 			set
 			{
-				this._Select_Memories.Assign(value);
+				this._Select_Memory.Assign(value);
 			}
 		}
 		
@@ -2637,13 +2637,13 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		private void attach_Select_Memories(Select_Memory entity)
+		private void attach_Select_Memory(Select_Memory entity)
 		{
 			this.SendPropertyChanging();
 			entity.Memory = this;
 		}
 		
-		private void detach_Select_Memories(Select_Memory entity)
+		private void detach_Select_Memory(Select_Memory entity)
 		{
 			this.SendPropertyChanging();
 			entity.Memory = null;
@@ -2678,9 +2678,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Mobo_Picture;
 		
-		private EntitySet<BUILD> _BUILDs;
+		private EntitySet<BUILD> _BUILD;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -2710,7 +2710,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public MotherBoard()
 		{
-			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
+			this._BUILD = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILD), new Action<BUILD>(this.detach_BUILD));
 			OnCreated();
 		}
 		
@@ -2934,16 +2934,16 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MotherBoard_BUILD", Storage="_BUILDs", ThisKey="MoBo_ID", OtherKey="MoBo_ID")]
-		public EntitySet<BUILD> BUILDs
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MotherBoard_BUILD", Storage="_BUILD", ThisKey="MoBo_ID", OtherKey="MoBo_ID")]
+		public EntitySet<BUILD> BUILD
 		{
 			get
 			{
-				return this._BUILDs;
+				return this._BUILD;
 			}
 			set
 			{
-				this._BUILDs.Assign(value);
+				this._BUILD.Assign(value);
 			}
 		}
 		
@@ -2967,13 +2967,13 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		private void attach_BUILDs(BUILD entity)
+		private void attach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.MotherBoard = this;
 		}
 		
-		private void detach_BUILDs(BUILD entity)
+		private void detach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.MotherBoard = null;
@@ -3002,9 +3002,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Psu_Picture;
 		
-		private EntitySet<BUILD> _BUILDs;
+		private EntitySet<BUILD> _BUILD;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -3028,7 +3028,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public PowerSupply()
 		{
-			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
+			this._BUILD = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILD), new Action<BUILD>(this.detach_BUILD));
 			OnCreated();
 		}
 		
@@ -3192,16 +3192,16 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PowerSupply_BUILD", Storage="_BUILDs", ThisKey="PowerSupply_ID", OtherKey="PowerSupply_ID")]
-		public EntitySet<BUILD> BUILDs
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PowerSupply_BUILD", Storage="_BUILD", ThisKey="PowerSupply_ID", OtherKey="PowerSupply_ID")]
+		public EntitySet<BUILD> BUILD
 		{
 			get
 			{
-				return this._BUILDs;
+				return this._BUILD;
 			}
 			set
 			{
-				this._BUILDs.Assign(value);
+				this._BUILD.Assign(value);
 			}
 		}
 		
@@ -3225,13 +3225,13 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		private void attach_BUILDs(BUILD entity)
+		private void attach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.PowerSupply = this;
 		}
 		
-		private void detach_BUILDs(BUILD entity)
+		private void detach_BUILD(BUILD entity)
 		{
 			this.SendPropertyChanging();
 			entity.PowerSupply = null;
@@ -3252,7 +3252,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private EntityRef<Gpu> _Gpu;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -3334,12 +3334,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._BUILD.Entity = null;
-						previousValue.Select_Gpus.Remove(this);
+						previousValue.Select_Gpu.Remove(this);
 					}
 					this._BUILD.Entity = value;
 					if ((value != null))
 					{
-						value.Select_Gpus.Add(this);
+						value.Select_Gpu.Add(this);
 						this._Build_ID = value.Build_ID;
 					}
 					else
@@ -3368,12 +3368,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._Gpu.Entity = null;
-						previousValue.Select_Gpus.Remove(this);
+						previousValue.Select_Gpu.Remove(this);
 					}
 					this._Gpu.Entity = value;
 					if ((value != null))
 					{
-						value.Select_Gpus.Add(this);
+						value.Select_Gpu.Add(this);
 						this._Gpu_ID = value.Gpu_ID;
 					}
 					else
@@ -3420,7 +3420,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private EntityRef<Memory> _Memory;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -3502,12 +3502,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._BUILD.Entity = null;
-						previousValue.Select_Memories.Remove(this);
+						previousValue.Select_Memory.Remove(this);
 					}
 					this._BUILD.Entity = value;
 					if ((value != null))
 					{
-						value.Select_Memories.Add(this);
+						value.Select_Memory.Add(this);
 						this._Build_ID = value.Build_ID;
 					}
 					else
@@ -3536,12 +3536,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._Memory.Entity = null;
-						previousValue.Select_Memories.Remove(this);
+						previousValue.Select_Memory.Remove(this);
 					}
 					this._Memory.Entity = value;
 					if ((value != null))
 					{
-						value.Select_Memories.Add(this);
+						value.Select_Memory.Add(this);
 						this._Memory_ID = value.Memory_ID;
 					}
 					else
@@ -3588,7 +3588,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private EntityRef<Storage> _Storage;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -3670,12 +3670,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._BUILD.Entity = null;
-						previousValue.Select_Storages.Remove(this);
+						previousValue.Select_Storage.Remove(this);
 					}
 					this._BUILD.Entity = value;
 					if ((value != null))
 					{
-						value.Select_Storages.Add(this);
+						value.Select_Storage.Add(this);
 						this._Build_ID = value.Build_ID;
 					}
 					else
@@ -3704,12 +3704,12 @@ namespace PcPartPicker_Desktop_Version
 					if ((previousValue != null))
 					{
 						this._Storage.Entity = null;
-						previousValue.Select_Storages.Remove(this);
+						previousValue.Select_Storage.Remove(this);
 					}
 					this._Storage.Entity = value;
 					if ((value != null))
 					{
-						value.Select_Storages.Add(this);
+						value.Select_Storage.Add(this);
 						this._Storage_ID = value.Storage_ID;
 					}
 					else
@@ -3754,7 +3754,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		private System.Nullable<int> _Capacity_storage;
 		
-		private string _Type_Storagre;
+		private string _Type_Storage;
 		
 		private string _Form_Factor_Storage;
 		
@@ -3766,9 +3766,9 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Storage_Picture;
 		
-		private EntitySet<Select_Storage> _Select_Storages;
+		private EntitySet<Select_Storage> _Select_Storage;
 		
-    #region Extensibility Method Definitions
+    #region Définitions de méthodes d'extensibilité
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
@@ -3778,8 +3778,8 @@ namespace PcPartPicker_Desktop_Version
     partial void OnManufacturer_StorageChanged();
     partial void OnCapacity_storageChanging(System.Nullable<int> value);
     partial void OnCapacity_storageChanged();
-    partial void OnType_StoragreChanging(string value);
-    partial void OnType_StoragreChanged();
+    partial void OnType_StorageChanging(string value);
+    partial void OnType_StorageChanged();
     partial void OnForm_Factor_StorageChanging(string value);
     partial void OnForm_Factor_StorageChanged();
     partial void OnInterface_strgChanging(string value);
@@ -3794,7 +3794,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Storage()
 		{
-			this._Select_Storages = new EntitySet<Select_Storage>(new Action<Select_Storage>(this.attach_Select_Storages), new Action<Select_Storage>(this.detach_Select_Storages));
+			this._Select_Storage = new EntitySet<Select_Storage>(new Action<Select_Storage>(this.attach_Select_Storage), new Action<Select_Storage>(this.detach_Select_Storage));
 			OnCreated();
 		}
 		
@@ -3858,22 +3858,22 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type_Storagre", DbType="VarChar(20)")]
-		public string Type_Storagre
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type_Storage", DbType="VarChar(20)")]
+		public string Type_Storage
 		{
 			get
 			{
-				return this._Type_Storagre;
+				return this._Type_Storage;
 			}
 			set
 			{
-				if ((this._Type_Storagre != value))
+				if ((this._Type_Storage != value))
 				{
-					this.OnType_StoragreChanging(value);
+					this.OnType_StorageChanging(value);
 					this.SendPropertyChanging();
-					this._Type_Storagre = value;
-					this.SendPropertyChanged("Type_Storagre");
-					this.OnType_StoragreChanged();
+					this._Type_Storage = value;
+					this.SendPropertyChanged("Type_Storage");
+					this.OnType_StorageChanged();
 				}
 			}
 		}
@@ -3978,16 +3978,16 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Storage_Select_Storage", Storage="_Select_Storages", ThisKey="Storage_ID", OtherKey="Storage_ID")]
-		public EntitySet<Select_Storage> Select_Storages
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Storage_Select_Storage", Storage="_Select_Storage", ThisKey="Storage_ID", OtherKey="Storage_ID")]
+		public EntitySet<Select_Storage> Select_Storage
 		{
 			get
 			{
-				return this._Select_Storages;
+				return this._Select_Storage;
 			}
 			set
 			{
-				this._Select_Storages.Assign(value);
+				this._Select_Storage.Assign(value);
 			}
 		}
 		
@@ -4011,13 +4011,13 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		private void attach_Select_Storages(Select_Storage entity)
+		private void attach_Select_Storage(Select_Storage entity)
 		{
 			this.SendPropertyChanging();
 			entity.Storage = this;
 		}
 		
-		private void detach_Select_Storages(Select_Storage entity)
+		private void detach_Select_Storage(Select_Storage entity)
 		{
 			this.SendPropertyChanging();
 			entity.Storage = null;
