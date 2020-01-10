@@ -46,7 +46,7 @@ namespace PcPartPicker_Desktop_Version
 
                 lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 lblPrice.Text = dataGridView1.Rows[0].Cells[9].Value.ToString() + "$";
-                //  pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[11].Value.ToString());
+                pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[11].Value.ToString());
             }
             if (type == "memory")
             {
@@ -59,7 +59,7 @@ namespace PcPartPicker_Desktop_Version
 
                 lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 lblPrice.Text = dataGridView1.Rows[0].Cells[7].Value.ToString() + "$";
-                //  pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[8].Value.ToString());
+                 pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[8].Value.ToString());
             }
             if (type == "CpuCooler")
             {
@@ -72,7 +72,7 @@ namespace PcPartPicker_Desktop_Version
 
                 lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 lblPrice.Text = dataGridView1.Rows[0].Cells[6].Value.ToString() + "$";
-                //  pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[7].Value.ToString());
+                pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[7].Value.ToString());
             }
             if (type == "Case")
             {
@@ -98,7 +98,7 @@ namespace PcPartPicker_Desktop_Version
 
                 lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 lblPrice.Text = dataGridView1.Rows[0].Cells[9].Value.ToString() + "$";
-                //     pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[10].Value.ToString());
+                   pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[10].Value.ToString());
             }
             if (type == "PowerSupply")
             {
@@ -111,7 +111,7 @@ namespace PcPartPicker_Desktop_Version
 
                 lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 lblPrice.Text = dataGridView1.Rows[0].Cells[6].Value.ToString() + "$";
-                //     pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[7].Value.ToString());
+                   pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[7].Value.ToString());
             }
             if (type == "Storage")
             {
@@ -124,7 +124,7 @@ namespace PcPartPicker_Desktop_Version
 
                 lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 lblPrice.Text = dataGridView1.Rows[0].Cells[7].Value.ToString() + "$";
-                //     pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[8].Value.ToString());
+                pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[8].Value.ToString());
             }
         }
     

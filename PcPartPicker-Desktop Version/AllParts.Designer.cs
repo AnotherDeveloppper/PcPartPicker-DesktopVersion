@@ -38,15 +38,15 @@
             this.cbMobo = new Bunifu.Framework.UI.BunifuCheckbox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.bunifuCheckbox4 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.cbcpucooler = new Bunifu.Framework.UI.BunifuCheckbox();
             this.cbStorage = new System.Windows.Forms.Label();
-            this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCheckbox6 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.cbst = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.cbggpp = new Bunifu.Framework.UI.BunifuCheckbox();
             this.cbGPU = new System.Windows.Forms.Label();
             this.cbPSU = new System.Windows.Forms.Label();
-            this.bunifuCheckbox7 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.cbpssu = new Bunifu.Framework.UI.BunifuCheckbox();
             this.cbCase = new System.Windows.Forms.Label();
-            this.bunifuCheckbox5 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.cbcASSE = new Bunifu.Framework.UI.BunifuCheckbox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -98,6 +98,7 @@
             this.cbCPU.Name = "cbCPU";
             this.cbCPU.Size = new System.Drawing.Size(20, 20);
             this.cbCPU.TabIndex = 4;
+            this.cbCPU.OnChange += new System.EventHandler(this.cbCPU_OnChange);
             // 
             // label1
             // 
@@ -130,6 +131,7 @@
             this.cbRAM.Name = "cbRAM";
             this.cbRAM.Size = new System.Drawing.Size(20, 20);
             this.cbRAM.TabIndex = 6;
+            this.cbRAM.OnChange += new System.EventHandler(this.cbRAM_OnChange);
             // 
             // cbMobo
             // 
@@ -142,6 +144,7 @@
             this.cbMobo.Name = "cbMobo";
             this.cbMobo.Size = new System.Drawing.Size(20, 20);
             this.cbMobo.TabIndex = 8;
+            this.cbMobo.OnChange += new System.EventHandler(this.cbMobo_OnChange);
             // 
             // label4
             // 
@@ -163,17 +166,18 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "CPU Cooler";
             // 
-            // bunifuCheckbox4
+            // cbcpucooler
             // 
-            this.bunifuCheckbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox4.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox4.Checked = true;
-            this.bunifuCheckbox4.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox4.Location = new System.Drawing.Point(510, 270);
-            this.bunifuCheckbox4.Name = "bunifuCheckbox4";
-            this.bunifuCheckbox4.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox4.TabIndex = 10;
+            this.cbcpucooler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbcpucooler.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbcpucooler.Checked = true;
+            this.cbcpucooler.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbcpucooler.ForeColor = System.Drawing.Color.White;
+            this.cbcpucooler.Location = new System.Drawing.Point(510, 270);
+            this.cbcpucooler.Name = "cbcpucooler";
+            this.cbcpucooler.Size = new System.Drawing.Size(20, 20);
+            this.cbcpucooler.TabIndex = 10;
+            this.cbcpucooler.OnChange += new System.EventHandler(this.bunifuCheckbox4_OnChange);
             // 
             // cbStorage
             // 
@@ -185,29 +189,31 @@
             this.cbStorage.TabIndex = 13;
             this.cbStorage.Text = "Storage";
             // 
-            // bunifuCheckbox2
+            // cbst
             // 
-            this.bunifuCheckbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox2.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox2.Checked = true;
-            this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox2.Location = new System.Drawing.Point(510, 296);
-            this.bunifuCheckbox2.Name = "bunifuCheckbox2";
-            this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox2.TabIndex = 12;
+            this.cbst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbst.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbst.Checked = true;
+            this.cbst.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbst.ForeColor = System.Drawing.Color.White;
+            this.cbst.Location = new System.Drawing.Point(510, 296);
+            this.cbst.Name = "cbst";
+            this.cbst.Size = new System.Drawing.Size(20, 20);
+            this.cbst.TabIndex = 12;
+            this.cbst.OnChange += new System.EventHandler(this.cbst_OnChange);
             // 
-            // bunifuCheckbox6
+            // cbggpp
             // 
-            this.bunifuCheckbox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox6.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox6.Checked = true;
-            this.bunifuCheckbox6.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox6.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox6.Location = new System.Drawing.Point(510, 322);
-            this.bunifuCheckbox6.Name = "bunifuCheckbox6";
-            this.bunifuCheckbox6.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox6.TabIndex = 14;
+            this.cbggpp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbggpp.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbggpp.Checked = true;
+            this.cbggpp.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbggpp.ForeColor = System.Drawing.Color.White;
+            this.cbggpp.Location = new System.Drawing.Point(510, 322);
+            this.cbggpp.Name = "cbggpp";
+            this.cbggpp.Size = new System.Drawing.Size(20, 20);
+            this.cbggpp.TabIndex = 14;
+            this.cbggpp.OnChange += new System.EventHandler(this.cbggpp_OnChange);
             // 
             // cbGPU
             // 
@@ -229,17 +235,18 @@
             this.cbPSU.TabIndex = 17;
             this.cbPSU.Text = "Power Supply";
             // 
-            // bunifuCheckbox7
+            // cbpssu
             // 
-            this.bunifuCheckbox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox7.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox7.Checked = true;
-            this.bunifuCheckbox7.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox7.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox7.Location = new System.Drawing.Point(510, 348);
-            this.bunifuCheckbox7.Name = "bunifuCheckbox7";
-            this.bunifuCheckbox7.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox7.TabIndex = 16;
+            this.cbpssu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbpssu.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbpssu.Checked = true;
+            this.cbpssu.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbpssu.ForeColor = System.Drawing.Color.White;
+            this.cbpssu.Location = new System.Drawing.Point(510, 348);
+            this.cbpssu.Name = "cbpssu";
+            this.cbpssu.Size = new System.Drawing.Size(20, 20);
+            this.cbpssu.TabIndex = 16;
+            this.cbpssu.OnChange += new System.EventHandler(this.cbpssu_OnChange);
             // 
             // cbCase
             // 
@@ -251,17 +258,18 @@
             this.cbCase.TabIndex = 19;
             this.cbCase.Text = "Case";
             // 
-            // bunifuCheckbox5
+            // cbcASSE
             // 
-            this.bunifuCheckbox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox5.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox5.Checked = true;
-            this.bunifuCheckbox5.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox5.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox5.Location = new System.Drawing.Point(510, 374);
-            this.bunifuCheckbox5.Name = "bunifuCheckbox5";
-            this.bunifuCheckbox5.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox5.TabIndex = 18;
+            this.cbcASSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbcASSE.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbcASSE.Checked = true;
+            this.cbcASSE.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbcASSE.ForeColor = System.Drawing.Color.White;
+            this.cbcASSE.Location = new System.Drawing.Point(510, 374);
+            this.cbcASSE.Name = "cbcASSE";
+            this.cbcASSE.Size = new System.Drawing.Size(20, 20);
+            this.cbcASSE.TabIndex = 18;
+            this.cbcASSE.OnChange += new System.EventHandler(this.cbcASSE_OnChange);
             // 
             // panel2
             // 
@@ -288,15 +296,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cbCase);
-            this.Controls.Add(this.bunifuCheckbox5);
+            this.Controls.Add(this.cbcASSE);
             this.Controls.Add(this.cbPSU);
-            this.Controls.Add(this.bunifuCheckbox7);
+            this.Controls.Add(this.cbpssu);
             this.Controls.Add(this.cbGPU);
-            this.Controls.Add(this.bunifuCheckbox6);
+            this.Controls.Add(this.cbggpp);
             this.Controls.Add(this.cbStorage);
-            this.Controls.Add(this.bunifuCheckbox2);
+            this.Controls.Add(this.cbst);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.bunifuCheckbox4);
+            this.Controls.Add(this.cbcpucooler);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbMobo);
             this.Controls.Add(this.label2);
@@ -326,15 +334,15 @@
         private Bunifu.Framework.UI.BunifuCheckbox cbMobo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox4;
+        private Bunifu.Framework.UI.BunifuCheckbox cbcpucooler;
         private System.Windows.Forms.Label cbStorage;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox6;
+        private Bunifu.Framework.UI.BunifuCheckbox cbst;
+        private Bunifu.Framework.UI.BunifuCheckbox cbggpp;
         private System.Windows.Forms.Label cbGPU;
         private System.Windows.Forms.Label cbPSU;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox7;
+        private Bunifu.Framework.UI.BunifuCheckbox cbpssu;
         private System.Windows.Forms.Label cbCase;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox5;
+        private Bunifu.Framework.UI.BunifuCheckbox cbcASSE;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
