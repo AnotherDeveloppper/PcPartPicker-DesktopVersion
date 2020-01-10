@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllParts));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tbSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.cbCPU = new Bunifu.Framework.UI.BunifuCheckbox();
@@ -48,6 +49,7 @@
             this.bunifuCheckbox7 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.cbCase = new System.Windows.Forms.Label();
             this.bunifuCheckbox5 = new Bunifu.Framework.UI.BunifuCheckbox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +61,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(476, 444);
             this.panel2.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(402, 261);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.Visible = false;
             // 
             // tbSearch
             // 
@@ -273,6 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbCase);
             this.Controls.Add(this.bunifuCheckbox5);
             this.Controls.Add(this.cbPSU);
@@ -295,6 +307,7 @@
             this.Name = "AllParts";
             this.Size = new System.Drawing.Size(645, 542);
             this.Load += new System.EventHandler(this.AllParts_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -321,5 +334,6 @@
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox7;
         private System.Windows.Forms.Label cbCase;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox5;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
