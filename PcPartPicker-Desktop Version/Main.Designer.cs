@@ -42,8 +42,8 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Workhere = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.allParts1 = new PcPartPicker_Desktop_Version.AllParts();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toper.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.sider.SuspendLayout();
@@ -78,9 +78,10 @@
             // naming
             // 
             this.naming.AutoSize = true;
+            this.naming.Dock = System.Windows.Forms.DockStyle.Right;
             this.naming.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.naming.ForeColor = System.Drawing.Color.White;
-            this.naming.Location = new System.Drawing.Point(6, 12);
+            this.naming.Location = new System.Drawing.Point(584, 0);
             this.naming.Name = "naming";
             this.naming.Size = new System.Drawing.Size(0, 30);
             this.naming.TabIndex = 6;
@@ -328,6 +329,13 @@
             this.Workhere.TabIndex = 2;
             this.Workhere.Paint += new System.Windows.Forms.PaintEventHandler(this.Workhere_Paint);
             // 
+            // allParts1
+            // 
+            this.allParts1.Location = new System.Drawing.Point(281, 78);
+            this.allParts1.Name = "allParts1";
+            this.allParts1.Size = new System.Drawing.Size(645, 542);
+            this.allParts1.TabIndex = 0;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
@@ -340,14 +348,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // allParts1
-            // 
-            this.allParts1.Location = new System.Drawing.Point(281, 78);
-            this.allParts1.Name = "allParts1";
-            this.allParts1.Size = new System.Drawing.Size(645, 542);
-            this.allParts1.TabIndex = 0;
-            this.allParts1.Load += new System.EventHandler(this.allParts1_Load);
             // 
             // Main
             // 
