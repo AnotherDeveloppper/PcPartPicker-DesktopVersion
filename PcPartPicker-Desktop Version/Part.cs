@@ -24,9 +24,76 @@ namespace PcPartPicker_Desktop_Version
             lbItemName.Text = Text;
         }
 
-        public Part(string Text ,string type)
+        public Part(string Text, string type)
         {
             InitializeComponent();
+            gpu(Text, type);
+           
+            cpu(Text, type);
+          
+            memory(Text, type);
+          
+            cpucooler(Text, type);
+        
+            Case(Text, type);
+          
+            motherboard(Text, type);
+         
+            powersupply(Text, type);
+          
+            storage(Text, type);
+     
+        }
+
+        /// HERE WE GOT THE THINGS
+            public void cpu(string Text, string type)
+        {
+            if (type == "cpu")
+            {
+                var q = from a in db.Cpus
+                        where a.Cpu_ID == Text
+                        select a;
+                dataGridView1.DataSource = q.ToList();
+
+                lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                lblPrice.Text = dataGridView1.Rows[0].Cells[9].Value.ToString() + "$";
+                pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[11].Value.ToString());
+            }
+        }
+        public void Case(string Text, string type)
+        {
+            if (type == "Case")
+            {
+                List<Case> b = new List<Case>();
+                var q = (from a in db.Cases
+                         where a.Case_ID == Text
+                         select a).ToList();
+                b = q;
+                dataGridView1.DataSource = b;
+
+                lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                lblPrice.Text = dataGridView1.Rows[0].Cells[5].Value.ToString() + "$";
+                pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[6].Value.ToString());
+            }
+        }
+        public void cpucooler(string Text, string type)
+        {
+            if (type == "CpuCooler")
+            {
+                List<CpuCooler> b = new List<CpuCooler>();
+                var q = (from a in db.CpuCoolers
+                         where a.CpuCooler_ID == Text
+                         select a).ToList();
+                b = q;
+                dataGridView1.DataSource = b;
+
+                lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                lblPrice.Text = dataGridView1.Rows[0].Cells[6].Value.ToString() + "$";
+                pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[7].Value.ToString());
+            }
+        }
+        public void gpu(string Text, string type)
+        {
             if (type == "gpu")
             {
                 List<Gpu> b = new List<Gpu>();
@@ -36,21 +103,13 @@ namespace PcPartPicker_Desktop_Version
                 b = q;
                 dataGridView1.DataSource = b;
 
-               lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 lblPrice.Text = dataGridView1.Rows[0].Cells[9].Value.ToString() + "$";
-                   pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[10].Value.ToString());
+                pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[10].Value.ToString());
             }
-            if (type == "cpu")
-            {
-                var q = from a in db.Cpus
-                         where a.Cpu_ID == Text
-                         select a;
-                dataGridView1.DataSource = q.ToList();
-
-            lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
-                  lblPrice.Text = dataGridView1.Rows[0].Cells[9].Value.ToString() + "$";
-                  pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[11].Value.ToString());
-            }
+        }
+        public void memory(string Text, string type)
+        {
             if (type == "memory")
             {
                 List<Memory> b = new List<Memory>();
@@ -64,32 +123,9 @@ namespace PcPartPicker_Desktop_Version
                 lblPrice.Text = dataGridView1.Rows[0].Cells[7].Value.ToString() + "$";
                 pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[8].Value.ToString());
             }
-            if (type == "CpuCooler")
-            {
-                List<CpuCooler> b = new List<CpuCooler>();
-                var q = (from a in db.CpuCoolers
-                         where a.CpuCooler_ID == Text
-                         select a).ToList();
-                b = q;
-                dataGridView1.DataSource = b;
-
-          lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
-                lblPrice.Text = dataGridView1.Rows[0].Cells[6].Value.ToString() + "$";
-                pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[7].Value.ToString());
-            }
-            if (type == "Case")
-            {
-                List<Case> b = new List<Case>();
-                var q = (from a in db.Cases
-                         where a.Case_ID == Text
-                         select a).ToList();
-                b = q;
-                dataGridView1.DataSource = b;
-
-               lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
-                lblPrice.Text = dataGridView1.Rows[0].Cells[5].Value.ToString() + "$";
-                pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[6].Value.ToString());
-            }
+        }
+        public void motherboard(string Text, string type)
+        {
             if (type == "Motherboard")
             {
                 List<MotherBoard> b = new List<MotherBoard>();
@@ -99,10 +135,13 @@ namespace PcPartPicker_Desktop_Version
                 b = q;
                 dataGridView1.DataSource = b;
 
-         lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 lblPrice.Text = dataGridView1.Rows[0].Cells[9].Value.ToString() + "$";
                 pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[10].Value.ToString());
             }
+        }
+        public void powersupply(string Text, string type)
+        {
             if (type == "PowerSupply")
             {
                 List<PowerSupply> b = new List<PowerSupply>();
@@ -112,10 +151,13 @@ namespace PcPartPicker_Desktop_Version
                 b = q;
                 dataGridView1.DataSource = b;
 
-             lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 lblPrice.Text = dataGridView1.Rows[0].Cells[6].Value.ToString() + "$";
                 pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[7].Value.ToString());
             }
+        }
+        public void storage(string Text, string type)
+        {
             if (type == "Storage")
             {
                 List<Storage> b = new List<Storage>();
@@ -125,10 +167,11 @@ namespace PcPartPicker_Desktop_Version
                 b = q;
                 dataGridView1.DataSource = b;
 
-              lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                lbItemName.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 lblPrice.Text = dataGridView1.Rows[0].Cells[7].Value.ToString() + "$";
                 pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[8].Value.ToString());
             }
         }
     }
-}
+    }
+

@@ -108,7 +108,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void Main_Load(object sender, EventArgs e)
         {
-            var q = from a in db.USER
+            var q = from a in db.USERs
                     where a.UserName == name && a.Password == password
                     select a;
 

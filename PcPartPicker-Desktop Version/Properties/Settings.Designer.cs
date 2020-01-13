@@ -26,10 +26,21 @@ namespace PcPartPicker_Desktop_Version.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=./;Initial Catalog=projet;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-PFU06AN\\IBRAHANDOURSQL;Initial Catalog=projet;Integrated Secu" +
+            "rity=True")]
         public string projetConnectionString {
             get {
                 return ((string)(this["projetConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=./;Initial Catalog=projet;Integrated Security=True")]
+        public string projetConnectionString1 {
+            get {
+                return ((string)(this["projetConnectionString1"]));
             }
         }
     }

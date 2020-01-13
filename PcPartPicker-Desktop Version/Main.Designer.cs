@@ -32,8 +32,8 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.toper = new System.Windows.Forms.Panel();
-            this.naming = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.naming = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.sider = new System.Windows.Forms.Panel();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -75,17 +75,6 @@
             this.toper.Size = new System.Drawing.Size(645, 78);
             this.toper.TabIndex = 1;
             // 
-            // naming
-            // 
-            this.naming.AutoSize = true;
-            this.naming.Dock = System.Windows.Forms.DockStyle.Right;
-            this.naming.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.naming.ForeColor = System.Drawing.Color.White;
-            this.naming.Location = new System.Drawing.Point(584, 0);
-            this.naming.Name = "naming";
-            this.naming.Size = new System.Drawing.Size(0, 30);
-            this.naming.TabIndex = 6;
-            // 
             // bunifuImageButton2
             // 
             this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
@@ -100,6 +89,17 @@
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 25;
             this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            // 
+            // naming
+            // 
+            this.naming.AutoSize = true;
+            this.naming.Dock = System.Windows.Forms.DockStyle.Right;
+            this.naming.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.naming.ForeColor = System.Drawing.Color.White;
+            this.naming.Location = new System.Drawing.Point(645, 0);
+            this.naming.Name = "naming";
+            this.naming.Size = new System.Drawing.Size(0, 30);
+            this.naming.TabIndex = 6;
             // 
             // sider
             // 
