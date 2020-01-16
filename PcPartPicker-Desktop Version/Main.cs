@@ -14,14 +14,25 @@ namespace PcPartPicker_Desktop_Version
     {
         databeuseDataContext db = new databeuseDataContext();
         string name, password;
-        int loop =1; 
+
+
+        int loop =1;
+
+
+
+        AllParts form4;
+        UserSettings form5;
+
+
         public Main(String a, String b)
         {
             InitializeComponent();
             name = a;
             password = b;
-
             pictureBox1.BackColor = Color.Transparent;
+
+            form4 = new AllParts();
+            form5 = new UserSettings(name,password);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,16 +95,22 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
+            form5.Hide();
             naming.Text = bunifuFlatButton5.Text;
-            //   allParts1.BringToFront();
-            allParts1.BringToFront();
+            form4.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(form4);
+            form4.Show();
 
           
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            naming.Text = bunifuFlatButton2.Text;
+            naming.Text = "User Settings";
+            form4.Hide();
+            form5.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(form5);
+            form5.Show();
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
