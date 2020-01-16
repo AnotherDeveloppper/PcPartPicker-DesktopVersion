@@ -43,7 +43,7 @@ namespace PcPartPicker_Desktop_Version
             activer(false);
 
             pbUser.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[8].Value.ToString());
-            //hey
+            //hey//
         }
         public void activer(Boolean tr )
         {
