@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelLeft.SuspendLayout();
             this.panelRight.SuspendLayout();
@@ -83,6 +84,7 @@
             // 
             // panelRight
             // 
+            this.panelRight.Controls.Add(this.button2);
             this.panelRight.Controls.Add(this.button1);
             this.panelRight.Controls.Add(this.label5);
             this.panelRight.Controls.Add(this.bunifuMaterialTextbox2);
@@ -209,6 +211,16 @@
             this.bunifuDragControl1.TargetControl = this.panelLeft;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(202, 92);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +258,7 @@
         private System.Windows.Forms.Button button1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

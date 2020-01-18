@@ -22,6 +22,7 @@ namespace PcPartPicker_Desktop_Version
 
         AllParts form4;
         UserSettings form5;
+        prebuilds f1;
 
 
         public Main(String a, String b)
@@ -33,6 +34,7 @@ namespace PcPartPicker_Desktop_Version
 
             form4 = new AllParts();
             form5 = new UserSettings(name,password);
+            f1 = new prebuilds();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -95,6 +97,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
+            f1.Hide();
             form5.Hide();
             naming.Text = bunifuFlatButton5.Text;
             form4.Dock = DockStyle.Fill;
@@ -106,6 +109,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+            f1.Hide();
             naming.Text = "User Settings";
             form4.Hide();
             form5.Dock = DockStyle.Fill;
@@ -115,7 +119,14 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
+            form4.Hide();
+            form5.Hide();
             naming.Text = bunifuFlatButton4.Text;
+            f1.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(f1);
+            f1.Show();
+
+
         }
 
         private void allParts1_Load(object sender, EventArgs e)

@@ -69,5 +69,12 @@ namespace PcPartPicker_Desktop_Version
                 button1.PerformClick();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Main a = new Main(bunifuMaterialTextbox1.Text, bunifuMaterialTextbox2.Text);
+            a.Show();
+            this.Hide();
+        }
     }
 }

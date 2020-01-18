@@ -49,6 +49,7 @@
             this.bunifuCheckbox7 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.cbCase = new System.Windows.Forms.Label();
             this.bunifuCheckbox5 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -343,5 +344,6 @@
         private System.Windows.Forms.Label cbCase;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
