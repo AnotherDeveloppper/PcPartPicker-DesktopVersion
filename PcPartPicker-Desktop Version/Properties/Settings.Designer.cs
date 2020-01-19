@@ -37,10 +37,21 @@ namespace PcPartPicker_Desktop_Version.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=./;Initial Catalog=projet;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-Q6F79J6\\SQLEXPRESS;Initial Catalog=projet;Integrated Security" +
+            "=True")]
         public string projetConnectionString1 {
             get {
                 return ((string)(this["projetConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=./;Initial Catalog=projet;Integrated Security=True")]
+        public string projetConnectionString2 {
+            get {
+                return ((string)(this["projetConnectionString2"]));
             }
         }
     }

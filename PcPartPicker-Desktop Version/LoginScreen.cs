@@ -76,5 +76,14 @@ namespace PcPartPicker_Desktop_Version
             a.Show();
             this.Hide();
         }
+
+        private void bunifuMaterialTextbox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+
+        }
     }
 }

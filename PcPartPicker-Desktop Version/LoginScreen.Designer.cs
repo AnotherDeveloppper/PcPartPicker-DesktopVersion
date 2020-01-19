@@ -33,6 +33,7 @@
             this.panelLeft = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panelRight = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -42,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelLeft.SuspendLayout();
             this.panelRight.SuspendLayout();
@@ -98,6 +98,16 @@
             this.panelRight.Size = new System.Drawing.Size(400, 492);
             this.panelRight.TabIndex = 6;
             this.panelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRight_Paint);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(202, 92);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -165,6 +175,7 @@
             this.bunifuMaterialTextbox1.TabIndex = 11;
             this.bunifuMaterialTextbox1.Text = "Username";
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMaterialTextbox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bunifuMaterialTextbox1_KeyDown);
             // 
             // label4
             // 
@@ -210,16 +221,6 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.panelLeft;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(202, 92);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // LoginScreen
             // 
