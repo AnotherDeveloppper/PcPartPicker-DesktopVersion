@@ -125,6 +125,7 @@ namespace PcPartPicker_Desktop_Version
             f1.Dock = DockStyle.Fill;
             Workhere.Controls.Add(f1);
             f1.Show();
+            
 
 
         }

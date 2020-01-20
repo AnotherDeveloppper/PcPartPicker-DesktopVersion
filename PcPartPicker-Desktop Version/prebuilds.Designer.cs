@@ -44,6 +44,9 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.prebuild1 = new PcPartPicker_Desktop_Version.prebuild();
+            this.prebuild2 = new PcPartPicker_Desktop_Version.prebuild();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,6 +54,8 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel2.Controls.Add(this.prebuild2);
+            this.panel2.Controls.Add(this.prebuild1);
             this.panel2.Location = new System.Drawing.Point(0, 89);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(497, 453);
@@ -219,6 +224,20 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             // 
+            // prebuild1
+            // 
+            this.prebuild1.Location = new System.Drawing.Point(3, 8);
+            this.prebuild1.Name = "prebuild1";
+            this.prebuild1.Size = new System.Drawing.Size(233, 227);
+            this.prebuild1.TabIndex = 0;
+            // 
+            // prebuild2
+            // 
+            this.prebuild2.Location = new System.Drawing.Point(251, 8);
+            this.prebuild2.Name = "prebuild2";
+            this.prebuild2.Size = new System.Drawing.Size(233, 227);
+            this.prebuild2.TabIndex = 1;
+            // 
             // prebuilds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +259,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "prebuilds";
             this.Size = new System.Drawing.Size(645, 542);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -263,5 +283,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private prebuild prebuild2;
+        private prebuild prebuild1;
     }
 }
