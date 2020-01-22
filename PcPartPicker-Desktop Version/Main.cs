@@ -23,7 +23,7 @@ namespace PcPartPicker_Desktop_Version
         AllParts form4;
         UserSettings form5;
         prebuilds f1;
-
+        NewBuild form3;
 
         public Main(String a, String b)
         {
@@ -82,7 +82,13 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
+            f1.Hide();
+            form5.Hide();
+            form4.Hide();
             naming.Text = bunifuFlatButton3.Text;
+            form3.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(form3);
+            form3.Show();
         }
 
         private void Workhere_Paint(object sender, PaintEventArgs e)
@@ -131,6 +137,11 @@ namespace PcPartPicker_Desktop_Version
         }
 
         private void allParts1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Workhere_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

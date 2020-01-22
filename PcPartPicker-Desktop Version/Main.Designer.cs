@@ -346,6 +346,7 @@
             this.Workhere.Name = "Workhere";
             this.Workhere.Size = new System.Drawing.Size(645, 542);
             this.Workhere.TabIndex = 2;
+            this.Workhere.Paint += new System.Windows.Forms.PaintEventHandler(this.Workhere_Paint_1);
             // 
             // pictureBox1
             // 

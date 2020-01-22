@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -67,6 +67,12 @@
     </Compile>
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewBuild.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewBuild.Designer.cs">
+      <DependentUpon>NewBuild.cs</DependentUpon>
     </Compile>
     <Compile Include="Part.cs">
       <SubType>UserControl</SubType>
@@ -102,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="AllParts.resx">
       <DependentUpon>AllParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewBuild.resx">
+      <DependentUpon>NewBuild.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="prebuild.resx">
       <DependentUpon>prebuild.cs</DependentUpon>
