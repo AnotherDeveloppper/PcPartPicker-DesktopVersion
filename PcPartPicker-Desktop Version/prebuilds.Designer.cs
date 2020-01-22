@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(prebuilds));
-            this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTrackbar1 = new Bunifu.Framework.UI.BunifuTrackbar();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -44,22 +43,11 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.prebuild1 = new PcPartPicker_Desktop_Version.prebuild();
-            this.prebuild2 = new PcPartPicker_Desktop_Version.prebuild();
-            this.panel2.SuspendLayout();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dg = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel2.Controls.Add(this.prebuild2);
-            this.panel2.Controls.Add(this.prebuild1);
-            this.panel2.Location = new System.Drawing.Point(0, 89);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(497, 453);
-            this.panel2.TabIndex = 2;
             // 
             // bunifuCustomLabel1
             // 
@@ -224,24 +212,37 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             // 
-            // prebuild1
+            // tableLayoutPanel1
             // 
-            this.prebuild1.Location = new System.Drawing.Point(3, 8);
-            this.prebuild1.Name = "prebuild1";
-            this.prebuild1.Size = new System.Drawing.Size(233, 227);
-            this.prebuild1.TabIndex = 0;
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 89);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(1);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(497, 453);
+            this.tableLayoutPanel1.TabIndex = 16;
             // 
-            // prebuild2
+            // dg
             // 
-            this.prebuild2.Location = new System.Drawing.Point(251, 8);
-            this.prebuild2.Name = "prebuild2";
-            this.prebuild2.Size = new System.Drawing.Size(233, 227);
-            this.prebuild2.TabIndex = 1;
+            this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dg.Location = new System.Drawing.Point(20, 3);
+            this.dg.Name = "dg";
+            this.dg.Size = new System.Drawing.Size(0, 0);
+            this.dg.TabIndex = 0;
             // 
             // prebuilds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dg);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.bunifuMetroTextbox1);
             this.Controls.Add(this.bunifuCustomLabel5);
@@ -256,19 +257,17 @@
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuTrackbar1);
             this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.panel2);
             this.Name = "prebuilds";
             this.Size = new System.Drawing.Size(645, 542);
-            this.panel2.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.prebuilds_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuTrackbar bunifuTrackbar1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
@@ -283,7 +282,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private prebuild prebuild2;
-        private prebuild prebuild1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView dg;
     }
 }

@@ -172,6 +172,11 @@ namespace PcPartPicker_Desktop_Version
                 pbItemPic.Image = Image.FromFile(@"images\" + dataGridView1.Rows[0].Cells[8].Value.ToString());
             }
         }
+
+        private void Part_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

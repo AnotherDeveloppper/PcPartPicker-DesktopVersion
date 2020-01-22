@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(prebuild));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.prebuildbuilder = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.prebuildpic = new System.Windows.Forms.PictureBox();
             this.prebuildname = new System.Windows.Forms.Label();
             this.prebuildcpu = new System.Windows.Forms.Label();
             this.prebuildgpu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.prebuildprice = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prebuildpic)).BeginInit();
             this.SuspendLayout();
@@ -44,17 +45,38 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.prebuildbuilder);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, -5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(233, 32);
             this.panel1.TabIndex = 0;
             // 
+            // prebuildbuilder
+            // 
+            this.prebuildbuilder.AutoSize = true;
+            this.prebuildbuilder.Font = new System.Drawing.Font("Berlin Sans FB Demi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prebuildbuilder.Location = new System.Drawing.Point(65, 11);
+            this.prebuildbuilder.Name = "prebuildbuilder";
+            this.prebuildbuilder.Size = new System.Drawing.Size(70, 13);
+            this.prebuildbuilder.TabIndex = 1;
+            this.prebuildbuilder.Text = "Build name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(40, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "🖥️";
+            // 
             // prebuildpic
             // 
             this.prebuildpic.Location = new System.Drawing.Point(0, 27);
             this.prebuildpic.Name = "prebuildpic";
             this.prebuildpic.Size = new System.Drawing.Size(233, 108);
+            this.prebuildpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.prebuildpic.TabIndex = 1;
             this.prebuildpic.TabStop = false;
             // 
@@ -109,19 +131,11 @@
             this.prebuildprice.TabIndex = 6;
             this.prebuildprice.Text = "980.36 $";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "🖥️";
-            // 
             // prebuild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.prebuildprice);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.prebuildgpu);
@@ -149,5 +163,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label prebuildprice;
         private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuCustomLabel prebuildbuilder;
     }
 }

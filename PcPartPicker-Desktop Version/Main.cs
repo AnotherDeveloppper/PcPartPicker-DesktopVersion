@@ -142,9 +142,10 @@ namespace PcPartPicker_Desktop_Version
                     select a;
 
             bunifuFlatButton2.Text = "                  " + name;
+            dataGridView1.DataSource = q;
+            
+           pictureBox2.Image = Image.FromFile(@"images\"+ dataGridView1.Rows[0].Cells[8].Value.ToString());
 
-
-           
 
         }
     }

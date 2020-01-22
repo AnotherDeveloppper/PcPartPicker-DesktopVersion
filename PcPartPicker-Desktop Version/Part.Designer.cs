@@ -93,6 +93,7 @@
             this.Controls.Add(this.lbItemName);
             this.Name = "Part";
             this.Size = new System.Drawing.Size(448, 84);
+            this.Load += new System.EventHandler(this.Part_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbItemPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

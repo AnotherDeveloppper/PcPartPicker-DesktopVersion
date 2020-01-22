@@ -222,9 +222,13 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _CpuCooler_ID;
 		
+		private string _Gpu_ID;
+		
 		private string _Cpu_ID;
 		
 		private string _MoBo_ID;
+		
+		private string _Ram_ID;
 		
 		private int _USER_ID;
 		
@@ -233,6 +237,8 @@ namespace PcPartPicker_Desktop_Version
 		private System.Nullable<decimal> _Total_Watt;
 		
 		private string _Bootable;
+		
+		private string _Build_Picture;
 		
 		private EntitySet<Select_Gpu> _Select_Gpus;
 		
@@ -247,6 +253,10 @@ namespace PcPartPicker_Desktop_Version
 		private EntityRef<Cpu> _Cpu;
 		
 		private EntityRef<CpuCooler> _CpuCooler;
+		
+		private EntityRef<Gpu> _Gpu;
+		
+		private EntityRef<Memory> _Memory;
 		
 		private EntityRef<MotherBoard> _MotherBoard;
 		
@@ -266,10 +276,14 @@ namespace PcPartPicker_Desktop_Version
     partial void OnPowerSupply_IDChanged();
     partial void OnCpuCooler_IDChanging(string value);
     partial void OnCpuCooler_IDChanged();
+    partial void OnGpu_IDChanging(string value);
+    partial void OnGpu_IDChanged();
     partial void OnCpu_IDChanging(string value);
     partial void OnCpu_IDChanged();
     partial void OnMoBo_IDChanging(string value);
     partial void OnMoBo_IDChanged();
+    partial void OnRam_IDChanging(string value);
+    partial void OnRam_IDChanged();
     partial void OnUSER_IDChanging(int value);
     partial void OnUSER_IDChanged();
     partial void OnTotal_PriceChanging(System.Nullable<double> value);
@@ -278,6 +292,8 @@ namespace PcPartPicker_Desktop_Version
     partial void OnTotal_WattChanged();
     partial void OnBootableChanging(string value);
     partial void OnBootableChanged();
+    partial void OnBuild_PictureChanging(string value);
+    partial void OnBuild_PictureChanged();
     #endregion
 		
 		public BUILD()
@@ -289,6 +305,8 @@ namespace PcPartPicker_Desktop_Version
 			this._Case = default(EntityRef<Case>);
 			this._Cpu = default(EntityRef<Cpu>);
 			this._CpuCooler = default(EntityRef<CpuCooler>);
+			this._Gpu = default(EntityRef<Gpu>);
+			this._Memory = default(EntityRef<Memory>);
 			this._MotherBoard = default(EntityRef<MotherBoard>);
 			this._PowerSupply = default(EntityRef<PowerSupply>);
 			OnCreated();
@@ -406,7 +424,31 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cpu_ID", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gpu_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Gpu_ID
+		{
+			get
+			{
+				return this._Gpu_ID;
+			}
+			set
+			{
+				if ((this._Gpu_ID != value))
+				{
+					if (this._Gpu.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnGpu_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Gpu_ID = value;
+					this.SendPropertyChanged("Gpu_ID");
+					this.OnGpu_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cpu_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
 		public string Cpu_ID
 		{
 			get
@@ -450,6 +492,30 @@ namespace PcPartPicker_Desktop_Version
 					this._MoBo_ID = value;
 					this.SendPropertyChanged("MoBo_ID");
 					this.OnMoBo_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ram_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Ram_ID
+		{
+			get
+			{
+				return this._Ram_ID;
+			}
+			set
+			{
+				if ((this._Ram_ID != value))
+				{
+					if (this._Memory.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnRam_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Ram_ID = value;
+					this.SendPropertyChanged("Ram_ID");
+					this.OnRam_IDChanged();
 				}
 			}
 		}
@@ -534,6 +600,26 @@ namespace PcPartPicker_Desktop_Version
 					this._Bootable = value;
 					this.SendPropertyChanged("Bootable");
 					this.OnBootableChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_Picture", DbType="VarChar(50)")]
+		public string Build_Picture
+		{
+			get
+			{
+				return this._Build_Picture;
+			}
+			set
+			{
+				if ((this._Build_Picture != value))
+				{
+					this.OnBuild_PictureChanging(value);
+					this.SendPropertyChanging();
+					this._Build_Picture = value;
+					this.SendPropertyChanged("Build_Picture");
+					this.OnBuild_PictureChanged();
 				}
 			}
 		}
@@ -709,6 +795,74 @@ namespace PcPartPicker_Desktop_Version
 						this._CpuCooler_ID = default(string);
 					}
 					this.SendPropertyChanged("CpuCooler");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Gpu_BUILD", Storage="_Gpu", ThisKey="Gpu_ID", OtherKey="Gpu_ID", IsForeignKey=true)]
+		public Gpu Gpu
+		{
+			get
+			{
+				return this._Gpu.Entity;
+			}
+			set
+			{
+				Gpu previousValue = this._Gpu.Entity;
+				if (((previousValue != value) 
+							|| (this._Gpu.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Gpu.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._Gpu.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._Gpu_ID = value.Gpu_ID;
+					}
+					else
+					{
+						this._Gpu_ID = default(string);
+					}
+					this.SendPropertyChanged("Gpu");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Memory_BUILD", Storage="_Memory", ThisKey="Ram_ID", OtherKey="Memory_ID", IsForeignKey=true)]
+		public Memory Memory
+		{
+			get
+			{
+				return this._Memory.Entity;
+			}
+			set
+			{
+				Memory previousValue = this._Memory.Entity;
+				if (((previousValue != value) 
+							|| (this._Memory.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Memory.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._Memory.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._Ram_ID = value.Memory_ID;
+					}
+					else
+					{
+						this._Ram_ID = default(string);
+					}
+					this.SendPropertyChanged("Memory");
 				}
 			}
 		}
@@ -1494,7 +1648,7 @@ namespace PcPartPicker_Desktop_Version
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cpu_ID", DbType="VarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cpu_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string Cpu_ID
 		{
 			get
@@ -2066,6 +2220,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Gpu_Picture;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
 		private EntitySet<Select_Gpu> _Select_Gpus;
 		
     #region Extensibility Method Definitions
@@ -2098,11 +2254,12 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Gpu()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
 			this._Select_Gpus = new EntitySet<Select_Gpu>(new Action<Select_Gpu>(this.attach_Select_Gpus), new Action<Select_Gpu>(this.detach_Select_Gpus));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gpu_ID", DbType="VarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gpu_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string Gpu_ID
 		{
 			get
@@ -2322,6 +2479,19 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Gpu_BUILD", Storage="_BUILDs", ThisKey="Gpu_ID", OtherKey="Gpu_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Gpu_Select_Gpu", Storage="_Select_Gpus", ThisKey="Gpu_ID", OtherKey="Gpu_ID")]
 		public EntitySet<Select_Gpu> Select_Gpus
 		{
@@ -2353,6 +2523,18 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Gpu = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Gpu = null;
 		}
 		
 		private void attach_Select_Gpus(Select_Gpu entity)
@@ -2392,6 +2574,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Memory_Picture;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
 		private EntitySet<Select_Memory> _Select_Memories;
 		
     #region Extensibility Method Definitions
@@ -2420,11 +2604,12 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Memory()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
 			this._Select_Memories = new EntitySet<Select_Memory>(new Action<Select_Memory>(this.attach_Select_Memories), new Action<Select_Memory>(this.detach_Select_Memories));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Memory_ID", DbType="VarChar(40) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Memory_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string Memory_ID
 		{
 			get
@@ -2604,6 +2789,19 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Memory_BUILD", Storage="_BUILDs", ThisKey="Memory_ID", OtherKey="Ram_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Memory_Select_Memory", Storage="_Select_Memories", ThisKey="Memory_ID", OtherKey="Memory_ID")]
 		public EntitySet<Select_Memory> Select_Memories
 		{
@@ -2635,6 +2833,18 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Memory = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Memory = null;
 		}
 		
 		private void attach_Select_Memories(Select_Memory entity)
@@ -3269,7 +3479,7 @@ namespace PcPartPicker_Desktop_Version
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gpu_ID", DbType="VarChar(100) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gpu_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string Gpu_ID
 		{
 			get
@@ -3461,7 +3671,7 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Memory_ID", DbType="VarChar(40) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Memory_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string Memory_ID
 		{
 			get
