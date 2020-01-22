@@ -143,8 +143,10 @@
             this.Controls.Add(this.prebuildname);
             this.Controls.Add(this.prebuildpic);
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "prebuild";
             this.Size = new System.Drawing.Size(233, 227);
+            this.Click += new System.EventHandler(this.prebuild_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prebuildpic)).EndInit();

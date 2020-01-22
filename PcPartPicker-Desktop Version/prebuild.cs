@@ -12,17 +12,20 @@ namespace PcPartPicker_Desktop_Version
 {
     public partial class prebuild : UserControl
     {
+
         public prebuild()
         {
             InitializeComponent();
-        }
 
+           
+        }
         private string _title;
         private string _builder;
         private string _gpu;
         private string _cpu;
         private string _price;
         private Image _pic;
+
 
 
 
@@ -60,8 +63,9 @@ namespace PcPartPicker_Desktop_Version
             set { _pic = value; prebuildpic.Image = value; }
         }
 
-
-
-
+        public void prebuild_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

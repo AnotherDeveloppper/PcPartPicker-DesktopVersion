@@ -92,6 +92,12 @@
     <Compile Include="prebuild.Designer.cs">
       <DependentUpon>prebuild.cs</DependentUpon>
     </Compile>
+    <Compile Include="prebuildpage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="prebuildpage.Designer.cs">
+      <DependentUpon>prebuildpage.cs</DependentUpon>
+    </Compile>
     <Compile Include="prebuilds.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="prebuild.resx">
       <DependentUpon>prebuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prebuildpage.resx">
+      <DependentUpon>prebuildpage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="prebuilds.resx">
       <DependentUpon>prebuilds.cs</DependentUpon>
