@@ -73,6 +73,7 @@
             // 
             // prebuildpic
             // 
+            this.prebuildpic.Enabled = false;
             this.prebuildpic.Location = new System.Drawing.Point(0, 27);
             this.prebuildpic.Name = "prebuildpic";
             this.prebuildpic.Size = new System.Drawing.Size(233, 108);
@@ -123,11 +124,11 @@
             // prebuildprice
             // 
             this.prebuildprice.AutoSize = true;
-            this.prebuildprice.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prebuildprice.ForeColor = System.Drawing.Color.DarkRed;
-            this.prebuildprice.Location = new System.Drawing.Point(10, 206);
+            this.prebuildprice.Font = new System.Drawing.Font("Berlin Sans FB Demi", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prebuildprice.ForeColor = System.Drawing.Color.DarkGreen;
+            this.prebuildprice.Location = new System.Drawing.Point(15, 205);
             this.prebuildprice.Name = "prebuildprice";
-            this.prebuildprice.Size = new System.Drawing.Size(49, 13);
+            this.prebuildprice.Size = new System.Drawing.Size(55, 16);
             this.prebuildprice.TabIndex = 6;
             this.prebuildprice.Text = "980.36 $";
             // 
@@ -147,6 +148,8 @@
             this.Name = "prebuild";
             this.Size = new System.Drawing.Size(233, 227);
             this.Click += new System.EventHandler(this.prebuild_Click);
+            this.MouseLeave += new System.EventHandler(this.prebuild_MouseLeave);
+            this.MouseHover += new System.EventHandler(this.prebuild_MouseHover);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prebuildpic)).EndInit();

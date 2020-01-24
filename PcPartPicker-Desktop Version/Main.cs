@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PcPartPicker_Desktop_Version
 {
-    public partial class Main : Form
+    public  partial class Main : Form
     {
 
         databeuseDataContext db = new databeuseDataContext();
@@ -25,6 +25,7 @@ namespace PcPartPicker_Desktop_Version
         UserSettings form5;
         prebuilds f1;
         NewBuild form3;
+        prebuildpage f2;
 
         public Main(String a, String b)
         {
@@ -36,6 +37,11 @@ namespace PcPartPicker_Desktop_Version
             form4 = new AllParts();
             form5 = new UserSettings(name,password);
             f1 = new prebuilds();
+            f2 = new prebuildpage();
+        }
+
+        public Main()
+        {
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -124,7 +130,7 @@ namespace PcPartPicker_Desktop_Version
             form5.Show();
         }
 
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        public void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
             form4.Hide();
             form5.Hide();
@@ -132,16 +138,14 @@ namespace PcPartPicker_Desktop_Version
             f1.Dock = DockStyle.Fill;
             Workhere.Controls.Add(f1);
             f1.Show();
-            
-
-
+          
         }
+
 
         private void allParts1_Load(object sender, EventArgs e)
         {
 
         }
-
         private void Workhere_Paint_1(object sender, PaintEventArgs e)
         {
 
@@ -156,12 +160,18 @@ namespace PcPartPicker_Desktop_Version
             bunifuFlatButton2.Text = "                  " + name;
             dataGridView1.DataSource = q;
             
-           //pictureBox2.Image = Image.FromFile(@"images\"+ dataGridView1.Rows[0].Cells[8].Value.ToString());
-
+            //pictureBox2.Image = Image.FromFile(@"images\"+ dataGridView1.Rows[0].Cells[8].Value.ToString());
+        }
+        public static void  testc()
+        {
+            MessageBox.Show("ksksk");
+            
 
         }
 
-     
+        
+
+
 
     }
 }

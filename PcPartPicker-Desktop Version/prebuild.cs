@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PcPartPicker_Desktop_Version
 {
+    
     public partial class prebuild : UserControl
     {
-
         public prebuild()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace PcPartPicker_Desktop_Version
         private string _cpu;
         private string _price;
         private Image _pic;
-
+        
 
 
 
@@ -62,10 +62,47 @@ namespace PcPartPicker_Desktop_Version
             get { return _pic; }
             set { _pic = value; prebuildpic.Image = value; }
         }
-
-        public void prebuild_Click(object sender, EventArgs e)
+        
+        //UC CLICK 
+        public new event EventHandler Click
         {
-            
+            add
+            {
+                base.Click += value;
+                foreach (Control control in Controls)
+                {
+                    control.Click += value;
+                }
+            }
+            remove
+            {
+                base.Click -= value;
+                foreach (Control control in Controls)
+                {
+                    control.Click -= value;
+                }
+            }
+        }
+
+        private void prebuild_Click(object sender, EventArgs e)
+        {
+          /*  prebuildpage p = new prebuildpage();
+            p.BringToFront();*/
+
+        }
+
+        private void prebuild_MouseHover(object sender, EventArgs e)
+        {
+      
+            this.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void prebuild_MouseLeave(object sender, EventArgs e)
+        {
+          
+            this.BorderStyle = BorderStyle.None;
+
+
         }
     }
 }
