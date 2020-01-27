@@ -50,7 +50,7 @@ namespace PcPartPicker_Desktop_Version
         {
             if (type == "cpu")
             {
-                var q = from a in db.Cpus
+                var q = from a in db.Cpu
                         where a.Cpu_ID == Text
                         select a;
                 dataGridView1.DataSource = q.ToList();
@@ -65,7 +65,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "Case")
             {
                 List<Case> b = new List<Case>();
-                var q = (from a in db.Cases
+                var q = (from a in db.Case
                          where a.Case_ID == Text
                          select a).ToList();
                 b = q;
@@ -81,7 +81,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "CpuCooler")
             {
                 List<CpuCooler> b = new List<CpuCooler>();
-                var q = (from a in db.CpuCoolers
+                var q = (from a in db.CpuCooler
                          where a.CpuCooler_ID == Text
                          select a).ToList();
                 b = q;
@@ -97,7 +97,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "gpu")
             {
                 List<Gpu> b = new List<Gpu>();
-                var q = (from a in db.Gpus
+                var q = (from a in db.Gpu
                          where a.Gpu_ID == Text
                          select a).ToList();
                 b = q;
@@ -113,7 +113,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "memory")
             {
                 List<Memory> b = new List<Memory>();
-                var q = (from a in db.Memories
+                var q = (from a in db.Memory
                          where a.Memory_ID == Text
                          select a).ToList();
                 b = q;
@@ -129,7 +129,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "Motherboard")
             {
                 List<MotherBoard> b = new List<MotherBoard>();
-                var q = (from a in db.MotherBoards
+                var q = (from a in db.MotherBoard
                          where a.MoBo_ID == Text
                          select a).ToList();
                 b = q;
@@ -145,7 +145,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "PowerSupply")
             {
                 List<PowerSupply> b = new List<PowerSupply>();
-                var q = (from a in db.PowerSupplies
+                var q = (from a in db.PowerSupply
                          where a.PowerSupply_ID == Text
                          select a).ToList();
                 b = q;
@@ -161,7 +161,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "Storage")
             {
                 List<Storage> b = new List<Storage>();
-                var q = (from a in db.Storages
+                var q = (from a in db.Storage
                          where a.Storage_ID == Text
                          select a).ToList();
                 b = q;

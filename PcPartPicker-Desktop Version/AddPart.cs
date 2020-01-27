@@ -49,7 +49,7 @@ namespace PcPartPicker_Desktop_Version
         {
             if (type == "cpu")
             {
-                Cpu q = (from a in db.Cpus
+                Cpu q = (from a in db.Cpu
                         where a.Cpu_ID == Text
                         select a).FirstOrDefault();
 
@@ -64,7 +64,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "Case")
             {
                 List<Case> b = new List<Case>();
-                Case q = (from a in db.Cases
+                Case q = (from a in db.Case
                           where a.Case_ID == Text
                          select a).FirstOrDefault();
 
@@ -78,7 +78,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "CpuCooler")
             {
                 List<CpuCooler> b = new List<CpuCooler>();
-                CpuCooler q = (from a in db.CpuCoolers
+                CpuCooler q = (from a in db.CpuCooler
                                where a.CpuCooler_ID == Text
                           select a).FirstOrDefault();
 
@@ -92,7 +92,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "gpu")
             {
                 List<Gpu> b = new List<Gpu>();
-                Gpu q = (from a in db.Gpus
+                Gpu q = (from a in db.Gpu
                          where a.Gpu_ID == Text
                          select a).FirstOrDefault();
 
@@ -106,7 +106,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "memory")
             {
                 List<Memory> b = new List<Memory>();
-                Memory q = (from a in db.Memories
+                Memory q = (from a in db.Memory
                          where a.Memory_ID == Text
                          select a).FirstOrDefault();
 
@@ -120,7 +120,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "Motherboard")
             {
                 List<MotherBoard> b = new List<MotherBoard>();
-                MotherBoard q = (from a in db.MotherBoards
+                MotherBoard q = (from a in db.MotherBoard
                                  where a.MoBo_ID == Text
                                 select a).FirstOrDefault();
 
@@ -134,7 +134,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "PowerSupply")
             {
                 List<PowerSupply> b = new List<PowerSupply>();
-                PowerSupply q = (from a in db.PowerSupplies
+                PowerSupply q = (from a in db.PowerSupply
                                  where a.PowerSupply_ID == Text
                                  select a).FirstOrDefault();
 
@@ -148,7 +148,7 @@ namespace PcPartPicker_Desktop_Version
             if (type == "Storage")
             {
                 List<Storage> b = new List<Storage>();
-                Storage q = (from a in db.Storages
+                Storage q = (from a in db.Storage
                              where a.Storage_ID == Text
                                  select a).FirstOrDefault();
 

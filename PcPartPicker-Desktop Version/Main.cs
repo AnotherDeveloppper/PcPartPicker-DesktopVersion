@@ -34,6 +34,7 @@ namespace PcPartPicker_Desktop_Version
             password = b;
             pictureBox1.BackColor = Color.Transparent;
 
+            form3 = new NewBuild();
             form4 = new AllParts();
             form5 = new UserSettings(name,password);
             f1 = new prebuilds();
@@ -153,7 +154,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void Main_Load(object sender, EventArgs e)
         {
-            var q = from a in db.USERs
+            var q = from a in db.USER
                     where a.UserName == name && a.Password == password
                     select a;
 
