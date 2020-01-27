@@ -18,6 +18,8 @@ namespace PcPartPicker_Desktop_Version
         }
         databeuseDataContext db = new databeuseDataContext();
         int poss = 10;
+
+
         public void addItem(string text, string path)
         {
             Part p = new PcPartPicker_Desktop_Version.Part(text, path);

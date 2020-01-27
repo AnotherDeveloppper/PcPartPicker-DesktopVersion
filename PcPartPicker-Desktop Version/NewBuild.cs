@@ -16,5 +16,10 @@ namespace PcPartPicker_Desktop_Version
         {
             InitializeComponent();
         }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
