@@ -38,6 +38,7 @@
             this.prebuildgpu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.prebuildprice = new System.Windows.Forms.Label();
+            this.prebuildID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prebuildpic)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.prebuildID);
             this.panel1.Controls.Add(this.prebuildbuilder);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(0, -5);
@@ -132,6 +134,15 @@
             this.prebuildprice.TabIndex = 6;
             this.prebuildprice.Text = "980.36 $";
             // 
+            // prebuildID
+            // 
+            this.prebuildID.AutoSize = true;
+            this.prebuildID.Location = new System.Drawing.Point(177, 13);
+            this.prebuildID.Name = "prebuildID";
+            this.prebuildID.Size = new System.Drawing.Size(35, 13);
+            this.prebuildID.TabIndex = 2;
+            this.prebuildID.Text = "label3";
+            // 
             // prebuild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,5 +180,6 @@
         private System.Windows.Forms.Label prebuildprice;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuCustomLabel prebuildbuilder;
+        private System.Windows.Forms.Label prebuildID;
     }
 }

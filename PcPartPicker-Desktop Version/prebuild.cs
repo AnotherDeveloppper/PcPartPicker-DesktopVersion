@@ -10,30 +10,36 @@ using System.Windows.Forms;
 
 namespace PcPartPicker_Desktop_Version
 {
-    
+
     public partial class prebuild : UserControl
     {
+
         public prebuild()
         {
             InitializeComponent();
-
-           
         }
+        private string _id;
         private string _title;
         private string _builder;
         private string _gpu;
         private string _cpu;
         private string _price;
         private Image _pic;
-        
+        public static string sID;
 
 
 
+
+        public string id
+        {
+            get { return _id; }
+            set { _id = value; prebuildID.Text = value; }
+        }
         public string title
-             {
+        {
             get { return _title; }
             set { _title = value; prebuildname.Text = value; }
-             }
+        }
 
         public string builder
         {
@@ -50,19 +56,19 @@ namespace PcPartPicker_Desktop_Version
         public string cpu
         {
             get { return _cpu; }
-            set { _cpu = value;prebuildcpu.Text = value; }
+            set { _cpu = value; prebuildcpu.Text = value; }
         }
         public string price
         {
             get { return _price; }
-            set { _price = value;prebuildprice.Text = value.ToString(); }
+            set { _price = value; prebuildprice.Text = value.ToString(); }
         }
         public Image pic
         {
             get { return _pic; }
             set { _pic = value; prebuildpic.Image = value; }
         }
-        
+
         //UC CLICK 
         public new event EventHandler Click
         {
@@ -86,23 +92,27 @@ namespace PcPartPicker_Desktop_Version
 
         private void prebuild_Click(object sender, EventArgs e)
         {
-          /*  prebuildpage p = new prebuildpage();
-            p.BringToFront();*/
+            sID = this.prebuildID.Text;
+            Main.main.testc();
 
         }
 
         private void prebuild_MouseHover(object sender, EventArgs e)
         {
-      
+
             this.BorderStyle = BorderStyle.Fixed3D;
         }
 
         private void prebuild_MouseLeave(object sender, EventArgs e)
         {
-          
+
             this.BorderStyle = BorderStyle.None;
 
 
+        }
+
+        private void prebuild_Load(object sender, EventArgs e)
+        {
         }
     }
 }

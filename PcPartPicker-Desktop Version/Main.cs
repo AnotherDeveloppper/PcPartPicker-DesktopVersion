@@ -18,7 +18,7 @@ namespace PcPartPicker_Desktop_Version
 
 
         int loop =1;
-
+        public static Main main;
 
 
         AllParts form4;
@@ -154,7 +154,8 @@ namespace PcPartPicker_Desktop_Version
 
         private void Main_Load(object sender, EventArgs e)
         {
-            var q = from a in db.USER
+            main = this;
+            var q = from a in db.USERs
                     where a.UserName == name && a.Password == password
                     select a;
 
@@ -163,10 +164,16 @@ namespace PcPartPicker_Desktop_Version
             
             //pictureBox2.Image = Image.FromFile(@"images\"+ dataGridView1.Rows[0].Cells[8].Value.ToString());
         }
-        public static void  testc()
+        public  void  testc()
         {
-            MessageBox.Show("ksksk");
-            
+            form4.Hide();
+            f1.Hide();
+            form5.Hide();
+            naming.Text = "Parts list";
+            f2.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(f2);
+            f2.Show();
+
 
         }
 

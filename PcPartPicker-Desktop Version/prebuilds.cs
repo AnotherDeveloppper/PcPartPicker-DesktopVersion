@@ -25,7 +25,7 @@ namespace PcPartPicker_Desktop_Version
         }
         private void builds ()
         {
-            var x = from a in db.BUILD select a;
+            var x = from a in db.BUILDs select a;
             dg.DataSource = x;
 
             prebuild[] listprebuild = new prebuild[dg.Rows.Count-1];
@@ -33,12 +33,13 @@ namespace PcPartPicker_Desktop_Version
             for (int i=0; i < listprebuild.Length; i++)
             {
                 listprebuild[i] = new prebuild();
-               listprebuild[i].builder= dg.Rows[i].Cells[7].Value.ToString();
+                listprebuild[i].id = dg.Rows[i].Cells[0].Value.ToString();
+                listprebuild[i].builder= dg.Rows[i].Cells[7].Value.ToString();
                 listprebuild[i].title = dg.Rows[i].Cells[1].Value.ToString();
-                listprebuild[i].price = dg.Rows[i].Cells[10].Value.ToString()+" $";
+                listprebuild[i].price = dg.Rows[i].Cells[11].Value.ToString()+" $";
                 listprebuild[i].gpu = dg.Rows[i].Cells[5].Value.ToString();
-                listprebuild[i].cpu = dg.Rows[i].Cells[6].Value.ToString();
-                listprebuild[i].pic = Image.FromFile(@"images\" + dg.Rows[i].Cells[13].Value.ToString());
+                listprebuild[i].cpu = dg.Rows[i].Cells[7].Value.ToString();
+                listprebuild[i].pic = Image.FromFile(@"images\" + dg.Rows[i].Cells[14].Value.ToString());
                 tableLayoutPanel1.Controls.Add(listprebuild[i]);
 
             }
