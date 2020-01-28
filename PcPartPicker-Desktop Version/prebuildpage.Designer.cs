@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.Label();
             this.userpic = new System.Windows.Forms.PictureBox();
+            this.dguser = new System.Windows.Forms.DataGridView();
             this.dgbuild = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.buildname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dguser = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.cpuname = new System.Windows.Forms.Label();
             this.cpuprice = new System.Windows.Forms.Label();
@@ -49,7 +49,6 @@
             this.mobopic = new System.Windows.Forms.PictureBox();
             this.moboprice = new System.Windows.Forms.Label();
             this.moboname = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.storagepic = new System.Windows.Forms.PictureBox();
             this.storageprice = new System.Windows.Forms.Label();
@@ -73,17 +72,26 @@
             this.psupic = new System.Windows.Forms.PictureBox();
             this.psuprice = new System.Windows.Forms.Label();
             this.psuname = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.dgmobo = new System.Windows.Forms.DataGridView();
+            this.dgcpu = new System.Windows.Forms.DataGridView();
+            this.dgram = new System.Windows.Forms.DataGridView();
+            this.dgstorage = new System.Windows.Forms.DataGridView();
+            this.dggpu = new System.Windows.Forms.DataGridView();
+            this.dgcase = new System.Windows.Forms.DataGridView();
+            this.dgpsu = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.buildpic = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cpucoolerpic = new System.Windows.Forms.PictureBox();
+            this.cpucoolerprice = new System.Windows.Forms.Label();
+            this.cpucoolername = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dgcpucooler = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userpic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgbuild)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dguser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbuild)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpupic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mobopic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storagepic)).BeginInit();
@@ -91,13 +99,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.casepic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpupic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.psupic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgmobo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcpu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgstorage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dggpu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcase)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgpsu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildpic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpucoolerpic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcpucooler)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -113,7 +124,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(645, 82);
+            this.panel1.Size = new System.Drawing.Size(645, 68);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -130,7 +141,7 @@
             // 
             this.username.AutoSize = true;
             this.username.Font = new System.Drawing.Font("Forte", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(318, 55);
+            this.username.Location = new System.Drawing.Point(337, 42);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(46, 14);
             this.username.TabIndex = 4;
@@ -138,12 +149,20 @@
             // 
             // userpic
             // 
-            this.userpic.Location = new System.Drawing.Point(289, 47);
+            this.userpic.Location = new System.Drawing.Point(308, 34);
             this.userpic.Name = "userpic";
             this.userpic.Size = new System.Drawing.Size(29, 30);
             this.userpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.userpic.TabIndex = 3;
             this.userpic.TabStop = false;
+            // 
+            // dguser
+            // 
+            this.dguser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dguser.Location = new System.Drawing.Point(421, 47);
+            this.dguser.Name = "dguser";
+            this.dguser.Size = new System.Drawing.Size(0, 0);
+            this.dguser.TabIndex = 44;
             // 
             // dgbuild
             // 
@@ -158,7 +177,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label3.Location = new System.Drawing.Point(263, 55);
+            this.label3.Location = new System.Drawing.Point(282, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(20, 13);
             this.label3.TabIndex = 2;
@@ -169,36 +188,29 @@
             this.buildname.AutoSize = true;
             this.buildname.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buildname.ForeColor = System.Drawing.Color.White;
-            this.buildname.Location = new System.Drawing.Point(271, 26);
+            this.buildname.Location = new System.Drawing.Point(301, 13);
             this.buildname.Name = "buildname";
-            this.buildname.Size = new System.Drawing.Size(107, 20);
+            this.buildname.Size = new System.Drawing.Size(34, 20);
             this.buildname.TabIndex = 1;
-            this.buildname.Text = "BUILD NAME";
+            this.buildname.Text = "F16";
+            this.buildname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(301, 8);
+            this.label1.Location = new System.Drawing.Point(301, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "BUILD";
             // 
-            // dguser
-            // 
-            this.dguser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dguser.Location = new System.Drawing.Point(418, 53);
-            this.dguser.Name = "dguser";
-            this.dguser.Size = new System.Drawing.Size(0, 0);
-            this.dguser.TabIndex = 44;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Berlin Sans FB Demi", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 92);
+            this.label5.Location = new System.Drawing.Point(292, 300);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 18);
             this.label5.TabIndex = 1;
@@ -208,7 +220,7 @@
             // 
             this.cpuname.AutoSize = true;
             this.cpuname.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuname.Location = new System.Drawing.Point(77, 136);
+            this.cpuname.Location = new System.Drawing.Point(141, 351);
             this.cpuname.Name = "cpuname";
             this.cpuname.Size = new System.Drawing.Size(98, 13);
             this.cpuname.TabIndex = 2;
@@ -219,7 +231,7 @@
             this.cpuprice.AutoSize = true;
             this.cpuprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpuprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.cpuprice.Location = new System.Drawing.Point(81, 156);
+            this.cpuprice.Location = new System.Drawing.Point(145, 371);
             this.cpuprice.Name = "cpuprice";
             this.cpuprice.Size = new System.Drawing.Size(29, 13);
             this.cpuprice.TabIndex = 3;
@@ -227,9 +239,10 @@
             // 
             // cpupic
             // 
-            this.cpupic.Location = new System.Drawing.Point(36, 136);
+            this.cpupic.Location = new System.Drawing.Point(100, 351);
             this.cpupic.Name = "cpupic";
             this.cpupic.Size = new System.Drawing.Size(35, 35);
+            this.cpupic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cpupic.TabIndex = 4;
             this.cpupic.TabStop = false;
             // 
@@ -237,7 +250,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(35, 119);
+            this.label8.Location = new System.Drawing.Point(99, 334);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(28, 14);
             this.label8.TabIndex = 5;
@@ -247,7 +260,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(31, 108);
+            this.label9.Location = new System.Drawing.Point(250, 318);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(145, 13);
             this.label9.TabIndex = 6;
@@ -257,29 +270,29 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(40, 178);
+            this.label6.Location = new System.Drawing.Point(104, 393);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 5);
+            this.label6.Size = new System.Drawing.Size(142, 5);
             this.label6.TabIndex = 7;
             this.label6.Text = "---------------------------------------------------------------------------------" +
-    "------------------------------------------";
+    "----------------------------------------------------------";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(40, 243);
+            this.label7.Location = new System.Drawing.Point(102, 455);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 5);
+            this.label7.Size = new System.Drawing.Size(142, 5);
             this.label7.TabIndex = 12;
             this.label7.Text = "---------------------------------------------------------------------------------" +
-    "------------------------------------------";
+    "----------------------------------------------------------";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(31, 184);
+            this.label10.Location = new System.Drawing.Point(95, 399);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 14);
             this.label10.TabIndex = 11;
@@ -287,9 +300,10 @@
             // 
             // mobopic
             // 
-            this.mobopic.Location = new System.Drawing.Point(36, 201);
+            this.mobopic.Location = new System.Drawing.Point(98, 416);
             this.mobopic.Name = "mobopic";
-            this.mobopic.Size = new System.Drawing.Size(35, 35);
+            this.mobopic.Size = new System.Drawing.Size(37, 33);
+            this.mobopic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.mobopic.TabIndex = 10;
             this.mobopic.TabStop = false;
             // 
@@ -298,7 +312,7 @@
             this.moboprice.AutoSize = true;
             this.moboprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moboprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.moboprice.Location = new System.Drawing.Point(81, 221);
+            this.moboprice.Location = new System.Drawing.Point(145, 436);
             this.moboprice.Name = "moboprice";
             this.moboprice.Size = new System.Drawing.Size(29, 13);
             this.moboprice.TabIndex = 9;
@@ -308,28 +322,17 @@
             // 
             this.moboname.AutoSize = true;
             this.moboname.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moboname.Location = new System.Drawing.Point(77, 201);
+            this.moboname.Location = new System.Drawing.Point(141, 416);
             this.moboname.Name = "moboname";
             this.moboname.Size = new System.Drawing.Size(98, 13);
             this.moboname.TabIndex = 8;
             this.moboname.Text = "amd ryzen5 3600x ";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(41, 373);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(126, 5);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "---------------------------------------------------------------------------------" +
-    "------------------------------------------";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(34, 314);
+            this.label14.Location = new System.Drawing.Point(96, 526);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(56, 14);
             this.label14.TabIndex = 22;
@@ -337,9 +340,10 @@
             // 
             // storagepic
             // 
-            this.storagepic.Location = new System.Drawing.Point(37, 331);
+            this.storagepic.Location = new System.Drawing.Point(99, 543);
             this.storagepic.Name = "storagepic";
             this.storagepic.Size = new System.Drawing.Size(35, 35);
+            this.storagepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.storagepic.TabIndex = 21;
             this.storagepic.TabStop = false;
             // 
@@ -348,7 +352,7 @@
             this.storageprice.AutoSize = true;
             this.storageprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.storageprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.storageprice.Location = new System.Drawing.Point(82, 351);
+            this.storageprice.Location = new System.Drawing.Point(144, 563);
             this.storageprice.Name = "storageprice";
             this.storageprice.Size = new System.Drawing.Size(29, 13);
             this.storageprice.TabIndex = 20;
@@ -358,7 +362,7 @@
             // 
             this.storagename.AutoSize = true;
             this.storagename.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storagename.Location = new System.Drawing.Point(78, 331);
+            this.storagename.Location = new System.Drawing.Point(140, 543);
             this.storagename.Name = "storagename";
             this.storagename.Size = new System.Drawing.Size(98, 13);
             this.storagename.TabIndex = 19;
@@ -368,18 +372,18 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(41, 308);
+            this.label17.Location = new System.Drawing.Point(103, 520);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(126, 5);
+            this.label17.Size = new System.Drawing.Size(142, 5);
             this.label17.TabIndex = 18;
             this.label17.Text = "---------------------------------------------------------------------------------" +
-    "------------------------------------------";
+    "----------------------------------------------------------";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(33, 249);
+            this.label19.Location = new System.Drawing.Point(95, 461);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(49, 14);
             this.label19.TabIndex = 16;
@@ -387,9 +391,10 @@
             // 
             // memorypic
             // 
-            this.memorypic.Location = new System.Drawing.Point(37, 266);
+            this.memorypic.Location = new System.Drawing.Point(99, 478);
             this.memorypic.Name = "memorypic";
             this.memorypic.Size = new System.Drawing.Size(35, 35);
+            this.memorypic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.memorypic.TabIndex = 15;
             this.memorypic.TabStop = false;
             // 
@@ -398,7 +403,7 @@
             this.memoryprice.AutoSize = true;
             this.memoryprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memoryprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.memoryprice.Location = new System.Drawing.Point(82, 286);
+            this.memoryprice.Location = new System.Drawing.Point(144, 498);
             this.memoryprice.Name = "memoryprice";
             this.memoryprice.Size = new System.Drawing.Size(29, 13);
             this.memoryprice.TabIndex = 14;
@@ -408,7 +413,7 @@
             // 
             this.memoryname.AutoSize = true;
             this.memoryname.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memoryname.Location = new System.Drawing.Point(78, 266);
+            this.memoryname.Location = new System.Drawing.Point(140, 478);
             this.memoryname.Name = "memoryname";
             this.memoryname.Size = new System.Drawing.Size(98, 13);
             this.memoryname.TabIndex = 13;
@@ -418,18 +423,18 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(41, 505);
+            this.label18.Location = new System.Drawing.Point(412, 458);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(126, 5);
+            this.label18.Size = new System.Drawing.Size(142, 5);
             this.label18.TabIndex = 33;
             this.label18.Text = "---------------------------------------------------------------------------------" +
-    "------------------------------------------";
+    "----------------------------------------------------------";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(34, 446);
+            this.label22.Location = new System.Drawing.Point(405, 399);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(35, 14);
             this.label22.TabIndex = 32;
@@ -437,9 +442,10 @@
             // 
             // casepic
             // 
-            this.casepic.Location = new System.Drawing.Point(37, 463);
+            this.casepic.Location = new System.Drawing.Point(408, 416);
             this.casepic.Name = "casepic";
             this.casepic.Size = new System.Drawing.Size(35, 35);
+            this.casepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.casepic.TabIndex = 31;
             this.casepic.TabStop = false;
             // 
@@ -448,7 +454,7 @@
             this.caseprice.AutoSize = true;
             this.caseprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.caseprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.caseprice.Location = new System.Drawing.Point(82, 483);
+            this.caseprice.Location = new System.Drawing.Point(453, 436);
             this.caseprice.Name = "caseprice";
             this.caseprice.Size = new System.Drawing.Size(29, 13);
             this.caseprice.TabIndex = 30;
@@ -458,7 +464,7 @@
             // 
             this.casename.AutoSize = true;
             this.casename.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.casename.Location = new System.Drawing.Point(78, 463);
+            this.casename.Location = new System.Drawing.Point(449, 416);
             this.casename.Name = "casename";
             this.casename.Size = new System.Drawing.Size(98, 13);
             this.casename.TabIndex = 29;
@@ -468,18 +474,18 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(41, 440);
+            this.label25.Location = new System.Drawing.Point(412, 393);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(126, 5);
+            this.label25.Size = new System.Drawing.Size(142, 5);
             this.label25.TabIndex = 28;
             this.label25.Text = "---------------------------------------------------------------------------------" +
-    "------------------------------------------";
+    "----------------------------------------------------------";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(33, 381);
+            this.label26.Location = new System.Drawing.Point(404, 334);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(28, 14);
             this.label26.TabIndex = 27;
@@ -487,9 +493,10 @@
             // 
             // gpupic
             // 
-            this.gpupic.Location = new System.Drawing.Point(37, 398);
+            this.gpupic.Location = new System.Drawing.Point(407, 351);
             this.gpupic.Name = "gpupic";
-            this.gpupic.Size = new System.Drawing.Size(35, 35);
+            this.gpupic.Size = new System.Drawing.Size(36, 35);
+            this.gpupic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gpupic.TabIndex = 26;
             this.gpupic.TabStop = false;
             // 
@@ -498,7 +505,7 @@
             this.gpuprice.AutoSize = true;
             this.gpuprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpuprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.gpuprice.Location = new System.Drawing.Point(82, 418);
+            this.gpuprice.Location = new System.Drawing.Point(453, 371);
             this.gpuprice.Name = "gpuprice";
             this.gpuprice.Size = new System.Drawing.Size(29, 13);
             this.gpuprice.TabIndex = 25;
@@ -508,7 +515,7 @@
             // 
             this.gpuname.AutoSize = true;
             this.gpuname.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpuname.Location = new System.Drawing.Point(78, 398);
+            this.gpuname.Location = new System.Drawing.Point(449, 351);
             this.gpuname.Name = "gpuname";
             this.gpuname.Size = new System.Drawing.Size(98, 13);
             this.gpuname.TabIndex = 24;
@@ -518,7 +525,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(34, 510);
+            this.label30.Location = new System.Drawing.Point(405, 463);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(91, 14);
             this.label30.TabIndex = 42;
@@ -526,9 +533,10 @@
             // 
             // psupic
             // 
-            this.psupic.Location = new System.Drawing.Point(37, 527);
+            this.psupic.Location = new System.Drawing.Point(408, 480);
             this.psupic.Name = "psupic";
             this.psupic.Size = new System.Drawing.Size(35, 35);
+            this.psupic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.psupic.TabIndex = 41;
             this.psupic.TabStop = false;
             // 
@@ -537,7 +545,7 @@
             this.psuprice.AutoSize = true;
             this.psuprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.psuprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.psuprice.Location = new System.Drawing.Point(82, 547);
+            this.psuprice.Location = new System.Drawing.Point(453, 500);
             this.psuprice.Name = "psuprice";
             this.psuprice.Size = new System.Drawing.Size(29, 13);
             this.psuprice.TabIndex = 40;
@@ -547,67 +555,151 @@
             // 
             this.psuname.AutoSize = true;
             this.psuname.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.psuname.Location = new System.Drawing.Point(78, 527);
+            this.psuname.Location = new System.Drawing.Point(449, 480);
             this.psuname.Name = "psuname";
             this.psuname.Size = new System.Drawing.Size(98, 13);
             this.psuname.TabIndex = 39;
             this.psuname.Text = "amd ryzen5 3600x ";
             // 
-            // dataGridView3
+            // dgmobo
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(193, 201);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(41, 30);
-            this.dataGridView3.TabIndex = 45;
+            this.dgmobo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgmobo.Location = new System.Drawing.Point(223, 393);
+            this.dgmobo.Name = "dgmobo";
+            this.dgmobo.Size = new System.Drawing.Size(0, 0);
+            this.dgmobo.TabIndex = 45;
             // 
-            // dataGridView4
+            // dgcpu
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(193, 136);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(41, 35);
-            this.dataGridView4.TabIndex = 46;
+            this.dgcpu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgcpu.Location = new System.Drawing.Point(224, 123);
+            this.dgcpu.Name = "dgcpu";
+            this.dgcpu.Size = new System.Drawing.Size(0, 0);
+            this.dgcpu.TabIndex = 46;
             // 
-            // dataGridView5
+            // dgram
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(193, 266);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(41, 30);
-            this.dataGridView5.TabIndex = 47;
+            this.dgram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgram.Location = new System.Drawing.Point(221, 455);
+            this.dgram.Name = "dgram";
+            this.dgram.Size = new System.Drawing.Size(0, 0);
+            this.dgram.TabIndex = 47;
             // 
-            // dataGridView6
+            // dgstorage
             // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(193, 331);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(41, 30);
-            this.dataGridView6.TabIndex = 48;
+            this.dgstorage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgstorage.Location = new System.Drawing.Point(221, 520);
+            this.dgstorage.Name = "dgstorage";
+            this.dgstorage.Size = new System.Drawing.Size(0, 0);
+            this.dgstorage.TabIndex = 48;
             // 
-            // dataGridView7
+            // dggpu
             // 
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(193, 398);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(41, 30);
-            this.dataGridView7.TabIndex = 49;
+            this.dggpu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dggpu.Location = new System.Drawing.Point(407, 347);
+            this.dggpu.Name = "dggpu";
+            this.dggpu.Size = new System.Drawing.Size(0, 0);
+            this.dggpu.TabIndex = 49;
             // 
-            // dataGridView8
+            // dgcase
             // 
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(193, 463);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(41, 30);
-            this.dataGridView8.TabIndex = 50;
+            this.dgcase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgcase.Location = new System.Drawing.Point(407, 412);
+            this.dgcase.Name = "dgcase";
+            this.dgcase.Size = new System.Drawing.Size(0, 0);
+            this.dgcase.TabIndex = 50;
             // 
-            // dataGridView9
+            // dgpsu
             // 
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(193, 527);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.Size = new System.Drawing.Size(41, 30);
-            this.dataGridView9.TabIndex = 51;
+            this.dgpsu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgpsu.Location = new System.Drawing.Point(407, 476);
+            this.dgpsu.Name = "dgpsu";
+            this.dgpsu.Size = new System.Drawing.Size(0, 0);
+            this.dgpsu.TabIndex = 51;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Crimson;
+            this.panel2.Location = new System.Drawing.Point(616, 67);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(30, 230);
+            this.panel2.TabIndex = 52;
+            // 
+            // buildpic
+            // 
+            this.buildpic.Location = new System.Drawing.Point(34, 67);
+            this.buildpic.Name = "buildpic";
+            this.buildpic.Size = new System.Drawing.Size(584, 230);
+            this.buildpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.buildpic.TabIndex = 53;
+            this.buildpic.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Crimson;
+            this.panel3.Location = new System.Drawing.Point(0, 67);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(34, 230);
+            this.panel3.TabIndex = 54;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(410, 526);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 14);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "CPU COOELR";
+            // 
+            // cpucoolerpic
+            // 
+            this.cpucoolerpic.Location = new System.Drawing.Point(413, 543);
+            this.cpucoolerpic.Name = "cpucoolerpic";
+            this.cpucoolerpic.Size = new System.Drawing.Size(35, 35);
+            this.cpucoolerpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cpucoolerpic.TabIndex = 58;
+            this.cpucoolerpic.TabStop = false;
+            // 
+            // cpucoolerprice
+            // 
+            this.cpucoolerprice.AutoSize = true;
+            this.cpucoolerprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpucoolerprice.ForeColor = System.Drawing.Color.DarkGreen;
+            this.cpucoolerprice.Location = new System.Drawing.Point(458, 563);
+            this.cpucoolerprice.Name = "cpucoolerprice";
+            this.cpucoolerprice.Size = new System.Drawing.Size(29, 13);
+            this.cpucoolerprice.TabIndex = 57;
+            this.cpucoolerprice.Text = "198 $";
+            // 
+            // cpucoolername
+            // 
+            this.cpucoolername.AutoSize = true;
+            this.cpucoolername.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpucoolername.Location = new System.Drawing.Point(454, 543);
+            this.cpucoolername.Name = "cpucoolername";
+            this.cpucoolername.Size = new System.Drawing.Size(98, 13);
+            this.cpucoolername.TabIndex = 56;
+            this.cpucoolername.Text = "amd ryzen5 3600x ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(417, 520);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(142, 5);
+            this.label13.TabIndex = 55;
+            this.label13.Text = "---------------------------------------------------------------------------------" +
+    "----------------------------------------------------------";
+            // 
+            // dgcpucooler
+            // 
+            this.dgcpucooler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgcpucooler.Location = new System.Drawing.Point(569, 522);
+            this.dgcpucooler.Name = "dgcpucooler";
+            this.dgcpucooler.Size = new System.Drawing.Size(0, 0);
+            this.dgcpucooler.TabIndex = 60;
             // 
             // prebuildpage
             // 
@@ -615,13 +707,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.dataGridView9);
-            this.Controls.Add(this.dataGridView8);
-            this.Controls.Add(this.dataGridView7);
-            this.Controls.Add(this.dataGridView6);
-            this.Controls.Add(this.dataGridView5);
-            this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.dgcpucooler);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cpucoolerpic);
+            this.Controls.Add(this.cpucoolerprice);
+            this.Controls.Add(this.cpucoolername);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.buildpic);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.dgpsu);
+            this.Controls.Add(this.dgcase);
+            this.Controls.Add(this.dggpu);
+            this.Controls.Add(this.dgstorage);
+            this.Controls.Add(this.dgram);
+            this.Controls.Add(this.dgcpu);
+            this.Controls.Add(this.dgmobo);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.psupic);
             this.Controls.Add(this.psuprice);
@@ -636,7 +737,6 @@
             this.Controls.Add(this.gpupic);
             this.Controls.Add(this.gpuprice);
             this.Controls.Add(this.gpuname);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.storagepic);
             this.Controls.Add(this.storageprice);
@@ -660,13 +760,13 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Name = "prebuildpage";
-            this.Size = new System.Drawing.Size(578, 504);
+            this.Size = new System.Drawing.Size(647, 594);
             this.Load += new System.EventHandler(this.prebuildpage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userpic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgbuild)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dguser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbuild)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cpupic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mobopic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storagepic)).EndInit();
@@ -674,13 +774,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.casepic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpupic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.psupic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgmobo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcpu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgstorage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dggpu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcase)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgpsu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildpic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpucoolerpic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgcpucooler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -706,7 +809,6 @@
         private System.Windows.Forms.PictureBox mobopic;
         private System.Windows.Forms.Label moboprice;
         private System.Windows.Forms.Label moboname;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox storagepic;
         private System.Windows.Forms.Label storageprice;
@@ -732,13 +834,22 @@
         private System.Windows.Forms.Label psuname;
         private System.Windows.Forms.DataGridView dguser;
         private System.Windows.Forms.DataGridView dgbuild;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.DataGridView dataGridView7;
-        private System.Windows.Forms.DataGridView dataGridView8;
-        private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.DataGridView dgmobo;
+        private System.Windows.Forms.DataGridView dgcpu;
+        private System.Windows.Forms.DataGridView dgram;
+        private System.Windows.Forms.DataGridView dgstorage;
+        private System.Windows.Forms.DataGridView dggpu;
+        private System.Windows.Forms.DataGridView dgcase;
+        private System.Windows.Forms.DataGridView dgpsu;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox buildpic;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox cpucoolerpic;
+        private System.Windows.Forms.Label cpucoolerprice;
+        private System.Windows.Forms.Label cpucoolername;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView dgcpucooler;
     }
 }
