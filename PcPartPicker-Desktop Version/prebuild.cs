@@ -114,5 +114,10 @@ namespace PcPartPicker_Desktop_Version
         private void prebuild_Load(object sender, EventArgs e)
         {
         }
+
+        private void prebuildpic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

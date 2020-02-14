@@ -25,7 +25,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void UserSettings_Load(object sender, EventArgs e)
         {
-            var q = from a in db.USERs
+            var q = from a in db.USER
                     where a.UserName == name && a.Password == pass
                     select a;
             dataGridView1.DataSource = q;
@@ -46,7 +46,7 @@ namespace PcPartPicker_Desktop_Version
         {
             DialogResult s = MessageBox.Show("Do you want to save changes?", "Confirmation", MessageBoxButtons.YesNo);
             if (s == DialogResult.Yes) {
-                USER result = (from a in db.USERs
+                USER result = (from a in db.USER
                                where a.USER_ID == Convert.ToInt32(dataGridView1.Rows[0].Cells[0].Value)
                                select a).SingleOrDefault();
                 result.UserName = txtUsername.Text;

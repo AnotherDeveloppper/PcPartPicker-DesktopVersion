@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,6 +56,12 @@
     </Compile>
     <Compile Include="AddPart.Designer.cs">
       <DependentUpon>AddPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADDPART2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ADDPART2.Designer.cs">
+      <DependentUpon>ADDPART2.cs</DependentUpon>
     </Compile>
     <Compile Include="AllParts.cs">
       <SubType>UserControl</SubType>
@@ -79,6 +85,12 @@
     </Compile>
     <Compile Include="NewBuild.Designer.cs">
       <DependentUpon>NewBuild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewBuildParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewBuildParts.Designer.cs">
+      <DependentUpon>NewBuildParts.cs</DependentUpon>
     </Compile>
     <Compile Include="Part.cs">
       <SubType>UserControl</SubType>
@@ -112,6 +124,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypePart.cs" />
     <Compile Include="UserSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,11 +134,17 @@
     <EmbeddedResource Include="AddPart.resx">
       <DependentUpon>AddPart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ADDPART2.resx">
+      <DependentUpon>ADDPART2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllParts.resx">
       <DependentUpon>AllParts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewBuild.resx">
       <DependentUpon>NewBuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewBuildParts.resx">
+      <DependentUpon>NewBuildParts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="prebuild.resx">
       <DependentUpon>prebuild.cs</DependentUpon>
