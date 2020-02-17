@@ -106,7 +106,7 @@ namespace PcPartPicker_Desktop_Version
         public void cpu(String Filter)
         {
             List<Cpu> b1 = new List<Cpu>();
-            var q1 = (from a in db.Cpu
+            var q1 = (from a in db.Cpus
                       where a.Cpu_ID.Contains(Filter)
                       select a).ToList();
             b1 = q1;
@@ -125,7 +125,7 @@ namespace PcPartPicker_Desktop_Version
         public void Storage(String Filter)
         {
                      List<Storage> b7 = new List<Storage>();
-        var q7 = (from a in db.Storage
+        var q7 = (from a in db.Storages
                   where a.Storage_ID.Contains(Filter)
                   select a).ToList();
         b7 = q7;
@@ -142,7 +142,7 @@ namespace PcPartPicker_Desktop_Version
         public void Case (String Filter)
         {
                    List<Case> b4 = new List<Case>();
-        var q4 = (from a in db.Case
+        var q4 = (from a in db.Cases
                   where a.Case_ID.Contains(Filter)
                   select a).ToList();
         b4 = q4;
@@ -159,7 +159,7 @@ namespace PcPartPicker_Desktop_Version
 
         public void powersupply(String Filter) {
             List<PowerSupply> b6 = new List<PowerSupply>();
-            var q6 = (from a in db.PowerSupply
+            var q6 = (from a in db.PowerSupplies
                       where a.PowerSupply_ID.Contains(Filter)
                       select a).ToList();
             b6 = q6;
@@ -176,7 +176,7 @@ namespace PcPartPicker_Desktop_Version
         public void gpu(String Filter)
         {
             List<Gpu> b = new List<Gpu>();
-            var q = (from a in db.Gpu
+            var q = (from a in db.Gpus
                      where a.Gpu_ID.Contains(Filter)
                      select a).ToList();
             b = q;
@@ -193,7 +193,7 @@ namespace PcPartPicker_Desktop_Version
         public void CpuCooler(String Filter)
         {
             List<CpuCooler> b3 = new List<CpuCooler>();
-            var q3 = (from a in db.CpuCooler
+            var q3 = (from a in db.CpuCoolers
                       where a.CpuCooler_ID.Contains(Filter)
                       select a).ToList();
             b3 = q3;
@@ -210,7 +210,7 @@ namespace PcPartPicker_Desktop_Version
         public void Motherboard(String Filter)
         {
             List<MotherBoard> b5 = new List<MotherBoard>();
-            var q5 = (from a in db.MotherBoard
+            var q5 = (from a in db.MotherBoards
                       where a.MoBo_ID.Contains(Filter)
                       select a).ToList();
             b5 = q5;
@@ -227,7 +227,7 @@ namespace PcPartPicker_Desktop_Version
         public void Memory(String Filter)
         {
             List<Memory> b2 = new List<Memory>();
-            var q2 = (from a in db.Memory
+            var q2 = (from a in db.Memories
                       where a.Memory_ID.Contains(Filter)
                       select a).ToList();
             b2 = q2;

@@ -25,7 +25,7 @@ namespace PcPartPicker_Desktop_Version
         }
         private void builds ()
         {
-            var x = from a in db.BUILD select a;
+            var x = from a in db.BUILDs select a;
             dg.DataSource = x;
 
             prebuild[] listprebuild = new prebuild[dg.Rows.Count-1];
