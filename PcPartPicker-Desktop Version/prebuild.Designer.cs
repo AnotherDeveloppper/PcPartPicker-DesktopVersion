@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(prebuild));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.prebuildID = new System.Windows.Forms.Label();
             this.prebuildbuilder = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.prebuildpic = new System.Windows.Forms.PictureBox();
@@ -39,6 +38,7 @@
             this.prebuildgpu = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.prebuildprice = new System.Windows.Forms.Label();
+            this.prebuildID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.prebuildpic)).BeginInit();
             this.SuspendLayout();
@@ -53,15 +53,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(233, 32);
             this.panel1.TabIndex = 0;
-            // 
-            // prebuildID
-            // 
-            this.prebuildID.AutoSize = true;
-            this.prebuildID.Location = new System.Drawing.Point(177, 13);
-            this.prebuildID.Name = "prebuildID";
-            this.prebuildID.Size = new System.Drawing.Size(35, 13);
-            this.prebuildID.TabIndex = 2;
-            this.prebuildID.Text = "label3";
             // 
             // prebuildbuilder
             // 
@@ -143,6 +134,15 @@
             this.prebuildprice.Size = new System.Drawing.Size(55, 16);
             this.prebuildprice.TabIndex = 6;
             this.prebuildprice.Text = "980.36 $";
+            // 
+            // prebuildID
+            // 
+            this.prebuildID.AutoSize = true;
+            this.prebuildID.Location = new System.Drawing.Point(184, 16);
+            this.prebuildID.Name = "prebuildID";
+            this.prebuildID.Size = new System.Drawing.Size(35, 13);
+            this.prebuildID.TabIndex = 2;
+            this.prebuildID.Text = "label3";
             // 
             // prebuild
             // 

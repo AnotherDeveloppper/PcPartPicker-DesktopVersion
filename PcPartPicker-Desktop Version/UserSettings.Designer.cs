@@ -197,7 +197,7 @@
             this.dtpBD.BorderRadius = 0;
             this.dtpBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBD.ForeColor = System.Drawing.Color.Black;
-            this.dtpBD.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBD.FormatCustom = null;
             this.dtpBD.Location = new System.Drawing.Point(250, 202);
             this.dtpBD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);

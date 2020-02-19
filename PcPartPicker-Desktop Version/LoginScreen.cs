@@ -14,6 +14,9 @@ namespace PcPartPicker_Desktop_Version
     public partial class LoginScreen : Form
     {
         databeuseDataContext db = new databeuseDataContext();
+        registerPanel r1 = new registerPanel();
+        registerform rf = new registerform();
+
         
         public LoginScreen()
         {
@@ -84,6 +87,17 @@ namespace PcPartPicker_Desktop_Version
                 button1.PerformClick();
             }
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_register_Click(object sender, EventArgs e)
+        {    
+            rf.Show();
+            this.Hide();
         }
     }
 }
