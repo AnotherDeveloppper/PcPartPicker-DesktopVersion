@@ -93,7 +93,7 @@ namespace PcPartPicker_Desktop_Version
         private void prebuild_Click(object sender, EventArgs e)
         {
             sID = this.prebuildID.Text;
-            Main.main.testc();
+            Main.main.prebuildpageshow();
 
         }
 

@@ -12,6 +12,7 @@ namespace PcPartPicker_Desktop_Version
 {
     public partial class prebuilds : UserControl
     {
+        int min, max;
 
         databeuseDataContext db = new databeuseDataContext();
         public prebuilds()
@@ -22,7 +23,16 @@ namespace PcPartPicker_Desktop_Version
         private void prebuilds_Load(object sender, EventArgs e)
         {
             builds();
+
+            
+
         }
+
+        
+        
+
+
+
         private void builds ()
         {
             var x = from a in db.BUILDs select a;
@@ -45,6 +55,22 @@ namespace PcPartPicker_Desktop_Version
             }
 
         }
-                
+
+        private void minP_OnValueChanged(object sender, EventArgs e)
+        {
+            btn_ok.Visible = true;
+        }
+
+        private void maxP_OnValueChanged(object sender, EventArgs e)
+        {
+            btn_ok.Visible = true;
+        }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+            min = Convert.ToInt32(minP.Text);
+            max = Convert.ToInt32(maxP.Text);
+            MessageBox.Show(min + " " + max);
+        }
     }
 }

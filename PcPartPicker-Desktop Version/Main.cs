@@ -27,6 +27,7 @@ namespace PcPartPicker_Desktop_Version
         prebuilds f1;
         NewBuild  form3;
         prebuildpage f2;
+        mainpanel m1;
         
 
         public Main(String a, String b)
@@ -41,10 +42,12 @@ namespace PcPartPicker_Desktop_Version
             form5 = new UserSettings(name, password);
             f1 = new prebuilds();
             f2 = new prebuildpage();
+            m1 = new mainpanel();
         }
 
         public Main()
         {
+        
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -92,6 +95,16 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
+            newbuildclick();
+        }
+
+        private void Workhere_Paint(object sender, PaintEventArgs e)
+        {
+
+
+        }
+        public void newbuildclick()
+        {
 
             bahja = true;
             f1.Hide();
@@ -101,29 +114,55 @@ namespace PcPartPicker_Desktop_Version
             form3.Dock = DockStyle.Fill;
             Workhere.Controls.Add(form3);
             form3.Show();
-        }
-
-        private void Workhere_Paint(object sender, PaintEventArgs e)
-        {
-
+            f2.Hide();
+            m1.Hide();
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            yourbuildsclick();
+        }
+
+        public void yourbuildsclick()
+        {
+            // dir l code hna 
             naming.Text = bunifuFlatButton1.Text;
+
         }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
-            f1.Hide();
+
+            yourbuildsclick();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label1_MouseHover(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Red;
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.White;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            form4.Hide();
             form5.Hide();
+            f2.Hide();
+            f1.Hide();
             form3.Hide();
-            naming.Text = bunifuFlatButton5.Text;
-            form4.Dock = DockStyle.Fill;
-            Workhere.Controls.Add(form4);
-            form4.Show();
-
-
+            m1.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(m1);
+            m1.Show();
+            
+            
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -135,9 +174,16 @@ namespace PcPartPicker_Desktop_Version
             form5.Dock = DockStyle.Fill;
             Workhere.Controls.Add(form5);
             form5.Show();
+            f2.Hide();
+            m1.Hide();
         }
 
         public void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            prebuildsclick();
+
+        }
+        public void prebuildsclick()
         {
             form4.Hide();
             form5.Hide();
@@ -146,7 +192,8 @@ namespace PcPartPicker_Desktop_Version
             f1.Dock = DockStyle.Fill;
             Workhere.Controls.Add(f1);
             f1.Show();
-
+            f2.Hide();
+            m1.Hide();
         }
 
 
@@ -170,8 +217,19 @@ namespace PcPartPicker_Desktop_Version
             dataGridView1.DataSource = q;
 
             pictureBox2.Image = Image.FromFile(@"images\"+ dataGridView1.Rows[0].Cells[8].Value.ToString());
+
+
+            //mainpanel load
+            form4.Hide();
+            form5.Hide();
+            form3.Hide();
+            m1.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(m1);
+            f1.Show();
+            f2.Hide();
+
         }
-        public void testc()
+        public void prebuildpageshow()
         {
             form4.Hide();
             f1.Hide();
@@ -181,6 +239,7 @@ namespace PcPartPicker_Desktop_Version
             f2.Dock = DockStyle.Fill;
             Workhere.Controls.Add(f2);
             f2.Show();
+            m1.Hide();
 
 
         }
@@ -199,6 +258,7 @@ namespace PcPartPicker_Desktop_Version
             f3.Dock = DockStyle.Fill;
             Workhere.Controls.Add(f3);
             f3.Show();
+            m1.Hide();
 
         }
         public void hideParts(NewBuild a)
@@ -206,6 +266,7 @@ namespace PcPartPicker_Desktop_Version
             
 
             form4.Hide();
+            m1.Hide();
             f1.Hide();
             form5.Hide();
             f3.Hide();

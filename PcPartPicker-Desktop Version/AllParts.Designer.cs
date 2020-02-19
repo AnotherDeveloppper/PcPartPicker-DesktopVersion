@@ -57,10 +57,10 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(3, 56);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(476, 444);
+            this.panel2.Size = new System.Drawing.Size(495, 444);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -81,7 +81,7 @@
             this.tbSearch.HintText = "";
             this.tbSearch.isPassword = false;
             this.tbSearch.LineFocusedColor = System.Drawing.Color.Blue;
-            this.tbSearch.LineIdleColor = System.Drawing.Color.Gray;
+            this.tbSearch.LineIdleColor = System.Drawing.Color.Black;
             this.tbSearch.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.tbSearch.LineThickness = 3;
             this.tbSearch.Location = new System.Drawing.Point(15, 5);
@@ -107,12 +107,12 @@
             // 
             // cbCPU
             // 
-            this.cbCPU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbCPU.BackColor = System.Drawing.Color.Black;
             this.cbCPU.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbCPU.Checked = true;
-            this.cbCPU.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbCPU.CheckedOnColor = System.Drawing.Color.Black;
             this.cbCPU.ForeColor = System.Drawing.Color.White;
-            this.cbCPU.Location = new System.Drawing.Point(491, 125);
+            this.cbCPU.Location = new System.Drawing.Point(504, 124);
             this.cbCPU.Name = "cbCPU";
             this.cbCPU.Size = new System.Drawing.Size(20, 20);
             this.cbCPU.TabIndex = 4;
@@ -122,7 +122,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.label1.Location = new System.Drawing.Point(531, 125);
+            this.label1.Location = new System.Drawing.Point(544, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 17);
             this.label1.TabIndex = 5;
@@ -132,7 +132,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.label2.Location = new System.Drawing.Point(531, 151);
+            this.label2.Location = new System.Drawing.Point(544, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 7;
@@ -140,12 +140,12 @@
             // 
             // cbRAM
             // 
-            this.cbRAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbRAM.BackColor = System.Drawing.Color.Black;
             this.cbRAM.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbRAM.Checked = true;
-            this.cbRAM.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbRAM.CheckedOnColor = System.Drawing.Color.Black;
             this.cbRAM.ForeColor = System.Drawing.Color.White;
-            this.cbRAM.Location = new System.Drawing.Point(491, 151);
+            this.cbRAM.Location = new System.Drawing.Point(504, 150);
             this.cbRAM.Name = "cbRAM";
             this.cbRAM.Size = new System.Drawing.Size(20, 20);
             this.cbRAM.TabIndex = 6;
@@ -153,12 +153,12 @@
             // 
             // cbMobo
             // 
-            this.cbMobo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbMobo.BackColor = System.Drawing.Color.Black;
             this.cbMobo.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbMobo.Checked = true;
-            this.cbMobo.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbMobo.CheckedOnColor = System.Drawing.Color.Black;
             this.cbMobo.ForeColor = System.Drawing.Color.White;
-            this.cbMobo.Location = new System.Drawing.Point(491, 177);
+            this.cbMobo.Location = new System.Drawing.Point(504, 176);
             this.cbMobo.Name = "cbMobo";
             this.cbMobo.Size = new System.Drawing.Size(20, 20);
             this.cbMobo.TabIndex = 8;
@@ -168,7 +168,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.label4.Location = new System.Drawing.Point(531, 177);
+            this.label4.Location = new System.Drawing.Point(544, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 17);
             this.label4.TabIndex = 9;
@@ -178,7 +178,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.label5.Location = new System.Drawing.Point(531, 206);
+            this.label5.Location = new System.Drawing.Point(544, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 17);
             this.label5.TabIndex = 11;
@@ -186,12 +186,12 @@
             // 
             // bunifuCheckbox4
             // 
-            this.bunifuCheckbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox4.BackColor = System.Drawing.Color.Black;
             this.bunifuCheckbox4.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.bunifuCheckbox4.Checked = true;
-            this.bunifuCheckbox4.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox4.CheckedOnColor = System.Drawing.Color.Black;
             this.bunifuCheckbox4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox4.Location = new System.Drawing.Point(491, 203);
+            this.bunifuCheckbox4.Location = new System.Drawing.Point(504, 202);
             this.bunifuCheckbox4.Name = "bunifuCheckbox4";
             this.bunifuCheckbox4.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox4.TabIndex = 10;
@@ -201,7 +201,7 @@
             // 
             this.cbStorage.AutoSize = true;
             this.cbStorage.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbStorage.Location = new System.Drawing.Point(531, 229);
+            this.cbStorage.Location = new System.Drawing.Point(544, 228);
             this.cbStorage.Name = "cbStorage";
             this.cbStorage.Size = new System.Drawing.Size(58, 17);
             this.cbStorage.TabIndex = 13;
@@ -209,12 +209,12 @@
             // 
             // bunifuCheckbox2
             // 
-            this.bunifuCheckbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox2.BackColor = System.Drawing.Color.Black;
             this.bunifuCheckbox2.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.bunifuCheckbox2.Checked = true;
-            this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.Black;
             this.bunifuCheckbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox2.Location = new System.Drawing.Point(491, 229);
+            this.bunifuCheckbox2.Location = new System.Drawing.Point(504, 228);
             this.bunifuCheckbox2.Name = "bunifuCheckbox2";
             this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox2.TabIndex = 12;
@@ -222,12 +222,12 @@
             // 
             // bunifuCheckbox6
             // 
-            this.bunifuCheckbox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox6.BackColor = System.Drawing.Color.Black;
             this.bunifuCheckbox6.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.bunifuCheckbox6.Checked = true;
-            this.bunifuCheckbox6.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox6.CheckedOnColor = System.Drawing.Color.Black;
             this.bunifuCheckbox6.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox6.Location = new System.Drawing.Point(491, 255);
+            this.bunifuCheckbox6.Location = new System.Drawing.Point(504, 254);
             this.bunifuCheckbox6.Name = "bunifuCheckbox6";
             this.bunifuCheckbox6.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox6.TabIndex = 14;
@@ -237,7 +237,7 @@
             // 
             this.cbGPU.AutoSize = true;
             this.cbGPU.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbGPU.Location = new System.Drawing.Point(531, 255);
+            this.cbGPU.Location = new System.Drawing.Point(544, 254);
             this.cbGPU.Name = "cbGPU";
             this.cbGPU.Size = new System.Drawing.Size(97, 17);
             this.cbGPU.TabIndex = 15;
@@ -247,7 +247,7 @@
             // 
             this.cbPSU.AutoSize = true;
             this.cbPSU.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbPSU.Location = new System.Drawing.Point(531, 281);
+            this.cbPSU.Location = new System.Drawing.Point(544, 280);
             this.cbPSU.Name = "cbPSU";
             this.cbPSU.Size = new System.Drawing.Size(94, 17);
             this.cbPSU.TabIndex = 17;
@@ -255,12 +255,12 @@
             // 
             // bunifuCheckbox7
             // 
-            this.bunifuCheckbox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox7.BackColor = System.Drawing.Color.Black;
             this.bunifuCheckbox7.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.bunifuCheckbox7.Checked = true;
-            this.bunifuCheckbox7.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox7.CheckedOnColor = System.Drawing.Color.Black;
             this.bunifuCheckbox7.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox7.Location = new System.Drawing.Point(491, 281);
+            this.bunifuCheckbox7.Location = new System.Drawing.Point(504, 280);
             this.bunifuCheckbox7.Name = "bunifuCheckbox7";
             this.bunifuCheckbox7.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox7.TabIndex = 16;
@@ -270,7 +270,7 @@
             // 
             this.cbCase.AutoSize = true;
             this.cbCase.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbCase.Location = new System.Drawing.Point(531, 307);
+            this.cbCase.Location = new System.Drawing.Point(544, 306);
             this.cbCase.Name = "cbCase";
             this.cbCase.Size = new System.Drawing.Size(41, 17);
             this.cbCase.TabIndex = 19;
@@ -278,12 +278,12 @@
             // 
             // bunifuCheckbox5
             // 
-            this.bunifuCheckbox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox5.BackColor = System.Drawing.Color.Black;
             this.bunifuCheckbox5.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.bunifuCheckbox5.Checked = true;
-            this.bunifuCheckbox5.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.bunifuCheckbox5.CheckedOnColor = System.Drawing.Color.Black;
             this.bunifuCheckbox5.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox5.Location = new System.Drawing.Point(491, 307);
+            this.bunifuCheckbox5.Location = new System.Drawing.Point(504, 306);
             this.bunifuCheckbox5.Name = "bunifuCheckbox5";
             this.bunifuCheckbox5.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox5.TabIndex = 18;
@@ -293,6 +293,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cbCase);
             this.Controls.Add(this.bunifuCheckbox5);
