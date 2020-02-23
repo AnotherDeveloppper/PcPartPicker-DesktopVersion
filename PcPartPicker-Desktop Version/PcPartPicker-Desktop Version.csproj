@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,12 +56,6 @@
     </Compile>
     <Compile Include="AddPart.Designer.cs">
       <DependentUpon>AddPart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ADDPART2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ADDPART2.Designer.cs">
-      <DependentUpon>ADDPART2.cs</DependentUpon>
     </Compile>
     <Compile Include="AllParts.cs">
       <SubType>UserControl</SubType>
@@ -92,12 +86,6 @@
     <Compile Include="NewBuild.Designer.cs">
       <DependentUpon>NewBuild.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewBuildParts.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="NewBuildParts.Designer.cs">
-      <DependentUpon>NewBuildParts.cs</DependentUpon>
-    </Compile>
     <Compile Include="Part.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,6 +97,54 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickCase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PickCase.Designer.cs">
+      <DependentUpon>PickCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickCpu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PickCpu.Designer.cs">
+      <DependentUpon>PickCpu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickCpuCooler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PickCpuCooler.Designer.cs">
+      <DependentUpon>PickCpuCooler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickGpu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PickGpu.Designer.cs">
+      <DependentUpon>PickGpu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickMobo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PickMobo.Designer.cs">
+      <DependentUpon>PickMobo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickPsu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PickPsu.Designer.cs">
+      <DependentUpon>PickPsu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickRam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PickRam.Designer.cs">
+      <DependentUpon>PickRam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickStorage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PickStorage.Designer.cs">
+      <DependentUpon>PickStorage.cs</DependentUpon>
     </Compile>
     <Compile Include="prebuild.cs">
       <SubType>UserControl</SubType>
@@ -147,6 +183,12 @@
     <Compile Include="registerPanel.Designer.cs">
       <DependentUpon>registerPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowNewBuild.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShowNewBuild.Designer.cs">
+      <DependentUpon>ShowNewBuild.cs</DependentUpon>
+    </Compile>
     <Compile Include="TypePart.cs" />
     <Compile Include="UserSettings.cs">
       <SubType>UserControl</SubType>
@@ -157,9 +199,6 @@
     <EmbeddedResource Include="AddPart.resx">
       <DependentUpon>AddPart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ADDPART2.resx">
-      <DependentUpon>ADDPART2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AllParts.resx">
       <DependentUpon>AllParts.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,8 +208,29 @@
     <EmbeddedResource Include="NewBuild.resx">
       <DependentUpon>NewBuild.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewBuildParts.resx">
-      <DependentUpon>NewBuildParts.cs</DependentUpon>
+    <EmbeddedResource Include="PickCase.resx">
+      <DependentUpon>PickCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickCpu.resx">
+      <DependentUpon>PickCpu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickCpuCooler.resx">
+      <DependentUpon>PickCpuCooler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickGpu.resx">
+      <DependentUpon>PickGpu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickMobo.resx">
+      <DependentUpon>PickMobo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickPsu.resx">
+      <DependentUpon>PickPsu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickRam.resx">
+      <DependentUpon>PickRam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickStorage.resx">
+      <DependentUpon>PickStorage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="prebuild.resx">
       <DependentUpon>prebuild.cs</DependentUpon>
@@ -186,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registerPanel.resx">
       <DependentUpon>registerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowNewBuild.resx">
+      <DependentUpon>ShowNewBuild.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSettings.resx">
       <DependentUpon>UserSettings.cs</DependentUpon>

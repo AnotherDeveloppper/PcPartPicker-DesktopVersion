@@ -53,7 +53,7 @@ namespace PcPartPicker_Desktop_Version
             u.UserName = tb_username.Text;
             u.Password = tb_password.Text;
             u.Phone = tb_phone.Text;
-            if (male.Checked = true)
+            if (male.Checked == true)
             {
                 s = "m";
             }

@@ -14,20 +14,28 @@ namespace PcPartPicker_Desktop_Version
     {
 
         databeuseDataContext db = new databeuseDataContext();
-        string name, password;
-
+        public static string name, password;
+        int loop = 0;
+        public static  int WATTAGE;
+        public static double PRICE;
         public static String cp,gp,mem,mobo,cpc,ssd,psp,chase;
-        int loop = 1;
         public static Main main;
-        public static bool bahja=false;
-
-        NewBuildParts f3;
+        public static int PcPartsLoop = 0;
         AllParts form4;
         UserSettings form5;
         prebuilds f1;
-        NewBuild  form3;
         prebuildpage f2;
         mainpanel m1;
+        NewBuild n1;
+        PickCpu p1;
+        PickCpuCooler p2;
+        PickMobo p3;
+        PickRam p4;
+        PickStorage p5;
+        PickGpu p6;
+        PickPsu p7;
+        PickCase p8;
+        ShowNewBuild p9;
         
 
         public Main(String a, String b)
@@ -36,13 +44,20 @@ namespace PcPartPicker_Desktop_Version
             name = a;
             password = b;
             pictureBox1.BackColor = Color.Transparent;
-
-            form3 = new NewBuild();
+            
             form4 = new AllParts();
             form5 = new UserSettings(name, password);
             f1 = new prebuilds();
             f2 = new prebuildpage();
             m1 = new mainpanel();
+            n1 = new NewBuild();
+            p1 = new PickCpu();
+            p2 = new PickCpuCooler();
+            p4 = new PickRam();
+            p5 = new PickStorage();
+            p6 = new PickGpu();
+            p7 = new PickPsu();
+            p8 = new PickCase();
         }
 
         public Main()
@@ -95,7 +110,16 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            newbuildclick();
+              f1.Hide();
+            form5.Hide();
+            form4.Hide();
+            naming.Text = bunifuFlatButton3.Text;
+            f2.Hide();
+            m1.Hide();
+            n1.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(n1);
+            n1.Show();
+
         }
 
         private void Workhere_Paint(object sender, PaintEventArgs e)
@@ -105,15 +129,11 @@ namespace PcPartPicker_Desktop_Version
         }
         public void newbuildclick()
         {
-
-            bahja = true;
+            
             f1.Hide();
             form5.Hide();
             form4.Hide();
             naming.Text = bunifuFlatButton3.Text;
-            form3.Dock = DockStyle.Fill;
-            Workhere.Controls.Add(form3);
-            form3.Show();
             f2.Hide();
             m1.Hide();
         }
@@ -132,8 +152,13 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
-
-            yourbuildsclick();
+            m1.Hide();
+            form5.Hide();
+            f2.Hide();
+            f1.Hide();
+            form4.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(form4);
+            form4.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -157,7 +182,6 @@ namespace PcPartPicker_Desktop_Version
             form5.Hide();
             f2.Hide();
             f1.Hide();
-            form3.Hide();
             m1.Dock = DockStyle.Fill;
             Workhere.Controls.Add(m1);
             m1.Show();
@@ -168,7 +192,6 @@ namespace PcPartPicker_Desktop_Version
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             f1.Hide();
-            form3.Hide();
             naming.Text = "User Settings";
             form4.Hide();
             form5.Dock = DockStyle.Fill;
@@ -187,7 +210,6 @@ namespace PcPartPicker_Desktop_Version
         {
             form4.Hide();
             form5.Hide();
-            form3.Hide();
             naming.Text = bunifuFlatButton4.Text;
             f1.Dock = DockStyle.Fill;
             Workhere.Controls.Add(f1);
@@ -222,7 +244,6 @@ namespace PcPartPicker_Desktop_Version
             //mainpanel load
             form4.Hide();
             form5.Hide();
-            form3.Hide();
             m1.Dock = DockStyle.Fill;
             Workhere.Controls.Add(m1);
             f1.Show();
@@ -234,7 +255,6 @@ namespace PcPartPicker_Desktop_Version
             form4.Hide();
             f1.Hide();
             form5.Hide();
-            form3.Hide();
             naming.Text = "Parts list";
             f2.Dock = DockStyle.Fill;
             Workhere.Controls.Add(f2);
@@ -243,41 +263,165 @@ namespace PcPartPicker_Desktop_Version
 
 
         }
-
-        public void callparts(TypePart c )
+        public void cpuCheck()
         {
-
-            f3 = new NewBuildParts(c);
-
+            naming.Text = bunifuFlatButton4.Text;
+            letHide("cpu");
+            p1.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(p1);
             form4.Hide();
-            f1.Hide();
             form5.Hide();
-            form3.Hide();
-            naming.Text = "Parts list";
+            f1.Hide();
+            p1.Show();
+            f1.Hide();
             f2.Hide();
-            f3.Dock = DockStyle.Fill;
-            Workhere.Controls.Add(f3);
-            f3.Show();
             m1.Hide();
-
+            n1.Hide();
+            PcPartsLoop = 1;
         }
-        public void hideParts(NewBuild a)
-        {
-            
 
+
+        public void cpucoolerCheck()
+        {
+            naming.Text = bunifuFlatButton4.Text;
+            letHide("cpucooler");
+            p2.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(p2);
             form4.Hide();
-            m1.Hide();
-            f1.Hide();
             form5.Hide();
-            f3.Hide();
-            naming.Text = "Parts list";
+            f1.Hide();
+            p2.Show();
+            f1.Hide();
             f2.Hide();
-            Workhere.Controls.Remove(form3);
-            a = new NewBuild(AddPart.msab);
-            Workhere.Controls.Add(a);
+            m1.Hide();
+            n1.Hide();
+            PcPartsLoop = 2;
+            p3 = new PickMobo();
+        }
+        public void moboCheck()
+        {
+            naming.Text = bunifuFlatButton4.Text;
+            letHide("mobo");
+            p3.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(p3);
+            form4.Hide();
+            form5.Hide();
+            f1.Hide();
+            p3.Show();
+            f1.Hide();
+            f2.Hide();
+            m1.Hide();
+            n1.Hide();
+            PcPartsLoop = 3;
+        }
+        public void ramCheck()
+        {
+            naming.Text = bunifuFlatButton4.Text;
+            letHide("ram");
+            p4.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(p4);
+            form4.Hide();
+            form5.Hide();
+            f1.Hide();
+            p4.Show();
+            f1.Hide();
+            f2.Hide();
+            m1.Hide();
+            n1.Hide();
+            PcPartsLoop = 4;
+        }
+        public void storageCheck()
+        {
+            naming.Text = bunifuFlatButton4.Text;
+            letHide("storage");
+            p5.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(p5);
+            form4.Hide();
+            form5.Hide();
+            f1.Hide();
+            p5.Show();
+            f1.Hide();
+            f2.Hide();
+            m1.Hide();
+            n1.Hide();
+            PcPartsLoop = 5;
+        }
+        public void gpuCheck()
+        {
+            naming.Text = bunifuFlatButton4.Text;
+            letHide("gpu");
+            p6.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(p6);
+            form4.Hide();
+            form5.Hide();
+            f1.Hide();
+            p6.Show();
+            f1.Hide();
+            f2.Hide();
+            m1.Hide();
+            n1.Hide();
+            PcPartsLoop = 6;
+        }
+        public void psuCheck()
+        {
+            naming.Text = bunifuFlatButton4.Text;
+            letHide("psu");
+            p7.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(p7);
+            form4.Hide();
+            form5.Hide();
+            f1.Hide();
+            p7.Show();
+            f1.Hide();
+            f2.Hide();
+            m1.Hide();
+            n1.Hide();
+            PcPartsLoop = 7;
+        }
+        public void caseCheck()
+        {
+            naming.Text = bunifuFlatButton4.Text;
+            letHide("case");
+            p8.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(p8);
+            form4.Hide();
+            form5.Hide();
+            f1.Hide();
+            p8.Show();
+            f1.Hide();
+            f2.Hide();
+            m1.Hide();
+            n1.Hide();
+            PcPartsLoop = 8;
+        }
+        public void FULLBUILD()
+        {
+            naming.Text = bunifuFlatButton4.Text;
+            letHide("");
+            p9 = new ShowNewBuild();
+            p9.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(p9);
+            form4.Hide();
+            form5.Hide();
+            f1.Hide();
+            p9.Show();
+            f1.Hide();
+            f2.Hide();
+            m1.Hide();
+            n1.Hide();
+            PcPartsLoop = 9;
+        }
+        public void letHide(string a)
+        {
+            if (a != "cpu") p1.Hide();
+            if (a != "cpucooler") p2.Hide();
+            if (a != "mobo" && Workhere.Controls.Contains(p3)) p3.Hide();
+            if (a != "ram") p4.Hide();
+            if (a != "storage") p5.Hide();
+            if (a != "gpu") p6.Hide();
+            if (a != "psu") p7.Hide();
+            if (a != "case") p8.Hide();
            
         }
-       
-
     }
 }
