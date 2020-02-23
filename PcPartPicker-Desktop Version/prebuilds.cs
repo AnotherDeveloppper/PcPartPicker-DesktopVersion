@@ -23,19 +23,11 @@ namespace PcPartPicker_Desktop_Version
         private void prebuilds_Load(object sender, EventArgs e)
         {
             builds();
-
-            
-
         }
-
-        
-        
-
-
 
         private void builds ()
         {
-            var x = from a in db.BUILDs select a;
+            var x = from a in db.BUILDs  where (a.USER_ID==1 || a.USER_ID==2 || a.USER_ID==3) select a;
             dg.DataSource = x;
 
             prebuild[] listprebuild = new prebuild[dg.Rows.Count-1];

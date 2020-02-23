@@ -49,10 +49,19 @@ namespace PcPartPicker_Desktop_Version
             dataGridView1.DataSource = q;
             userID = dataGridView1.Rows[0].Cells[0].Value.ToString();
 
+
+            var x = from a in db.Cases where a.Case_ID == Main.chase select a;
+
+            dataGridView2.DataSource = x;
+
+
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+
+       
+
             if (txtbxName.Text != "")
             {
                 DialogResult s = MessageBox.Show("Do you want to save this Build?", "Confirmation", MessageBoxButtons.YesNo);
@@ -74,6 +83,7 @@ namespace PcPartPicker_Desktop_Version
                     newb.Bootable = "true";
                     newb.Total_Watt = Main.WATTAGE;
                     newb.Total_Price = Main.PRICE;
+                    newb.Build_Picture=dataGridView2.Rows[0].Cells[6].Value.ToString();
 
                     db.BUILDs.InsertOnSubmit(newb);
                     db.SubmitChanges();

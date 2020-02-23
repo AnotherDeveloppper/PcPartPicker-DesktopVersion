@@ -15,6 +15,7 @@ namespace PcPartPicker_Desktop_Version
 
         databeuseDataContext db = new databeuseDataContext();
         public static string name, password;
+        public string uid;
         int loop = 0;
         public static  int WATTAGE;
         public static double PRICE;
@@ -36,6 +37,7 @@ namespace PcPartPicker_Desktop_Version
         PickPsu p7;
         PickCase p8;
         ShowNewBuild p9;
+        urbuilds u1;
         
 
         public Main(String a, String b)
@@ -58,6 +60,7 @@ namespace PcPartPicker_Desktop_Version
             p6 = new PickGpu();
             p7 = new PickPsu();
             p8 = new PickCase();
+            u1 = new urbuilds();
         }
 
         public Main()
@@ -110,6 +113,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
+            u1.Hide();
               f1.Hide();
             form5.Hide();
             form4.Hide();
@@ -136,6 +140,8 @@ namespace PcPartPicker_Desktop_Version
             naming.Text = bunifuFlatButton3.Text;
             f2.Hide();
             m1.Hide();
+            u1.Hide();
+
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -145,7 +151,16 @@ namespace PcPartPicker_Desktop_Version
 
         public void yourbuildsclick()
         {
-            // dir l code hna 
+            f1.Hide();
+            form5.Hide();
+            form4.Hide();
+            n1.Hide();
+            f2.Hide();
+            m1.Hide();
+            u1.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(u1);
+            u1.Show();
+            
             naming.Text = bunifuFlatButton1.Text;
 
         }
@@ -159,6 +174,8 @@ namespace PcPartPicker_Desktop_Version
             form4.Dock = DockStyle.Fill;
             Workhere.Controls.Add(form4);
             form4.Show();
+            u1.Hide();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -185,8 +202,8 @@ namespace PcPartPicker_Desktop_Version
             m1.Dock = DockStyle.Fill;
             Workhere.Controls.Add(m1);
             m1.Show();
-            
-            
+            u1.Hide();
+
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -199,6 +216,8 @@ namespace PcPartPicker_Desktop_Version
             form5.Show();
             f2.Hide();
             m1.Hide();
+            u1.Hide();
+
         }
 
         public void bunifuFlatButton4_Click(object sender, EventArgs e)
@@ -216,6 +235,8 @@ namespace PcPartPicker_Desktop_Version
             f1.Show();
             f2.Hide();
             m1.Hide();
+            u1.Hide();
+
         }
 
 
@@ -239,6 +260,7 @@ namespace PcPartPicker_Desktop_Version
             dataGridView1.DataSource = q;
 
             pictureBox2.Image = Image.FromFile(@"images\"+ dataGridView1.Rows[0].Cells[8].Value.ToString());
+            uid= dataGridView1.Rows[0].Cells[0].Value.ToString();
 
 
             //mainpanel load

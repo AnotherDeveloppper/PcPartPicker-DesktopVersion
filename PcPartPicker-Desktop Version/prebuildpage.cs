@@ -23,7 +23,7 @@ namespace PcPartPicker_Desktop_Version
             int id = Convert.ToInt32(prebuild.sID);
               //BUILD INFO + user info //
               //BUILD
-              var bd = from a in db.BUILDs where a.Build_ID == id select a ;
+              var bd = from a in db.BUILDs where a.Build_ID == id  select a ;
               dgbuild.DataSource = bd;
               this.buildname.Text = dgbuild.Rows[0].Cells[1].Value.ToString();
               this.cpuname.Text = dgbuild.Rows[0].Cells[7].Value.ToString();
