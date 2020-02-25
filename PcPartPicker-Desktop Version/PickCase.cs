@@ -1,4 +1,5 @@
-﻿using System;
+﻿ 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -43,6 +44,14 @@ namespace PcPartPicker_Desktop_Version
                 string c = dataGridView1.Rows[a].Cells[0].Value.ToString();
                 addItem(c, "Case");
             }
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            poss = 10;
+            panel1.Controls.Clear();
+
+            Case(bunifuMaterialTextbox1.Text);
         }
     }
 }

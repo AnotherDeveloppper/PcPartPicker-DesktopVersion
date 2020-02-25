@@ -31,11 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PickCase));
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbIntel = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbAMD = new Bunifu.Framework.UI.BunifuCheckbox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -61,59 +56,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.Visible = false;
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(527, 163);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(97, 13);
-            this.bunifuCustomLabel2.TabIndex = 19;
-            this.bunifuCustomLabel2.Text = "MANUFACTURER";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(565, 249);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "INTEL";
-            // 
-            // cbIntel
-            // 
-            this.cbIntel.BackColor = System.Drawing.Color.Black;
-            this.cbIntel.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cbIntel.Checked = true;
-            this.cbIntel.CheckedOnColor = System.Drawing.Color.Black;
-            this.cbIntel.ForeColor = System.Drawing.Color.White;
-            this.cbIntel.Location = new System.Drawing.Point(525, 249);
-            this.cbIntel.Name = "cbIntel";
-            this.cbIntel.Size = new System.Drawing.Size(20, 20);
-            this.cbIntel.TabIndex = 17;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label1.Location = new System.Drawing.Point(565, 211);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 16);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "AMD";
-            // 
-            // cbAMD
-            // 
-            this.cbAMD.BackColor = System.Drawing.Color.Black;
-            this.cbAMD.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cbAMD.Checked = true;
-            this.cbAMD.CheckedOnColor = System.Drawing.Color.Black;
-            this.cbAMD.ForeColor = System.Drawing.Color.White;
-            this.cbAMD.Location = new System.Drawing.Point(525, 211);
-            this.cbAMD.Name = "cbAMD";
-            this.cbAMD.Size = new System.Drawing.Size(20, 20);
-            this.cbAMD.TabIndex = 15;
             // 
             // panel1
             // 
@@ -157,6 +99,7 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuMaterialTextbox1
             // 
@@ -181,11 +124,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuCustomLabel2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbIntel);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbAMD);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuMaterialTextbox1);
@@ -202,11 +140,6 @@
         #endregion
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuCheckbox cbIntel;
-        private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuCheckbox cbAMD;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;

@@ -40,7 +40,6 @@
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuFlatButton1
@@ -64,7 +63,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(540, 3);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(531, 59);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -76,11 +75,12 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(177, 120);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 20;
@@ -89,7 +89,7 @@
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(528, 165);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(528, 174);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(97, 13);
             this.bunifuCustomLabel2.TabIndex = 19;
@@ -101,9 +101,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label2.Location = new System.Drawing.Point(566, 251);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 18;
-            this.label2.Text = "INTEL";
+            this.label2.Text = "Nvidia";
             // 
             // cbIntel
             // 
@@ -116,6 +116,7 @@
             this.cbIntel.Name = "cbIntel";
             this.cbIntel.Size = new System.Drawing.Size(20, 20);
             this.cbIntel.TabIndex = 17;
+            this.cbIntel.OnChange += new System.EventHandler(this.cbIntel_OnChange);
             // 
             // label1
             // 
@@ -138,11 +139,11 @@
             this.cbAMD.Name = "cbAMD";
             this.cbAMD.Size = new System.Drawing.Size(20, 20);
             this.cbAMD.TabIndex = 15;
+            this.cbAMD.OnChange += new System.EventHandler(this.cbAMD_OnChange);
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(18, 114);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(493, 401);
@@ -181,6 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.label2);
@@ -193,7 +195,6 @@
             this.Name = "PickGpu";
             this.Size = new System.Drawing.Size(645, 542);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

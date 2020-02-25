@@ -49,7 +49,66 @@ namespace PcPartPicker_Desktop_Version
 
         private void cbAMD_OnChange(object sender, EventArgs e)
         {
-            
+            clears();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            poss = 10;
+            panel1.Controls.Clear();
+            clears();
+        }
+
+
+        public void clears()
+        {
+            poss = 10;
+            panel1.Controls.Clear();
+            string a = bunifuMaterialTextbox1.Text;
+            if (cbAMD.Checked) CpuCoolers("NO",a);
+            if (cbIntel.Checked) CpuCoolers("yes-120mm",a);
+            if (cb240.Checked) CpuCoolers("yes-240mm",a);
+            if (cb360.Checked) CpuCoolers("yes-360mm",a);
+        }
+        public void CpuCoolers(string Filter,string name)
+        {
+            List<CpuCooler> b3 = new List<CpuCooler>();
+            var q3 = (from a in db.CpuCoolers
+                      where a.Water_Cooled.Contains(Filter) && a.CpuCooler_ID.Contains(name)
+                      select a).ToList();
+            b3 = q3;
+            dataGridView1.DataSource = b3;
+
+            int i3 = b3.Count();
+            for (int a = 0; a < i3; a++)
+            {
+
+                string c = dataGridView1.Rows[a].Cells[0].Value.ToString();
+                addItem(c, "CpuCooler");
+            }
+        }
+
+        private void cbIntel_OnChange(object sender, EventArgs e)
+        {
+
+            clears();
+        }
+
+        private void cb240_OnChange(object sender, EventArgs e)
+        {
+
+            clears();
+        }
+
+        private void cb360_OnChange(object sender, EventArgs e)
+        {
+
+            clears();
+        }
+
+        private void cbIntel_OnChange_1(object sender, EventArgs e)
+        {
+            clears();
         }
     }
-    }
+}

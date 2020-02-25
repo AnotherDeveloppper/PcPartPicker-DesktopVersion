@@ -52,62 +52,42 @@ namespace PcPartPicker_Desktop_Version
 
             }
         }
+        public void cpus(String Filter,string company)
+        {
+            List<Cpu> b1 = new List<Cpu>();
+            var q1 = (from a in db.Cpus
+                      where a.ManufacturerCpu.Contains(Filter) && a.ManufacturerCpu.Contains(company)
+                      select a).ToList();
+            b1 = q1;
+            dataGridView1.DataSource = b1;
 
+            int i1 = b1.Count();
+            for (int a = 0; a < i1; a++)
+            {
+
+                string c = dataGridView1.Rows[a].Cells[0].Value.ToString();
+                addItem(c, "cpu");
+
+            }
+        }
         private void cbAMD_OnChange(object sender, EventArgs e)
         {
-            if(cbAMD.Checked && cbIntel.Checked)
-            {
-                poss = 10;
-                panel1.Controls.Clear();
-                cpu("");
-            }else if(cbAMD.Checked && !cbIntel.Checked)
-            {
-                poss = 10;
-                panel1.Controls.Clear();
-                cpu("AMD");
-            }
-            if (cbAMD.Checked && cbIntel.Checked)
-            {
-                poss = 10;
-                panel1.Controls.Clear();
-                cpu("");
-            }
-            else if (!cbAMD.Checked && cbIntel.Checked)
-            {
-                poss = 10;
-                panel1.Controls.Clear();
-                cpu("INTEL");
-            }
+            clears();
+
         }
 
         private void cbIntel_OnChange(object sender, EventArgs e)
         {
-            if (cbAMD.Checked && cbIntel.Checked)
-            {
-                poss = 10;
-                panel1.Controls.Clear();
-                cpu("");
-            }
-            else if (!cbAMD.Checked && cbIntel.Checked)
-            {
-                poss = 10;
-                panel1.Controls.Clear();
-                cpu("INTEL");
-            }
-            if (cbAMD.Checked && cbIntel.Checked)
-            {
-                poss = 10;
-                panel1.Controls.Clear();
-                cpu("");
-            }
-            else if (cbAMD.Checked && !cbIntel.Checked)
-            {
-                poss = 10;
-                panel1.Controls.Clear();
-                cpu("AMD");
-            }
+            clears();
         }
-
+        public void clears()
+        {
+            poss = 10;
+            panel1.Controls.Clear();
+            string a = bunifuMaterialTextbox1.Text;
+            if (cbAMD.Checked) cpus(a, "AMD");
+            if (cbIntel.Checked) cpus(a, "intel");
+        }
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             poss = 10;

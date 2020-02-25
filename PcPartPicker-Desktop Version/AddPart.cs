@@ -245,7 +245,7 @@ namespace PcPartPicker_Desktop_Version
                 // calll psu
                 Main.WATTAGE += Convert.ToInt32(dataGridView1.Rows[0].Cells[8].Value.ToString());
                 Main.PRICE += Convert.ToDouble(dataGridView1.Rows[0].Cells[9].Value.ToString());
-                MessageBox.Show("" + Main.WATTAGE);
+             
                 Main.main.psuCheck();
             }
             if (tipe == "PowerSupply")

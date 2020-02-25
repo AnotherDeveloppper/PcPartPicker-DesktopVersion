@@ -44,5 +44,52 @@ namespace PcPartPicker_Desktop_Version
                 addItem(c, "Storage");
             }
         }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            poss = 10;
+            panel1.Controls.Clear();
+
+            Storage(bunifuMaterialTextbox1.Text);
+        }
+
+        private void cbAMD_OnChange(object sender, EventArgs e)
+        {
+            clears();
+        }
+
+
+        public void storages(string filter,string b )
+        {
+
+            List<Storage> b7 = new List<Storage>();
+            var q7 = (from a in db.Storages
+                      where a.Type_Storage.Contains(filter) && a.Storage_ID.Contains(b)
+                      select a).ToList();
+            b7 = q7;
+            dataGridView1.DataSource = b7;
+
+            int i7 = b7.Count();
+            for (int a = 0; a < i7; a++)
+            {
+
+                string c = dataGridView1.Rows[a].Cells[0].Value.ToString();
+                addItem(c, "Storage");
+            }
+        }
+
+        public void clears()
+        {
+            poss = 10;
+            panel1.Controls.Clear();
+            string a = bunifuMaterialTextbox1.Text;
+            if (cbAMD.Checked) storages("HDD",a);
+            if (cbIntel.Checked) storages("SSD",a);
+        }
+
+        private void cbIntel_OnChange(object sender, EventArgs e)
+        {
+            clears();
+        }
     }
 }

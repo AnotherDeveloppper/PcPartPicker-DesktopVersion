@@ -40,7 +40,6 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -56,9 +55,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(220, 177);
+            this.dataGridView1.Location = new System.Drawing.Point(18, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(357, 97);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.Visible = false;
             // 
@@ -77,9 +76,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label2.Location = new System.Drawing.Point(566, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 18;
-            this.label2.Text = "INTEL";
+            this.label2.Text = "SSD";
             // 
             // cbIntel
             // 
@@ -92,6 +91,7 @@
             this.cbIntel.Name = "cbIntel";
             this.cbIntel.Size = new System.Drawing.Size(20, 20);
             this.cbIntel.TabIndex = 17;
+            this.cbIntel.OnChange += new System.EventHandler(this.cbIntel_OnChange);
             // 
             // label1
             // 
@@ -99,9 +99,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label1.Location = new System.Drawing.Point(566, 214);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.Size = new System.Drawing.Size(73, 16);
             this.label1.TabIndex = 16;
-            this.label1.Text = "AMD";
+            this.label1.Text = "Hard Drive";
             // 
             // cbAMD
             // 
@@ -114,11 +114,11 @@
             this.cbAMD.Name = "cbAMD";
             this.cbAMD.Size = new System.Drawing.Size(20, 20);
             this.cbAMD.TabIndex = 15;
+            this.cbAMD.OnChange += new System.EventHandler(this.cbAMD_OnChange);
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(18, 115);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(493, 401);
@@ -157,6 +157,7 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuMaterialTextbox1
             // 
@@ -181,6 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbIntel);
@@ -193,7 +195,6 @@
             this.Name = "PickStorage";
             this.Size = new System.Drawing.Size(645, 542);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

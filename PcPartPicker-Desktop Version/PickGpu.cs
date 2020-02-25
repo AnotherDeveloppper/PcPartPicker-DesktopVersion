@@ -44,5 +44,52 @@ namespace PcPartPicker_Desktop_Version
                 addItem(c, "gpu");
             }
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            poss = 10;
+            panel1.Controls.Clear();
+            gpu(bunifuMaterialTextbox1.Text);
+        }
+
+        private void cbAMD_OnChange(object sender, EventArgs e)
+        {
+            clears();
+        }
+
+        private void cbIntel_OnChange(object sender, EventArgs e)
+        {
+            clears();
+        }
+
+        public void clears()
+        {
+
+
+            panel1.Controls.Clear();
+            poss = 10;
+            string a = bunifuMaterialTextbox1.Text;
+            if (cbAMD.Checked) gpus("FreeSync",a);
+            if (cbIntel.Checked) gpus("G-sync",a);
+          
+
+        }
+        public void gpus(string Filter,string filter2)
+        {
+            List<Gpu> b = new List<Gpu>();
+            var q = (from a in db.Gpus
+                     where a.Frame_Sync.Equals(Filter) && a.Gpu_ID.Contains(a)
+                     select a).ToList();
+            b = q;
+            dataGridView1.DataSource = b;
+
+            int i = b.Count();
+            for (int a = 0; a < i; a++)
+            {
+
+                string c = dataGridView1.Rows[a].Cells[0].Value.ToString();
+                addItem(c, "gpu");
+            }
+        }
     }
 }

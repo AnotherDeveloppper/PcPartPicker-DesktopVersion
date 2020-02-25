@@ -44,7 +44,6 @@
             this.cb240 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.cb360 = new Bunifu.Framework.UI.BunifuCheckbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuFlatButton1
@@ -68,7 +67,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(537, 0);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(537, 57);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -80,6 +79,7 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -94,7 +94,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(159, 180);
+            this.dataGridView1.Location = new System.Drawing.Point(405, 389);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 20;
@@ -130,6 +130,7 @@
             this.cbIntel.Name = "cbIntel";
             this.cbIntel.Size = new System.Drawing.Size(20, 20);
             this.cbIntel.TabIndex = 17;
+            this.cbIntel.OnChange += new System.EventHandler(this.cbIntel_OnChange_1);
             // 
             // label1
             // 
@@ -157,7 +158,6 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(23, 112);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(493, 401);
@@ -213,6 +213,7 @@
             this.cb240.Name = "cb240";
             this.cb240.Size = new System.Drawing.Size(20, 20);
             this.cb240.TabIndex = 22;
+            this.cb240.OnChange += new System.EventHandler(this.cb240_OnChange);
             // 
             // cb360
             // 
@@ -225,11 +226,13 @@
             this.cb360.Name = "cb360";
             this.cb360.Size = new System.Drawing.Size(20, 20);
             this.cb360.TabIndex = 23;
+            this.cb360.OnChange += new System.EventHandler(this.cb360_OnChange);
             // 
             // PickCpuCooler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cb360);
             this.Controls.Add(this.cb240);
             this.Controls.Add(this.label4);
@@ -246,7 +249,6 @@
             this.Name = "PickCpuCooler";
             this.Size = new System.Drawing.Size(645, 542);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -41,7 +41,7 @@ namespace PcPartPicker_Desktop_Version
             }
             List<MotherBoard> b5 = new List<MotherBoard>();
             var q5 = (from a in db.MotherBoards
-                      where a.Socket___CPU.Contains(b)
+                      where (a.MoBo_ID.Contains(Filter)&&  a.Socket___CPU == b )
                       select a).ToList();
             b5 = q5;
             dataGridView1.DataSource = b5;
@@ -53,6 +53,14 @@ namespace PcPartPicker_Desktop_Version
                 string c = dataGridView1.Rows[a].Cells[0].Value.ToString();
                 addItem(c, "Motherboard");
             }
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            poss = 10;
+            panel1.Controls.Clear();
+
+            Motherboard(bunifuMaterialTextbox1.Text);
         }
     }
 }
