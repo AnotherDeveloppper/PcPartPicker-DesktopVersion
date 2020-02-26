@@ -33,24 +33,22 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.toper = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.naming = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.sider = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Workhere = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Workhere = new System.Windows.Forms.Panel();
+            this.naming = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.toper.SuspendLayout();
             this.sider.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -68,8 +66,8 @@
             // toper
             // 
             this.toper.BackColor = System.Drawing.Color.Black;
-            this.toper.Controls.Add(this.label1);
             this.toper.Controls.Add(this.naming);
+            this.toper.Controls.Add(this.label1);
             this.toper.Dock = System.Windows.Forms.DockStyle.Top;
             this.toper.ForeColor = System.Drawing.Color.Red;
             this.toper.Location = new System.Drawing.Point(281, 0);
@@ -91,16 +89,6 @@
             this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             this.label1.MouseHover += new System.EventHandler(this.label1_MouseHover);
             // 
-            // naming
-            // 
-            this.naming.AutoSize = true;
-            this.naming.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.naming.ForeColor = System.Drawing.Color.White;
-            this.naming.Location = new System.Drawing.Point(338, 26);
-            this.naming.Name = "naming";
-            this.naming.Size = new System.Drawing.Size(0, 30);
-            this.naming.TabIndex = 6;
-            // 
             // sider
             // 
             this.sider.BackColor = System.Drawing.Color.Black;
@@ -111,31 +99,12 @@
             this.sider.Controls.Add(this.bunifuFlatButton5);
             this.sider.Controls.Add(this.bunifuFlatButton4);
             this.sider.Controls.Add(this.bunifuFlatButton3);
-            this.sider.Controls.Add(this.bunifuImageButton1);
             this.sider.Controls.Add(this.bunifuFlatButton1);
             this.sider.Dock = System.Windows.Forms.DockStyle.Left;
             this.sider.Location = new System.Drawing.Point(0, 0);
             this.sider.Name = "sider";
             this.sider.Size = new System.Drawing.Size(281, 620);
             this.sider.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 412);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(0, 0);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // Workhere
-            // 
-            this.Workhere.BackColor = System.Drawing.Color.White;
-            this.Workhere.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Workhere.Location = new System.Drawing.Point(281, 78);
-            this.Workhere.Name = "Workhere";
-            this.Workhere.Size = new System.Drawing.Size(645, 542);
-            this.Workhere.TabIndex = 2;
-            this.Workhere.Paint += new System.Windows.Forms.PaintEventHandler(this.Workhere_Paint_1);
             // 
             // pictureBox1
             // 
@@ -147,6 +116,14 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(27, 412);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(0, 0);
+            this.dataGridView1.TabIndex = 10;
             // 
             // pictureBox2
             // 
@@ -308,20 +285,6 @@
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Black;
-            this.bunifuImageButton1.Image = global::PcPartPicker_Desktop_Version.Properties.Resources.menu3;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(233, 93);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(39, 34);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 4;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
@@ -360,6 +323,26 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
+            // Workhere
+            // 
+            this.Workhere.BackColor = System.Drawing.Color.White;
+            this.Workhere.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Workhere.Location = new System.Drawing.Point(281, 78);
+            this.Workhere.Name = "Workhere";
+            this.Workhere.Size = new System.Drawing.Size(645, 542);
+            this.Workhere.TabIndex = 2;
+            this.Workhere.Paint += new System.Windows.Forms.PaintEventHandler(this.Workhere_Paint_1);
+            // 
+            // naming
+            // 
+            this.naming.AutoSize = true;
+            this.naming.Font = new System.Drawing.Font("Chinese Rocks", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.naming.ForeColor = System.Drawing.Color.White;
+            this.naming.Location = new System.Drawing.Point(240, 15);
+            this.naming.Name = "naming";
+            this.naming.Size = new System.Drawing.Size(0, 21);
+            this.naming.TabIndex = 8;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,10 +359,9 @@
             this.toper.ResumeLayout(false);
             this.toper.PerformLayout();
             this.sider.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -392,14 +374,13 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private System.Windows.Forms.Panel Workhere;
-        private Bunifu.Framework.UI.BunifuCustomLabel naming;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuCustomLabel naming;
     }
 }

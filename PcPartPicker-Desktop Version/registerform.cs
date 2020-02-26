@@ -19,7 +19,9 @@ namespace PcPartPicker_Desktop_Version
 
         private void label5_Click(object sender, EventArgs e)
         {
-
+            LoginScreen l = new LoginScreen();
+            l.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,6 +32,13 @@ namespace PcPartPicker_Desktop_Version
         private void registerform_Load(object sender, EventArgs e)
         {
             CenterToParent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            LoginScreen l = new LoginScreen();
+            l.Show();
+            this.Hide();
         }
     }
 }

@@ -60,7 +60,6 @@ namespace PcPartPicker_Desktop_Version
             p6 = new PickGpu();
             p7 = new PickPsu();
             p8 = new PickCase();
-            u1 = new urbuilds();
         }
 
         public Main()
@@ -81,19 +80,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            if (loop % 2 == 0) {
-                sider.Width = 281;
-
-                bunifuImageButton1.Location = new Point(227, 93);
-            }
-            else
-            {
-
-                sider.Width = 56;
-                bunifuImageButton1.Location = new Point(5, 93);
-
-            }
-            loop++;
+          
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
@@ -113,8 +100,11 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            u1.Hide();
-              f1.Hide();
+
+
+              if(Workhere.Controls.Contains(u1))   u1.Hide();
+            letHide("");
+            f1.Hide();
             form5.Hide();
             form4.Hide();
             naming.Text = bunifuFlatButton3.Text;
@@ -131,9 +121,16 @@ namespace PcPartPicker_Desktop_Version
 
 
         }
+
+        public void resetyourbuilds()
+        {
+            Workhere.Controls.Remove(u1);
+            yourbuildsclick();
+        }
         public void newbuildclick()
         {
-            
+
+            u1 = new urbuilds();
             f1.Hide();
             form5.Hide();
             form4.Hide();
@@ -141,16 +138,22 @@ namespace PcPartPicker_Desktop_Version
             f2.Hide();
             m1.Hide();
             u1.Hide();
+            n1.Show();
+           
 
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             yourbuildsclick();
+            letHide("");
+            
         }
 
         public void yourbuildsclick()
         {
+
+            u1 = new urbuilds();
             f1.Hide();
             form5.Hide();
             form4.Hide();
@@ -160,13 +163,14 @@ namespace PcPartPicker_Desktop_Version
             u1.Dock = DockStyle.Fill;
             Workhere.Controls.Add(u1);
             u1.Show();
-            
+            letHide("");
             naming.Text = bunifuFlatButton1.Text;
 
         }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
+            u1 = new urbuilds();
             m1.Hide();
             form5.Hide();
             f2.Hide();
@@ -175,6 +179,8 @@ namespace PcPartPicker_Desktop_Version
             Workhere.Controls.Add(form4);
             form4.Show();
             u1.Hide();
+            n1.Hide();
+            letHide("");
 
         }
 
@@ -195,6 +201,7 @@ namespace PcPartPicker_Desktop_Version
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
+            n1.Hide();
             form4.Hide();
             form5.Hide();
             f2.Hide();
@@ -208,6 +215,10 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
+
+            u1 = new urbuilds();
+            n1.Hide();
+            letHide("");
             f1.Hide();
             naming.Text = "User Settings";
             form4.Hide();
@@ -223,10 +234,12 @@ namespace PcPartPicker_Desktop_Version
         public void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
             prebuildsclick();
+            letHide("");
 
         }
         public void prebuildsclick()
         {
+            u1 = new urbuilds();
             form4.Hide();
             form5.Hide();
             naming.Text = bunifuFlatButton4.Text;
@@ -235,6 +248,7 @@ namespace PcPartPicker_Desktop_Version
             f1.Show();
             f2.Hide();
             m1.Hide();
+            n1.Hide();
             u1.Hide();
 
         }
@@ -443,6 +457,7 @@ namespace PcPartPicker_Desktop_Version
             if (a != "gpu") p6.Hide();
             if (a != "psu") p7.Hide();
             if (a != "case") p8.Hide();
+            if (a != "show" && Workhere.Controls.Contains(p9)) p9.Hide();
            
         }
     }

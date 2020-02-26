@@ -99,5 +99,10 @@ namespace PcPartPicker_Desktop_Version
             rf.Show();
             this.Hide();
         }
+
+        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

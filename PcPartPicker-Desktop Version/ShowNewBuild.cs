@@ -87,7 +87,7 @@ namespace PcPartPicker_Desktop_Version
 
                     db.BUILDs.InsertOnSubmit(newb);
                     db.SubmitChanges();
-                    
+                    Main.main.yourbuildsclick();
                 }
             }
         }

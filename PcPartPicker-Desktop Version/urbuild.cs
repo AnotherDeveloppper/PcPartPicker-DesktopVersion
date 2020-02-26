@@ -12,9 +12,12 @@ namespace PcPartPicker_Desktop_Version
 {
     public partial class urbuild : UserControl
     {
+        databeuseDataContext db = new databeuseDataContext();
         public urbuild()
         {
             InitializeComponent();
+
+            this.panel1.ContextMenuStrip = contextMenuStrip1;
         }
         private string _id;
         private string _title;
@@ -116,6 +119,27 @@ namespace PcPartPicker_Desktop_Version
         private void prebuildpic_Click(object sender, EventArgs e)
         {
 
+        }
+
+      
+
+        private void urbuild_MouseHover(object sender, EventArgs e)
+        {
+            this.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void urbuild_MouseLeave(object sender, EventArgs e)
+        {
+            this.BorderStyle = BorderStyle.None;
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BUILD x =( from a in db.BUILDs where Convert.ToString(a.Build_ID) == _id select a).FirstOrDefault();
+            
+            db.BUILDs.DeleteOnSubmit(x);
+            db.SubmitChanges();
+            Main.main.resetyourbuilds();
         }
     }
 }

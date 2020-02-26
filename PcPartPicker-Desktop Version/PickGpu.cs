@@ -74,15 +74,15 @@ namespace PcPartPicker_Desktop_Version
           
 
         }
-        public void gpus(string Filter,string filter2)
+        public void gpus(string Filter, string filter2)
         {
             List<Gpu> b = new List<Gpu>();
             var q = (from a in db.Gpus
-                     where a.Frame_Sync.Equals(Filter) && a.Gpu_ID.Contains(a)
+                     where a.Frame_Sync.Equals(Filter) && a.Gpu_ID.Contains(filter2)
                      select a).ToList();
             b = q;
             dataGridView1.DataSource = b;
-
+        
             int i = b.Count();
             for (int a = 0; a < i; a++)
             {

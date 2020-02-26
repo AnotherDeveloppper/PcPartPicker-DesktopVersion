@@ -25,9 +25,18 @@ namespace PcPartPicker_Desktop_Version
         private void builds()
         {
 
-            string xid = Main.main.uid;
+            var x = from a in db.BUILDs select a; 
 
-            var x = from a in db.BUILDs where a.USER_ID==Convert.ToInt32(xid) select a;
+            string xid = Main.main.uid;
+            if(xid == "1" || xid == "2" || xid == "3") {
+                x = from a in db.BUILDs  select a;
+            }
+            else
+            {
+                x = from a in db.BUILDs where a.USER_ID == Convert.ToInt32(xid) select a;
+            }
+
+           
             dg.DataSource = x;
 
             urbuild[] listurbuild = new urbuild[dg.Rows.Count - 1];
