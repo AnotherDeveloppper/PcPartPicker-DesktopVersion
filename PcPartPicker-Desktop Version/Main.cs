@@ -38,7 +38,7 @@ namespace PcPartPicker_Desktop_Version
         PickCase p8;
         ShowNewBuild p9;
         urbuilds u1;
-        
+        AdminParts ad;
 
         public Main(String a, String b)
         {
@@ -60,6 +60,7 @@ namespace PcPartPicker_Desktop_Version
             p6 = new PickGpu();
             p7 = new PickPsu();
             p8 = new PickCase();
+            ad = new AdminParts();
         }
 
         public Main()
@@ -110,6 +111,7 @@ namespace PcPartPicker_Desktop_Version
             naming.Text = bunifuFlatButton3.Text;
             f2.Hide();
             m1.Hide();
+            ad.Hide();
             n1.Dock = DockStyle.Fill;
             Workhere.Controls.Add(n1);
             n1.Show();
@@ -146,6 +148,7 @@ namespace PcPartPicker_Desktop_Version
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             yourbuildsclick();
+            ad.Hide();
             letHide("");
             
         }
@@ -180,6 +183,7 @@ namespace PcPartPicker_Desktop_Version
             form4.Show();
             u1.Hide();
             n1.Hide();
+            ad.Hide();
             letHide("");
 
         }
@@ -217,6 +221,7 @@ namespace PcPartPicker_Desktop_Version
         {
 
             u1 = new urbuilds();
+            ad.Hide();
             n1.Hide();
             letHide("");
             f1.Hide();
@@ -235,6 +240,7 @@ namespace PcPartPicker_Desktop_Version
         {
             prebuildsclick();
             letHide("");
+            ad.Hide();
 
         }
         public void prebuildsclick()
@@ -334,6 +340,23 @@ namespace PcPartPicker_Desktop_Version
             PcPartsLoop = 2;
             p3 = new PickMobo();
         }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            form4.Hide();
+            form5.Hide();
+            f1.Hide();
+            p2.Show();
+            f1.Hide();
+            f2.Hide();
+            m1.Hide();
+            n1.Hide();
+            letHide("");
+            ad.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(ad);
+            ad.Show();
+        }
+
         public void moboCheck()
         {
             naming.Text = bunifuFlatButton4.Text;

@@ -32,8 +32,10 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.toper = new System.Windows.Forms.Panel();
+            this.naming = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.sider = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -43,7 +45,6 @@
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Workhere = new System.Windows.Forms.Panel();
-            this.naming = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.toper.SuspendLayout();
             this.sider.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,6 +76,16 @@
             this.toper.Size = new System.Drawing.Size(645, 78);
             this.toper.TabIndex = 1;
             // 
+            // naming
+            // 
+            this.naming.AutoSize = true;
+            this.naming.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.naming.ForeColor = System.Drawing.Color.White;
+            this.naming.Location = new System.Drawing.Point(240, 15);
+            this.naming.Name = "naming";
+            this.naming.Size = new System.Drawing.Size(0, 25);
+            this.naming.TabIndex = 8;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -92,6 +103,7 @@
             // sider
             // 
             this.sider.BackColor = System.Drawing.Color.Black;
+            this.sider.Controls.Add(this.bunifuFlatButton6);
             this.sider.Controls.Add(this.pictureBox1);
             this.sider.Controls.Add(this.dataGridView1);
             this.sider.Controls.Add(this.pictureBox2);
@@ -105,6 +117,44 @@
             this.sider.Name = "sider";
             this.sider.Size = new System.Drawing.Size(281, 620);
             this.sider.TabIndex = 0;
+            // 
+            // bunifuFlatButton6
+            // 
+            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.bunifuFlatButton6.BackColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton6.BorderRadius = 0;
+            this.bunifuFlatButton6.ButtonText = "ADD PARTS";
+            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton6.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton6.ForeColor = System.Drawing.Color.White;
+            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton6.Iconimage = global::PcPartPicker_Desktop_Version.Properties.Resources.cpu_white;
+            this.bunifuFlatButton6.Iconimage_right = null;
+            this.bunifuFlatButton6.Iconimage_right_Selected = null;
+            this.bunifuFlatButton6.Iconimage_Selected = null;
+            this.bunifuFlatButton6.IconMarginLeft = 0;
+            this.bunifuFlatButton6.IconMarginRight = 0;
+            this.bunifuFlatButton6.IconRightVisible = true;
+            this.bunifuFlatButton6.IconRightZoom = 0D;
+            this.bunifuFlatButton6.IconVisible = true;
+            this.bunifuFlatButton6.IconZoom = 60D;
+            this.bunifuFlatButton6.IsTab = false;
+            this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 367);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
+            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.Red;
+            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton6.selected = false;
+            this.bunifuFlatButton6.Size = new System.Drawing.Size(281, 48);
+            this.bunifuFlatButton6.TabIndex = 12;
+            this.bunifuFlatButton6.Text = "ADD PARTS";
+            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton6.Click += new System.EventHandler(this.bunifuFlatButton6_Click);
             // 
             // pictureBox1
             // 
@@ -194,7 +244,7 @@
             this.bunifuFlatButton5.IconVisible = true;
             this.bunifuFlatButton5.IconZoom = 60D;
             this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(4, 309);
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 309);
             this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.Black;
@@ -333,16 +383,6 @@
             this.Workhere.TabIndex = 2;
             this.Workhere.Paint += new System.Windows.Forms.PaintEventHandler(this.Workhere_Paint_1);
             // 
-            // naming
-            // 
-            this.naming.AutoSize = true;
-            this.naming.Font = new System.Drawing.Font("Chinese Rocks", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.naming.ForeColor = System.Drawing.Color.White;
-            this.naming.Location = new System.Drawing.Point(240, 15);
-            this.naming.Name = "naming";
-            this.naming.Size = new System.Drawing.Size(0, 21);
-            this.naming.TabIndex = 8;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,5 +422,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuCustomLabel naming;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
     }
 }

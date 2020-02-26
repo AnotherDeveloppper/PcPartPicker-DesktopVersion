@@ -57,13 +57,22 @@ namespace PcPartPicker_Desktop_Version
     partial void InsertPowerSupply(PowerSupply instance);
     partial void UpdatePowerSupply(PowerSupply instance);
     partial void DeletePowerSupply(PowerSupply instance);
+    partial void InsertSelect_Gpu(Select_Gpu instance);
+    partial void UpdateSelect_Gpu(Select_Gpu instance);
+    partial void DeleteSelect_Gpu(Select_Gpu instance);
+    partial void InsertSelect_Memory(Select_Memory instance);
+    partial void UpdateSelect_Memory(Select_Memory instance);
+    partial void DeleteSelect_Memory(Select_Memory instance);
+    partial void InsertSelect_Storage(Select_Storage instance);
+    partial void UpdateSelect_Storage(Select_Storage instance);
+    partial void DeleteSelect_Storage(Select_Storage instance);
     partial void InsertStorage(Storage instance);
     partial void UpdateStorage(Storage instance);
     partial void DeleteStorage(Storage instance);
     #endregion
 		
 		public databeuseDataContext() : 
-				base(global::PcPartPicker_Desktop_Version.Properties.Settings.Default.projetConnectionString1, mappingSource)
+				base(global::PcPartPicker_Desktop_Version.Properties.Settings.Default.projetConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -164,6 +173,30 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		public System.Data.Linq.Table<Select_Gpu> Select_Gpus
+		{
+			get
+			{
+				return this.GetTable<Select_Gpu>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Select_Memory> Select_Memories
+		{
+			get
+			{
+				return this.GetTable<Select_Memory>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Select_Storage> Select_Storages
+		{
+			get
+			{
+				return this.GetTable<Select_Storage>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Storage> Storages
 		{
 			get
@@ -209,6 +242,30 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Build_Picture;
 		
+		private EntitySet<Select_Gpu> _Select_Gpus;
+		
+		private EntitySet<Select_Memory> _Select_Memories;
+		
+		private EntitySet<Select_Storage> _Select_Storages;
+		
+		private EntityRef<USER> _USER;
+		
+		private EntityRef<Case> _Case;
+		
+		private EntityRef<Cpu> _Cpu;
+		
+		private EntityRef<CpuCooler> _CpuCooler;
+		
+		private EntityRef<Gpu> _Gpu;
+		
+		private EntityRef<Memory> _Memory;
+		
+		private EntityRef<MotherBoard> _MotherBoard;
+		
+		private EntityRef<PowerSupply> _PowerSupply;
+		
+		private EntityRef<Storage> _Storage;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -247,6 +304,18 @@ namespace PcPartPicker_Desktop_Version
 		
 		public BUILD()
 		{
+			this._Select_Gpus = new EntitySet<Select_Gpu>(new Action<Select_Gpu>(this.attach_Select_Gpus), new Action<Select_Gpu>(this.detach_Select_Gpus));
+			this._Select_Memories = new EntitySet<Select_Memory>(new Action<Select_Memory>(this.attach_Select_Memories), new Action<Select_Memory>(this.detach_Select_Memories));
+			this._Select_Storages = new EntitySet<Select_Storage>(new Action<Select_Storage>(this.attach_Select_Storages), new Action<Select_Storage>(this.detach_Select_Storages));
+			this._USER = default(EntityRef<USER>);
+			this._Case = default(EntityRef<Case>);
+			this._Cpu = default(EntityRef<Cpu>);
+			this._CpuCooler = default(EntityRef<CpuCooler>);
+			this._Gpu = default(EntityRef<Gpu>);
+			this._Memory = default(EntityRef<Memory>);
+			this._MotherBoard = default(EntityRef<MotherBoard>);
+			this._PowerSupply = default(EntityRef<PowerSupply>);
+			this._Storage = default(EntityRef<Storage>);
 			OnCreated();
 		}
 		
@@ -301,6 +370,10 @@ namespace PcPartPicker_Desktop_Version
 			{
 				if ((this._Case_ID != value))
 				{
+					if (this._Case.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnCase_IDChanging(value);
 					this.SendPropertyChanging();
 					this._Case_ID = value;
@@ -321,6 +394,10 @@ namespace PcPartPicker_Desktop_Version
 			{
 				if ((this._PowerSupply_ID != value))
 				{
+					if (this._PowerSupply.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnPowerSupply_IDChanging(value);
 					this.SendPropertyChanging();
 					this._PowerSupply_ID = value;
@@ -341,6 +418,10 @@ namespace PcPartPicker_Desktop_Version
 			{
 				if ((this._CpuCooler_ID != value))
 				{
+					if (this._CpuCooler.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnCpuCooler_IDChanging(value);
 					this.SendPropertyChanging();
 					this._CpuCooler_ID = value;
@@ -361,6 +442,10 @@ namespace PcPartPicker_Desktop_Version
 			{
 				if ((this._Gpu_ID != value))
 				{
+					if (this._Gpu.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnGpu_IDChanging(value);
 					this.SendPropertyChanging();
 					this._Gpu_ID = value;
@@ -381,6 +466,10 @@ namespace PcPartPicker_Desktop_Version
 			{
 				if ((this._Storage_ID != value))
 				{
+					if (this._Storage.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnStorage_IDChanging(value);
 					this.SendPropertyChanging();
 					this._Storage_ID = value;
@@ -401,6 +490,10 @@ namespace PcPartPicker_Desktop_Version
 			{
 				if ((this._Cpu_ID != value))
 				{
+					if (this._Cpu.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnCpu_IDChanging(value);
 					this.SendPropertyChanging();
 					this._Cpu_ID = value;
@@ -421,6 +514,10 @@ namespace PcPartPicker_Desktop_Version
 			{
 				if ((this._MoBo_ID != value))
 				{
+					if (this._MotherBoard.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnMoBo_IDChanging(value);
 					this.SendPropertyChanging();
 					this._MoBo_ID = value;
@@ -441,6 +538,10 @@ namespace PcPartPicker_Desktop_Version
 			{
 				if ((this._Ram_ID != value))
 				{
+					if (this._Memory.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnRam_IDChanging(value);
 					this.SendPropertyChanging();
 					this._Ram_ID = value;
@@ -461,6 +562,10 @@ namespace PcPartPicker_Desktop_Version
 			{
 				if ((this._USER_ID != value))
 				{
+					if (this._USER.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnUSER_IDChanging(value);
 					this.SendPropertyChanging();
 					this._USER_ID = value;
@@ -550,6 +655,351 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Gpu", Storage="_Select_Gpus", ThisKey="Build_ID", OtherKey="Build_ID")]
+		public EntitySet<Select_Gpu> Select_Gpus
+		{
+			get
+			{
+				return this._Select_Gpus;
+			}
+			set
+			{
+				this._Select_Gpus.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Memory", Storage="_Select_Memories", ThisKey="Build_ID", OtherKey="Build_ID")]
+		public EntitySet<Select_Memory> Select_Memories
+		{
+			get
+			{
+				return this._Select_Memories;
+			}
+			set
+			{
+				this._Select_Memories.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Storage", Storage="_Select_Storages", ThisKey="Build_ID", OtherKey="Build_ID")]
+		public EntitySet<Select_Storage> Select_Storages
+		{
+			get
+			{
+				return this._Select_Storages;
+			}
+			set
+			{
+				this._Select_Storages.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="USER_BUILD", Storage="_USER", ThisKey="USER_ID", OtherKey="USER_ID", IsForeignKey=true)]
+		public USER USER
+		{
+			get
+			{
+				return this._USER.Entity;
+			}
+			set
+			{
+				USER previousValue = this._USER.Entity;
+				if (((previousValue != value) 
+							|| (this._USER.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._USER.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._USER.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._USER_ID = value.USER_ID;
+					}
+					else
+					{
+						this._USER_ID = default(int);
+					}
+					this.SendPropertyChanged("USER");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Case_BUILD", Storage="_Case", ThisKey="Case_ID", OtherKey="Case_ID", IsForeignKey=true)]
+		public Case Case
+		{
+			get
+			{
+				return this._Case.Entity;
+			}
+			set
+			{
+				Case previousValue = this._Case.Entity;
+				if (((previousValue != value) 
+							|| (this._Case.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Case.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._Case.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._Case_ID = value.Case_ID;
+					}
+					else
+					{
+						this._Case_ID = default(string);
+					}
+					this.SendPropertyChanged("Case");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cpu_BUILD", Storage="_Cpu", ThisKey="Cpu_ID", OtherKey="Cpu_ID", IsForeignKey=true)]
+		public Cpu Cpu
+		{
+			get
+			{
+				return this._Cpu.Entity;
+			}
+			set
+			{
+				Cpu previousValue = this._Cpu.Entity;
+				if (((previousValue != value) 
+							|| (this._Cpu.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Cpu.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._Cpu.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._Cpu_ID = value.Cpu_ID;
+					}
+					else
+					{
+						this._Cpu_ID = default(string);
+					}
+					this.SendPropertyChanged("Cpu");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CpuCooler_BUILD", Storage="_CpuCooler", ThisKey="CpuCooler_ID", OtherKey="CpuCooler_ID", IsForeignKey=true)]
+		public CpuCooler CpuCooler
+		{
+			get
+			{
+				return this._CpuCooler.Entity;
+			}
+			set
+			{
+				CpuCooler previousValue = this._CpuCooler.Entity;
+				if (((previousValue != value) 
+							|| (this._CpuCooler.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._CpuCooler.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._CpuCooler.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._CpuCooler_ID = value.CpuCooler_ID;
+					}
+					else
+					{
+						this._CpuCooler_ID = default(string);
+					}
+					this.SendPropertyChanged("CpuCooler");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Gpu_BUILD", Storage="_Gpu", ThisKey="Gpu_ID", OtherKey="Gpu_ID", IsForeignKey=true)]
+		public Gpu Gpu
+		{
+			get
+			{
+				return this._Gpu.Entity;
+			}
+			set
+			{
+				Gpu previousValue = this._Gpu.Entity;
+				if (((previousValue != value) 
+							|| (this._Gpu.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Gpu.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._Gpu.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._Gpu_ID = value.Gpu_ID;
+					}
+					else
+					{
+						this._Gpu_ID = default(string);
+					}
+					this.SendPropertyChanged("Gpu");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Memory_BUILD", Storage="_Memory", ThisKey="Ram_ID", OtherKey="Memory_ID", IsForeignKey=true)]
+		public Memory Memory
+		{
+			get
+			{
+				return this._Memory.Entity;
+			}
+			set
+			{
+				Memory previousValue = this._Memory.Entity;
+				if (((previousValue != value) 
+							|| (this._Memory.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Memory.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._Memory.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._Ram_ID = value.Memory_ID;
+					}
+					else
+					{
+						this._Ram_ID = default(string);
+					}
+					this.SendPropertyChanged("Memory");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MotherBoard_BUILD", Storage="_MotherBoard", ThisKey="MoBo_ID", OtherKey="MoBo_ID", IsForeignKey=true)]
+		public MotherBoard MotherBoard
+		{
+			get
+			{
+				return this._MotherBoard.Entity;
+			}
+			set
+			{
+				MotherBoard previousValue = this._MotherBoard.Entity;
+				if (((previousValue != value) 
+							|| (this._MotherBoard.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._MotherBoard.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._MotherBoard.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._MoBo_ID = value.MoBo_ID;
+					}
+					else
+					{
+						this._MoBo_ID = default(string);
+					}
+					this.SendPropertyChanged("MotherBoard");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PowerSupply_BUILD", Storage="_PowerSupply", ThisKey="PowerSupply_ID", OtherKey="PowerSupply_ID", IsForeignKey=true)]
+		public PowerSupply PowerSupply
+		{
+			get
+			{
+				return this._PowerSupply.Entity;
+			}
+			set
+			{
+				PowerSupply previousValue = this._PowerSupply.Entity;
+				if (((previousValue != value) 
+							|| (this._PowerSupply.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._PowerSupply.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._PowerSupply.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._PowerSupply_ID = value.PowerSupply_ID;
+					}
+					else
+					{
+						this._PowerSupply_ID = default(string);
+					}
+					this.SendPropertyChanged("PowerSupply");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Storage_BUILD", Storage="_Storage", ThisKey="Storage_ID", OtherKey="Storage_ID", IsForeignKey=true)]
+		public Storage Storage
+		{
+			get
+			{
+				return this._Storage.Entity;
+			}
+			set
+			{
+				Storage previousValue = this._Storage.Entity;
+				if (((previousValue != value) 
+							|| (this._Storage.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Storage.Entity = null;
+						previousValue.BUILDs.Remove(this);
+					}
+					this._Storage.Entity = value;
+					if ((value != null))
+					{
+						value.BUILDs.Add(this);
+						this._Storage_ID = value.Storage_ID;
+					}
+					else
+					{
+						this._Storage_ID = default(string);
+					}
+					this.SendPropertyChanged("Storage");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -568,6 +1018,42 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_Select_Gpus(Select_Gpu entity)
+		{
+			this.SendPropertyChanging();
+			entity.BUILD = this;
+		}
+		
+		private void detach_Select_Gpus(Select_Gpu entity)
+		{
+			this.SendPropertyChanging();
+			entity.BUILD = null;
+		}
+		
+		private void attach_Select_Memories(Select_Memory entity)
+		{
+			this.SendPropertyChanging();
+			entity.BUILD = this;
+		}
+		
+		private void detach_Select_Memories(Select_Memory entity)
+		{
+			this.SendPropertyChanging();
+			entity.BUILD = null;
+		}
+		
+		private void attach_Select_Storages(Select_Storage entity)
+		{
+			this.SendPropertyChanging();
+			entity.BUILD = this;
+		}
+		
+		private void detach_Select_Storages(Select_Storage entity)
+		{
+			this.SendPropertyChanging();
+			entity.BUILD = null;
 		}
 	}
 	
@@ -601,6 +1087,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Password;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -633,6 +1121,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public USER()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
 			OnCreated();
 		}
 		
@@ -876,6 +1365,19 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="USER_BUILD", Storage="_BUILDs", ThisKey="USER_ID", OtherKey="USER_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -894,6 +1396,18 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.USER = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.USER = null;
 		}
 	}
 	
@@ -917,6 +1431,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Case_Picture;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -939,6 +1455,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Case()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
 			OnCreated();
 		}
 		
@@ -1082,6 +1599,19 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Case_BUILD", Storage="_BUILDs", ThisKey="Case_ID", OtherKey="Case_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1100,6 +1630,18 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Case = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Case = null;
 		}
 	}
 	
@@ -1133,6 +1675,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Cpu_Picture;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1165,6 +1709,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Cpu()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
 			OnCreated();
 		}
 		
@@ -1408,6 +1953,19 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cpu_BUILD", Storage="_BUILDs", ThisKey="Cpu_ID", OtherKey="Cpu_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1426,6 +1984,18 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Cpu = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Cpu = null;
 		}
 	}
 	
@@ -1451,6 +2021,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _CpuCooler_Picture;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1475,6 +2047,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public CpuCooler()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
 			OnCreated();
 		}
 		
@@ -1638,6 +2211,19 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CpuCooler_BUILD", Storage="_BUILDs", ThisKey="CpuCooler_ID", OtherKey="CpuCooler_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1656,6 +2242,18 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.CpuCooler = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.CpuCooler = null;
 		}
 	}
 	
@@ -1687,6 +2285,10 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Gpu_Picture;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
+		private EntitySet<Select_Gpu> _Select_Gpus;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1717,6 +2319,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Gpu()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
+			this._Select_Gpus = new EntitySet<Select_Gpu>(new Action<Select_Gpu>(this.attach_Select_Gpus), new Action<Select_Gpu>(this.detach_Select_Gpus));
 			OnCreated();
 		}
 		
@@ -1940,6 +2544,32 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Gpu_BUILD", Storage="_BUILDs", ThisKey="Gpu_ID", OtherKey="Gpu_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Gpu_Select_Gpu", Storage="_Select_Gpus", ThisKey="Gpu_ID", OtherKey="Gpu_ID")]
+		public EntitySet<Select_Gpu> Select_Gpus
+		{
+			get
+			{
+				return this._Select_Gpus;
+			}
+			set
+			{
+				this._Select_Gpus.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1958,6 +2588,30 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Gpu = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Gpu = null;
+		}
+		
+		private void attach_Select_Gpus(Select_Gpu entity)
+		{
+			this.SendPropertyChanging();
+			entity.Gpu = this;
+		}
+		
+		private void detach_Select_Gpus(Select_Gpu entity)
+		{
+			this.SendPropertyChanging();
+			entity.Gpu = null;
 		}
 	}
 	
@@ -1985,6 +2639,10 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Memory_Picture;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
+		private EntitySet<Select_Memory> _Select_Memories;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2011,6 +2669,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Memory()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
+			this._Select_Memories = new EntitySet<Select_Memory>(new Action<Select_Memory>(this.attach_Select_Memories), new Action<Select_Memory>(this.detach_Select_Memories));
 			OnCreated();
 		}
 		
@@ -2194,6 +2854,32 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Memory_BUILD", Storage="_BUILDs", ThisKey="Memory_ID", OtherKey="Ram_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Memory_Select_Memory", Storage="_Select_Memories", ThisKey="Memory_ID", OtherKey="Memory_ID")]
+		public EntitySet<Select_Memory> Select_Memories
+		{
+			get
+			{
+				return this._Select_Memories;
+			}
+			set
+			{
+				this._Select_Memories.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2212,6 +2898,30 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Memory = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Memory = null;
+		}
+		
+		private void attach_Select_Memories(Select_Memory entity)
+		{
+			this.SendPropertyChanging();
+			entity.Memory = this;
+		}
+		
+		private void detach_Select_Memories(Select_Memory entity)
+		{
+			this.SendPropertyChanging();
+			entity.Memory = null;
 		}
 	}
 	
@@ -2243,6 +2953,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Mobo_Picture;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2273,6 +2985,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public MotherBoard()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
 			OnCreated();
 		}
 		
@@ -2496,6 +3209,19 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MotherBoard_BUILD", Storage="_BUILDs", ThisKey="MoBo_ID", OtherKey="MoBo_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2514,6 +3240,18 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.MotherBoard = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.MotherBoard = null;
 		}
 	}
 	
@@ -2539,6 +3277,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Psu_Picture;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2563,6 +3303,7 @@ namespace PcPartPicker_Desktop_Version
 		
 		public PowerSupply()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
 			OnCreated();
 		}
 		
@@ -2726,6 +3467,535 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PowerSupply_BUILD", Storage="_BUILDs", ThisKey="PowerSupply_ID", OtherKey="PowerSupply_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.PowerSupply = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.PowerSupply = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Select_Gpu")]
+	public partial class Select_Gpu : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _Gpu_ID;
+		
+		private int _Build_ID;
+		
+		private EntityRef<BUILD> _BUILD;
+		
+		private EntityRef<Gpu> _Gpu;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnGpu_IDChanging(string value);
+    partial void OnGpu_IDChanged();
+    partial void OnBuild_IDChanging(int value);
+    partial void OnBuild_IDChanged();
+    #endregion
+		
+		public Select_Gpu()
+		{
+			this._BUILD = default(EntityRef<BUILD>);
+			this._Gpu = default(EntityRef<Gpu>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gpu_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Gpu_ID
+		{
+			get
+			{
+				return this._Gpu_ID;
+			}
+			set
+			{
+				if ((this._Gpu_ID != value))
+				{
+					if (this._Gpu.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnGpu_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Gpu_ID = value;
+					this.SendPropertyChanged("Gpu_ID");
+					this.OnGpu_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Build_ID
+		{
+			get
+			{
+				return this._Build_ID;
+			}
+			set
+			{
+				if ((this._Build_ID != value))
+				{
+					if (this._BUILD.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnBuild_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Build_ID = value;
+					this.SendPropertyChanged("Build_ID");
+					this.OnBuild_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Gpu", Storage="_BUILD", ThisKey="Build_ID", OtherKey="Build_ID", IsForeignKey=true)]
+		public BUILD BUILD
+		{
+			get
+			{
+				return this._BUILD.Entity;
+			}
+			set
+			{
+				BUILD previousValue = this._BUILD.Entity;
+				if (((previousValue != value) 
+							|| (this._BUILD.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BUILD.Entity = null;
+						previousValue.Select_Gpus.Remove(this);
+					}
+					this._BUILD.Entity = value;
+					if ((value != null))
+					{
+						value.Select_Gpus.Add(this);
+						this._Build_ID = value.Build_ID;
+					}
+					else
+					{
+						this._Build_ID = default(int);
+					}
+					this.SendPropertyChanged("BUILD");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Gpu_Select_Gpu", Storage="_Gpu", ThisKey="Gpu_ID", OtherKey="Gpu_ID", IsForeignKey=true)]
+		public Gpu Gpu
+		{
+			get
+			{
+				return this._Gpu.Entity;
+			}
+			set
+			{
+				Gpu previousValue = this._Gpu.Entity;
+				if (((previousValue != value) 
+							|| (this._Gpu.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Gpu.Entity = null;
+						previousValue.Select_Gpus.Remove(this);
+					}
+					this._Gpu.Entity = value;
+					if ((value != null))
+					{
+						value.Select_Gpus.Add(this);
+						this._Gpu_ID = value.Gpu_ID;
+					}
+					else
+					{
+						this._Gpu_ID = default(string);
+					}
+					this.SendPropertyChanged("Gpu");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Select_Memory")]
+	public partial class Select_Memory : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Build_ID;
+		
+		private string _Memory_ID;
+		
+		private EntityRef<BUILD> _BUILD;
+		
+		private EntityRef<Memory> _Memory;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnBuild_IDChanging(int value);
+    partial void OnBuild_IDChanged();
+    partial void OnMemory_IDChanging(string value);
+    partial void OnMemory_IDChanged();
+    #endregion
+		
+		public Select_Memory()
+		{
+			this._BUILD = default(EntityRef<BUILD>);
+			this._Memory = default(EntityRef<Memory>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Build_ID
+		{
+			get
+			{
+				return this._Build_ID;
+			}
+			set
+			{
+				if ((this._Build_ID != value))
+				{
+					if (this._BUILD.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnBuild_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Build_ID = value;
+					this.SendPropertyChanged("Build_ID");
+					this.OnBuild_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Memory_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Memory_ID
+		{
+			get
+			{
+				return this._Memory_ID;
+			}
+			set
+			{
+				if ((this._Memory_ID != value))
+				{
+					if (this._Memory.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMemory_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Memory_ID = value;
+					this.SendPropertyChanged("Memory_ID");
+					this.OnMemory_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Memory", Storage="_BUILD", ThisKey="Build_ID", OtherKey="Build_ID", IsForeignKey=true)]
+		public BUILD BUILD
+		{
+			get
+			{
+				return this._BUILD.Entity;
+			}
+			set
+			{
+				BUILD previousValue = this._BUILD.Entity;
+				if (((previousValue != value) 
+							|| (this._BUILD.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BUILD.Entity = null;
+						previousValue.Select_Memories.Remove(this);
+					}
+					this._BUILD.Entity = value;
+					if ((value != null))
+					{
+						value.Select_Memories.Add(this);
+						this._Build_ID = value.Build_ID;
+					}
+					else
+					{
+						this._Build_ID = default(int);
+					}
+					this.SendPropertyChanged("BUILD");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Memory_Select_Memory", Storage="_Memory", ThisKey="Memory_ID", OtherKey="Memory_ID", IsForeignKey=true)]
+		public Memory Memory
+		{
+			get
+			{
+				return this._Memory.Entity;
+			}
+			set
+			{
+				Memory previousValue = this._Memory.Entity;
+				if (((previousValue != value) 
+							|| (this._Memory.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Memory.Entity = null;
+						previousValue.Select_Memories.Remove(this);
+					}
+					this._Memory.Entity = value;
+					if ((value != null))
+					{
+						value.Select_Memories.Add(this);
+						this._Memory_ID = value.Memory_ID;
+					}
+					else
+					{
+						this._Memory_ID = default(string);
+					}
+					this.SendPropertyChanged("Memory");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Select_Storage")]
+	public partial class Select_Storage : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Build_ID;
+		
+		private string _Storage_ID;
+		
+		private EntityRef<BUILD> _BUILD;
+		
+		private EntityRef<Storage> _Storage;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnBuild_IDChanging(int value);
+    partial void OnBuild_IDChanged();
+    partial void OnStorage_IDChanging(string value);
+    partial void OnStorage_IDChanged();
+    #endregion
+		
+		public Select_Storage()
+		{
+			this._BUILD = default(EntityRef<BUILD>);
+			this._Storage = default(EntityRef<Storage>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Build_ID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Build_ID
+		{
+			get
+			{
+				return this._Build_ID;
+			}
+			set
+			{
+				if ((this._Build_ID != value))
+				{
+					if (this._BUILD.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnBuild_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Build_ID = value;
+					this.SendPropertyChanged("Build_ID");
+					this.OnBuild_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Storage_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Storage_ID
+		{
+			get
+			{
+				return this._Storage_ID;
+			}
+			set
+			{
+				if ((this._Storage_ID != value))
+				{
+					if (this._Storage.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnStorage_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Storage_ID = value;
+					this.SendPropertyChanged("Storage_ID");
+					this.OnStorage_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="BUILD_Select_Storage", Storage="_BUILD", ThisKey="Build_ID", OtherKey="Build_ID", IsForeignKey=true)]
+		public BUILD BUILD
+		{
+			get
+			{
+				return this._BUILD.Entity;
+			}
+			set
+			{
+				BUILD previousValue = this._BUILD.Entity;
+				if (((previousValue != value) 
+							|| (this._BUILD.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._BUILD.Entity = null;
+						previousValue.Select_Storages.Remove(this);
+					}
+					this._BUILD.Entity = value;
+					if ((value != null))
+					{
+						value.Select_Storages.Add(this);
+						this._Build_ID = value.Build_ID;
+					}
+					else
+					{
+						this._Build_ID = default(int);
+					}
+					this.SendPropertyChanged("BUILD");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Storage_Select_Storage", Storage="_Storage", ThisKey="Storage_ID", OtherKey="Storage_ID", IsForeignKey=true)]
+		public Storage Storage
+		{
+			get
+			{
+				return this._Storage.Entity;
+			}
+			set
+			{
+				Storage previousValue = this._Storage.Entity;
+				if (((previousValue != value) 
+							|| (this._Storage.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Storage.Entity = null;
+						previousValue.Select_Storages.Remove(this);
+					}
+					this._Storage.Entity = value;
+					if ((value != null))
+					{
+						value.Select_Storages.Add(this);
+						this._Storage_ID = value.Storage_ID;
+					}
+					else
+					{
+						this._Storage_ID = default(string);
+					}
+					this.SendPropertyChanged("Storage");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2771,6 +4041,10 @@ namespace PcPartPicker_Desktop_Version
 		
 		private string _Storage_Picture;
 		
+		private EntitySet<BUILD> _BUILDs;
+		
+		private EntitySet<Select_Storage> _Select_Storages;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -2797,6 +4071,8 @@ namespace PcPartPicker_Desktop_Version
 		
 		public Storage()
 		{
+			this._BUILDs = new EntitySet<BUILD>(new Action<BUILD>(this.attach_BUILDs), new Action<BUILD>(this.detach_BUILDs));
+			this._Select_Storages = new EntitySet<Select_Storage>(new Action<Select_Storage>(this.attach_Select_Storages), new Action<Select_Storage>(this.detach_Select_Storages));
 			OnCreated();
 		}
 		
@@ -2980,6 +4256,32 @@ namespace PcPartPicker_Desktop_Version
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Storage_BUILD", Storage="_BUILDs", ThisKey="Storage_ID", OtherKey="Storage_ID")]
+		public EntitySet<BUILD> BUILDs
+		{
+			get
+			{
+				return this._BUILDs;
+			}
+			set
+			{
+				this._BUILDs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Storage_Select_Storage", Storage="_Select_Storages", ThisKey="Storage_ID", OtherKey="Storage_ID")]
+		public EntitySet<Select_Storage> Select_Storages
+		{
+			get
+			{
+				return this._Select_Storages;
+			}
+			set
+			{
+				this._Select_Storages.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -2998,6 +4300,30 @@ namespace PcPartPicker_Desktop_Version
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Storage = this;
+		}
+		
+		private void detach_BUILDs(BUILD entity)
+		{
+			this.SendPropertyChanging();
+			entity.Storage = null;
+		}
+		
+		private void attach_Select_Storages(Select_Storage entity)
+		{
+			this.SendPropertyChanging();
+			entity.Storage = this;
+		}
+		
+		private void detach_Select_Storages(Select_Storage entity)
+		{
+			this.SendPropertyChanging();
+			entity.Storage = null;
 		}
 	}
 }
