@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Desktop\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -103,6 +103,12 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="partpage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="partpage.Designer.cs">
+      <DependentUpon>partpage.cs</DependentUpon>
     </Compile>
     <Compile Include="PickCase.cs">
       <SubType>UserControl</SubType>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewBuild.resx">
       <DependentUpon>NewBuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="partpage.resx">
+      <DependentUpon>partpage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PickCase.resx">
       <DependentUpon>PickCase.cs</DependentUpon>

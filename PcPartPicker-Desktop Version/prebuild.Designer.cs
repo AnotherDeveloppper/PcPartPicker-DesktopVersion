@@ -159,6 +159,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "prebuild";
             this.Size = new System.Drawing.Size(233, 227);
+            this.Load += new System.EventHandler(this.prebuild_Load_1);
             this.Click += new System.EventHandler(this.prebuild_Click);
             this.MouseLeave += new System.EventHandler(this.prebuild_MouseLeave);
             this.MouseHover += new System.EventHandler(this.prebuild_MouseHover);

@@ -34,6 +34,7 @@
             this.pbItemPic = new System.Windows.Forms.PictureBox();
             this.lblPrice = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbItemPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -82,11 +83,21 @@
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(166, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
+            // 
             // Part
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.pbItemPic);
@@ -94,6 +105,7 @@
             this.Name = "Part";
             this.Size = new System.Drawing.Size(448, 84);
             this.Load += new System.EventHandler(this.Part_Load);
+            this.Click += new System.EventHandler(this.Part_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbItemPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.PictureBox pbItemPic;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuCustomLabel lblPrice;
+        private System.Windows.Forms.Label label1;
     }
 }

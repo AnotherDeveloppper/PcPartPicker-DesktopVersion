@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PcPartPicker_Desktop_Version
 {
@@ -15,6 +16,7 @@ namespace PcPartPicker_Desktop_Version
         databeuseDataContext db = new databeuseDataContext();
         int poss = 10;
         string userID;
+        string pic;
         public void addItem(Part p)
         {
             panel1.Controls.Add(p);
@@ -57,11 +59,23 @@ namespace PcPartPicker_Desktop_Version
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+
+                label1.Text = open.FileName;
+                pic = Path.GetFileName(label1.Text);
+            }
+            File.Copy(label1.Text, Path.Combine(@"images\", Path.GetFileName(label1.Text)), true);
+            pic = Path.GetFileName(label1.Text);
+
+        }
+
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-
-       
-
             if (txtbxName.Text != "")
             {
                 DialogResult s = MessageBox.Show("Do you want to save this Build?", "Confirmation", MessageBoxButtons.YesNo);
@@ -83,13 +97,32 @@ namespace PcPartPicker_Desktop_Version
                     newb.Bootable = "true";
                     newb.Total_Watt = Main.WATTAGE;
                     newb.Total_Price = Main.PRICE;
+                    if (Main.main.uid == "1" || Main.main.uid == "2" || Main.main.uid == "3")
+                    {
+                        newb.Build_Picture = pic;
+                    }
+                    else { 
                     newb.Build_Picture=dataGridView2.Rows[0].Cells[6].Value.ToString();
+                    }
 
                     db.BUILDs.InsertOnSubmit(newb);
                     db.SubmitChanges();
                     Main.main.yourbuildsclick();
                 }
             }
+        }
+
+        private void ShowNewBuild_Load(object sender, EventArgs e)
+        {
+            if(Main.main.uid=="1" || Main.main.uid == "2" || Main.main.uid == "3")
+            {
+                panel2.Visible = true;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

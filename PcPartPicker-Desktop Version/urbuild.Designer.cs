@@ -152,12 +152,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 26);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -174,6 +174,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "urbuild";
             this.Size = new System.Drawing.Size(233, 227);
+            this.Click += new System.EventHandler(this.urbuild_Click);
             this.MouseLeave += new System.EventHandler(this.urbuild_MouseLeave);
             this.MouseHover += new System.EventHandler(this.urbuild_MouseHover);
             this.panel1.ResumeLayout(false);

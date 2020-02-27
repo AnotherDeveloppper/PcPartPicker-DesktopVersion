@@ -48,6 +48,7 @@
             this.minP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.maxP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Searchtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.addbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).BeginInit();
@@ -297,10 +298,26 @@
             this.Searchtxt.TabIndex = 26;
             this.Searchtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // addbtn
+            // 
+            this.addbtn.BackColor = System.Drawing.Color.Transparent;
+            this.addbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addbtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.addbtn.ForeColor = System.Drawing.Color.Black;
+            this.addbtn.Location = new System.Drawing.Point(504, 484);
+            this.addbtn.Name = "addbtn";
+            this.addbtn.Size = new System.Drawing.Size(138, 40);
+            this.addbtn.TabIndex = 27;
+            this.addbtn.Text = "ADD";
+            this.addbtn.UseVisualStyleBackColor = false;
+            this.addbtn.Visible = false;
+            this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
+            // 
             // prebuilds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.addbtn);
             this.Controls.Add(this.Searchtxt);
             this.Controls.Add(this.maxP);
             this.Controls.Add(this.minP);
@@ -351,5 +368,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox minP;
         private Bunifu.Framework.UI.BunifuMaterialTextbox maxP;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Searchtxt;
+        private System.Windows.Forms.Button addbtn;
     }
 }

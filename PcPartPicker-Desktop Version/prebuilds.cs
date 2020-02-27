@@ -23,6 +23,12 @@ namespace PcPartPicker_Desktop_Version
         private void prebuilds_Load(object sender, EventArgs e)
         {
             builds();
+
+            if (Main.main.uid == "1" || Main.main.uid == "2" || Main.main.uid == "3")
+            {
+                addbtn.Visible = true;
+            }
+
         }
 
         private void builds ()
@@ -144,6 +150,11 @@ namespace PcPartPicker_Desktop_Version
         private void minP_OnValueChanged_1(object sender, EventArgs e)
         {
             btn_ok.Visible = true;
+        }
+
+        private void addbtn_Click(object sender, EventArgs e)
+        {
+            Main.main.newbuildclick();
         }
 
         public void clears()

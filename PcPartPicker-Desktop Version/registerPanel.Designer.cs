@@ -119,6 +119,7 @@
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button2
             // 
@@ -211,6 +212,7 @@
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // registerPanel
             // 

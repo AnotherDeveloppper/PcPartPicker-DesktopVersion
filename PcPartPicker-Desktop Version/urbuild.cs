@@ -141,5 +141,11 @@ namespace PcPartPicker_Desktop_Version
             db.SubmitChanges();
             Main.main.resetyourbuilds();
         }
+
+        private void urbuild_Click(object sender, EventArgs e)
+        {
+            sID = this.prebuildID.Text;
+            Main.main.prebuildpageshow();
+        }
     }
 }

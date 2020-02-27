@@ -119,5 +119,10 @@ namespace PcPartPicker_Desktop_Version
         {
 
         }
+
+        private void prebuild_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

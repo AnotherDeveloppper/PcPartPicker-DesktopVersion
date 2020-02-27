@@ -39,6 +39,7 @@ namespace PcPartPicker_Desktop_Version
         ShowNewBuild p9;
         urbuilds u1;
         AdminParts ad;
+        partpage pg;
 
         public Main(String a, String b)
         {
@@ -103,18 +104,7 @@ namespace PcPartPicker_Desktop_Version
         {
 
 
-              if(Workhere.Controls.Contains(u1))   u1.Hide();
-            letHide("");
-            f1.Hide();
-            form5.Hide();
-            form4.Hide();
-            naming.Text = bunifuFlatButton3.Text;
-            f2.Hide();
-            m1.Hide();
-            ad.Hide();
-            n1.Dock = DockStyle.Fill;
-            Workhere.Controls.Add(n1);
-            n1.Show();
+            newbuildclick();
 
         }
 
@@ -133,16 +123,19 @@ namespace PcPartPicker_Desktop_Version
         {
 
             u1 = new urbuilds();
+            if (Workhere.Controls.Contains(u1)) u1.Hide();
+            letHide("");
             f1.Hide();
+            u1.Hide();
             form5.Hide();
             form4.Hide();
             naming.Text = bunifuFlatButton3.Text;
             f2.Hide();
             m1.Hide();
-            u1.Hide();
+            ad.Hide();
+            n1.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(n1);
             n1.Show();
-           
-
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -282,7 +275,6 @@ namespace PcPartPicker_Desktop_Version
             pictureBox2.Image = Image.FromFile(@"images\"+ dataGridView1.Rows[0].Cells[8].Value.ToString());
             uid= dataGridView1.Rows[0].Cells[0].Value.ToString();
 
-
             //mainpanel load
             form4.Hide();
             form5.Hide();
@@ -291,9 +283,15 @@ namespace PcPartPicker_Desktop_Version
             f1.Show();
             f2.Hide();
 
+            //
+            if (Main.main.uid == "1" || Main.main.uid == "2" || Main.main.uid == "3")
+            {
+                bunifuFlatButton6.Visible = true;
+            }
+
         }
         public void prebuildpageshow()
-        {
+        {         
             form4.Hide();
             f1.Hide();
             form5.Hide();
@@ -302,9 +300,28 @@ namespace PcPartPicker_Desktop_Version
             Workhere.Controls.Add(f2);
             f2.Show();
             m1.Hide();
-
+            u1.Hide();
+            
 
         }
+        public void partpageshow()
+        {
+            pg = new partpage(Part.typirino);
+            form4.Hide();
+            f1.Hide();
+            form5.Hide();
+            naming.Text = "Parts list";
+            pg.Dock = DockStyle.Fill;
+            Workhere.Controls.Add(pg);
+            pg.Show();
+            m1.Hide();
+
+        }
+
+
+
+
+
         public void cpuCheck()
         {
             naming.Text = bunifuFlatButton4.Text;

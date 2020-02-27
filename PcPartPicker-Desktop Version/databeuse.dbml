@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="projet" Class="databeuseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PFU06AN\IBRAHANDOURSQL;Initial Catalog=projet;Integrated Security=True" SettingsObjectName="PcPartPicker_Desktop_Version.Properties.Settings" SettingsPropertyName="projetConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-Q6F79J6\SQLEXPRESS;Initial Catalog=projet;Integrated Security=True" SettingsObjectName="PcPartPicker_Desktop_Version.Properties.Settings" SettingsPropertyName="projetConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.BUILD" Member="BUILDs">
     <Type Name="BUILD">
       <Column Name="Build_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -17,18 +17,6 @@
       <Column Name="Total_Watt" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="Bootable" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="Build_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="BUILD_Select_Gpu" Member="Select_Gpus" ThisKey="Build_ID" OtherKey="Build_ID" Type="Select_Gpu" />
-      <Association Name="BUILD_Select_Memory" Member="Select_Memories" ThisKey="Build_ID" OtherKey="Build_ID" Type="Select_Memory" />
-      <Association Name="BUILD_Select_Storage" Member="Select_Storages" ThisKey="Build_ID" OtherKey="Build_ID" Type="Select_Storage" />
-      <Association Name="USER_BUILD" Member="USER" ThisKey="USER_ID" OtherKey="USER_ID" Type="USER" IsForeignKey="true" />
-      <Association Name="Case_BUILD" Member="Case" ThisKey="Case_ID" OtherKey="Case_ID" Type="Case" IsForeignKey="true" />
-      <Association Name="Cpu_BUILD" Member="Cpu" ThisKey="Cpu_ID" OtherKey="Cpu_ID" Type="Cpu" IsForeignKey="true" />
-      <Association Name="CpuCooler_BUILD" Member="CpuCooler" ThisKey="CpuCooler_ID" OtherKey="CpuCooler_ID" Type="CpuCooler" IsForeignKey="true" />
-      <Association Name="Gpu_BUILD" Member="Gpu" ThisKey="Gpu_ID" OtherKey="Gpu_ID" Type="Gpu" IsForeignKey="true" />
-      <Association Name="Memory_BUILD" Member="Memory" ThisKey="Ram_ID" OtherKey="Memory_ID" Type="Memory" IsForeignKey="true" />
-      <Association Name="MotherBoard_BUILD" Member="MotherBoard" ThisKey="MoBo_ID" OtherKey="MoBo_ID" Type="MotherBoard" IsForeignKey="true" />
-      <Association Name="PowerSupply_BUILD" Member="PowerSupply" ThisKey="PowerSupply_ID" OtherKey="PowerSupply_ID" Type="PowerSupply" IsForeignKey="true" />
-      <Association Name="Storage_BUILD" Member="Storage" ThisKey="Storage_ID" OtherKey="Storage_ID" Type="Storage" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.[USER]" Member="USERs">
@@ -45,7 +33,6 @@
       <Column Name="ROLE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="USER_BUILD" Member="BUILDs" ThisKey="USER_ID" OtherKey="USER_ID" Type="BUILD" />
     </Type>
   </Table>
   <Table Name="dbo.[Case]" Member="Cases">
@@ -57,7 +44,6 @@
       <Column Name="Volume" Type="System.Single" DbType="Real" CanBeNull="true" />
       <Column Name="Case_Price" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Case_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Case_BUILD" Member="BUILDs" ThisKey="Case_ID" OtherKey="Case_ID" Type="BUILD" />
     </Type>
   </Table>
   <Table Name="dbo.Cpu" Member="Cpus">
@@ -74,7 +60,6 @@
       <Column Name="Cpu_Price" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="[Integrated Gpu]" Member="Integrated_Gpu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Cpu_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Cpu_BUILD" Member="BUILDs" ThisKey="Cpu_ID" OtherKey="Cpu_ID" Type="BUILD" />
     </Type>
   </Table>
   <Table Name="dbo.CpuCooler" Member="CpuCoolers">
@@ -87,7 +72,6 @@
       <Column Name="[Water Cooled]" Member="Water_Cooled" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="CpuCooler_Price" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="CpuCooler_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="CpuCooler_BUILD" Member="BUILDs" ThisKey="CpuCooler_ID" OtherKey="CpuCooler_ID" Type="BUILD" />
     </Type>
   </Table>
   <Table Name="dbo.Gpu" Member="Gpus">
@@ -103,8 +87,6 @@
       <Column Name="TDP_Gpu" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Gpu_Price" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Gpu_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Gpu_BUILD" Member="BUILDs" ThisKey="Gpu_ID" OtherKey="Gpu_ID" Type="BUILD" />
-      <Association Name="Gpu_Select_Gpu" Member="Select_Gpus" ThisKey="Gpu_ID" OtherKey="Gpu_ID" Type="Select_Gpu" />
     </Type>
   </Table>
   <Table Name="dbo.Memory" Member="Memories">
@@ -118,8 +100,6 @@
       <Column Name="[CAS Latency]" Member="CAS_Latency" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Memory_Price" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Memory_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Memory_BUILD" Member="BUILDs" ThisKey="Memory_ID" OtherKey="Ram_ID" Type="BUILD" />
-      <Association Name="Memory_Select_Memory" Member="Select_Memories" ThisKey="Memory_ID" OtherKey="Memory_ID" Type="Select_Memory" />
     </Type>
   </Table>
   <Table Name="dbo.MotherBoard" Member="MotherBoards">
@@ -135,7 +115,6 @@
       <Column Name="[M.2 Slots]" Member="M_2_Slots" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MoBo_Price" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Mobo_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="MotherBoard_BUILD" Member="BUILDs" ThisKey="MoBo_ID" OtherKey="MoBo_ID" Type="BUILD" />
     </Type>
   </Table>
   <Table Name="dbo.PowerSupply" Member="PowerSupplies">
@@ -148,31 +127,6 @@
       <Column Name="Modular" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="Psu_Price" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Psu_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="PowerSupply_BUILD" Member="BUILDs" ThisKey="PowerSupply_ID" OtherKey="PowerSupply_ID" Type="BUILD" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Select_Gpu" Member="Select_Gpus">
-    <Type Name="Select_Gpu">
-      <Column Name="Gpu_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Build_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="BUILD_Select_Gpu" Member="BUILD" ThisKey="Build_ID" OtherKey="Build_ID" Type="BUILD" IsForeignKey="true" />
-      <Association Name="Gpu_Select_Gpu" Member="Gpu" ThisKey="Gpu_ID" OtherKey="Gpu_ID" Type="Gpu" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Select_Memory" Member="Select_Memories">
-    <Type Name="Select_Memory">
-      <Column Name="Build_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Memory_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="BUILD_Select_Memory" Member="BUILD" ThisKey="Build_ID" OtherKey="Build_ID" Type="BUILD" IsForeignKey="true" />
-      <Association Name="Memory_Select_Memory" Member="Memory" ThisKey="Memory_ID" OtherKey="Memory_ID" Type="Memory" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Select_Storage" Member="Select_Storages">
-    <Type Name="Select_Storage">
-      <Column Name="Build_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Storage_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="BUILD_Select_Storage" Member="BUILD" ThisKey="Build_ID" OtherKey="Build_ID" Type="BUILD" IsForeignKey="true" />
-      <Association Name="Storage_Select_Storage" Member="Storage" ThisKey="Storage_ID" OtherKey="Storage_ID" Type="Storage" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Storage" Member="Storages">
@@ -186,8 +140,6 @@
       <Column Name="NVME" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
       <Column Name="Storage_Price" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="Storage_Picture" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="Storage_BUILD" Member="BUILDs" ThisKey="Storage_ID" OtherKey="Storage_ID" Type="BUILD" />
-      <Association Name="Storage_Select_Storage" Member="Select_Storages" ThisKey="Storage_ID" OtherKey="Storage_ID" Type="Select_Storage" />
     </Type>
   </Table>
 </Database>
