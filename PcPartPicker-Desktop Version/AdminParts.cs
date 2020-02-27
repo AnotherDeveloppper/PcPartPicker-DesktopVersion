@@ -138,8 +138,8 @@ namespace PcPartPicker_Desktop_Version
                 c.ManufacturerCpu = comboBox2.Text;
                 c.Core_Count = Convert.ToInt32(bunifuMaterialTextbox2.Text);
                 c.Threads_Count = Convert.ToInt32(bunifuMaterialTextbox3.Text);
-                c.Core_Clock_Cpu = Convert.ToInt32(bunifuMaterialTextbox4.Text);
-                c.Boost_Clock_Cpu = Convert.ToInt32(bunifuMaterialTextbox5.Text);
+                c.Core_Clock_Cpu = float.Parse(bunifuMaterialTextbox4.Text);
+                c.Boost_Clock_Cpu = float.Parse(bunifuMaterialTextbox5.Text);
                 c.Socket = comboBox3.Text;
                 c.TDP_Cpu = Convert.ToInt32(bunifuMaterialTextbox6.Text);
                 c.Maximum_Supported_Memory_Cpu = Convert.ToInt32(bunifuMaterialTextbox7.Text);

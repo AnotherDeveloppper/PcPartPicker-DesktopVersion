@@ -45,10 +45,10 @@
             this.dg = new System.Windows.Forms.DataGridView();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_ok = new Bunifu.Framework.UI.BunifuImageButton();
-            this.minP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.maxP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Searchtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.addbtn = new System.Windows.Forms.Button();
+            this.minP = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).BeginInit();
@@ -240,26 +240,6 @@
             this.btn_ok.Zoom = 10;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
-            // minP
-            // 
-            this.minP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.minP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.minP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.minP.HintForeColor = System.Drawing.Color.Empty;
-            this.minP.HintText = "Min";
-            this.minP.isPassword = false;
-            this.minP.LineFocusedColor = System.Drawing.Color.Blue;
-            this.minP.LineIdleColor = System.Drawing.Color.Gray;
-            this.minP.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.minP.LineThickness = 3;
-            this.minP.Location = new System.Drawing.Point(705, 105);
-            this.minP.Margin = new System.Windows.Forms.Padding(4);
-            this.minP.Name = "minP";
-            this.minP.Size = new System.Drawing.Size(46, 44);
-            this.minP.TabIndex = 24;
-            this.minP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.minP.OnValueChanged += new System.EventHandler(this.minP_OnValueChanged_1);
-            // 
             // maxP
             // 
             this.maxP.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -313,6 +293,26 @@
             this.addbtn.Visible = false;
             this.addbtn.Click += new System.EventHandler(this.addbtn_Click);
             // 
+            // minP
+            // 
+            this.minP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.minP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.minP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.minP.HintForeColor = System.Drawing.Color.Empty;
+            this.minP.HintText = "Min";
+            this.minP.isPassword = false;
+            this.minP.LineFocusedColor = System.Drawing.Color.Blue;
+            this.minP.LineIdleColor = System.Drawing.Color.Gray;
+            this.minP.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.minP.LineThickness = 3;
+            this.minP.Location = new System.Drawing.Point(705, 105);
+            this.minP.Margin = new System.Windows.Forms.Padding(4);
+            this.minP.Name = "minP";
+            this.minP.Size = new System.Drawing.Size(46, 44);
+            this.minP.TabIndex = 24;
+            this.minP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.minP.OnValueChanged += new System.EventHandler(this.minP_OnValueChanged_1);
+            // 
             // prebuilds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,9 +365,9 @@
         private System.Windows.Forms.DataGridView dg;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Bunifu.Framework.UI.BunifuImageButton btn_ok;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox minP;
         private Bunifu.Framework.UI.BunifuMaterialTextbox maxP;
         private Bunifu.Framework.UI.BunifuMaterialTextbox Searchtxt;
         private System.Windows.Forms.Button addbtn;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox minP;
     }
 }

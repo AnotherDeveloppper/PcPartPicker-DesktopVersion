@@ -127,7 +127,7 @@
             this.bunifuFlatButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton6.ForeColor = System.Drawing.Color.White;
             this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = global::PcPartPicker_Desktop_Version.Properties.Resources.cpu_white;
+            this.bunifuFlatButton6.Iconimage = global::PcPartPicker_Desktop_Version.Properties.Resources.download;
             this.bunifuFlatButton6.Iconimage_right = null;
             this.bunifuFlatButton6.Iconimage_right_Selected = null;
             this.bunifuFlatButton6.Iconimage_Selected = null;

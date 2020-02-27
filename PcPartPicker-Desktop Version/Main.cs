@@ -40,7 +40,6 @@ namespace PcPartPicker_Desktop_Version
         urbuilds u1;
         AdminParts ad;
         partpage pg;
-
         public Main(String a, String b)
         {
             InitializeComponent();
@@ -103,8 +102,10 @@ namespace PcPartPicker_Desktop_Version
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
 
-
+            if (Workhere.Controls.Contains(pg)) pg.Hide();
+            u1.Hide();
             newbuildclick();
+            letHide("");
             form5.Hide();
 
         }
@@ -141,6 +142,8 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+
+          if(Workhere.Controls.Contains(pg))  pg.Hide();
             yourbuildsclick();
             form5.Hide();
             ad.Hide();
@@ -169,6 +172,8 @@ namespace PcPartPicker_Desktop_Version
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
             u1 = new urbuilds();
+            if (Workhere.Controls.Contains(pg)) pg.Hide();
+            u1.Hide();
             m1.Hide();
             form5.Hide();
             form5.Hide();
@@ -233,6 +238,9 @@ namespace PcPartPicker_Desktop_Version
 
         public void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
+
+            if (Workhere.Controls.Contains(pg)) pg.Hide();
+            u1.Hide();
             prebuildsclick();
             letHide("");
             ad.Hide();
@@ -364,6 +372,8 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
         {
+            if (Workhere.Controls.Contains(pg)) pg.Hide();
+            u1.Hide();
             form4.Hide();
             form5.Hide();
             f1.Hide();
