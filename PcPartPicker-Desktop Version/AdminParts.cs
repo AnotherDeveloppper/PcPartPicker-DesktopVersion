@@ -227,6 +227,7 @@ namespace PcPartPicker_Desktop_Version
             if (open.ShowDialog() == DialogResult.OK)
             {
                 x = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, Path.Combine(@"images\", Path.GetFileName(open.FileName)), true);
             }
         }
 
@@ -237,6 +238,7 @@ namespace PcPartPicker_Desktop_Version
             if (open.ShowDialog() == DialogResult.OK)
             {
                 x = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, Path.Combine(@"images\", Path.GetFileName(open.FileName)), true);
             }
         }
 
@@ -247,6 +249,7 @@ namespace PcPartPicker_Desktop_Version
             if (open.ShowDialog() == DialogResult.OK)
             {
                 x = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, Path.Combine(@"images\", Path.GetFileName(open.FileName)), true);
             }
         }
 
@@ -257,6 +260,7 @@ namespace PcPartPicker_Desktop_Version
             if (open.ShowDialog() == DialogResult.OK)
             {
                 x = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, Path.Combine(@"images\", Path.GetFileName(open.FileName)), true);
             }
         }
 
@@ -289,6 +293,7 @@ namespace PcPartPicker_Desktop_Version
             if (open.ShowDialog() == DialogResult.OK)
             {
                 x = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, Path.Combine(@"images\", Path.GetFileName(open.FileName)), true);
             }
         }
 
@@ -323,6 +328,7 @@ namespace PcPartPicker_Desktop_Version
             if (open.ShowDialog() == DialogResult.OK)
             {
                 x = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, Path.Combine(@"images\", Path.GetFileName(open.FileName)), true);
             }
         }
 
@@ -354,6 +360,7 @@ namespace PcPartPicker_Desktop_Version
             if (open.ShowDialog() == DialogResult.OK)
             {
                 x = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, Path.Combine(@"images\", Path.GetFileName(open.FileName)), true);
             }
         }
 
@@ -384,6 +391,7 @@ namespace PcPartPicker_Desktop_Version
             if (open.ShowDialog() == DialogResult.OK)
             {
                 x = Path.GetFileName(open.FileName);
+                File.Copy(open.FileName, Path.Combine(@"images\", Path.GetFileName(open.FileName)), true);
             }
         }
     }

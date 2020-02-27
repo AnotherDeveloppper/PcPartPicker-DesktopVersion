@@ -64,13 +64,13 @@ namespace PcPartPicker_Desktop_Version
             u.ROLE = "user";
             db.USERs.InsertOnSubmit(u);
             db.SubmitChanges();
-            MessageBox.Show("succ");         
+            MessageBox.Show("register succeed mothafaaa");
 
             File.Copy(label1.Text, Path.Combine(@"images\", Path.GetFileName(label1.Text)), true);
-             pic =Path.GetFileName(label1.Text);
+            pic = Path.GetFileName(label1.Text);
             MessageBox.Show(pic);
-            
-            
+
+
 
         }
 

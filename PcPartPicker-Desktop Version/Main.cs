@@ -272,7 +272,7 @@ namespace PcPartPicker_Desktop_Version
             bunifuFlatButton2.Text = "                  " + name;
             dataGridView1.DataSource = q;
 
-            pictureBox2.Image = Image.FromFile(@"images\"+ dataGridView1.Rows[0].Cells[8].Value.ToString());
+            bunifuFlatButton2.Iconimage = Image.FromFile(@"images\"+ dataGridView1.Rows[0].Cells[8].Value.ToString());
             uid= dataGridView1.Rows[0].Cells[0].Value.ToString();
 
             //mainpanel load
