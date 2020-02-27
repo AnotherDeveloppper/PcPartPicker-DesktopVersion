@@ -46,7 +46,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(262, 11);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(385, 11);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(100, 24);
             this.bunifuCustomLabel1.TabIndex = 0;
@@ -67,7 +67,7 @@
             this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(11, 39);
             this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(493, 68);
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(628, 68);
             this.bunifuMaterialTextbox1.TabIndex = 1;
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -76,14 +76,14 @@
             this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(11, 114);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(493, 401);
+            this.panel1.Size = new System.Drawing.Size(628, 482);
             this.panel1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label1.Location = new System.Drawing.Point(559, 213);
+            this.label1.Location = new System.Drawing.Point(715, 249);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 7;
@@ -96,7 +96,7 @@
             this.cbAMD.Checked = true;
             this.cbAMD.CheckedOnColor = System.Drawing.Color.Black;
             this.cbAMD.ForeColor = System.Drawing.Color.White;
-            this.cbAMD.Location = new System.Drawing.Point(519, 213);
+            this.cbAMD.Location = new System.Drawing.Point(675, 249);
             this.cbAMD.Name = "cbAMD";
             this.cbAMD.Size = new System.Drawing.Size(20, 20);
             this.cbAMD.TabIndex = 6;
@@ -106,7 +106,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(559, 251);
+            this.label2.Location = new System.Drawing.Point(715, 287);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 9;
@@ -119,7 +119,7 @@
             this.cbIntel.Checked = true;
             this.cbIntel.CheckedOnColor = System.Drawing.Color.Black;
             this.cbIntel.ForeColor = System.Drawing.Color.White;
-            this.cbIntel.Location = new System.Drawing.Point(519, 251);
+            this.cbIntel.Location = new System.Drawing.Point(675, 287);
             this.cbIntel.Name = "cbIntel";
             this.cbIntel.Size = new System.Drawing.Size(20, 20);
             this.cbIntel.TabIndex = 8;
@@ -128,7 +128,7 @@
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(521, 165);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(677, 201);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(97, 13);
             this.bunifuCustomLabel2.TabIndex = 10;
@@ -147,7 +147,7 @@
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "Search";
@@ -165,13 +165,13 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(524, 59);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(675, 60);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(105, 48);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(114, 47);
             this.bunifuFlatButton1.TabIndex = 3;
             this.bunifuFlatButton1.Text = "Search";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -194,7 +194,7 @@
             this.Controls.Add(this.bunifuMaterialTextbox1);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Name = "PickCpu";
-            this.Size = new System.Drawing.Size(645, 542);
+            this.Size = new System.Drawing.Size(862, 637);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

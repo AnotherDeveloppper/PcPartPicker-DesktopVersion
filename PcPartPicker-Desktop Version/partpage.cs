@@ -36,7 +36,7 @@ namespace PcPartPicker_Desktop_Version
         public  void amar(string b)
         {
             hiderino(b);
-
+            label7.Text = b;
             if (b == "Case")
             {
                 string id = Part.pID;
@@ -208,6 +208,16 @@ namespace PcPartPicker_Desktop_Version
         }
 
         private void psupanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label44_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label48_Click(object sender, EventArgs e)
         {
 
         }

@@ -32,8 +32,8 @@
             this.s = new System.Windows.Forms.PictureBox();
             this.sliderbox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,18 +45,18 @@
             // s
             // 
             this.s.Image = global::PcPartPicker_Desktop_Version.Properties.Resources.E2;
-            this.s.Location = new System.Drawing.Point(0, 0);
+            this.s.Location = new System.Drawing.Point(3, 3);
             this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(642, 331);
+            this.s.Size = new System.Drawing.Size(856, 386);
             this.s.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.s.TabIndex = 0;
             this.s.TabStop = false;
             // 
             // sliderbox
             // 
-            this.sliderbox.Location = new System.Drawing.Point(3, 336);
+            this.sliderbox.Location = new System.Drawing.Point(3, 395);
             this.sliderbox.Name = "sliderbox";
-            this.sliderbox.Size = new System.Drawing.Size(437, 203);
+            this.sliderbox.Size = new System.Drawing.Size(537, 239);
             this.sliderbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sliderbox.TabIndex = 1;
             this.sliderbox.TabStop = false;
@@ -67,35 +67,35 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(446, 337);
+            this.panel1.Location = new System.Drawing.Point(546, 395);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 202);
+            this.panel1.Size = new System.Drawing.Size(313, 239);
             this.panel1.TabIndex = 2;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Chinese Rocks", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(44, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 49);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "YOUR";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Chinese Rocks", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(28, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 49);
+            this.label2.Size = new System.Drawing.Size(198, 55);
             this.label2.TabIndex = 1;
             this.label2.Text = "BUILDS";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(33, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 55);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "YOUR";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer1
             // 
@@ -107,11 +107,11 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Crimson;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Chinese Rocks", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(259, 265);
+            this.button1.Location = new System.Drawing.Point(342, 310);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 29);
+            this.button1.Size = new System.Drawing.Size(171, 35);
             this.button1.TabIndex = 3;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = false;
@@ -121,9 +121,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.DarkGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Chinese Rocks", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(28, 498);
+            this.button2.Location = new System.Drawing.Point(42, 556);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 26);
             this.button2.TabIndex = 4;
@@ -142,7 +142,7 @@
             this.Controls.Add(this.sliderbox);
             this.Controls.Add(this.s);
             this.Name = "mainpanel";
-            this.Size = new System.Drawing.Size(645, 542);
+            this.Size = new System.Drawing.Size(862, 637);
             this.Load += new System.EventHandler(this.mainpanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.s)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderbox)).EndInit();

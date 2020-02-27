@@ -124,7 +124,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(645, 68);
+            this.panel1.Size = new System.Drawing.Size(862, 68);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -140,16 +140,16 @@
             // username
             // 
             this.username.AutoSize = true;
-            this.username.Font = new System.Drawing.Font("Forte", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(337, 42);
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.username.Location = new System.Drawing.Point(456, 43);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(46, 14);
+            this.username.Size = new System.Drawing.Size(49, 16);
             this.username.TabIndex = 4;
             this.username.Text = "builder";
             // 
             // userpic
             // 
-            this.userpic.Location = new System.Drawing.Point(308, 34);
+            this.userpic.Location = new System.Drawing.Point(427, 35);
             this.userpic.Name = "userpic";
             this.userpic.Size = new System.Drawing.Size(29, 30);
             this.userpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -175,22 +175,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label3.Location = new System.Drawing.Point(282, 42);
+            this.label3.Location = new System.Drawing.Point(401, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 13);
+            this.label3.Size = new System.Drawing.Size(19, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "by";
             // 
             // buildname
             // 
             this.buildname.AutoSize = true;
-            this.buildname.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buildname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buildname.ForeColor = System.Drawing.Color.White;
-            this.buildname.Location = new System.Drawing.Point(301, 13);
+            this.buildname.Location = new System.Drawing.Point(420, 14);
             this.buildname.Name = "buildname";
-            this.buildname.Size = new System.Drawing.Size(34, 20);
+            this.buildname.Size = new System.Drawing.Size(40, 20);
             this.buildname.TabIndex = 1;
             this.buildname.Text = "F16";
             this.buildname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,48 +198,48 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(301, 2);
+            this.label1.Location = new System.Drawing.Point(420, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(48, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "BUILD";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Berlin Sans FB Demi", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(292, 300);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(400, 300);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 18);
+            this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Part List ";
             // 
             // cpuname
             // 
             this.cpuname.AutoSize = true;
-            this.cpuname.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpuname.Location = new System.Drawing.Point(141, 351);
+            this.cpuname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpuname.Location = new System.Drawing.Point(269, 349);
             this.cpuname.Name = "cpuname";
-            this.cpuname.Size = new System.Drawing.Size(98, 13);
+            this.cpuname.Size = new System.Drawing.Size(96, 13);
             this.cpuname.TabIndex = 2;
             this.cpuname.Text = "amd ryzen5 3600x ";
             // 
             // cpuprice
             // 
             this.cpuprice.AutoSize = true;
-            this.cpuprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpuprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpuprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.cpuprice.Location = new System.Drawing.Point(145, 371);
+            this.cpuprice.Location = new System.Drawing.Point(277, 373);
             this.cpuprice.Name = "cpuprice";
-            this.cpuprice.Size = new System.Drawing.Size(29, 13);
+            this.cpuprice.Size = new System.Drawing.Size(34, 13);
             this.cpuprice.TabIndex = 3;
             this.cpuprice.Text = "198 $";
             // 
             // cpupic
             // 
-            this.cpupic.Location = new System.Drawing.Point(100, 351);
+            this.cpupic.Location = new System.Drawing.Point(228, 351);
             this.cpupic.Name = "cpupic";
             this.cpupic.Size = new System.Drawing.Size(35, 35);
             this.cpupic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -250,7 +250,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(99, 334);
+            this.label8.Location = new System.Drawing.Point(177, 363);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(28, 14);
             this.label8.TabIndex = 5;
@@ -260,7 +260,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(250, 318);
+            this.label9.Location = new System.Drawing.Point(364, 320);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(145, 13);
             this.label9.TabIndex = 6;
@@ -270,7 +270,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(104, 393);
+            this.label6.Location = new System.Drawing.Point(207, 395);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 5);
             this.label6.TabIndex = 7;
@@ -281,7 +281,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(102, 455);
+            this.label7.Location = new System.Drawing.Point(207, 457);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(142, 5);
             this.label7.TabIndex = 12;
@@ -292,7 +292,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(95, 399);
+            this.label10.Location = new System.Drawing.Point(121, 418);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 14);
             this.label10.TabIndex = 11;
@@ -300,7 +300,7 @@
             // 
             // mobopic
             // 
-            this.mobopic.Location = new System.Drawing.Point(98, 416);
+            this.mobopic.Location = new System.Drawing.Point(226, 414);
             this.mobopic.Name = "mobopic";
             this.mobopic.Size = new System.Drawing.Size(37, 33);
             this.mobopic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -310,21 +310,21 @@
             // moboprice
             // 
             this.moboprice.AutoSize = true;
-            this.moboprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moboprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.moboprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.moboprice.Location = new System.Drawing.Point(145, 436);
+            this.moboprice.Location = new System.Drawing.Point(273, 434);
             this.moboprice.Name = "moboprice";
-            this.moboprice.Size = new System.Drawing.Size(29, 13);
+            this.moboprice.Size = new System.Drawing.Size(34, 13);
             this.moboprice.TabIndex = 9;
             this.moboprice.Text = "198 $";
             // 
             // moboname
             // 
             this.moboname.AutoSize = true;
-            this.moboname.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moboname.Location = new System.Drawing.Point(141, 416);
+            this.moboname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moboname.Location = new System.Drawing.Point(269, 414);
             this.moboname.Name = "moboname";
-            this.moboname.Size = new System.Drawing.Size(98, 13);
+            this.moboname.Size = new System.Drawing.Size(96, 13);
             this.moboname.TabIndex = 8;
             this.moboname.Text = "amd ryzen5 3600x ";
             // 
@@ -332,7 +332,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(96, 526);
+            this.label14.Location = new System.Drawing.Point(156, 545);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(56, 14);
             this.label14.TabIndex = 22;
@@ -340,7 +340,7 @@
             // 
             // storagepic
             // 
-            this.storagepic.Location = new System.Drawing.Point(99, 543);
+            this.storagepic.Location = new System.Drawing.Point(228, 545);
             this.storagepic.Name = "storagepic";
             this.storagepic.Size = new System.Drawing.Size(35, 35);
             this.storagepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -350,21 +350,21 @@
             // storageprice
             // 
             this.storageprice.AutoSize = true;
-            this.storageprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storageprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.storageprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.storageprice.Location = new System.Drawing.Point(144, 563);
+            this.storageprice.Location = new System.Drawing.Point(273, 565);
             this.storageprice.Name = "storageprice";
-            this.storageprice.Size = new System.Drawing.Size(29, 13);
+            this.storageprice.Size = new System.Drawing.Size(34, 13);
             this.storageprice.TabIndex = 20;
             this.storageprice.Text = "198 $";
             // 
             // storagename
             // 
             this.storagename.AutoSize = true;
-            this.storagename.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storagename.Location = new System.Drawing.Point(140, 543);
+            this.storagename.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storagename.Location = new System.Drawing.Point(269, 545);
             this.storagename.Name = "storagename";
-            this.storagename.Size = new System.Drawing.Size(98, 13);
+            this.storagename.Size = new System.Drawing.Size(96, 13);
             this.storagename.TabIndex = 19;
             this.storagename.Text = "amd ryzen5 3600x ";
             // 
@@ -372,7 +372,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(103, 520);
+            this.label17.Location = new System.Drawing.Point(207, 519);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(142, 5);
             this.label17.TabIndex = 18;
@@ -383,7 +383,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(95, 461);
+            this.label19.Location = new System.Drawing.Point(156, 480);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(49, 14);
             this.label19.TabIndex = 16;
@@ -391,7 +391,7 @@
             // 
             // memorypic
             // 
-            this.memorypic.Location = new System.Drawing.Point(99, 478);
+            this.memorypic.Location = new System.Drawing.Point(228, 466);
             this.memorypic.Name = "memorypic";
             this.memorypic.Size = new System.Drawing.Size(35, 35);
             this.memorypic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -401,21 +401,21 @@
             // memoryprice
             // 
             this.memoryprice.AutoSize = true;
-            this.memoryprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memoryprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memoryprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.memoryprice.Location = new System.Drawing.Point(144, 498);
+            this.memoryprice.Location = new System.Drawing.Point(273, 486);
             this.memoryprice.Name = "memoryprice";
-            this.memoryprice.Size = new System.Drawing.Size(29, 13);
+            this.memoryprice.Size = new System.Drawing.Size(34, 13);
             this.memoryprice.TabIndex = 14;
             this.memoryprice.Text = "198 $";
             // 
             // memoryname
             // 
             this.memoryname.AutoSize = true;
-            this.memoryname.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memoryname.Location = new System.Drawing.Point(140, 478);
+            this.memoryname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memoryname.Location = new System.Drawing.Point(269, 466);
             this.memoryname.Name = "memoryname";
-            this.memoryname.Size = new System.Drawing.Size(98, 13);
+            this.memoryname.Size = new System.Drawing.Size(96, 13);
             this.memoryname.TabIndex = 13;
             this.memoryname.Text = "amd ryzen5 3600x ";
             // 
@@ -423,7 +423,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(412, 458);
+            this.label18.Location = new System.Drawing.Point(556, 460);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(142, 5);
             this.label18.TabIndex = 33;
@@ -434,7 +434,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(405, 399);
+            this.label22.Location = new System.Drawing.Point(498, 418);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(35, 14);
             this.label22.TabIndex = 32;
@@ -442,7 +442,7 @@
             // 
             // casepic
             // 
-            this.casepic.Location = new System.Drawing.Point(408, 416);
+            this.casepic.Location = new System.Drawing.Point(552, 418);
             this.casepic.Name = "casepic";
             this.casepic.Size = new System.Drawing.Size(35, 35);
             this.casepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -452,21 +452,21 @@
             // caseprice
             // 
             this.caseprice.AutoSize = true;
-            this.caseprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.caseprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.caseprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.caseprice.Location = new System.Drawing.Point(453, 436);
+            this.caseprice.Location = new System.Drawing.Point(597, 438);
             this.caseprice.Name = "caseprice";
-            this.caseprice.Size = new System.Drawing.Size(29, 13);
+            this.caseprice.Size = new System.Drawing.Size(34, 13);
             this.caseprice.TabIndex = 30;
             this.caseprice.Text = "198 $";
             // 
             // casename
             // 
             this.casename.AutoSize = true;
-            this.casename.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.casename.Location = new System.Drawing.Point(449, 416);
+            this.casename.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.casename.Location = new System.Drawing.Point(593, 418);
             this.casename.Name = "casename";
-            this.casename.Size = new System.Drawing.Size(98, 13);
+            this.casename.Size = new System.Drawing.Size(96, 13);
             this.casename.TabIndex = 29;
             this.casename.Text = "amd ryzen5 3600x ";
             // 
@@ -474,7 +474,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(412, 393);
+            this.label25.Location = new System.Drawing.Point(556, 395);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(142, 5);
             this.label25.TabIndex = 28;
@@ -485,7 +485,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(404, 334);
+            this.label26.Location = new System.Drawing.Point(498, 363);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(28, 14);
             this.label26.TabIndex = 27;
@@ -493,7 +493,7 @@
             // 
             // gpupic
             // 
-            this.gpupic.Location = new System.Drawing.Point(407, 351);
+            this.gpupic.Location = new System.Drawing.Point(551, 353);
             this.gpupic.Name = "gpupic";
             this.gpupic.Size = new System.Drawing.Size(36, 35);
             this.gpupic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -503,21 +503,21 @@
             // gpuprice
             // 
             this.gpuprice.AutoSize = true;
-            this.gpuprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpuprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpuprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.gpuprice.Location = new System.Drawing.Point(453, 371);
+            this.gpuprice.Location = new System.Drawing.Point(597, 373);
             this.gpuprice.Name = "gpuprice";
-            this.gpuprice.Size = new System.Drawing.Size(29, 13);
+            this.gpuprice.Size = new System.Drawing.Size(34, 13);
             this.gpuprice.TabIndex = 25;
             this.gpuprice.Text = "198 $";
             // 
             // gpuname
             // 
             this.gpuname.AutoSize = true;
-            this.gpuname.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpuname.Location = new System.Drawing.Point(449, 351);
+            this.gpuname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpuname.Location = new System.Drawing.Point(593, 353);
             this.gpuname.Name = "gpuname";
-            this.gpuname.Size = new System.Drawing.Size(98, 13);
+            this.gpuname.Size = new System.Drawing.Size(96, 13);
             this.gpuname.TabIndex = 24;
             this.gpuname.Text = "amd ryzen5 3600x ";
             // 
@@ -525,7 +525,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(405, 463);
+            this.label30.Location = new System.Drawing.Point(442, 482);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(91, 14);
             this.label30.TabIndex = 42;
@@ -533,7 +533,7 @@
             // 
             // psupic
             // 
-            this.psupic.Location = new System.Drawing.Point(408, 480);
+            this.psupic.Location = new System.Drawing.Point(552, 482);
             this.psupic.Name = "psupic";
             this.psupic.Size = new System.Drawing.Size(35, 35);
             this.psupic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -543,28 +543,28 @@
             // psuprice
             // 
             this.psuprice.AutoSize = true;
-            this.psuprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.psuprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.psuprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.psuprice.Location = new System.Drawing.Point(453, 500);
+            this.psuprice.Location = new System.Drawing.Point(597, 502);
             this.psuprice.Name = "psuprice";
-            this.psuprice.Size = new System.Drawing.Size(29, 13);
+            this.psuprice.Size = new System.Drawing.Size(34, 13);
             this.psuprice.TabIndex = 40;
             this.psuprice.Text = "198 $";
             // 
             // psuname
             // 
             this.psuname.AutoSize = true;
-            this.psuname.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.psuname.Location = new System.Drawing.Point(449, 480);
+            this.psuname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.psuname.Location = new System.Drawing.Point(593, 482);
             this.psuname.Name = "psuname";
-            this.psuname.Size = new System.Drawing.Size(98, 13);
+            this.psuname.Size = new System.Drawing.Size(96, 13);
             this.psuname.TabIndex = 39;
             this.psuname.Text = "amd ryzen5 3600x ";
             // 
             // dgmobo
             // 
             this.dgmobo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgmobo.Location = new System.Drawing.Point(223, 393);
+            this.dgmobo.Location = new System.Drawing.Point(367, 395);
             this.dgmobo.Name = "dgmobo";
             this.dgmobo.Size = new System.Drawing.Size(0, 0);
             this.dgmobo.TabIndex = 45;
@@ -580,7 +580,7 @@
             // dgram
             // 
             this.dgram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgram.Location = new System.Drawing.Point(221, 455);
+            this.dgram.Location = new System.Drawing.Point(365, 457);
             this.dgram.Name = "dgram";
             this.dgram.Size = new System.Drawing.Size(0, 0);
             this.dgram.TabIndex = 47;
@@ -588,7 +588,7 @@
             // dgstorage
             // 
             this.dgstorage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgstorage.Location = new System.Drawing.Point(221, 520);
+            this.dgstorage.Location = new System.Drawing.Point(365, 522);
             this.dgstorage.Name = "dgstorage";
             this.dgstorage.Size = new System.Drawing.Size(0, 0);
             this.dgstorage.TabIndex = 48;
@@ -596,7 +596,7 @@
             // dggpu
             // 
             this.dggpu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dggpu.Location = new System.Drawing.Point(407, 347);
+            this.dggpu.Location = new System.Drawing.Point(551, 349);
             this.dggpu.Name = "dggpu";
             this.dggpu.Size = new System.Drawing.Size(0, 0);
             this.dggpu.TabIndex = 49;
@@ -604,7 +604,7 @@
             // dgcase
             // 
             this.dgcase.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgcase.Location = new System.Drawing.Point(407, 412);
+            this.dgcase.Location = new System.Drawing.Point(551, 414);
             this.dgcase.Name = "dgcase";
             this.dgcase.Size = new System.Drawing.Size(0, 0);
             this.dgcase.TabIndex = 50;
@@ -612,7 +612,7 @@
             // dgpsu
             // 
             this.dgpsu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgpsu.Location = new System.Drawing.Point(407, 476);
+            this.dgpsu.Location = new System.Drawing.Point(551, 478);
             this.dgpsu.Name = "dgpsu";
             this.dgpsu.Size = new System.Drawing.Size(0, 0);
             this.dgpsu.TabIndex = 51;
@@ -620,7 +620,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Crimson;
-            this.panel2.Location = new System.Drawing.Point(616, 67);
+            this.panel2.Location = new System.Drawing.Point(832, 67);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(30, 230);
             this.panel2.TabIndex = 52;
@@ -629,7 +629,7 @@
             // 
             this.buildpic.Location = new System.Drawing.Point(34, 67);
             this.buildpic.Name = "buildpic";
-            this.buildpic.Size = new System.Drawing.Size(584, 230);
+            this.buildpic.Size = new System.Drawing.Size(798, 230);
             this.buildpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.buildpic.TabIndex = 53;
             this.buildpic.TabStop = false;
@@ -646,7 +646,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(410, 526);
+            this.label4.Location = new System.Drawing.Point(456, 545);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 14);
             this.label4.TabIndex = 59;
@@ -654,7 +654,7 @@
             // 
             // cpucoolerpic
             // 
-            this.cpucoolerpic.Location = new System.Drawing.Point(413, 543);
+            this.cpucoolerpic.Location = new System.Drawing.Point(551, 543);
             this.cpucoolerpic.Name = "cpucoolerpic";
             this.cpucoolerpic.Size = new System.Drawing.Size(35, 35);
             this.cpucoolerpic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -664,21 +664,21 @@
             // cpucoolerprice
             // 
             this.cpucoolerprice.AutoSize = true;
-            this.cpucoolerprice.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpucoolerprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpucoolerprice.ForeColor = System.Drawing.Color.DarkGreen;
-            this.cpucoolerprice.Location = new System.Drawing.Point(458, 563);
+            this.cpucoolerprice.Location = new System.Drawing.Point(602, 565);
             this.cpucoolerprice.Name = "cpucoolerprice";
-            this.cpucoolerprice.Size = new System.Drawing.Size(29, 13);
+            this.cpucoolerprice.Size = new System.Drawing.Size(34, 13);
             this.cpucoolerprice.TabIndex = 57;
             this.cpucoolerprice.Text = "198 $";
             // 
             // cpucoolername
             // 
             this.cpucoolername.AutoSize = true;
-            this.cpucoolername.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpucoolername.Location = new System.Drawing.Point(454, 543);
+            this.cpucoolername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpucoolername.Location = new System.Drawing.Point(598, 545);
             this.cpucoolername.Name = "cpucoolername";
-            this.cpucoolername.Size = new System.Drawing.Size(98, 13);
+            this.cpucoolername.Size = new System.Drawing.Size(96, 13);
             this.cpucoolername.TabIndex = 56;
             this.cpucoolername.Text = "amd ryzen5 3600x ";
             // 
@@ -686,7 +686,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 3F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(417, 520);
+            this.label13.Location = new System.Drawing.Point(561, 522);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(142, 5);
             this.label13.TabIndex = 55;
@@ -696,7 +696,7 @@
             // dgcpucooler
             // 
             this.dgcpucooler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgcpucooler.Location = new System.Drawing.Point(569, 522);
+            this.dgcpucooler.Location = new System.Drawing.Point(713, 524);
             this.dgcpucooler.Name = "dgcpucooler";
             this.dgcpucooler.Size = new System.Drawing.Size(0, 0);
             this.dgcpucooler.TabIndex = 60;
@@ -760,7 +760,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Name = "prebuildpage";
-            this.Size = new System.Drawing.Size(647, 594);
+            this.Size = new System.Drawing.Size(862, 637);
             this.Load += new System.EventHandler(this.prebuildpage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

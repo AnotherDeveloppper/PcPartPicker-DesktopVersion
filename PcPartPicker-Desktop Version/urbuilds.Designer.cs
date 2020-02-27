@@ -56,17 +56,17 @@
             // bunifuCustomLabel8
             // 
             this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(550, 118);
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(758, 135);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(12, 15);
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(12, 16);
             this.bunifuCustomLabel8.TabIndex = 39;
             this.bunifuCustomLabel8.Text = "-";
             // 
             // minP
             // 
             this.minP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.minP.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minP.ForeColor = System.Drawing.Color.Black;
             this.minP.HintForeColor = System.Drawing.Color.Empty;
             this.minP.HintText = "";
@@ -75,7 +75,8 @@
             this.minP.LineIdleColor = System.Drawing.Color.Black;
             this.minP.LineMouseHoverColor = System.Drawing.Color.Red;
             this.minP.LineThickness = 2;
-            this.minP.Location = new System.Drawing.Point(510, 106);
+            this.minP.Location = new System.Drawing.Point(718, 123);
+            this.minP.Margin = new System.Windows.Forms.Padding(4);
             this.minP.Name = "minP";
             this.minP.Size = new System.Drawing.Size(38, 27);
             this.minP.TabIndex = 38;
@@ -85,7 +86,7 @@
             // maxP
             // 
             this.maxP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.maxP.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxP.ForeColor = System.Drawing.Color.Black;
             this.maxP.HintForeColor = System.Drawing.Color.Empty;
             this.maxP.HintText = "";
@@ -94,7 +95,8 @@
             this.maxP.LineIdleColor = System.Drawing.Color.Black;
             this.maxP.LineMouseHoverColor = System.Drawing.Color.Red;
             this.maxP.LineThickness = 2;
-            this.maxP.Location = new System.Drawing.Point(565, 106);
+            this.maxP.Location = new System.Drawing.Point(773, 123);
+            this.maxP.Margin = new System.Windows.Forms.Padding(4);
             this.maxP.Name = "maxP";
             this.maxP.Size = new System.Drawing.Size(38, 27);
             this.maxP.TabIndex = 37;
@@ -109,13 +111,13 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 61);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(56, 95);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(497, 480);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(608, 502);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
             // bunifuMetroTextbox1
@@ -125,10 +127,10 @@
             this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.Blue;
             this.bunifuMetroTextbox1.BorderThickness = 3;
             this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(7, 12);
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(117, 36);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(493, 44);
@@ -139,20 +141,20 @@
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(536, 307);
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(744, 324);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(29, 13);
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(31, 13);
             this.bunifuCustomLabel5.TabIndex = 33;
             this.bunifuCustomLabel5.Text = "AMD";
             // 
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(536, 276);
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(744, 293);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(40, 13);
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(43, 13);
             this.bunifuCustomLabel6.TabIndex = 32;
             this.bunifuCustomLabel6.Text = "NVIDIA";
             // 
@@ -163,7 +165,7 @@
             this.bunifuCheckbox3.Checked = true;
             this.bunifuCheckbox3.CheckedOnColor = System.Drawing.Color.DarkOrange;
             this.bunifuCheckbox3.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox3.Location = new System.Drawing.Point(510, 302);
+            this.bunifuCheckbox3.Location = new System.Drawing.Point(718, 319);
             this.bunifuCheckbox3.Name = "bunifuCheckbox3";
             this.bunifuCheckbox3.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox3.TabIndex = 31;
@@ -175,7 +177,7 @@
             this.bunifuCheckbox4.Checked = true;
             this.bunifuCheckbox4.CheckedOnColor = System.Drawing.Color.DarkOrange;
             this.bunifuCheckbox4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox4.Location = new System.Drawing.Point(510, 276);
+            this.bunifuCheckbox4.Location = new System.Drawing.Point(718, 293);
             this.bunifuCheckbox4.Name = "bunifuCheckbox4";
             this.bunifuCheckbox4.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox4.TabIndex = 30;
@@ -183,30 +185,30 @@
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(507, 248);
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(715, 265);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(126, 15);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(131, 16);
             this.bunifuCustomLabel7.TabIndex = 29;
             this.bunifuCustomLabel7.Text = "GPU                              -";
             // 
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(535, 213);
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(743, 230);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(29, 13);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(31, 13);
             this.bunifuCustomLabel4.TabIndex = 28;
             this.bunifuCustomLabel4.Text = "AMD";
             // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Berlin Sans FB", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(535, 182);
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(743, 199);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(35, 13);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(38, 13);
             this.bunifuCustomLabel3.TabIndex = 27;
             this.bunifuCustomLabel3.Text = "INTEL";
             // 
@@ -217,7 +219,7 @@
             this.bunifuCheckbox2.Checked = true;
             this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.DarkOrange;
             this.bunifuCheckbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox2.Location = new System.Drawing.Point(509, 208);
+            this.bunifuCheckbox2.Location = new System.Drawing.Point(717, 225);
             this.bunifuCheckbox2.Name = "bunifuCheckbox2";
             this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox2.TabIndex = 26;
@@ -229,7 +231,7 @@
             this.bunifuCheckbox1.Checked = true;
             this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.DarkOrange;
             this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(509, 182);
+            this.bunifuCheckbox1.Location = new System.Drawing.Point(717, 199);
             this.bunifuCheckbox1.Name = "bunifuCheckbox1";
             this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox1.TabIndex = 25;
@@ -237,20 +239,20 @@
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(506, 154);
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(714, 171);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(126, 15);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(130, 16);
             this.bunifuCustomLabel2.TabIndex = 24;
             this.bunifuCustomLabel2.Text = "CPU                              -";
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Berlin Sans FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(503, 78);
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(711, 95);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(130, 15);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(136, 16);
             this.bunifuCustomLabel1.TabIndex = 23;
             this.bunifuCustomLabel1.Text = "Price                               -";
             // 
@@ -267,7 +269,7 @@
             this.btn_ok.BackColor = System.Drawing.Color.Black;
             this.btn_ok.Image = ((System.Drawing.Image)(resources.GetObject("btn_ok.Image")));
             this.btn_ok.ImageActive = null;
-            this.btn_ok.Location = new System.Drawing.Point(609, 106);
+            this.btn_ok.Location = new System.Drawing.Point(817, 123);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(29, 27);
             this.btn_ok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -281,7 +283,7 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.DarkOrange;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(506, 19);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(697, 36);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(90, 40);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -313,7 +315,7 @@
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Name = "urbuilds";
-            this.Size = new System.Drawing.Size(645, 542);
+            this.Size = new System.Drawing.Size(862, 637);
             this.Load += new System.EventHandler(this.urbuilds_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).EndInit();

@@ -209,7 +209,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(82, 12);
+            this.comboBox1.Location = new System.Drawing.Point(163, 12);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(464, 45);
             this.comboBox1.TabIndex = 1;
@@ -304,7 +304,7 @@
             // bunifuMaterialTextbox6
             // 
             this.bunifuMaterialTextbox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox6.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox6.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox6.HintText = "";
@@ -323,7 +323,7 @@
             // bunifuMaterialTextbox7
             // 
             this.bunifuMaterialTextbox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox7.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox7.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox7.HintText = "";
@@ -378,7 +378,7 @@
             // bunifuMaterialTextbox8
             // 
             this.bunifuMaterialTextbox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox8.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox8.HintText = "";
@@ -397,7 +397,7 @@
             // bunifuMaterialTextbox9
             // 
             this.bunifuMaterialTextbox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox9.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox9.HintText = "";
@@ -416,7 +416,7 @@
             // bunifuMaterialTextbox5
             // 
             this.bunifuMaterialTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox5.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox5.HintText = "";
@@ -435,7 +435,7 @@
             // bunifuMaterialTextbox4
             // 
             this.bunifuMaterialTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox4.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox4.HintText = "";
@@ -508,7 +508,7 @@
             // bunifuMaterialTextbox3
             // 
             this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox3.HintText = "";
@@ -527,7 +527,7 @@
             // bunifuMaterialTextbox2
             // 
             this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox2.HintText = "";
@@ -577,7 +577,7 @@
             // bunifuMaterialTextbox1
             // 
             this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox1.HintText = "";
@@ -653,7 +653,7 @@
             // bunifuMaterialTextbox15
             // 
             this.bunifuMaterialTextbox15.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox15.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox15.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox15.HintText = "";
@@ -681,7 +681,7 @@
             // bunifuMaterialTextbox13
             // 
             this.bunifuMaterialTextbox13.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox13.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox13.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox13.HintText = "";
@@ -709,7 +709,7 @@
             // bunifuMaterialTextbox12
             // 
             this.bunifuMaterialTextbox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox12.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox12.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox12.HintText = "";
@@ -737,7 +737,7 @@
             // bunifuMaterialTextbox21
             // 
             this.bunifuMaterialTextbox21.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox21.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox21.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox21.HintText = "";
@@ -809,7 +809,7 @@
             // bunifuMaterialTextbox14
             // 
             this.bunifuMaterialTextbox14.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox14.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox14.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox14.HintText = "";
@@ -846,7 +846,7 @@
             // bunifuMaterialTextbox20
             // 
             this.bunifuMaterialTextbox20.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox20.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox20.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox20.HintText = "";
@@ -910,7 +910,7 @@
             // bunifuMaterialTextbox16
             // 
             this.bunifuMaterialTextbox16.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox16.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox16.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox16.HintText = "";
@@ -947,7 +947,7 @@
             // bunifuMaterialTextbox25
             // 
             this.bunifuMaterialTextbox25.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox25.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox25.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox25.HintText = "";
@@ -975,7 +975,7 @@
             // bunifuMaterialTextbox26
             // 
             this.bunifuMaterialTextbox26.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox26.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox26.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox26.HintText = "";
@@ -1003,7 +1003,7 @@
             // bunifuMaterialTextbox17
             // 
             this.bunifuMaterialTextbox17.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox17.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox17.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox17.HintText = "";
@@ -1031,7 +1031,7 @@
             // bunifuMaterialTextbox18
             // 
             this.bunifuMaterialTextbox18.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox18.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox18.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox18.HintText = "";
@@ -1059,7 +1059,7 @@
             // bunifuMaterialTextbox19
             // 
             this.bunifuMaterialTextbox19.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox19.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox19.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox19.HintText = "";
@@ -1113,7 +1113,7 @@
             // bunifuMaterialTextbox23
             // 
             this.bunifuMaterialTextbox23.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox23.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox23.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox23.HintText = "";
@@ -1150,7 +1150,7 @@
             // bunifuMaterialTextbox24
             // 
             this.bunifuMaterialTextbox24.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox24.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox24.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox24.HintText = "";
@@ -1218,7 +1218,7 @@
             // bunifuMaterialTextbox31
             // 
             this.bunifuMaterialTextbox31.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox31.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox31.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox31.HintText = "";
@@ -1258,7 +1258,7 @@
             // bunifuMaterialTextbox27
             // 
             this.bunifuMaterialTextbox27.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox27.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox27.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox27.HintText = "";
@@ -1295,7 +1295,7 @@
             // bunifuMaterialTextbox28
             // 
             this.bunifuMaterialTextbox28.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox28.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox28.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox28.HintText = "";
@@ -1323,7 +1323,7 @@
             // bunifuMaterialTextbox29
             // 
             this.bunifuMaterialTextbox29.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox29.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox29.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox29.HintText = "";
@@ -1351,7 +1351,7 @@
             // bunifuMaterialTextbox30
             // 
             this.bunifuMaterialTextbox30.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox30.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox30.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox30.HintText = "";
@@ -1388,7 +1388,7 @@
             // bunifuMaterialTextbox32
             // 
             this.bunifuMaterialTextbox32.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox32.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox32.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox32.HintText = "";
@@ -1416,7 +1416,7 @@
             // bunifuMaterialTextbox33
             // 
             this.bunifuMaterialTextbox33.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox33.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox33.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox33.HintText = "";
@@ -1470,7 +1470,7 @@
             // bunifuMaterialTextbox34
             // 
             this.bunifuMaterialTextbox34.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox34.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox34.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox34.HintText = "";
@@ -1507,7 +1507,7 @@
             // bunifuMaterialTextbox35
             // 
             this.bunifuMaterialTextbox35.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox35.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox35.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox35.HintText = "";
@@ -1563,7 +1563,7 @@
             // bunifuMaterialTextbox10
             // 
             this.bunifuMaterialTextbox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox10.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox10.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox10.HintText = "";
@@ -1637,7 +1637,7 @@
             // bunifuMaterialTextbox22
             // 
             this.bunifuMaterialTextbox22.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox22.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox22.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox22.HintText = "";
@@ -1665,7 +1665,7 @@
             // bunifuMaterialTextbox36
             // 
             this.bunifuMaterialTextbox36.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox36.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox36.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox36.HintText = "";
@@ -1693,7 +1693,7 @@
             // bunifuMaterialTextbox37
             // 
             this.bunifuMaterialTextbox37.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox37.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox37.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox37.HintText = "";
@@ -1712,7 +1712,7 @@
             // bunifuMaterialTextbox38
             // 
             this.bunifuMaterialTextbox38.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox38.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox38.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox38.HintText = "";
@@ -1766,7 +1766,7 @@
             // bunifuMaterialTextbox39
             // 
             this.bunifuMaterialTextbox39.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox39.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox39.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox39.HintText = "";
@@ -1803,7 +1803,7 @@
             // bunifuMaterialTextbox40
             // 
             this.bunifuMaterialTextbox40.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox40.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox40.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox40.HintText = "";
@@ -1863,7 +1863,7 @@
             // bunifuMaterialTextbox45
             // 
             this.bunifuMaterialTextbox45.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox45.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox45.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox45.HintText = "";
@@ -1893,7 +1893,7 @@
             // bunifuMaterialTextbox48
             // 
             this.bunifuMaterialTextbox48.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox48.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox48.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox48.HintText = "";
@@ -1930,7 +1930,7 @@
             // bunifuMaterialTextbox47
             // 
             this.bunifuMaterialTextbox47.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox47.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox47.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox47.HintText = "";
@@ -1949,7 +1949,7 @@
             // bunifuMaterialTextbox11
             // 
             this.bunifuMaterialTextbox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox11.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox11.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox11.HintText = "";
@@ -2023,7 +2023,7 @@
             // bunifuMaterialTextbox41
             // 
             this.bunifuMaterialTextbox41.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox41.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox41.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox41.HintText = "";
@@ -2060,7 +2060,7 @@
             // bunifuMaterialTextbox43
             // 
             this.bunifuMaterialTextbox43.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox43.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox43.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox43.HintText = "";
@@ -2079,7 +2079,7 @@
             // bunifuMaterialTextbox44
             // 
             this.bunifuMaterialTextbox44.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox44.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox44.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox44.HintText = "";
@@ -2151,7 +2151,7 @@
             // bunifuMaterialTextbox46
             // 
             this.bunifuMaterialTextbox46.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox46.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox46.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox46.HintText = "";
@@ -2233,7 +2233,7 @@
             // bunifuMaterialTextbox51
             // 
             this.bunifuMaterialTextbox51.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox51.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox51.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox51.HintText = "";
@@ -2298,7 +2298,7 @@
             // bunifuMaterialTextbox52
             // 
             this.bunifuMaterialTextbox52.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox52.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox52.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox52.HintText = "";
@@ -2335,7 +2335,7 @@
             // bunifuMaterialTextbox53
             // 
             this.bunifuMaterialTextbox53.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox53.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox53.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox53.HintText = "";
@@ -2354,7 +2354,7 @@
             // bunifuMaterialTextbox54
             // 
             this.bunifuMaterialTextbox54.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox54.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox54.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox54.HintText = "";
@@ -2442,11 +2442,12 @@
             this.panelcase.Controls.Add(this.label76);
             this.panelcase.Location = new System.Drawing.Point(16, 63);
             this.panelcase.Name = "panelcase";
-            this.panelcase.Size = new System.Drawing.Size(600, 443);
+            this.panelcase.Size = new System.Drawing.Size(814, 557);
             this.panelcase.TabIndex = 78;
             // 
             // comboBox13
             // 
+            this.comboBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox13.FormattingEnabled = true;
             this.comboBox13.Items.AddRange(new object[] {
             "None",
@@ -2454,27 +2455,28 @@
             "Tinted Arcylic",
             "Tempered Glass",
             "Tinted tempered Glass"});
-            this.comboBox13.Location = new System.Drawing.Point(147, 154);
+            this.comboBox13.Location = new System.Drawing.Point(194, 309);
             this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(154, 21);
+            this.comboBox13.Size = new System.Drawing.Size(154, 32);
             this.comboBox13.TabIndex = 76;
             // 
             // comboBox14
             // 
+            this.comboBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox14.FormattingEnabled = true;
             this.comboBox14.Items.AddRange(new object[] {
             "ATX Full",
             "ATX Mid",
             "ATX Mini"});
-            this.comboBox14.Location = new System.Drawing.Point(418, 88);
+            this.comboBox14.Location = new System.Drawing.Point(557, 206);
             this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(154, 21);
+            this.comboBox14.Size = new System.Drawing.Size(154, 32);
             this.comboBox14.TabIndex = 75;
             // 
             // bunifuMaterialTextbox42
             // 
             this.bunifuMaterialTextbox42.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox42.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox42.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox42.HintText = "";
@@ -2483,7 +2485,7 @@
             this.bunifuMaterialTextbox42.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox42.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bunifuMaterialTextbox42.LineThickness = 3;
-            this.bunifuMaterialTextbox42.Location = new System.Drawing.Point(110, 317);
+            this.bunifuMaterialTextbox42.Location = new System.Drawing.Point(147, 399);
             this.bunifuMaterialTextbox42.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox42.Name = "bunifuMaterialTextbox42";
             this.bunifuMaterialTextbox42.Size = new System.Drawing.Size(295, 40);
@@ -2492,7 +2494,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(529, 330);
+            this.button7.Location = new System.Drawing.Point(654, 420);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(43, 23);
             this.button7.TabIndex = 65;
@@ -2503,7 +2505,7 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(477, 335);
+            this.label61.Location = new System.Drawing.Point(609, 426);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(39, 13);
             this.label61.TabIndex = 64;
@@ -2512,7 +2514,7 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(25, 330);
+            this.label62.Location = new System.Drawing.Point(95, 414);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(39, 13);
             this.label62.TabIndex = 38;
@@ -2521,7 +2523,7 @@
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(319, 155);
+            this.label72.Location = new System.Drawing.Point(424, 320);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(42, 13);
             this.label72.TabIndex = 34;
@@ -2530,7 +2532,7 @@
             // bunifuMaterialTextbox49
             // 
             this.bunifuMaterialTextbox49.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox49.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox49.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox49.HintText = "";
@@ -2539,7 +2541,7 @@
             this.bunifuMaterialTextbox49.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox49.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bunifuMaterialTextbox49.LineThickness = 3;
-            this.bunifuMaterialTextbox49.Location = new System.Drawing.Point(50, 13);
+            this.bunifuMaterialTextbox49.Location = new System.Drawing.Point(201, 65);
             this.bunifuMaterialTextbox49.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox49.Name = "bunifuMaterialTextbox49";
             this.bunifuMaterialTextbox49.Size = new System.Drawing.Size(518, 44);
@@ -2549,7 +2551,7 @@
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(16, 155);
+            this.label73.Location = new System.Drawing.Point(77, 320);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(58, 13);
             this.label73.TabIndex = 31;
@@ -2558,7 +2560,7 @@
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(319, 91);
+            this.label74.Location = new System.Drawing.Point(461, 214);
             this.label74.Name = "label74";
             this.label74.Size = new System.Drawing.Size(31, 13);
             this.label74.TabIndex = 29;
@@ -2567,7 +2569,7 @@
             // bunifuMaterialTextbox50
             // 
             this.bunifuMaterialTextbox50.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox50.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox50.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox50.HintText = "";
@@ -2576,17 +2578,17 @@
             this.bunifuMaterialTextbox50.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox50.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bunifuMaterialTextbox50.LineThickness = 3;
-            this.bunifuMaterialTextbox50.Location = new System.Drawing.Point(129, 82);
+            this.bunifuMaterialTextbox50.Location = new System.Drawing.Point(190, 203);
             this.bunifuMaterialTextbox50.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox50.Name = "bunifuMaterialTextbox50";
-            this.bunifuMaterialTextbox50.Size = new System.Drawing.Size(172, 40);
+            this.bunifuMaterialTextbox50.Size = new System.Drawing.Size(222, 40);
             this.bunifuMaterialTextbox50.TabIndex = 28;
             this.bunifuMaterialTextbox50.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuMaterialTextbox55
             // 
             this.bunifuMaterialTextbox55.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox55.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bunifuMaterialTextbox55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMaterialTextbox55.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox55.HintText = "";
@@ -2595,10 +2597,10 @@
             this.bunifuMaterialTextbox55.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox55.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bunifuMaterialTextbox55.LineThickness = 3;
-            this.bunifuMaterialTextbox55.Location = new System.Drawing.Point(418, 139);
+            this.bunifuMaterialTextbox55.Location = new System.Drawing.Point(537, 286);
             this.bunifuMaterialTextbox55.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox55.Name = "bunifuMaterialTextbox55";
-            this.bunifuMaterialTextbox55.Size = new System.Drawing.Size(171, 40);
+            this.bunifuMaterialTextbox55.Size = new System.Drawing.Size(227, 62);
             this.bunifuMaterialTextbox55.TabIndex = 26;
             this.bunifuMaterialTextbox55.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -2623,7 +2625,7 @@
             this.bunifuFlatButton8.IconVisible = true;
             this.bunifuFlatButton8.IconZoom = 90D;
             this.bunifuFlatButton8.IsTab = false;
-            this.bunifuFlatButton8.Location = new System.Drawing.Point(96, 379);
+            this.bunifuFlatButton8.Location = new System.Drawing.Point(201, 473);
             this.bunifuFlatButton8.Name = "bunifuFlatButton8";
             this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -2640,7 +2642,7 @@
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(16, 91);
+            this.label75.Location = new System.Drawing.Point(69, 226);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(97, 13);
             this.label75.TabIndex = 6;
@@ -2649,7 +2651,7 @@
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(25, 33);
+            this.label76.Location = new System.Drawing.Point(144, 88);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(18, 13);
             this.label76.TabIndex = 2;
@@ -2669,7 +2671,7 @@
             this.Controls.Add(this.panelmobo);
             this.Controls.Add(this.panelcpu);
             this.Name = "AdminParts";
-            this.Size = new System.Drawing.Size(645, 542);
+            this.Size = new System.Drawing.Size(862, 637);
             this.Load += new System.EventHandler(this.AdminParts_Load);
             this.panelcpu.ResumeLayout(false);
             this.panelcpu.PerformLayout();

@@ -45,7 +45,7 @@
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "Search";
@@ -63,13 +63,13 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(531, 59);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(687, 59);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(105, 48);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(114, 47);
             this.bunifuFlatButton1.TabIndex = 4;
             this.bunifuFlatButton1.Text = "Search";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -80,7 +80,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(619, 484);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 20;
@@ -89,7 +89,7 @@
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(528, 174);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(684, 203);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(97, 13);
             this.bunifuCustomLabel2.TabIndex = 19;
@@ -99,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(566, 251);
+            this.label2.Location = new System.Drawing.Point(722, 280);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 16);
             this.label2.TabIndex = 18;
@@ -112,7 +112,7 @@
             this.cbIntel.Checked = true;
             this.cbIntel.CheckedOnColor = System.Drawing.Color.Black;
             this.cbIntel.ForeColor = System.Drawing.Color.White;
-            this.cbIntel.Location = new System.Drawing.Point(526, 251);
+            this.cbIntel.Location = new System.Drawing.Point(682, 280);
             this.cbIntel.Name = "cbIntel";
             this.cbIntel.Size = new System.Drawing.Size(20, 20);
             this.cbIntel.TabIndex = 17;
@@ -122,7 +122,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label1.Location = new System.Drawing.Point(566, 213);
+            this.label1.Location = new System.Drawing.Point(722, 242);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 16;
@@ -135,7 +135,7 @@
             this.cbAMD.Checked = true;
             this.cbAMD.CheckedOnColor = System.Drawing.Color.Black;
             this.cbAMD.ForeColor = System.Drawing.Color.White;
-            this.cbAMD.Location = new System.Drawing.Point(526, 213);
+            this.cbAMD.Location = new System.Drawing.Point(682, 242);
             this.cbAMD.Name = "cbAMD";
             this.cbAMD.Size = new System.Drawing.Size(20, 20);
             this.cbAMD.TabIndex = 15;
@@ -146,7 +146,7 @@
             this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(18, 114);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(493, 401);
+            this.panel1.Size = new System.Drawing.Size(628, 482);
             this.panel1.TabIndex = 14;
             // 
             // bunifuMaterialTextbox1
@@ -164,7 +164,7 @@
             this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(18, 39);
             this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(493, 68);
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(628, 68);
             this.bunifuMaterialTextbox1.TabIndex = 12;
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -172,7 +172,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(222, 11);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(367, 11);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(121, 24);
             this.bunifuCustomLabel1.TabIndex = 20;
@@ -193,7 +193,7 @@
             this.Controls.Add(this.bunifuMaterialTextbox1);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Name = "PickGpu";
-            this.Size = new System.Drawing.Size(645, 542);
+            this.Size = new System.Drawing.Size(862, 637);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

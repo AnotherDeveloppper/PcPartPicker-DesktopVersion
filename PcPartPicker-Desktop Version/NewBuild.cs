@@ -26,5 +26,10 @@ namespace PcPartPicker_Desktop_Version
         {
             Main.main.cpuCheck();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

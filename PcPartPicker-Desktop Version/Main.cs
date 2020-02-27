@@ -105,6 +105,7 @@ namespace PcPartPicker_Desktop_Version
 
 
             newbuildclick();
+            form5.Hide();
 
         }
 
@@ -141,6 +142,7 @@ namespace PcPartPicker_Desktop_Version
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             yourbuildsclick();
+            form5.Hide();
             ad.Hide();
             letHide("");
             
@@ -168,6 +170,7 @@ namespace PcPartPicker_Desktop_Version
         {
             u1 = new urbuilds();
             m1.Hide();
+            form5.Hide();
             form5.Hide();
             f2.Hide();
             f1.Hide();
@@ -212,7 +215,6 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-
             u1 = new urbuilds();
             ad.Hide();
             n1.Hide();
@@ -234,6 +236,7 @@ namespace PcPartPicker_Desktop_Version
             prebuildsclick();
             letHide("");
             ad.Hide();
+            form5.Hide();
 
         }
         public void prebuildsclick()
@@ -363,6 +366,7 @@ namespace PcPartPicker_Desktop_Version
             form4.Hide();
             form5.Hide();
             f1.Hide();
+            form5.Hide();
             p2.Show();
             f1.Hide();
             f2.Hide();
