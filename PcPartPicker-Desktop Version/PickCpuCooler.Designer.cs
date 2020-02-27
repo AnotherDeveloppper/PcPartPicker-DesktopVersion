@@ -43,13 +43,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cb240 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.cb360 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPrice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "Search";
@@ -94,7 +96,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(595, 484);
+            this.dataGridView1.Location = new System.Drawing.Point(425, 622);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 20;
@@ -228,11 +230,43 @@
             this.cb360.TabIndex = 23;
             this.cb360.OnChange += new System.EventHandler(this.cb360_OnChange);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(812, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "step 2/8";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPrice.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPrice.HintText = "";
+            this.txtPrice.isPassword = false;
+            this.txtPrice.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtPrice.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPrice.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtPrice.LineThickness = 3;
+            this.txtPrice.Location = new System.Drawing.Point(694, 550);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(134, 44);
+            this.txtPrice.TabIndex = 25;
+            this.txtPrice.Text = "Total Price : ";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // PickCpuCooler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cb360);
             this.Controls.Add(this.cb240);
             this.Controls.Add(this.label4);
@@ -248,6 +282,7 @@
             this.Controls.Add(this.bunifuFlatButton1);
             this.Name = "PickCpuCooler";
             this.Size = new System.Drawing.Size(862, 637);
+            this.Load += new System.EventHandler(this.PickCpuCooler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -270,5 +305,7 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuCheckbox cb240;
         private Bunifu.Framework.UI.BunifuCheckbox cb360;
+        private System.Windows.Forms.Label label5;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrice;
     }
 }

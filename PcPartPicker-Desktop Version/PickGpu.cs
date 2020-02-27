@@ -91,5 +91,11 @@ namespace PcPartPicker_Desktop_Version
                 addItem(c, "gpu");
             }
         }
+
+        private void PickGpu_Load(object sender, EventArgs e)
+        {
+
+            txtPrice.Text = "Total Price : " + Main.PRICE;
+        }
     }
 }

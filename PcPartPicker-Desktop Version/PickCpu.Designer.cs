@@ -39,6 +39,8 @@
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPrice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,9 +50,9 @@
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(385, 11);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(100, 24);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(185, 24);
             this.bunifuCustomLabel1.TabIndex = 0;
-            this.bunifuCustomLabel1.Text = "Processor ";
+            this.bunifuCustomLabel1.Text = "Pick Your Processor ";
             // 
             // bunifuMaterialTextbox1
             // 
@@ -179,10 +181,42 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(812, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "step 1/8";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPrice.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPrice.HintText = "";
+            this.txtPrice.isPassword = false;
+            this.txtPrice.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtPrice.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPrice.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtPrice.LineThickness = 3;
+            this.txtPrice.Location = new System.Drawing.Point(655, 579);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(134, 44);
+            this.txtPrice.TabIndex = 13;
+            this.txtPrice.Text = "Total Price : ";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // PickCpu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.label2);
@@ -195,6 +229,7 @@
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Name = "PickCpu";
             this.Size = new System.Drawing.Size(862, 637);
+            this.Load += new System.EventHandler(this.PickCpu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,5 +248,7 @@
         private Bunifu.Framework.UI.BunifuCheckbox cbIntel;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrice;
     }
 }

@@ -15,6 +15,7 @@ namespace PcPartPicker_Desktop_Version
     {
         databeuseDataContext db = new databeuseDataContext();
         string pic;
+        int i = 0;
 
         public registerPanel()
         {
@@ -36,7 +37,7 @@ namespace PcPartPicker_Desktop_Version
                 label1.Text = open.FileName;
                 pic = Path.GetFileName(label1.Text);
             }
-            
+            i = 1;
        
         }
 
@@ -60,17 +61,26 @@ namespace PcPartPicker_Desktop_Version
             else { s = "f"; };
             u.Sexe = s;
             u.BirthDay = Convert.ToDateTime(tb_date.Value);
+            if (i == 0)
+            {
+                pic = "guest.png";
+            }
+            else
+            {
+
+                File.Copy(label1.Text, Path.Combine(@"images\", Path.GetFileName(label1.Text)), true);
+                pic = Path.GetFileName(label1.Text);
+            }
             u.User_Picture = pic;
             u.ROLE = "user";
             db.USERs.InsertOnSubmit(u);
             db.SubmitChanges();
-            MessageBox.Show("register succeed mothafaaa");
+            MessageBox.Show("register succeed ");
+       
 
-            File.Copy(label1.Text, Path.Combine(@"images\", Path.GetFileName(label1.Text)), true);
-            pic = Path.GetFileName(label1.Text);
-            MessageBox.Show(pic);
-
-
+            this.Hide();
+            LoginScreen l = new LoginScreen();
+            l.Show();
 
         }
 

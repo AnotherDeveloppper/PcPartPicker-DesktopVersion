@@ -53,5 +53,11 @@ namespace PcPartPicker_Desktop_Version
 
             Case(bunifuMaterialTextbox1.Text);
         }
+
+        private void PickCase_Load(object sender, EventArgs e)
+        {
+
+            txtPrice.Text = "Total Price : " + Main.PRICE;
+        }
     }
 }

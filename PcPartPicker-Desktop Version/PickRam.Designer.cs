@@ -43,6 +43,8 @@
             this.cb32 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.label4 = new System.Windows.Forms.Label();
             this.cb16 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPrice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,16 +54,16 @@
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(412, 10);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(79, 24);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(164, 24);
             this.bunifuCustomLabel1.TabIndex = 5;
-            this.bunifuCustomLabel1.Text = "Memory";
+            this.bunifuCustomLabel1.Text = "Pick Your Memory";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(250, 547);
+            this.dataGridView1.Location = new System.Drawing.Point(476, 446);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(635, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(362, 76);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.Visible = false;
             // 
@@ -228,11 +230,43 @@
             this.cb16.TabIndex = 20;
             this.cb16.OnChange += new System.EventHandler(this.cb16_OnChange);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(812, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "step 4/8";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPrice.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPrice.HintText = "";
+            this.txtPrice.isPassword = false;
+            this.txtPrice.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtPrice.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPrice.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtPrice.LineThickness = 3;
+            this.txtPrice.Location = new System.Drawing.Point(683, 564);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(134, 44);
+            this.txtPrice.TabIndex = 25;
+            this.txtPrice.Text = "Total Price : ";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // PickRam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cb32);
             this.Controls.Add(this.label4);
@@ -270,5 +304,7 @@
         private Bunifu.Framework.UI.BunifuCheckbox cb32;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuCheckbox cb16;
+        private System.Windows.Forms.Label label5;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrice;
     }
 }

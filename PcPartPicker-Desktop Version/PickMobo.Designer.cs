@@ -35,6 +35,8 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPrice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -78,11 +80,11 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(239, 20);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(307, 11);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(119, 24);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(204, 24);
             this.bunifuCustomLabel1.TabIndex = 5;
-            this.bunifuCustomLabel1.Text = "MotherBoard";
+            this.bunifuCustomLabel1.Text = "Pick Your MotherBoard";
             // 
             // panel1
             // 
@@ -129,10 +131,42 @@
             this.bunifuMaterialTextbox1.TabIndex = 20;
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(812, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "step 3/8";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPrice.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPrice.HintText = "";
+            this.txtPrice.isPassword = false;
+            this.txtPrice.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtPrice.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPrice.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtPrice.LineThickness = 3;
+            this.txtPrice.Location = new System.Drawing.Point(693, 568);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(134, 44);
+            this.txtPrice.TabIndex = 23;
+            this.txtPrice.Text = "Total Price : ";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // PickMobo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
@@ -141,6 +175,7 @@
             this.Controls.Add(this.bunifuFlatButton1);
             this.Name = "PickMobo";
             this.Size = new System.Drawing.Size(862, 637);
+            this.Load += new System.EventHandler(this.PickMobo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -156,5 +191,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrice;
     }
 }

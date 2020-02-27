@@ -39,6 +39,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPrice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,14 +50,14 @@
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(389, 12);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(75, 24);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(160, 24);
             this.bunifuCustomLabel1.TabIndex = 5;
-            this.bunifuCustomLabel1.Text = "Storage";
+            this.bunifuCustomLabel1.Text = "Pick Your Storage";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-17, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(446, 471);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(357, 97);
             this.dataGridView1.TabIndex = 20;
@@ -145,7 +147,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(689, 60);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(689, 61);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -178,10 +180,42 @@
             this.bunifuMaterialTextbox1.TabIndex = 12;
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(812, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "step 5/8";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPrice.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPrice.HintText = "";
+            this.txtPrice.isPassword = false;
+            this.txtPrice.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtPrice.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPrice.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtPrice.LineThickness = 3;
+            this.txtPrice.Location = new System.Drawing.Point(697, 575);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(134, 44);
+            this.txtPrice.TabIndex = 26;
+            this.txtPrice.Text = "Total Price : ";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // PickStorage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.label2);
@@ -194,6 +228,7 @@
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Name = "PickStorage";
             this.Size = new System.Drawing.Size(862, 637);
+            this.Load += new System.EventHandler(this.PickStorage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -211,5 +246,7 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private System.Windows.Forms.Label label5;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrice;
     }
 }

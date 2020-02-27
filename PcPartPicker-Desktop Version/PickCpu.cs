@@ -108,5 +108,10 @@ namespace PcPartPicker_Desktop_Version
 
             }
         }
+
+        private void PickCpu_Load(object sender, EventArgs e)
+        {
+            txtPrice.Text = "Total Price : " + Main.PRICE;
+        }
     }
 }

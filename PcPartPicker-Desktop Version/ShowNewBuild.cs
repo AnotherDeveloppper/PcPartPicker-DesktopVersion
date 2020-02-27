@@ -109,6 +109,9 @@ namespace PcPartPicker_Desktop_Version
                     db.SubmitChanges();
                     Main.main.yourbuildsclick();
                 }
+            }else
+            {
+                MessageBox.Show("Give it a name <3");
             }
         }
 
@@ -118,11 +121,24 @@ namespace PcPartPicker_Desktop_Version
             {
                 panel2.Visible = true;
             }
+
+            txtPrice.Text = "Total Price : " + Main.PRICE;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
 
+            Main.main.yourbuildsclick();
+            Main.chase = "";
+            Main.cp = "";
+            Main.cpc = "";
+            Main.mem = "";
+            Main.mobo = "";
+            Main.gp = "";
+            Main.ssd = "";
+            Main.psp = "";
+            Main.WATTAGE = 0;
+            Main.PRICE = 0;
         }
     }
 }

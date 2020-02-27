@@ -65,6 +65,7 @@ namespace PcPartPicker_Desktop_Version
         private void PickRam_Load(object sender, EventArgs e)
         {
 
+            txtPrice.Text = "Total Price : " + Main.PRICE;
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)

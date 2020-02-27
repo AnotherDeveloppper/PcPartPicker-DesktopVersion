@@ -101,6 +101,7 @@ namespace PcPartPicker_Desktop_Version
         private void PickPsu_Load(object sender, EventArgs e)
         {
 
+            txtPrice.Text = "Total Price : " + Main.PRICE;
         }
 
         private void bunifuCheckbox1_OnChange(object sender, EventArgs e)

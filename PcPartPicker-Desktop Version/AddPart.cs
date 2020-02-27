@@ -201,7 +201,7 @@ namespace PcPartPicker_Desktop_Version
                 Main.cp = dataGridView1.Rows[0].Cells[0].Value.ToString();
                 // calll cpucooler
                 Main.WATTAGE +=Convert.ToInt32( dataGridView1.Rows[0].Cells[7].Value.ToString());
-                Main.PRICE += Convert.ToDouble(dataGridView1.Rows[0].Cells[9].Value.ToString());
+                Main.PRICE = Convert.ToDouble(dataGridView1.Rows[0].Cells[9].Value.ToString());
                 Main.main.cpucoolerCheck();
                 
 

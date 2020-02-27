@@ -110,5 +110,11 @@ namespace PcPartPicker_Desktop_Version
         {
             clears();
         }
+
+        private void PickCpuCooler_Load(object sender, EventArgs e)
+        {
+
+            txtPrice.Text = "Total Price : " + Main.PRICE;
+        }
     }
 }

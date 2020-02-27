@@ -62,5 +62,11 @@ namespace PcPartPicker_Desktop_Version
 
             Motherboard(bunifuMaterialTextbox1.Text);
         }
+
+        private void PickMobo_Load(object sender, EventArgs e)
+        {
+
+            txtPrice.Text = "Total Price : " + Main.PRICE;
+        }
     }
 }
