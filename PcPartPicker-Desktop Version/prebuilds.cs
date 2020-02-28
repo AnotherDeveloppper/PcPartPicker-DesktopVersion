@@ -78,15 +78,27 @@ namespace PcPartPicker_Desktop_Version
 
         private void builds(int mi, int Ma , string filter, string cpu, string gpu)
         {
-            var x = from a in db.BUILDs 
-                     join b in db.Cpus on a.Cpu_ID equals b.Cpu_ID
-                     join c in db.Gpus on a.Gpu_ID equals c.Gpu_ID
-                    where
-                   ((a.USER_ID == 1 || a.USER_ID == 2 || a.USER_ID == 3) && (a.Total_Price <= Ma) && (a.Total_Price >= mi))
-                    && a.Build_Name.Contains(filter) && b.ManufacturerCpu.Contains(cpu)
-                    && c.Frame_Sync.Contains(gpu)
+            var x = from a in db.BUILDs select a;
+            if (maxP.Text != "")
+            {
+                x = from a in db.BUILDs
+                    join b in db.Gpus on a.Gpu_ID equals b.Gpu_ID
+                    join c in db.Cpus on a.Cpu_ID equals c.Cpu_ID
+                    where ((a.USER_ID == 1 || a.USER_ID == 2 || a.USER_ID == 3) && (a.Total_Price <= Ma) && (a.Total_Price >= mi))
+                    && b.Frame_Sync.Contains(gpu) && c.ManufacturerCpu.Contains(cpu)
 
                     select a;
+            }
+            else
+            {
+                x = from a in db.BUILDs
+
+                    join b in db.Gpus on a.Gpu_ID equals b.Gpu_ID
+                    join c in db.Cpus on a.Cpu_ID equals c.Cpu_ID
+                    where ((a.USER_ID == 1 || a.USER_ID == 2 || a.USER_ID == 3) &&  (a.Total_Price >= mi))
+                    && b.Frame_Sync.Contains(gpu) && c.ManufacturerCpu.Contains(cpu)select a;
+            }
+            
             dg.DataSource = x;
 
             prebuild[] listprebuild = new prebuild[dg.Rows.Count - 1];
@@ -160,17 +172,19 @@ namespace PcPartPicker_Desktop_Version
         public void clears()
         {
             tableLayoutPanel1.Controls.Clear();
+            min = 0;
             if (minP.Text!="" && maxP.Text!= "")
             {
                 min = Convert.ToInt32(minP.Text);
                 max = Convert.ToInt32(maxP.Text);
-                string a = Searchtxt.Text;
-
-                if (bunifuCheckbox1.Checked && bunifuCheckbox3.Checked) builds(min, max, a, "INTEL", "G-Sync");
-                if (bunifuCheckbox1.Checked && bunifuCheckbox4.Checked) builds(min, max, a, "INTEL", "Freesync");
-                if (bunifuCheckbox2.Checked && bunifuCheckbox3.Checked) builds(min, max, a, "AMD", "G-Sync");
-                if (bunifuCheckbox2.Checked && bunifuCheckbox4.Checked) builds(min, max, a, "AMD", "Freesync");
+              
             }
+            string a = Searchtxt.Text;
+
+            if (bunifuCheckbox1.Checked && bunifuCheckbox3.Checked) builds(min, max, a, "INTEL", "G-Sync");
+            if (bunifuCheckbox1.Checked && bunifuCheckbox4.Checked) builds(min, max, a, "INTEL", "Freesync");
+            if (bunifuCheckbox2.Checked && bunifuCheckbox3.Checked) builds(min, max, a, "AMD", "G-Sync");
+            if (bunifuCheckbox2.Checked && bunifuCheckbox4.Checked) builds(min, max, a, "AMD", "Freesync");
         }
 
     }

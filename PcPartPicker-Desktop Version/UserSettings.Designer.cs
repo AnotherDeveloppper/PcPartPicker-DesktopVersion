@@ -87,7 +87,7 @@
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(474, 440);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(416, 436);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(39, 13);
             this.bunifuCustomLabel6.TabIndex = 36;
@@ -96,7 +96,7 @@
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(474, 371);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(423, 372);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(32, 13);
             this.bunifuCustomLabel5.TabIndex = 35;
@@ -105,7 +105,7 @@
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(474, 299);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(423, 299);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(38, 13);
             this.bunifuCustomLabel4.TabIndex = 34;
@@ -114,7 +114,7 @@
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(474, 224);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(416, 224);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(45, 13);
             this.bunifuCustomLabel3.TabIndex = 33;
@@ -123,7 +123,7 @@
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(474, 147);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(416, 147);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(53, 13);
             this.bunifuCustomLabel2.TabIndex = 32;
@@ -132,7 +132,7 @@
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(474, 77);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(414, 82);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(55, 13);
             this.bunifuCustomLabel1.TabIndex = 31;

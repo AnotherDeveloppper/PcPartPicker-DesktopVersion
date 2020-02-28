@@ -103,7 +103,7 @@ namespace PcPartPicker_Desktop_Version
         {
 
             if (Workhere.Controls.Contains(pg)) pg.Hide();
-            u1.Hide();
+            if (Workhere.Controls.Contains(u1)) u1.Hide();
             newbuildclick();
             letHide("");
             form5.Hide();
@@ -123,8 +123,7 @@ namespace PcPartPicker_Desktop_Version
         }
         public void newbuildclick()
         {
-
-            u1 = new urbuilds();
+            
             if (Workhere.Controls.Contains(u1)) u1.Hide();
             letHide("");
             f1.Hide();
@@ -171,9 +170,8 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
-            u1 = new urbuilds();
             if (Workhere.Controls.Contains(pg)) pg.Hide();
-            u1.Hide();
+            if (Workhere.Controls.Contains(u1)) u1.Hide();
             m1.Hide();
             form5.Hide();
             form5.Hide();
@@ -220,7 +218,8 @@ namespace PcPartPicker_Desktop_Version
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            u1 = new urbuilds();
+
+            if (Workhere.Controls.Contains(u1)) u1.Hide();
             u1.Hide();
             ad.Hide();
             n1.Hide();
@@ -240,17 +239,17 @@ namespace PcPartPicker_Desktop_Version
         {
 
             if (Workhere.Controls.Contains(pg)) pg.Hide();
-            u1.Hide();
+            if (Workhere.Controls.Contains(u1)) u1.Hide();
             prebuildsclick();
             letHide("");
             ad.Hide();
-            u1.Hide();
             form5.Hide();
 
         }
         public void prebuildsclick()
         {
-            u1 = new urbuilds();
+
+            if (Workhere.Controls.Contains(u1)) u1.Hide();
             form4.Hide();
             form5.Hide();
             naming.Text = bunifuFlatButton4.Text;
@@ -260,7 +259,6 @@ namespace PcPartPicker_Desktop_Version
             f2.Hide();
             m1.Hide();
             n1.Hide();
-            u1.Hide();
 
         }
 
@@ -312,7 +310,8 @@ namespace PcPartPicker_Desktop_Version
             Workhere.Controls.Add(f2);
             f2.Show();
             m1.Hide();
-            u1.Hide();
+
+            if (Workhere.Controls.Contains(u1)) u1.Hide(); 
             
 
         }
@@ -373,7 +372,7 @@ namespace PcPartPicker_Desktop_Version
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
         {
             if (Workhere.Controls.Contains(pg)) pg.Hide();
-            u1.Hide();
+            if (Workhere.Controls.Contains(u1)) u1.Hide();
             form4.Hide();
             form5.Hide();
             f1.Hide();

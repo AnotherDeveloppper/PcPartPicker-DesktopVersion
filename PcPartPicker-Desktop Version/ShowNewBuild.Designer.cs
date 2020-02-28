@@ -41,6 +41,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPrice = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -51,9 +52,9 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(31, 68);
+            this.panel1.Location = new System.Drawing.Point(23, 81);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(628, 550);
+            this.panel1.Size = new System.Drawing.Size(636, 537);
             this.panel1.TabIndex = 8;
             // 
             // dataGridView1
@@ -77,7 +78,7 @@
             // btnConfirm
             // 
             this.btnConfirm.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfirm.BorderRadius = 0;
             this.btnConfirm.ButtonText = "Save Build";
@@ -112,7 +113,7 @@
             // btnCancel
             // 
             this.btnCancel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.BackColor = System.Drawing.Color.Gray;
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.BorderRadius = 0;
             this.btnCancel.ButtonText = "Cancel Build";
@@ -241,10 +242,21 @@
             this.txtPrice.Text = "Total Price : ";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(32, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 18);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "your parts :";
+            // 
             // ShowNewBuild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView2);
@@ -279,5 +291,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrice;
+        private System.Windows.Forms.Label label3;
     }
 }
