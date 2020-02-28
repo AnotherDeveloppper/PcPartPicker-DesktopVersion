@@ -145,7 +145,7 @@ namespace PcPartPicker_Desktop_Version
                 c.Maximum_Supported_Memory_Cpu = Convert.ToInt32(bunifuMaterialTextbox7.Text);
                 c.Cpu_Price = Convert.ToDouble(bunifuMaterialTextbox8.Text);
                 c.Integrated_Gpu = bunifuMaterialTextbox9.Text;
-                c.Cpu_Picture = bunifuMaterialTextbox10.Text;
+                c.Cpu_Picture = x;
                 db.Cpus.InsertOnSubmit(c);
                 db.SubmitChanges();
 
@@ -188,6 +188,7 @@ namespace PcPartPicker_Desktop_Version
                 c.Voltage = float.Parse(bunifuMaterialTextbox25.Text);
                 c.CAS_Latency = Convert.ToInt32(bunifuMaterialTextbox26.Text);
                 c.Memory_Price = Convert.ToDouble(bunifuMaterialTextbox16.Text);
+                c.Memory_Picture = x;
                 db.Memories.InsertOnSubmit(c);
                 db.SubmitChanges();
 
@@ -308,11 +309,11 @@ namespace PcPartPicker_Desktop_Version
                 c.Chipset_Gpu = bunifuMaterialTextbox43.Text;
                 c.Memory_Speed_Gpu = Convert.ToInt32(bunifuMaterialTextbox44.Text);
                 c.Memory_Type_Gpu = bunifuMaterialTextbox45.Text;
-                c.Core_Clock_Gpu = Convert.ToInt32(bunifuMaterialTextbox31.Text);
-                c.Boost_Clock_Gpu = Convert.ToInt32(bunifuMaterialTextbox32.Text);
+                c.Core_Clock_Gpu = Convert.ToInt32(bunifuMaterialTextbox46.Text);
+                c.Boost_Clock_Gpu = Convert.ToInt32(bunifuMaterialTextbox47.Text);
                 c.Frame_Sync = comboBox7.Text;
-                c.TDP_Gpu = Convert.ToInt32(bunifuMaterialTextbox34.Text);
-                c.Gpu_Price = Convert.ToDouble(bunifuMaterialTextbox35.Text);
+                c.TDP_Gpu = Convert.ToInt32(bunifuMaterialTextbox48.Text);
+                c.Gpu_Price = Convert.ToDouble(bunifuMaterialTextbox11.Text);
                 c.Gpu_Picture = x;
                 db.Gpus.InsertOnSubmit(c);
                 db.SubmitChanges();

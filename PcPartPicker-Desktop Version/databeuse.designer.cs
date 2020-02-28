@@ -72,7 +72,7 @@ namespace PcPartPicker_Desktop_Version
     #endregion
 		
 		public databeuseDataContext() : 
-				base(global::PcPartPicker_Desktop_Version.Properties.Settings.Default.projetConnectionString2, mappingSource)
+				base(global::PcPartPicker_Desktop_Version.Properties.Settings.Default.projetConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
